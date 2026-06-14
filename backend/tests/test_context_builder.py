@@ -9,6 +9,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.engine.context_builder import build_report_contexts
 from app.engine.data_loader import LoadedTable
+from app.engine.value_formatter import TraceValue
 from app.models.enums import DataType, RelationType, TableRole
 from app.models.template_models import FieldDefinition, RequiredTable, TemplateRequirements
 from app.models.trace_models import TraceItem
@@ -185,8 +186,17 @@ def test_source_rows_keep_raw_values_separate_from_display_context() -> None:
     bundle = build_report_contexts(make_requirements(), make_tables(), task_id="task_001")[0]
 
     assert bundle.context["loan_summary"]["loan_balance"] == "1200.00"
+    assert isinstance(bundle.context["loan_summary"]["loan_balance"], TraceValue)
     assert bundle.source_rows["loan_summary"]["loan_balance"] == 1200
     trace_item = bundle.trace_map["loan_summary.loan_balance"][0]
     assert trace_item.raw_value == 1200
     assert trace_item.display_value == "1200.00"
     assert trace_item.excel_column_letter == "B"
+
+
+def test_trace_value_uses_raw_values_for_numeric_comparison() -> None:
+    house_eval_amount = TraceValue(raw_value=900, display_value="900", trace_id="trace_house")
+    loan_balance = TraceValue(raw_value=1250, display_value="1250", trace_id="trace_loan")
+
+    assert house_eval_amount < loan_balance
+    assert str(house_eval_amount) == "900"

@@ -50,7 +50,7 @@ def apply_ai_blocks(input_data: ApplyAIBlocksInput) -> ApplyAIBlocksResult:
             markers = _find_ai_markers(paragraph.text)
             for marker in markers:
                 ai_result = result_by_block_id.get(_block_id_from_marker(marker))
-                ai_blocks.append(_build_ai_block_trace(marker, ai_result, input_data.ai_enabled))
+                ai_blocks.append(_build_ai_block_trace(marker, paragraph.text, ai_result, input_data.ai_enabled))
                 replacement = _replacement_text(paragraph.text, marker, ai_result, input_data.ai_enabled)
                 _replace_paragraph_text(paragraph, replacement)
 
@@ -119,6 +119,7 @@ def _replace_paragraph_text(paragraph: Paragraph, text: str) -> None:
 
 def _build_ai_block_trace(
     marker: str,
+    original_block_text: str,
     ai_result: AIGenerateResult | None,
     ai_enabled: bool,
 ) -> AIBlockTrace:
@@ -133,6 +134,7 @@ def _build_ai_block_trace(
         block_id=_block_id_from_marker(marker),
         marker=marker,
         status=status,
+        original_block_text=original_block_text,
         prompt_template=ai_result.prompt_template if ai_result is not None else "",
         prompt_rendered=ai_result.prompt_rendered if ai_result is not None else "",
         model=ai_result.model if ai_result is not None else "",

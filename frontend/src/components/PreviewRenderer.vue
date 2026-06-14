@@ -9,14 +9,28 @@
             {{ block.text }}
           </component>
 
-          <p v-else-if="block.type === 'paragraph'" class="preview-paragraph">
+          <p
+            v-else-if="block.type === 'paragraph'"
+            class="preview-paragraph"
+            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: block.block_trace_id === selectedTraceId }]"
+            @click="selectBlockTrace(block.block_trace_id, $event)"
+          >
+            <button
+              v-if="block.block_trace_id"
+              class="block-trace-button"
+              :class="[traceKindClass(block.block_trace_kind), { active: block.block_trace_id === selectedTraceId }]"
+              type="button"
+              @click.stop="emit('select-trace', block.block_trace_id)"
+            >
+              {{ blockTraceLabel(block.block_trace_kind) }}
+            </button>
             <template v-for="(run, index) in block.runs" :key="`${block.block_id}_${index}`">
               <button
                 v-if="run.trace_id"
                 class="trace-text"
-                :class="{ active: run.trace_id === selectedTraceId }"
+                :class="[traceKindClass(run.trace_kind), { active: run.trace_id === selectedTraceId }]"
                 type="button"
-                @click="$emit('select-trace', run.trace_id)"
+                @click.stop="emit('select-trace', run.trace_id)"
               >
                 {{ run.text }}
               </button>
@@ -24,7 +38,17 @@
             </template>
           </p>
 
-          <div v-else-if="block.type === 'table'" class="preview-table-wrap">
+          <div
+            v-else-if="block.type === 'table'"
+            class="preview-table-wrap"
+            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: block.block_trace_id === selectedTraceId }]"
+            @click.self="block.block_trace_id && emit('select-trace', block.block_trace_id)"
+          >
+            <div v-if="block.block_trace_id" class="table-trace-toolbar">
+              <el-button size="small" type="success" @click="emit('select-trace', block.block_trace_id)">
+                {{ blockTraceLabel(block.block_trace_kind) }}
+              </el-button>
+            </div>
             <table class="preview-table">
               <thead>
                 <tr>
@@ -32,7 +56,7 @@
                     <TraceCell
                       :cell="cell"
                       :selected-trace-id="selectedTraceId || undefined"
-                      @select-trace="$emit('select-trace', $event)"
+                      @select-trace="emit('select-trace', $event)"
                     />
                   </th>
                 </tr>
@@ -46,7 +70,7 @@
                     <TraceCell
                       :cell="cell"
                       :selected-trace-id="selectedTraceId || undefined"
-                      @select-trace="$emit('select-trace', $event)"
+                      @select-trace="emit('select-trace', $event)"
                     />
                   </td>
                 </tr>
@@ -65,6 +89,7 @@ import { defineComponent, h } from 'vue'
 interface PreviewRun {
   text: string
   trace_id: string | null
+  trace_kind?: 'field' | 'condition' | 'loop' | 'ai' | null
   ai_block_id?: string | null
   style?: {
     bold?: boolean | null
@@ -76,6 +101,7 @@ interface PreviewRun {
 interface PreviewTableCell {
   text: string
   trace_id: string | null
+  trace_kind?: 'field' | 'condition' | 'loop' | 'ai' | null
   ai_block_id?: string | null
 }
 
@@ -89,11 +115,15 @@ type PreviewBlock =
   | {
       type: 'paragraph'
       block_id: string
+      block_trace_id?: string | null
+      block_trace_kind?: 'field' | 'condition' | 'loop' | 'ai' | null
       runs: PreviewRun[]
     }
   | {
       type: 'table'
       block_id: string
+      block_trace_id?: string | null
+      block_trace_kind?: 'field' | 'condition' | 'loop' | 'ai' | null
       headers: PreviewTableCell[]
       rows: PreviewTableCell[][]
     }
@@ -107,7 +137,7 @@ defineProps<{
   selectedTraceId?: string | null
 }>()
 
-defineEmits<{
+const emit = defineEmits<{
   'select-trace': [traceId: string]
 }>()
 
@@ -132,7 +162,7 @@ const TraceCell = defineComponent({
       return h(
         'button',
         {
-          class: ['trace-text', { active: cell.trace_id === props.selectedTraceId }],
+          class: ['trace-text', traceKindClass(cell.trace_kind), { active: cell.trace_id === props.selectedTraceId }],
           type: 'button',
           onClick: () => emit('select-trace', cell.trace_id),
         },
@@ -145,6 +175,31 @@ const TraceCell = defineComponent({
 function headingTag(level?: number) {
   const safeLevel = Math.min(Math.max(level || 2, 1), 6)
   return `h${safeLevel}`
+}
+
+function traceKindClass(kind?: string | null) {
+  return `trace-${kind || 'field'}`
+}
+
+function blockTraceLabel(kind?: string | null) {
+  if (kind === 'ai') {
+    return 'AI生成'
+  }
+  if (kind === 'loop') {
+    return '查看表格循环溯源'
+  }
+  return '查看判断溯源'
+}
+
+function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent) {
+  if (!traceId) {
+    return
+  }
+  const target = event.target as HTMLElement | null
+  if (target?.closest('button')) {
+    return
+  }
+  emit('select-trace', traceId)
 }
 </script>
 
@@ -167,7 +222,22 @@ function headingTag(level?: number) {
 }
 
 .preview-paragraph {
+  border: 1px solid transparent;
+  border-radius: 6px;
   margin: 0 0 12px;
+  padding: 2px 4px;
+}
+
+.preview-paragraph.clickable-block {
+  cursor: pointer;
+}
+
+.preview-paragraph.trace-ai {
+  border-color: #e9d5ff;
+}
+
+.preview-paragraph.trace-ai.active {
+  background: #faf5ff;
 }
 
 .trace-text {
@@ -187,9 +257,66 @@ function headingTag(level?: number) {
   color: #fff;
 }
 
+.trace-condition {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.trace-loop {
+  background: #e8f7ee;
+  color: #15803d;
+}
+
+.trace-ai {
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.trace-condition:hover,
+.trace-condition.active {
+  background: #9333ea;
+  color: #fff;
+}
+
+.trace-loop:hover,
+.trace-loop.active {
+  background: #16a34a;
+  color: #fff;
+}
+
+.trace-ai:hover,
+.trace-ai.active {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.block-trace-button {
+  border: 1px solid #d8b4fe;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
 .preview-table-wrap {
+  border: 1px solid transparent;
+  border-radius: 6px;
   margin: 16px 0;
   overflow-x: auto;
+  padding: 8px;
+}
+
+.preview-table-wrap.clickable-block {
+  border-color: #b7ebc6;
+}
+
+.preview-table-wrap.clickable-block.active {
+  border-color: #16a34a;
+}
+
+.table-trace-toolbar {
+  margin-bottom: 8px;
 }
 
 .preview-table {

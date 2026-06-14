@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_5f29b39a-cdb1-5356-8d0b-4b742f7e677a",
+  "task_id": "task_20260614_111514_44f0a1",
+  "title": "普惠支行报告_B支行.docx",
+  "output_file": "普惠支行报告_B支行.docx",
+  "primary_key_value": "B支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_9847279f491d4b6d97312978c371be20",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2dede554f53d4b8e8264cdae60817982",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "B支行",
+          "trace_id": "trace_5baad44b-0e59-5d25-a0fa-332137b9c09c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_337240dd-8c3d-5100-8fc6-1f742c327ac6",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3706b4d3cbeb452b9b0817fa04971b8a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "980",
+          "trace_id": "trace_d5bbf92d-a0fa-5aa4-b18f-3c188c340ed8",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1200",
+          "trace_id": "trace_62a55d65-16b4-5d5d-b23e-c7a45c58333e",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_5a2f96c33a5240f4a89c7db0afb32ac6",
+      "block_trace_id": "trace_condition_doc_5f29b39a-cdb1-5356-8d0b-4b742f7e677a_condition_0",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "清偿能力判断：可清偿。",
+          "trace_id": "trace_condition_doc_5f29b39a-cdb1-5356-8d0b-4b742f7e677a_condition_0",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1eb01b36a788409daabb867ef4eb711e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_351e354b19b24c8c81c066f9a8d74944",
+      "block_trace_id": "trace_loop_doc_5f29b39a-cdb1-5356-8d0b-4b742f7e677a_loop_0",
+      "block_trace_kind": "loop",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "个人e抵押",
+            "trace_id": "trace_775e8e8a-20db-5347-8cd6-3bc42bfa6c3f",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "2.5",
+            "trace_id": "trace_bc54a36a-0db8-5ccd-bf24-1bfb30c8af78",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "法人e抵",
+            "trace_id": "trace_a0a66786-a013-5be5-a42c-81929aee57e2",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "2.3",
+            "trace_id": "trace_726d12b0-a85b-58dd-bc13-bd07b4fea16b",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_63404cee13364308a286cb02643147ba",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4062e6f6488049e8adceed498dd84ea2",
+      "block_trace_id": "trace_ai_doc_5f29b39a-cdb1-5356-8d0b-4b742f7e677a_AIBLOCK0",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "根据知识库信息及不良贷款数据，该支行不良贷款额环比下降0.03，但同比上升",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.1",
+          "trace_id": "trace_2da6be1b-7dad-5876-bdec-3a1487dac786",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，显示短期风险有所缓解，但长期压力仍在累积。环比改善可能得益于近期催收或核销措施，但同比上升表明资产质量基础尚未稳固，潜在风险点可能集中在部分行业或客户群体中，需进一步核实具体成因。\n\n建议该支行加强存量贷款的风险排查，重点关注同比上升期间新增的不良贷款客户特征，并优化贷后管理流程。同时，应结合环比改善的经验，总结有效处置手段，并提前制定针对潜在风险客户的预警与化解预案，以巩固短期成果并遏制长期恶化趋势。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T11:15:50.956920Z"
+}

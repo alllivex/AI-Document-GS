@@ -5,6 +5,15 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 
 DEFAULT_DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
 DEFAULT_DEEPSEEK_MODEL = "deepseek-chat"
+WORD_READY_SYSTEM_PROMPT = (
+    "You are a precise business document writing assistant. "
+    "Do not use Markdown formatting. Do not output headings like ###, bullet markers like * or -, "
+    "or table syntax. Write natural paragraphs suitable for the body of a Word business report. "
+    "For causes that cannot be directly proven by the provided data, use cautious wording such as "
+    "'may' or 'requires further verification'. Do not invent customers, industries, regions, approvals, "
+    "asset-quality causes, or facts that were not provided. Prefer two paragraphs: first risk analysis, "
+    "then management suggestions."
+)
 
 
 class DeepSeekClient:
@@ -29,7 +38,7 @@ class DeepSeekClient:
         response = self.client.chat.completions.create(
             model=model or self.model,
             messages=[
-                {"role": "system", "content": "You are a precise business document writing assistant."},
+                {"role": "system", "content": WORD_READY_SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
             temperature=0.2,

@@ -1,0 +1,6070 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_2f658109-31e3-5a54-80de-354a39edc4f9",
+  "task_id": "task_20260614_081911_37ab82",
+  "title": "法人e抵单面签署材料_4000920260329003.docx",
+  "output_file": "法人e抵单面签署材料_4000920260329003.docx",
+  "primary_key_value": "4000920260329003",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_cc97ff8d1c6644f2a22b8370d6827853",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "房屋未出租声明",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_09e8bc954c02498e80db2ecb7fb4c626",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司深圳市分行营业部:",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2f5e8e3fc98e453c8ffa7161a2e5231f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人（姓名： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_ed9a4058-2ee4-52dc-bb13-99e32194c971",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，身份证号码 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_361b8505-de43-563e-9e15-5448e9424891",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "）合法拥有的位于 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州市天河区珠江新城华夏路10号",
+          "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的房屋，目前未出租给他人。若情况不实，本人愿承担由此引致的一切法律责任，并同意赔偿贵行因此而产生的一切经济损失。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9307246d0911460fa1fd8087b0e64f02",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "特此声明",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_61f6417ac8864cf7a66af8f984a0b2db",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "声明人：（签字）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_59aba69359c0452cb270b0ebac75d92a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "身份证号码： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b674c565838344ad84b154fa6dfab65f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年     月     日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4716339cc27044808d00f06cec8f6b19",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "房屋已出租声明",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2b3bf0dcd5264a89afb590532b8e6a6d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司深圳市分行营业部：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_532f7a0898a149c39997f8fe0cce724c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人（姓名： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " ，身份证号码： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " ）合法拥有的位于 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州市天河区珠江新城华夏路10号",
+          "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "  的房屋，目前已出租给他人。若情况不实，本人愿承担由此引致的一切法律责任，并同意赔偿贵行因此而产生的一切经济损失。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6eee5bcf28f94e979c8f13d7234536fa",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "特此声明",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f1488405898842d8a3ffdcf16938643f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                             声明人：（签字）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9aa589beec4d40ba9b9657687a3be312",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "身份证号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f4dedfc5e0254610a054d5288b0e7e2b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                    年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c6ff6e0e278a4879abcb8bc128ffdd38",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "关于同意放弃抵押物优先购买权的承诺函",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_0be08183dbdc407f83d2fcc1c2b0503d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司深圳分行营业部：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_5a619b9cd4d342c3a5ff2916d09f6820",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人（姓名：        身份证号码:                     ）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_31c746e60c004cfbb306e71d2f658f8b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "是 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州市天河区珠江新城华夏路10号",
+          "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "  的承租方。我方已经知悉如下事实：产权人 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 已将上述出租物业抵押给中国工商银行股份有限公司深圳分行营业部。若借款人无法按时还款，贵行行使抵押权处置抵押物时，我方自愿放弃上述抵押物优先购买权，并同意解除租赁合同。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_dbc9bccda7b94764998b7ed7dde5c654",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                            承租人（签章）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_99f53427028c4c8c8a5cc86e29100fb2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                            日期：     年    月    日 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ac6c0280e2504b4db09b582f856544a4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司深圳市分行营业部(部)",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e3476337cf64433fac884ab291bf7d91",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "小 企 业 循 环 借 款 （网贷通）申 请 书                                                                           编    号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6ac43f99ed124719a5b940484d6092e8",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": " 申请日期：         年  月   日                      金额单位：万元",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_33d944453c56484d9f50c038865b055c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "借款人名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "借款人名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "经营地址",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "经营地址",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "经营地址",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "广州市越秀区中山五路10号C座",
+          "trace_id": "trace_c8beb827-7a4a-5aa3-8a20-4ad9600a360a",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州市越秀区中山五路10号C座",
+          "trace_id": "trace_c8beb827-7a4a-5aa3-8a20-4ad9600a360a",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州市越秀区中山五路10号C座",
+          "trace_id": "trace_c8beb827-7a4a-5aa3-8a20-4ad9600a360a",
+          "trace_kind": "field",
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "借款人类型",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "借款人类型",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "①国有 ②集体 ③个体 ④合作经营 ⑤有限责任公司 ⑥股份有限公司  ⑦ 其他",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "91440101MA0034567Z",
+            "trace_id": "trace_2d9987b1-2481-5e93-89f3-887e55532972",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "91440101MA0034567Z",
+            "trace_id": "trace_2d9987b1-2481-5e93-89f3-887e55532972",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "91440101MA0034567Z",
+            "trace_id": "trace_2d9987b1-2481-5e93-89f3-887e55532972",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "联系电话",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系电话",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系电话",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系电话",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "13700137003",
+            "trace_id": "trace_d473a617-762b-51cc-a6e6-40f639f5e7c5",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "资产总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "资产总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "资产总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "资产总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "资产总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "负债总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "负债总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "负债总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "负债总额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "存    货",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "存    货",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "存    货",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "存    货",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "存    货",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注册资本",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注册资本",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注册资本",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注册资本",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "应收账款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "应收账款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "应收账款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "应收账款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "应收账款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "累计销售(申请日止前12个月)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "累计销售(申请日止前12个月)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "累计销售(申请日止前12个月)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "累计销售(申请日止前12个月)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "固定资产净值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "固定资产净值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "固定资产净值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "固定资产净值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "固定资产净值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "利润（申请日止前12个月）",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "利润（申请日止前12个月）",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "利润（申请日止前12个月）",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "利润（申请日止前12个月）",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "申请额度(大写)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "申请额度(大写)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "申请额度(大写)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "申请额度(大写)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "申请额度(大写)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "壹仟万元整",
+            "trace_id": "trace_2c3a9673-9848-5a9b-b4b9-262c0a98f28f",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "壹仟万元整",
+            "trace_id": "trace_2c3a9673-9848-5a9b-b4b9-262c0a98f28f",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "壹仟万元整",
+            "trace_id": "trace_2c3a9673-9848-5a9b-b4b9-262c0a98f28f",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "期限",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "期限",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "期限",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "期限",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "融资用途及\n还款来源",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "融资用途及\n还款来源",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "融资用途及\n还款来源",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生产经营资金周转\n企业销售收入及自有资金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "担 保 状 况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "王强",
+            "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "王强",
+            "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "王强",
+            "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物地址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物地址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "担 保 状 况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物评估价值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物评估价值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "担 保 状 况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "出质人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "出质人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质押物价值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质押物价值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "担 保 状 况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质\n押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质押物名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "质押物名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "/",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本申请人对上述资料的真实性、可靠性负责。并不可撤销地授权贵行在该项业务全部过程中（从业务申请至业务终止），可以通过中国人民银行企业信用信息基础数据库、人民银行个人征信系统或其他依法设立的信用数据库查询本单位及法定代表人的信用报告。\n\n\n申请人签名（盖章）\n年   月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9b7f7b5cd7654bceb6b02347a323d608",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "抵押声明书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e9ee6b6a6ae64787a72f4c4569fa6845",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "声明人：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b64a79a61b1a4d46b9beb8fb34e8f09e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "身份证号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c2bc315d6a924bd99c4101d617af1308",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": " ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " （下称借方）因需资金，向中国工商银行深圳市分行营业部（下称贷方）贷款人民币 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "10000000",
+          "trace_id": "trace_42c28691-d864-548f-9dc7-f873873a51d0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 元，并于    年    月   日签订抵押贷款合同（下称贷款合同）。本人自愿将位于 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州市天河区珠江新城华夏路10号",
+          "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 的房产（下称抵押物）抵押给贷方，作为借方偿还上述贷款的保证，在借方还清上述贷款本息及有关费用前，按贷款合同条款规定处置抵押物。若借方不履行债务时，依照《中华人民共和国民法通则》第八条规定，贷方有权依照法律规定以抵押物折价或者变卖抵押的价款优先得到偿还。本人对此并无异议，特此声明。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_83b82776b07243ea9aacf7e0d5a458c1",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                     声明人：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_87fdb864f03346c39d59f863b4218e4a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "房产共有人：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1a444250166d4f37b223cf542ddc9e27",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                    年    月     日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_eeb2a21f740741659fcf151af992ce33",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "配 偶 声 明",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_0730ba26fae646d1971a7986d8ba2d6e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人系   ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "   的合法配偶，事先知晓并完全同意其于     年   月   日与中国工商银行深圳市分行营业部签署的编号为  0400000230-2024年营部(抵)字    号   的《最高额抵押合同》，本人已仔细阅读了上述合同，并愿意接受所有合同条款。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a01c264bb2a4416da417e928b78dc838",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "特此声明。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_373c34aa79084dbe89c3a952762ee2b2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "声明人：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e4c802906bfd4b72baf8da53dcf13b36",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "身份证号码：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_07d8d512ee8e4759a1aac83466d5907a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "住址：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_31637ce6b58f495ebfc8b68185e70029",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "            年     月     日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_193e070b54b04d65a65ee95ffd9ecfb2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "股东会决议",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_acac19cbe498448e831ed1ca04083f48",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "时间：    年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_244a1bf1c7c44836895a781011ab4d3f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "地点：公司会议室",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8b2a6c4aa8524acea2b3bf253b8d27b9",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "参加人员：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d51aa570084d4526a09bf71a04d445f9",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "会议内容：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c28b5687a2a040b59121ec249ecc70e6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "    关于向中国工商银行股份有限公司深圳分行营业部申请贷款的事宜，经出席会议的股东（或股东代表）表决，做出决议如下：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8bb79ce56a474a2a99808bf0a9cb44eb",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "同意  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "  向中国工商银行股份有限公司深圳分行营业部申请人民币 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "10000000",
+          "trace_id": "trace_42c28691-d864-548f-9dc7-f873873a51d0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 元法人经营贷款。具体贷款条件及担保措施以银行最终审批为准。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_55ab7a350cd6435eae09750a526dc605",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本决议符合我国法律法规和公司章程的规定，合法有效；本公司对以下股东签章的真实性、合法性、有效性负责，并承担相关的法律责任。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8ecf9cd968394f3f880d04aaf7f8052d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本决议自签署之日起生效，决议有效期一年。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3cf3b9729c16400695be4727ccc19581",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "特此决议！ ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_fd112346337d4bfc990e1744f4e2416f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "股东签章：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2202e1a4a68342a285714a92a190297f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                       公 司 名 称：  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7e0449d22f974b71ae1eba3e7c999a89",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_13640041bd894a97aeb670be4ec8d7ed",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "个人信息授权书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8a119d3fa2854f4e9709959c7043153f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "重要提示：本授权书适用于中国工商银行股份有限公司申请中小微企业银行贷款风险补偿使用。请您务必认真阅读、充分理解本授权书各条款，特别是黑体字条款（涉及到您权利与义务、约定争议解决和司法管辖等方面的条款）。如对本授权书内容有任何疑问，请您及时提请中国工商银行股份有限公司予以说明。本授权书一经您签字，即视为您已完全理解并同意全部条款，本授权书生效。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6ab949ca058348a8b400d0dac9fc48ee",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、本人 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " （身份证号 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " ）向中国工商银行股份有限公司作出以下不可撤销的授权及保证：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b35b113920cc46808089c1b61186d165",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人授权中国工商银行股份有限公司可在本授权书载明的授权期限内向政府机关及政府机关委托单位提供与本人相关基本信息、工商信息、信贷信息等，本人保证不会因中国工商银行股份有限公司在本授权书载明的授权期限内向政府机关及政府机关委托单位提供上述信息并保留相关核查资料而向中国工商银行股份有限公司以任何形式提出权利主张。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ba2033ebf9fe46109ed510ed3d6e2118",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "二、本授权书的授权期限:自      年    月     日起至本人在中国工商银行股份有限公司获得的全部授信额度到期之日止；若本人在中国工商银行股份有限公司的全部授信额度到期后，本人在中国工商银行股份有限公司仍有贷款业务没有结清的，授权期限至本人在中国工商银行股份有限公司的所有贷款业务结清之日止。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_664a9dd449e049fdae91afbdba74ca15",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "三、若本人与中国工商银行股份有限公司发生任何争议，本人同意首先应友好协商解决。若协商不成的，本人同意将争议提交至贷款人所在地有管辖权的人民法院管辖。本授权书适用中华人民共和国大",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_91fc37483706455e88528b22a679c9bb",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "陆地区法律。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_13ecd22815964c3799d1f3bc2ea10b71",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "授权人声明：中国工商银行股份有限公司已依法向本人提示了相关条款（特别是黑体字条款），应本人要求对相关条款的概念、内容及法律效果做了说明，本人已经知悉并理解上述条款，本授权书一经本人签字即视为生效。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_dc3a0b103d2d4db5883e1d6b6f6ce8c2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "授权人（签字）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3b76acd1ce4545c1a00292f1a95d0da8",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "日期：      年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_35cdf15bd3d348b7a30f059d12af0d3a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "办理法人信贷业务印鉴卡",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_96590ffa44bf4d638fbf5016324006ba",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                    日期：     年       月        日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_45c001e6253d45dc9ce6a3d7b1cde037",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "印鉴和签字式样",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "王强",
+            "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "法人授权代表人姓名",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "印鉴和签字式样",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "企业名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "企业公章印鉴式样",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "广州华南实业有限公司",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b3cae25b38cc4c3eb542a268e677f218",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "注：1.如无法人授权代表人，该栏可为空；",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4f894b6319c84932a61b0a9f91ae2170",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "2.企业公章印鉴式样请预留与我行签订融资或担保合同的印鉴式样。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7b9257442c6a43ac828f77af34676c5f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "企业信息授权书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_0b7ea6f34aca41bcb73b3292beb0a0bd",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "重要提示：本授权书适用于中国工商银行股份有限公司申请中小微企业银行贷款风险补偿使用。请你单位务必认真阅读、充分理解本授权书各条款，特别是黑体字条款（涉及到您权利与义务、约定争议解决和司法管辖等方面的条款）。如对本授权书内容有任何疑问，请你单位及时提请中国工商银行股份有限公司予以说明。本授权书一经盖章签字，即视为已完全理解并同意全部条款，本授权书生效。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_141ecf5529944efd9b9c87aa37a7c0a5",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、本单位 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 向中国工商银行股份有限公司作出以下不可撤销的授权及保证：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_502c5885b21d4c1393e7c6394a704c56",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本单位授权中国工商银行股份有限公司可在本授权书载明的授权期限内向政府机关及政府机关委托单位提供与本单位相关基本信息、工商信息、信贷信息等，本单位保证不会因中国工商银行股份有限公司在本授权书载明的授权期限内向政府机关及政府机关委托单位提供上述信息并保留相关核查资料而向中国工商银行股份有限公司以任何形式提出权利主张。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a8910189bc3b4cc39d4abf93e96bf8bf",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "二、本授权书的授权期限:自      年    月     日起至本单位在中国工商银行股份有限公司获得的全部授信额度到期之日止；若本单位在中国工商银行股份有限公司的全部授信额度到期后，本单位在中国工商银行股份有限公司仍有贷款业务没有结清的，授权期限至本企业在中国工商银行股份有限公司的所有贷款业务结清之日止。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_788a2b6a17434a0b973b22cc3eadc9a0",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "三、若本单位与中国工商银行股份有限公司发生任何争议，本单位同意首先应友好协商解决。若协商不成的，本单位同意将争议提交",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_619b59c324b94fa1b4c07e4f1c0f049d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "至贷款人所在地有管辖权的人民法院管辖。本授权书适用中华人民共",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2004575355d549c3a7f2465e347e7e24",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "和国大陆地区法律。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ee498664a146461db7d1bec7c7ad5283",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本单位声明：中国工商银行股份有限公司已依法向本单位提示了相关条款（特别是黑体字条款），应本单位要求对相关条款的概念、内容及法律效果做了说明，本单位已经知悉并理解上述条款，本授权书一经单位盖章签字即视为生效。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a7f878590ac745818017aebaae2ed3dd",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "公章：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_43dffd6151f04fa9b783c67386d2b704",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "法定代表人（授权代理人）：（签字） ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_00dba5cc967f45cbb2c3623942d75199",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "日期：      年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_38dd972cf09a4bfb894cb05b3213cbe8",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "小微客户金融服务告知函",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_eff0761cbd154b91a88df1498a01f6b4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（2020 年版）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3dd56c56c55b4486bf2e058ebf109e95",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "尊敬的 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 公司、先生/女士：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2613f1ea9df545df8427a9152c692165",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "感谢您选择中国工商银行小微金融服务！中国工商银行一直致力于遵循国家普惠金融发展战略，注重服务实体经济，勇于担当社会责任。您在我行办理小微客户业务期间，以下事项请您知晓：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4bd1151c1bb8475fac251e3fa690087b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "1、我行贷款利率定价均严格执行总分行指导利率和监管机构相关规定且均以年化利率形式进行约定，我行工作人员不得在对外宣传和业务办理过程中以“日息”、“月息”等不规范表述故意模糊贷款利率定价方式。您的贷款利率信息将在我行与您签署的相关合同中明确约定。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d31732f9391f4f9aaf7eb13eece1dd3a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "2、您在我行办理业务前，我行工作人员需告知您相关服务项目、服务价格、优惠措施（含生效和终止日期），并在您确认接受该服务价格后，为您提供相关服务。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_256a021ba66a4dc2b6021ccef896e89d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "3、您在我行办理小微贷款业务时，贷款业务所收取利息和费用将在我行借款合同或服务协议中明确，不收取合同约定之外的费用。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_17af5481a1e14b44a23b44290e02fa88",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "4、您在我行办理小微贷款业务时，我行工作人员不得搭售或强制要求办理保险、理财、基金、贵金属等金融产品和金融服务或以此作为贷款发放的条件。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_96154aaa41ad4ba887917ef21d387d54",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "5、我行不会强制要求您向特定第三方合作机构购买产品或服务。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b10b02f18c3a4b7dae38e3abcf336312",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "6、除贷款利息外，您在我行业务过程中产生的相关收费均执行最新中国工商银行服务价目表（可在我行各营业网点查阅）收费标准，并能够提供相关收费凭据。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_0976bddc9a7b439491f09da400e40a2f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "7、您在我行办理小微贷款过程中，因办理我行贷款产生的押品评估费、抵",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_413b499f21c848428edaca579bd4cd43",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "押登记费、公证费等费用应由我行全额承担。对于根据我行相关规定，贷款需要办理保险的：以我行作为借款人意外保险第一受益人的，保险费用应由我行承担；以我行作为抵押物财产保险索赔权益人的，如与您协商一致按合理比例共同承担保险费的，需在抵押合同中或以书面形式约定保险费承担方式及各自承担的比例，不得强制由您承担费用。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9346fb5045a24929840f8f35d94b7bc4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "我行将竭诚为您提供优质金融服务，服务相关咨询（投诉）请联系 95588 或我行营业网点，并欢迎您对我们的工作进行监督。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_05c01d56dbb643848bf06b956030c75f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人/本单位确认：工商银行客户经理及相关工作人员已明确告知且本人/本单位已清楚知晓以上事项。本人/本单位自愿承担在工商银行办理小微客户业务过程中产生的需由本人/本单位支付的费用。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4a0a0ae7a24b43149349c6fef5400dad",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "客户经理签名： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_cc87d884e7fb403b8ca588d2219770b8",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_20053f6f085943348e1320d245b17a7e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "客户签名(盖章)： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ccdf8640e65c46cca845256472e2de51",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_0546c9f7a3884278aa6cb119d89bb6ed",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "贷款用途承诺函",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8015689d8611491a82cc857263d70ab6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本单位（单位名称： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " ）因向贵行借款，作出如下承诺：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ee81c5e734c140d881c34359ef93a8a1",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "承诺贷款资金仅用于本单位（含个体工商户）的生产经营，不以任何形式流入股票、债券、期货、金融衍生品、理财产品、基金和其他资产管理产品等投资；不用于固定资产投资、股本权益性投资；不用于购置/投资房地产、偿还住房抵押贷款或房地产开发项目；不用于借贷；不从事洗钱、欺诈等非法活动，以及其他国家法律、法规明确规定不得经营的项目。本单位违反本条约定的一切后果由本单位承担。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a2460028a5754863bdb8111eefb68b9e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "贵行有权监督贷款的使用，并要求本单位提供贷款用途证明的佐证材料。若本单位（含个体工商户）未能按照要求提供符合贵行要求的用途证明佐证材料或贵行发现贷款资金用于上述禁止领域的，贵行有权单方面宣布贷款立即到期、冻结可贷额度、提前收回贷款本息，并将相关情况提供给国家设立的金融信用信息基础数据库及有权机构和主体，有权追究相应法律责任。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_664be18feead42e5abf155ea308417ad",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "抄录：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_9d4bbdcf18b64fcc823e31e349eb8eb4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "单",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "位",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "已",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "认",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "真",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "阅",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "读",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "承",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "诺",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "函",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "全",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "部",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "内",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "容",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "，",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "将",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "严",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "格",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "遵",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "守",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "承",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "诺",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "，",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "贷",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "资",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "金",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "用",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "于",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "生",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "产",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "经",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "营",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "，",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "不",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "以",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "任",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "何",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "形",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "式",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "流",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "入",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "股",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "票",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "、",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "理",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "财",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "产",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "品",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "、",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "房",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "地",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "产",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "、",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "偿",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "还",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "住",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "房",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "贷",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "等",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "违",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "规",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "领",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "域",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_075eebc13b4843cdb951c4561d06188a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                                 承诺单位：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3a149cce9a9c4f4083a7f02dfc0bd756",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                          见证人（客户经理）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6811aa31507e46dcb58e143613299f03",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                         时间      年    月   日 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_24ba8d703b35405a9730c51afa37c17c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "……装…………………钉…………………线……",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9e90e6db3f9045d4830c1ba54fe81e4d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "法定代表人证明书(存根)                        ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_98dceb1da1e54a8fa90591c91c7c998e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                        字第        号",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6c143054584b4723817a82bbaeaac7b8",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "同志，现任我单位      职务，为法定代表人，特此证明。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c428d529f2d440eaa1477981a822daff",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "有效期限：至     年  月  日       签发日期:       年   月   日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_01224e9ba0ac4b8096fe5bb5edb5f7f9",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "单位： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " （盖章）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_334e8c4a45dd4499855822016f9b1c09",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "…………………………………………………………………………………………………………………",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_14ab217aa4c3405186187d0c9edeb13f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "法  定  代  表  人  证  明  书                                                                                                ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4ae7d22c37c94a7f81706242a996184f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                  字第        号",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c00c9b3de0174214a5d2520016b19175",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "同志，现任我单位      职务，为法定代表人，特此证明。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_826da23f142f45628f36303fffdb605f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "有效期限：至      年  月  日      签发日期:       年  月  日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8752631d713140909e0b81f70da0260d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "单位： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " （盖章）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9cd0970ff3f94ab88c864eb86ae51609",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "附：   代表人性别：    年龄：          工作证号码：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6cc69e9c71c14fedb1820dea700ebb2a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       营业执照号码： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "91440101MA0034567Z",
+          "trace_id": "trace_2d9987b1-2481-5e93-89f3-887e55532972",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "   经济性质：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4cf2e05230844b36bfa69cad22cee51c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       主营（产）： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2101aaea87ac458eb25f9e2ccfb215ab",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       兼营（产）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9dcb3b4247f9428fabbafb4c8a455931",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       进口物品经营许可证号码：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_70d0728619cb42aab7555caee49cd192",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       主营：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4a35e67c0eb5406893407051c4bcb5d5",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "       兼营：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_675a2fec909b4e8d813060ed8d4252a3",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "说明：1、法定代表人为企业事业单位、国家机关、社会团体的主要行政负责人。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ed3922177e954e378dc9a1cda3a6b9be",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "      2、内容必须填写真实、清楚、涂改无效，不得转让、买卖。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f2818a676d16491981ad9fe15c76837b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "      3、将此证明书提交对方作为合同附件。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c8dcd1366f8f4e5390e41db4bc0fd6b6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": " 深圳市工商行政管理局监制",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3d4120974d0e4edea742acc4d1d13402",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "股东会签字样本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_5b109a1f99dc42ee8f827cebcc8d43b2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "兹证明，以下为我公司股东，签字样本如下：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_591b08ec609340c7a66bde6a62e2742d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "股东名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "签字样本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": []
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9c04a0d2463440c5ba38da70f849c20c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "公 司 名 称： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_35d5b4f30c844f5090103ea6dc54c3c2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年    月    日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4ae9d14c39e04e3dbe439356745c0162",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行抵押核实书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4f3994167d644cf1ac1c74aa362957f3",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                                           单位：万元",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_6d296b8d9a174a6d89400b5961ce95ce",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "抵押人名称： 王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "抵押人名称： 王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "抵押人名称： 王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "身份证号码： 440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "身份证号码： 440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "身份证号码： 440101197803033456",
+          "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "抵押人是否具有合法的主体资格：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人是否具有合法的主体资格：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人是否具有合法的主体资格：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人是否对抵押物享有所有权或处分权：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人是否对抵押物享有所有权或处分权：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押人是否对抵押物享有所有权或处分权：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "抵押物权属是否明确：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物权属是否明确：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物权属是否明确：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "产权证书或其他权属文件是否完整、真实、有效：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "产权证书或其他权属文件是否完整、真实、有效：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "产权证书或其他权属文件是否完整、真实、有效：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "抵押物是否存在出租、在先抵押等情况：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物是否存在出租、在先抵押等情况：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物是否存在出租、在先抵押等情况：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物评估价值及变现能力是否存在明显出入：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物评估价值及变现能力是否存在明显出入：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物评估价值及变现能力是否存在明显出入：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "抵押不动产登记簿内容是否与权属证书内容和抵押品清单记载内容一致：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押不动产登记簿内容是否与权属证书内容和抵押品清单记载内容一致：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押不动产登记簿内容是否与权属证书内容和抵押品清单记载内容一致：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押不动产是否存在预告登记：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押不动产是否存在预告登记：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押不动产是否存在预告登记：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "抵押物所在地及状态是否与产权证书相符：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物所在地及状态是否与产权证书相符：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物所在地及状态是否与产权证书相符：是",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "是否存在其他需核查的问题：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "是否存在其他需核查的问题：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "是否存在其他需核查的问题：否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "抵押物评估价值",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "抵押物最高担保额度",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本次抵押金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "本人自愿为借款人 广州华南实业有限公司\n提供金额为（大写）人民币 壹仟万元整  的贷款（或其他形式的融资）抵押担保，全部意思表示真实，并保证抵押物依法可以设定抵押，未被依法查封、扣押或监管，本次抵押设立不会受到任何限制。\n\n抵押人：\n\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "本人自愿为借款人 广州华南实业有限公司\n提供金额为（大写）人民币 壹仟万元整  的贷款（或其他形式的融资）抵押担保，全部意思表示真实，并保证抵押物依法可以设定抵押，未被依法查封、扣押或监管，本次抵押设立不会受到任何限制。\n\n抵押人：\n\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "本人自愿为借款人 广州华南实业有限公司\n提供金额为（大写）人民币 壹仟万元整  的贷款（或其他形式的融资）抵押担保，全部意思表示真实，并保证抵押物依法可以设定抵押，未被依法查封、扣押或监管，本次抵押设立不会受到任何限制。\n\n抵押人：\n\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：经核实，情况一致\n\n\n\n\n核保人：\n\n核保人：\n\n年    月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：经核实，情况一致\n\n\n\n\n核保人：\n\n核保人：\n\n年    月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：经核实，情况一致\n\n\n\n\n核保人：\n\n核保人：\n\n年    月   日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a80bc79559414accad57ddc1ee043f94",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "注：本核实书作为抵押合同附件留存。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_dcc1019134a94118a2d8fc5712a993be",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "抵押物现场调查、勘察表",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7da6f2044dee40d591bd1a9becb20fbc",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "支行名称(签)章：中国工商银行深圳市分行营业部                            NO:     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_76693454b5b94e1e8f30310387f2b053",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "客户类型",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "客户类型",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "抵押物权利人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "贷款类别",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "贷 款 金 额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "贷 款 金 额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "10000000元",
+            "trace_id": "trace_42c28691-d864-548f-9dc7-f873873a51d0",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "■新增      □存量",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "■新增      □存量",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "物业名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "地 址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "广州市天河区珠江新城华夏路10号",
+            "trace_id": "trace_3fc16966-45cc-52b8-9d8c-937e8e2c4b69",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "权属证书及编号",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "粤(2026)穗不动产权第0000003号",
+            "trace_id": "trace_6e81be1c-912c-590e-97e5-a263cad4a227",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "粤(2026)穗不动产权第0000003号",
+            "trace_id": "trace_6e81be1c-912c-590e-97e5-a263cad4a227",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "粤(2026)穗不动产权第0000003号",
+            "trace_id": "trace_6e81be1c-912c-590e-97e5-a263cad4a227",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "粤(2026)穗不动产权第0000003号",
+            "trace_id": "trace_6e81be1c-912c-590e-97e5-a263cad4a227",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "登记价/建购价款",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "地价交纳情况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "已缴清地价",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "已缴清地价",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "已缴清地价",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "已缴清地价",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "建筑面积",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "权属来源",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□购商品房 □行政划拨 □协议 □拍卖 □安居房换证 □其他\n□自建: 是否有欠工程款 □是  □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "有无抵押",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□有       □无",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□有       □无",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□有       □无",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "有无共有人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "有无共有人",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□有    　   □无",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□有    　   □无",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "竣工日期",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "使用年限(起止日期)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "使用年限(起止日期)",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "剩余使用年限",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "朝向",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "评估层数及总层数",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "评估层数及总层数",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "结 构",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "四至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□东至               □西至              □南至              □北至",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "设施",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□电梯(__部)  □车位   □消防   □绿化  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□商场  □酒店  □医院  □学校  □菜市场  □公园  □其他__",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "环境",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□景观（海景、山景、其他） □污染(噪音、空气、污水) □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "交通",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□交通管制   □公交站点和线路______________   □邻近主要道路            _",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "周边物业",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□标志性建筑              □同类物业____            □大型小区_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "临街状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□一面临街  □两面临街  □临街宽度_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "环境及配套",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "物业管理",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□物业管理公司(名称)                                      □管理费___元/M2",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "使用状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "用途",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□规划用途              □实际用途_",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "使用状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "租赁状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□出租   租期(年月)：        至          月租金     元/平方    承租方\n□自用   □空置（____年）      是否有以租代购：  □是 □否",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "使用状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "成新率",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□五-六成  □七-八成 □九-十成  □其他_____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "使用状况",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "是否有拖欠费用",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "□水费___      □电费____       □管理费____    □电话费____   □其他费用____",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "土地其他\n情况说明",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "计入容积率建筑面积:          其中,各用途面积:居住        商业      其他\n容积率:       建筑层数≤        土地开发程度:\n取得方式：□拍卖 □招标 □协议",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "备注",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "注：1.各支行（部）如未按要求填写，该填的内容未填或未签字盖章，评审部将不予接收作退审处理。\n2.填表说明见背面。",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3b2e01f965dd4f7bb91099023d07ba91",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "业主(或代表)签章：         支行调查人及联系电话            调查日期:    年 月  日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_57d9e2c641a5427ab4a1e16524afd5df",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行保证担保核保书 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_524c66948ff4451e80bc21a512464997",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "(自然人保证担保）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_211fa75da948417e9eee2e7fe1f0cc3a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "单位：万元",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_e15e283af76649e38dca134d3d75c547",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "保证人姓名：王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "保证人姓名：王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "保证人姓名：王强",
+          "trace_id": "trace_d6875749-e9f7-52da-b600-ac01735548ce",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "联系方式：13700137003",
+          "trace_id": "trace_48f90f83-c6da-50bb-b483-e70a97ca63b8",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "联系方式：13700137003",
+          "trace_id": "trace_48f90f83-c6da-50bb-b483-e70a97ca63b8",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "联系方式：13700137003",
+          "trace_id": "trace_48f90f83-c6da-50bb-b483-e70a97ca63b8",
+          "trace_kind": "field",
+          "ai_block_id": null
+        },
+        {
+          "text": "婚姻状况：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "婚姻状况：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "证件类型：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件类型：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件类型：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：440101197803033456",
+            "trace_id": "trace_4ceaac8b-35ca-5497-a627-d416f2a6469c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "保证人配偶姓名：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "保证人配偶姓名：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "保证人配偶姓名：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系方式：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系方式：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系方式：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系方式：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "联系方式：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "证件类型：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件类型：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件类型：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "证件号码：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "家庭住址：",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "已对外提供担保金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "其中：已提供给工行的担保金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "其中：已提供给工行的担保金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本次担保金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "本次担保金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "已对外融资金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "其中：向工行借款金额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "本人自愿为借款人  广州华南实业有限公司   提供金额为人民币壹仟万元整（大写）的贷款（或其他形式的融资）担保，并承担连带责任。\n\n保证人签字：\n\n保证人配偶签字：\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "本人自愿为借款人  广州华南实业有限公司   提供金额为人民币壹仟万元整（大写）的贷款（或其他形式的融资）担保，并承担连带责任。\n\n保证人签字：\n\n保证人配偶签字：\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "本人自愿为借款人  广州华南实业有限公司   提供金额为人民币壹仟万元整（大写）的贷款（或其他形式的融资）担保，并承担连带责任。\n\n保证人签字：\n\n保证人配偶签字：\n\n年    月    日",
+            "trace_id": "trace_903fc234-d555-5dec-9a73-aa164dab006c",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：\n\n\n\n核保人：\n\n核保人：\n\n\n年    月    日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：\n\n\n\n核保人：\n\n核保人：\n\n\n年    月    日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：\n\n\n\n核保人：\n\n核保人：\n\n\n年    月    日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：\n\n\n\n核保人：\n\n核保人：\n\n\n年    月    日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          },
+          {
+            "text": "银行核保意见：\n\n\n\n核保人：\n\n核保人：\n\n\n年    月    日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f3d612da8049465c9de3e4c5b419b6c6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "注：本核保书作为保证合同附件留存，适用于自然人作为保证人的情形，小微企业客户另有规定的从其规定。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T08:19:27.546875Z"
+}

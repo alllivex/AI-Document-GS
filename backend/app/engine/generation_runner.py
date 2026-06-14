@@ -277,6 +277,7 @@ class GenerationRunner:
                 trace_map=bundle.trace_map,
                 ai_blocks=final_result.ai_blocks,
                 final_docx_path=output_path,
+                template_path=template_path,
             )
         )
         _remove_if_exists(rendered_path)

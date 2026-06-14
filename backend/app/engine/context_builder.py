@@ -9,7 +9,7 @@ from pydantic import BaseModel, ConfigDict
 
 from app.engine.data_loader import LoadedTable
 from app.engine.trace_map import TraceMap, add_trace_item, build_trace_item
-from app.engine.value_formatter import format_display_value, normalize_raw_value
+from app.engine.value_formatter import TraceValue, format_display_value, normalize_raw_value
 from app.models.enums import RelationType, TableRole
 from app.models.template_models import FieldDefinition, RequiredTable, TemplateRequirements
 
@@ -135,31 +135,31 @@ def _build_row_context(
     occurrence_index: int,
     field_schemas: dict[tuple[str, str], FieldDefinition],
     trace_map: TraceMap,
-) -> dict[str, str]:
-    row_context: dict[str, str] = {}
+) -> dict[str, Any]:
+    row_context: dict[str, Any] = {}
     for field_name in table.columns:
         field_schema = field_schemas.get((table.table_name, field_name))
         raw_value = row[field_name]
         display_value = format_display_value(raw_value, field_schema)
-        row_context[field_name] = display_value
-
         var_path = f"{table.table_name}.{field_name}"
+        trace_item = build_trace_item(
+            doc_id=doc_id,
+            var_path=var_path,
+            table=table,
+            field_name=field_name,
+            raw_value=raw_value,
+            display_value=display_value,
+            pk_field=pk_field,
+            pk_value=pk_value,
+            row_index=row_index,
+            source_relation_type=relation_type,
+            occurrence_index=occurrence_index,
+            field_schema=field_schema,
+        )
+        row_context[field_name] = TraceValue(raw_value=raw_value, display_value=display_value, trace_id=trace_item.trace_id)
         add_trace_item(
             trace_map,
-            build_trace_item(
-                doc_id=doc_id,
-                var_path=var_path,
-                table=table,
-                field_name=field_name,
-                raw_value=raw_value,
-                display_value=display_value,
-                pk_field=pk_field,
-                pk_value=pk_value,
-                row_index=row_index,
-                source_relation_type=relation_type,
-                occurrence_index=occurrence_index,
-                field_schema=field_schema,
-            ),
+            trace_item,
         )
     return row_context
 

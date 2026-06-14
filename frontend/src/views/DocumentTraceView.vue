@@ -18,7 +18,7 @@
           @select-trace="selectTrace"
         />
       </div>
-      <TraceDetailPanel :trace-item="selectedTraceItem" :loading="loadingTrace" />
+      <TraceDetailPanel :trace-item="selectedTraceItem" :loading="loadingTrace" @select-trace="selectTrace" />
     </section>
   </main>
 </template>
@@ -31,6 +31,7 @@ import PreviewRenderer from '../components/PreviewRenderer.vue'
 import TraceDetailPanel from '../components/TraceDetailPanel.vue'
 import { downloadDocumentUrl, getDocumentPreview } from '../api/documents'
 import { getTraceItem } from '../api/trace'
+import type { TraceDetail } from '../types/trace'
 
 interface PreviewFile {
   doc_id?: string
@@ -76,25 +77,12 @@ type PreviewBlock =
       rows: PreviewTableCell[][]
     }
 
-interface TraceItem {
-  trace_id: string
-  table_name?: string
-  table_name_cn?: string
-  field_name?: string
-  field_name_cn?: string
-  source_file?: string
-  excel_row_number?: number
-  excel_column_letter?: string | null
-  raw_value?: unknown
-  display_value?: string
-}
-
 const route = useRoute()
 const router = useRouter()
 const docId = computed(() => String(route.params.docId || ''))
 const preview = ref<PreviewFile | null>(null)
 const selectedTraceId = ref<string | null>(null)
-const selectedTraceItem = ref<TraceItem | null>(null)
+const selectedTraceItem = ref<TraceDetail | null>(null)
 const loadingPreview = ref(false)
 const loadingTrace = ref(false)
 const errorMessage = ref('')
@@ -151,22 +139,43 @@ function goBack() {
 <style scoped>
 .trace-page {
   background: #f5f7fa;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--app-header-height, 60px));
+  min-height: 0;
+  overflow: hidden;
 }
 
 .trace-layout {
+  align-items: start;
   display: grid;
+  flex: 1;
   grid-template-columns: minmax(0, 1fr) 420px;
-  min-height: calc(100vh - 73px);
+  min-height: 0;
+  overflow: hidden;
 }
 
 .preview-pane {
+  height: 100%;
   min-width: 0;
+  overflow-y: auto;
 }
 
 @media (max-width: 960px) {
+  .trace-page {
+    height: auto;
+    min-height: calc(100vh - var(--app-header-height, 60px));
+    overflow: visible;
+  }
+
   .trace-layout {
     grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .preview-pane {
+    height: auto;
+    overflow-y: visible;
   }
 }
 </style>

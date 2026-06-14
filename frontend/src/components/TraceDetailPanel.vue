@@ -1,75 +1,72 @@
 <template>
-  <aside class="trace-panel">
+  <aside ref="panelRef" class="trace-panel">
     <h3>溯源详情</h3>
 
     <el-empty v-if="!traceItem && !loading" description="点击左侧高亮文本查看来源" />
     <el-skeleton v-else-if="loading" :rows="7" animated />
 
     <template v-else-if="traceItem">
-      <el-descriptions :column="1" border>
-        <el-descriptions-item label="来源表">
-          {{ displayName(traceItem.table_name_cn, traceItem.table_name) }}
-        </el-descriptions-item>
-        <el-descriptions-item label="来源字段">
-          {{ displayName(traceItem.field_name_cn, traceItem.field_name) }}
-        </el-descriptions-item>
-        <el-descriptions-item label="来源文件">
-          {{ traceItem.source_file || '-' }}
-        </el-descriptions-item>
-        <el-descriptions-item label="Excel 行号">
-          {{ traceItem.excel_row_number ?? '-' }}
-        </el-descriptions-item>
-        <el-descriptions-item label="Excel 列">
-          {{ traceItem.excel_column_letter || '-' }}
-        </el-descriptions-item>
-        <el-descriptions-item label="原始值">
-          {{ formatValue(traceItem.raw_value) }}
-        </el-descriptions-item>
-        <el-descriptions-item label="展示值">
-          {{ traceItem.display_value || '-' }}
-        </el-descriptions-item>
-      </el-descriptions>
-
-      <div class="source-row-section">
-        <h4>来源行</h4>
-        <SourceRowTable :trace-item="traceItem" />
-      </div>
+      <FieldTracePanel v-if="traceItem.trace_kind === 'field'" :trace="traceItem" />
+      <ConditionTracePanel v-else-if="traceItem.trace_kind === 'condition'" :trace="traceItem" />
+      <LoopTracePanel v-else-if="traceItem.trace_kind === 'loop'" :trace="traceItem" />
+      <AITracePanel v-else-if="traceItem.trace_kind === 'ai'" :trace="traceItem" @select-trace="$emit('select-trace', $event)" />
+      <el-alert v-else title="暂不支持该溯源类型" type="warning" :closable="false" />
     </template>
   </aside>
 </template>
 
 <script setup lang="ts">
-import SourceRowTable from './SourceRowTable.vue'
+import { nextTick, ref, watch } from 'vue'
+import AITracePanel from './AITracePanel.vue'
+import ConditionTracePanel from './ConditionTracePanel.vue'
+import FieldTracePanel from './FieldTracePanel.vue'
+import LoopTracePanel from './LoopTracePanel.vue'
+import type { TraceDetail } from '../types/trace'
 
-interface TraceItem {
-  table_name?: string
-  table_name_cn?: string
-  field_name?: string
-  field_name_cn?: string
-  source_file?: string
-  excel_row_number?: number
-  excel_column_letter?: string | null
-  raw_value?: unknown
-  display_value?: string
-}
-
-defineProps<{
-  traceItem: TraceItem | null
+const props = defineProps<{
+  traceItem: TraceDetail | null
   loading?: boolean
 }>()
 
-function displayName(cn?: string, name?: string) {
-  if (cn && name) {
-    return `${cn}（${name}）`
-  }
-  return cn || name || '-'
-}
+defineEmits<{
+  'select-trace': [traceId: string]
+}>()
 
-function formatValue(value: unknown) {
-  if (value === null || value === undefined || value === '') {
-    return '-'
+const panelRef = ref<HTMLElement | null>(null)
+let scrollRequestId = 0
+
+watch(
+  () => [props.traceItem?.trace_id, props.loading] as const,
+  async () => {
+    const requestId = ++scrollRequestId
+    await nextTick()
+
+    if (requestId !== scrollRequestId || props.loading) {
+      return
+    }
+
+    scrollToHighlightedRow()
+  },
+  { flush: 'post' },
+)
+
+function scrollToHighlightedRow() {
+  const panel = panelRef.value
+  if (!panel) {
+    return
   }
-  return String(value)
+
+  const highlightedRow = panel.querySelector<HTMLElement>('.trace-highlight-row, .highlight-row')
+  if (!highlightedRow) {
+    panel.scrollTo({ top: 0, behavior: 'smooth' })
+    return
+  }
+
+  highlightedRow.scrollIntoView({
+    block: 'center',
+    inline: 'nearest',
+    behavior: 'smooth',
+  })
 }
 </script>
 
@@ -77,7 +74,9 @@ function formatValue(value: unknown) {
 .trace-panel {
   background: #fff;
   border-left: 1px solid #e4e7ed;
-  min-height: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
   padding: 20px;
 }
 
@@ -86,12 +85,13 @@ function formatValue(value: unknown) {
   margin: 0 0 16px;
 }
 
-.source-row-section {
-  margin-top: 20px;
-}
-
-.source-row-section h4 {
-  font-size: 14px;
-  margin: 0 0 10px;
+@media (max-width: 960px) {
+  .trace-panel {
+    border-left: 0;
+    border-top: 1px solid #e4e7ed;
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+  }
 }
 </style>

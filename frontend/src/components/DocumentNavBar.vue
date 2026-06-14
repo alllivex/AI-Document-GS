@@ -32,13 +32,22 @@ defineEmits<{
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  flex: 0 0 auto;
+  min-height: var(--document-nav-height, 73px);
   padding: 16px 24px;
+  position: relative;
+  z-index: 20;
 }
 
 .document-title {
   align-items: center;
   display: flex;
+  flex: 1;
   gap: 16px;
+  min-width: 0;
+}
+
+.document-title > div {
   min-width: 0;
 }
 
@@ -46,11 +55,32 @@ defineEmits<{
   font-size: 18px;
   line-height: 1.4;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .document-title p {
   color: #909399;
   font-size: 13px;
   margin: 4px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.document-nav > .el-button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 960px) {
+  .document-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .document-title {
+    width: 100%;
+  }
 }
 </style>

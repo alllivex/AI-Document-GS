@@ -13,6 +13,16 @@ FOR_PATTERN = re.compile(
     re.DOTALL,
 )
 IGNORED_ROOT_NAMES = {"loop", "cycler", "namespace", "super", "true", "false", "none"}
+IF_BLOCK_PATTERN = re.compile(
+    r"{%\s*if\s+(.*?)\s*%}(.*?)(?:{%\s*else\s*%}(.*?))?{%\s*endif\s*%}",
+    re.DOTALL,
+)
+LOOP_BLOCK_PATTERN = re.compile(
+    r"{%\s*tr\s+for\s+([A-Za-z_][A-Za-z0-9_]*)\s+in\s+([A-Za-z_][A-Za-z0-9_]*)\s*%}"
+    r"(.*?)"
+    r"{%\s*tr\s+endfor\s*%}",
+    re.DOTALL,
+)
 
 
 @dataclass(frozen=True)
@@ -20,6 +30,29 @@ class TemplateFieldReference:
     variable_path: str
     table_name: str
     field_name: str
+
+
+@dataclass(frozen=True)
+class ConditionBlock:
+    block_id: str
+    expression: str
+    used_variables: list[str]
+    if_text: str
+    else_text: str | None = None
+
+
+@dataclass(frozen=True)
+class LoopBlock:
+    block_id: str
+    table_name: str
+    loop_alias: str
+    used_fields: list[str]
+
+
+@dataclass(frozen=True)
+class TemplateTraceBlocks:
+    conditions: list[ConditionBlock]
+    loops: list[LoopBlock]
 
 
 def extract_template_field_references(template_path: Path) -> list[TemplateFieldReference]:
@@ -48,6 +81,14 @@ def extract_jinja_variables_from_docx(template_path: Path) -> set[str]:
     return {reference.variable_path for reference in extract_template_field_references(template_path)}
 
 
+def extract_template_trace_blocks(template_path: Path) -> TemplateTraceBlocks:
+    text = _read_docx_template_text(template_path)
+    return TemplateTraceBlocks(
+        conditions=_extract_condition_blocks(text),
+        loops=_extract_loop_blocks(text),
+    )
+
+
 def split_var_path(var_path: str) -> tuple[str, str]:
     parts = var_path.split(".")
     if len(parts) < 2 or not parts[0] or not parts[1]:
@@ -62,6 +103,63 @@ def _extract_loop_table_by_variable(tags: list[str]) -> dict[str, str]:
         if match:
             loop_table_by_variable[match.group(1)] = match.group(2)
     return loop_table_by_variable
+
+
+def _extract_condition_blocks(text: str) -> list[ConditionBlock]:
+    blocks: list[ConditionBlock] = []
+    for index, match in enumerate(IF_BLOCK_PATTERN.finditer(text)):
+        expression = match.group(1).strip()
+        blocks.append(
+            ConditionBlock(
+                block_id=f"condition_{index}",
+                expression=expression,
+                used_variables=_extract_variable_paths(expression),
+                if_text=_clean_block_text(match.group(2)),
+                else_text=_clean_block_text(match.group(3)) if match.group(3) is not None else None,
+            )
+        )
+    return blocks
+
+
+def _extract_loop_blocks(text: str) -> list[LoopBlock]:
+    blocks: list[LoopBlock] = []
+    for index, match in enumerate(LOOP_BLOCK_PATTERN.finditer(text)):
+        loop_alias = match.group(1)
+        table_name = match.group(2)
+        body = match.group(3)
+        used_fields = sorted(
+            {
+                f"{table_name}.{field_name}"
+                for root_name, field_name in DOTTED_NAME_PATTERN.findall(body)
+                if root_name == loop_alias
+            }
+        )
+        blocks.append(
+            LoopBlock(
+                block_id=f"loop_{index}",
+                table_name=table_name,
+                loop_alias=loop_alias,
+                used_fields=used_fields,
+            )
+        )
+    return blocks
+
+
+def _extract_variable_paths(text: str) -> list[str]:
+    return sorted(
+        {
+            f"{root_name}.{field_name}"
+            for root_name, field_name in DOTTED_NAME_PATTERN.findall(text)
+            if root_name.lower() not in IGNORED_ROOT_NAMES
+        }
+    )
+
+
+def _clean_block_text(text: str | None) -> str:
+    if not text:
+        return ""
+    without_tags = JINJA_TAG_PATTERN.sub("", text)
+    return re.sub(r"\s+", " ", without_tags).strip()
 
 
 def _read_docx_template_text(template_path: Path) -> str:

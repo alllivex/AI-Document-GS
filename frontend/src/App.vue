@@ -29,15 +29,25 @@ onErrorCaptured((error) => {
 
 <style scoped>
 .app-shell {
+  --app-header-height: 60px;
+  --document-nav-height: 73px;
+  --trace-sticky-top: calc(var(--app-header-height) + var(--document-nav-height));
+  height: 100vh;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .app-header {
   align-items: center;
+  background: #fff;
   border-bottom: 1px solid #e4e7ed;
   display: flex;
   gap: 24px;
+  height: var(--app-header-height);
   padding: 0 24px;
+  position: relative;
+  flex: 0 0 var(--app-header-height);
+  z-index: 30;
 }
 
 .brand {
@@ -52,6 +62,9 @@ onErrorCaptured((error) => {
 }
 
 .app-main {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
   padding: 0;
 }
 </style>

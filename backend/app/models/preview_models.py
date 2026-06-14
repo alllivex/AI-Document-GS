@@ -17,6 +17,7 @@ class PreviewRunStyle(ContractModel):
 class PreviewRun(ContractModel):
     text: str
     trace_id: str | None = None
+    trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     ai_block_id: str | None = None
     style: PreviewRunStyle | None = None
 
@@ -24,6 +25,7 @@ class PreviewRun(ContractModel):
 class PreviewTableCell(ContractModel):
     text: str
     trace_id: str | None = None
+    trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     ai_block_id: str | None = None
 
 
@@ -37,12 +39,16 @@ class PreviewHeadingBlock(ContractModel):
 class PreviewParagraphBlock(ContractModel):
     type: Literal["paragraph"] = "paragraph"
     block_id: str
+    block_trace_id: str | None = None
+    block_trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     runs: list[PreviewRun]
 
 
 class PreviewTableBlock(ContractModel):
     type: Literal["table"] = "table"
     block_id: str
+    block_trace_id: str | None = None
+    block_trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     headers: list[PreviewTableCell]
     rows: list[list[PreviewTableCell]]
 

@@ -9,6 +9,42 @@ import pandas as pd
 from app.models.enums import DataType
 
 
+class TraceValue:
+    def __init__(self, raw_value: Any, display_value: str, trace_id: str = "") -> None:
+        self.raw_value = raw_value
+        self.display_value = display_value
+        self.trace_id = trace_id
+
+    def __str__(self) -> str:
+        return self.display_value
+
+    def __repr__(self) -> str:
+        return self.display_value
+
+    def __lt__(self, other: Any) -> bool:
+        return self.raw_value < unwrap_raw_value(other)
+
+    def __le__(self, other: Any) -> bool:
+        return self.raw_value <= unwrap_raw_value(other)
+
+    def __gt__(self, other: Any) -> bool:
+        return self.raw_value > unwrap_raw_value(other)
+
+    def __ge__(self, other: Any) -> bool:
+        return self.raw_value >= unwrap_raw_value(other)
+
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, str) and other == self.display_value:
+            return True
+        return self.raw_value == unwrap_raw_value(other)
+
+
+def unwrap_raw_value(value: Any) -> Any:
+    if isinstance(value, TraceValue):
+        return value.raw_value
+    return value
+
+
 def format_display_value(value: Any, field_schema: Any | None = None) -> str:
     if is_missing_value(value):
         return ""
