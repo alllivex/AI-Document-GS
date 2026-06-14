@@ -1,0 +1,25 @@
+# ============================================
+# AI智能文档生成系统 — 核心依赖
+# Python 3.12
+# 安装方式: pip install -r requirements.txt
+# ============================================
+
+# ---- 模板引擎 ----
+docxtpl>=0.16.0         # Word模板渲染（变量/条件/循环）
+python-docx>=1.2.0      # Word文档读写与解析
+jinja2>=3.1.0           # 模板引擎（prompt渲染）
+
+# ---- XML操作 ----
+lxml>=5.0.0             # Word XML精确操作
+
+# ---- 数据加载 ----
+pandas>=2.2.0           # Excel数据加载与处理
+openpyxl>=3.1.0         # .xlsx文件读写引擎
+
+# ---- AI模型 ----
+openai>=1.0.0           # DeepSeek API调用（OpenAI兼容）
+tenacity>=8.0.0         # AI调用重试（指数退避）
+
+# ---- Web后端 ----
+fastapi>=0.100.0        # REST API后端框架
+uvicorn[standard]>=0.20.0  # ASGI服务器

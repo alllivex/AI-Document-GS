@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_ee803b60-1c72-55f2-bfb7-bcade4a46add",
+  "task_id": "task_20260614_061348_92a22c",
+  "title": "普惠支行报告_B支行.docx",
+  "output_file": "普惠支行报告_B支行.docx",
+  "primary_key_value": "B支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_cf0ffd8fabf0449284e7b6a40077752e",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c20a6aefd10344d182cdbb6a6f9196b2",
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "B支行",
+          "trace_id": "trace_1b3de154-5d6e-5ecd-9a5d-6432c54bb605",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_5def27c8-3870-5c8c-9ce1-e1f06f4c64b6",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_98fab99c63684362ae6271037d732495",
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "980",
+          "trace_id": "trace_2c0d3d49-b20a-53b9-a741-2facda52be14",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1200",
+          "trace_id": "trace_c714ef6b-8dae-533c-a86f-53ce0d2b5fbb",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3d7ff8c5bafb4a96a42cb78950330b90",
+      "runs": [
+        {
+          "text": "清偿能力判断：无法清偿。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_79f4aa91fd894a42845779cfe2819332",
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_2d9b1a48023c46578c81b4620f3e0592",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": []
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_233458a339df41d5a4eaee79296ea689",
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_5d1458cfc3254d2c9cfb2fc1cabcee78",
+      "runs": [
+        {
+          "text": "基于不良环比",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "-0.03",
+          "trace_id": "trace_934bc985-521b-5420-918f-26c2b06ac860",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "、同比",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.1",
+          "trace_id": "trace_59358bfa-bf6b-5515-8fdd-0ead2cede8d4",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，请撰写风险分析与建议。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T06:17:10.516383Z"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "puhui_daikou_buliang",
+  "display_name": "普惠贷后不良知识库",
+  "description": "普惠金融贷后不良贷款认定、处置、风险缓释及政策案例知识库",
+  "category": "banking_risk",
+  "version": "1.0",
+  "created_date": "2024-12-19",
+  "last_updated": "2024-12-19",
+  "author": "普惠金融风险管理部",
+  "documents": [
+    "不良贷款认定标准.docx",
+    "不良贷款处置方式.docx",
+    "风险缓释措施.docx",
+    "普惠金融政策案例.docx"
+  ],
+  "keywords": [
+    "不良贷款",
+    "风险分类",
+    "贷款重组",
+    "风险缓释",
+    "普惠金融",
+    "贷后管理",
+    "风险处置",
+    "小微企业"
+  ]
+}

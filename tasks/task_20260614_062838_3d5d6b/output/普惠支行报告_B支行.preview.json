@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_4f63f18b-8fcf-5abf-b6a2-6f90012f9d51",
+  "task_id": "task_20260614_062838_3d5d6b",
+  "title": "普惠支行报告_B支行.docx",
+  "output_file": "普惠支行报告_B支行.docx",
+  "primary_key_value": "B支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_91d27793df754ae89d8fb495c4701509",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7876bfa8198a4debab77dda9bf41c460",
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "B支行",
+          "trace_id": "trace_71809e02-918b-5d13-9184-3b99bdd952f7",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_a88fb7cf-52fc-54b9-a7d2-eeab1b29686a",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c307a370954c4d6985fed48452379919",
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "980",
+          "trace_id": "trace_2cd5d944-376a-5ad5-a15c-b4df71b150af",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1200",
+          "trace_id": "trace_8c1470ed-53ff-53ce-90e8-057f48558afb",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d8bc4890562c4415a7e9bbee8fb49bf3",
+      "runs": [
+        {
+          "text": "清偿能力判断：无法清偿。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2ece360b3ce84bf691d72bf2f533f2bd",
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_f93f1e37fa4b425eb12a7dea51ba7b70",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": []
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8cdf943469fd47558d1a5db43d4aed56",
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a8a0af6b0da54765bdd3dacc237e89da",
+      "runs": [
+        {
+          "text": "根据知识库 `puhui_daikou_buliang` 中的相关定义与标准，结合该支行不良额环比下降3%、同比上升10%的数据，现对其风险状况分析及针对性建议如下：\n\n---\n\n### 一、风险状况分析\n\n1. **环比改善，短期风险可控**  \n   不良额环比下降3%，表明近期（如本月较上月）该支行在不良资产清收、核销或风险化解方面取得一定成效，短期风险暴露有所收敛，资产质量边际改善。\n\n2. **同比上升，长期压力犹存**  \n   不良额同比上升10%，说明与去年同期相比，不良资产规模仍在扩大。这可能反映出：\n   - 存量风险尚未完全出清；\n   - 新增不良贷款生成速度加快；\n   - 宏观经济或区域信用环境对部分客户还款能力造成持续影响。\n\n3. **综合判断：风险处于“短期改善、长期承压”阶段**  \n   该支行当前风险状况属于“可控但需警惕”区间。环比数据虽好，但同比上升幅度较大，若趋势延续，可能侵蚀拨备、影响利润，并触发监管关注。\n\n---\n\n### 二、针对性建议\n\n#### 1. 强化存量不良清收与核销\n- **加大清收力度**：对逾期90天以上贷款逐户制定清收方案，重点跟进大额、有抵押或担保的客户。\n- **加快核销节奏**：对确无回收可能的不良贷款，按政策及时核销，降低不良率分母压力。\n\n#### 2. 严控新增不良生成\n- **加强贷前审查**：对新增授信客户，重点核查其经营现金流、行业景气度及历史信用记录。\n- **优化贷后管理**：对存量正常类贷款中风险信号（如欠息、账户异常）客户，提前介入，采取压缩授信、追加担保等措施。\n\n#### 3. 实施差异化风险化解策略\n- **分类施策**：对暂时性困难但经营前景尚可的客户，通过展期、重组等方式缓释风险；对恶意逃废债客户，依法诉讼追偿。\n- **联动地方政府**：对涉及区域特色产业或政府项目的风险贷款，争取政策支持或风险补偿。\n\n#### 4. 完善风险监测与预警机制\n- **建立环比、同比双维度监控**：将不良额环比、同比变化纳入支行月度风险例会必报指标，设定预警阈值（如同比增幅超5%即启动专项分析）。\n- **开展压力测试**：模拟不良额同比持续上升情景，评估对拨备覆盖率、资本充足率的影响，提前储备应对措施。\n\n#### 5. 提升全员风险意识与考核导向\n- **调整考核权重**：将不良额同比增速纳入客户经理及支行负责人绩效考核，强化“控新降旧”导向。\n- **开展专项培训**：针对当前风险高发行业（如批发零售、建筑等），组织风险识别与处置案例培训。\n\n---\n\n### 三、总结\n\n该支行不良额环比下降是积极信号，但同比上升10%需引起高度重视。建议短期内以“控增量、清存量”为核心，中长期完善风险治理机制，确保资产质量稳步向好。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T06:29:34.060600Z"
+}

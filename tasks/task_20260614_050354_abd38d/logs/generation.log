@@ -1,0 +1,20 @@
+2026-06-14T05:04:22.272894+00:00 [INFO] start  Generation started.
+2026-06-14T05:04:22.377028+00:00 [ERROR] document doc_b08ef73c-a571-5506-8640-2eda2c047442 Document generation failed for primary key: A支行
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 257, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: Failed to render docx template 'F:\资料\AI\AI-Document-GS\templates\template_1.docx': 'list object' has no attribute 'house_eval_amount'
+
+2026-06-14T05:04:22.403252+00:00 [ERROR] document doc_66cd94bc-b0e5-511a-9030-35e1eb1e44a3 Document generation failed for primary key: B支行
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 257, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: Failed to render docx template 'F:\资料\AI\AI-Document-GS\templates\template_1.docx': 'list object' has no attribute 'house_eval_amount'
+
+2026-06-14T05:04:22.421476+00:00 [INFO] complete  Generation finished with status: failed.

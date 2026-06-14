@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+pandas
+openpyxl
+docxtpl
+python-docx
+lxml
+Jinja2
+openai
+tenacity
+python-multipart
+pytest

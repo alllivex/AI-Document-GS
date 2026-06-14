@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260614_062838_3d5d6b",
+  "task_name": "普惠支行报告_2026/6/14 14:28:37",
+  "template_id": 1,
+  "template_name": "普惠支行报告",
+  "template_file": "template_1.docx",
+  "ai_enabled": true,
+  "status": "completed",
+  "main_table": "branch_main",
+  "main_table_cn": "支行主表",
+  "primary_key_field": "branch_name",
+  "required_tables": [
+    {
+      "table_name": "branch_main",
+      "table_name_cn": "支行主表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "loan_summary",
+      "table_name_cn": "贷款汇总表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "products",
+      "table_name_cn": "产品明细表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "branch_main",
+      "original_filename": "branch_main.xlsx",
+      "stored_filename": "branch_main.xlsx",
+      "path": "tasks/task_20260614_062838_3d5d6b/data/branch_main.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-14T06:28:46.289722Z"
+    },
+    {
+      "table_name": "loan_summary",
+      "original_filename": "loan_summary.xlsx",
+      "stored_filename": "loan_summary.xlsx",
+      "path": "tasks/task_20260614_062838_3d5d6b/data/loan_summary.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-14T06:28:59.333845Z"
+    },
+    {
+      "table_name": "products",
+      "original_filename": "products.xlsx",
+      "stored_filename": "products.xlsx",
+      "path": "tasks/task_20260614_062838_3d5d6b/data/products.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-14T06:29:03.623309Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 2,
+    "success_count": 2,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": [
+      "doc_b9e4bd46-2ea9-517a-8673-9d80f0e16479",
+      "doc_4f63f18b-8fcf-5abf-b6a2-6f90012f9d51"
+    ]
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260614_062838_3d5d6b",
+    "data_dir": "tasks/task_20260614_062838_3d5d6b/data",
+    "output_dir": "tasks/task_20260614_062838_3d5d6b/output",
+    "validation_dir": "tasks/task_20260614_062838_3d5d6b/validation",
+    "logs_dir": "tasks/task_20260614_062838_3d5d6b/logs"
+  },
+  "created_at": "2026-06-14T06:28:38.364599Z",
+  "updated_at": "2026-06-14T06:29:34.069605Z",
+  "started_at": null,
+  "completed_at": "2026-06-14T06:29:34.069605Z"
+}

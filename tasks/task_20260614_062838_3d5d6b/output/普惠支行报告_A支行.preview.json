@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_b9e4bd46-2ea9-517a-8673-9d80f0e16479",
+  "task_id": "task_20260614_062838_3d5d6b",
+  "title": "普惠支行报告_A支行.docx",
+  "output_file": "普惠支行报告_A支行.docx",
+  "primary_key_value": "A支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_cdae9c5c98db40ef882295329bfc7073",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_681ae740b3d345ba8afb1ffdab100970",
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "A支行",
+          "trace_id": "trace_941afa0f-f4db-5f1d-9825-0de47249915d",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_ecf63c38-24b2-5a6c-a575-ace244e50a91",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_dc233a93857b49c4afd2e36a5abba647",
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1250",
+          "trace_id": "trace_d91253da-8b08-5690-bfa3-05a444f3094b",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "900",
+          "trace_id": "trace_4a3e28c2-2a7c-5f91-b9ff-e21f9a98d482",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6c1c76b41a624bc79fb87d54f3ca2f1c",
+      "runs": [
+        {
+          "text": "清偿能力判断：可清偿。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1b86a654eb0e48c998212bc443d211ba",
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_67fcc52b62f44cbfb0e32cd4ee933d7e",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": []
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_aee0c9861baa48c0a5ff18cfc71a5293",
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_52f7d24a2cad4cbf93ee8ee4ed66f854",
+      "runs": [
+        {
+          "text": "根据提供的知识库（普惠贷款不良相关）及不良额环比增长",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.12",
+          "trace_id": "trace_9688de13-7a5c-5c50-a49f-380f2b0ce2f1",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "、同比增长",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.35",
+          "trace_id": "trace_765d04b1-1e6f-5d70-9127-a13e1722052e",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的数据，对该支行风险状况分析及建议如下：\n\n---\n\n### 一、风险状况分析\n\n1. **不良额上升趋势明显**  \n   - 不良额环比增长12%（0.12），同比大幅增长35%（0.35），表明该支行普惠贷款资产质量在短期内显著恶化，且恶化速度在加快。\n   - 同比增幅远高于环比，说明风险并非短期波动，而是存在持续积累或结构性隐患。\n\n2. **风险暴露可能滞后**  \n   - 普惠贷款客户群体抗风险能力相对较弱，经济下行或行业波动时，风险暴露往往滞后于宏观指标变化。当前数据可能反映前期风险正在集中释放。\n\n3. **潜在风险点**  \n   - 若知识库中提及“行业集中度”“客户资质下沉”“贷后管理薄弱”等特征，则需重点关注相关领域。\n   - 环比与同比双升，可能涉及：部分客户经营恶化、担保代偿不足、或前期风险缓释措施失效。\n\n---\n\n### 二、针对性建议\n\n#### （一）立即行动：遏制不良上升势头\n1. **逐户排查，分类施策**  \n   - 对存量不良及关注类贷款进行逐户分析，区分“临时性困难”与“实质性恶化”。  \n   - 对短期经营困难但还款意愿良好的客户，通过展期、调整还款计划等方式缓释风险；对恶意逃废债客户，启动法律清收。\n\n2. **强化催收与核销**  \n   - 加大催收力度，尤其是对逾期30-90天贷款，防止向不良迁移。  \n   - 对确认无法收回的贷款，加快核销流程，释放风险资本。\n\n#### （二）中期调整：优化风控与业务结构\n1. **收紧新增授信标准**  \n   - 暂停或审慎介入高风险行业、信用评分偏低客户，提高首付比例或追加担保措施。  \n   - 对存量客户实施“动态额度管理”，根据经营流水、纳税数据等实时调整授信。\n\n2. **加强贷后管理**  \n   - 增加现场检查频率，重点关注资金流向、经营场所、担保物状态。  \n   - 建立风险预警机制，对触发预警信号（如纳税下降、水电费异常）的客户提前介入。\n\n3. **优化行业与客户结构**  \n   - 降低对单一行业或区域客户的依赖，分散风险。  \n   - 优先支持有稳定现金流、抵押物充足、信用记录良好的小微企业主。\n\n#### （三）长期建设：完善风险文化与管理体系\n1. **提升员工风险识别能力**  \n   - 开展普惠贷款风险案例培训，强化客户经理对“隐形负债”“关联交易”等风险的识别能力。\n\n2. **引入外部数据与科技手段**  \n   - 对接税务、工商、征信等外部数据，利用大数据模型辅助审批与预警。  \n   - 探索“线上+线下”结合的风控模式，提高效率与准确性。\n\n3. **建立风险复盘机制**  \n   - 每季度对不良成因进行复盘，总结共性特征（如行业、区域、客户画像），动态调整授信政策。\n\n---\n\n### 三、总结\n\n该支行当前面临不良额“环比加速、同比恶化”的双重压力，需立即采取“止血”措施，同时从中长期优化风控体系。建议在3个月内实现不良率环比下降，6个月内同比增幅收窄，逐步恢复资产质量健康水平。",
+          "trace_id": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T06:29:22.215115Z"
+}

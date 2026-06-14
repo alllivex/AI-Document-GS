@@ -1,0 +1,43 @@
+2026-06-14T06:15:57.878023+00:00 [INFO] start  Generation started.
+2026-06-14T06:16:34.705418+00:00 [INFO] document doc_4a0854c1-790c-5a9a-af7d-b0b4ebdd69e4 Document generated successfully.
+2026-06-14T06:17:10.520416+00:00 [INFO] document doc_ee803b60-1c72-55f2-bfb7-bcade4a46add Document generated successfully.
+2026-06-14T06:17:10.533323+00:00 [INFO] complete  Generation finished with status: completed.
+2026-06-14T06:20:01.358363+00:00 [INFO] start  Generation started.
+2026-06-14T06:20:12.864684+00:00 [ERROR] document doc_4a0854c1-790c-5a9a-af7d-b0b4ebdd69e4 Document generation failed for primary key: A支行
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 304, in _generate_one_document
+    return self.document_repository.create(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\db\repositories\document_repository.py", line 14, in create
+    self.connection.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: documents.task_id, documents.primary_key_value
+
+2026-06-14T06:20:12.876569+00:00 [ERROR] generation  Generation failed before document loop.
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 304, in _generate_one_document
+    return self.document_repository.create(record)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\db\repositories\document_repository.py", line 14, in create
+    self.connection.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: documents.task_id, documents.primary_key_value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 143, in generate
+    result = self._generate_bundles(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 213, in _generate_bundles
+    self._create_failed_document_record(task_id, requirements, bundle)
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 357, in _create_failed_document_record
+    self.document_repository.create(record)
+  File "F:\资料\AI\AI-Document-GS\backend\app\db\repositories\document_repository.py", line 14, in create
+    self.connection.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: documents.task_id, documents.primary_key_value
+

@@ -1,0 +1,51 @@
+export type TableRole = 'main' | 'aux'
+export type RelationType = 'main' | 'one_to_one' | 'one_to_many'
+export type DataType = 'string' | 'number' | 'integer' | 'date' | 'datetime' | 'percent' | 'boolean' | 'amount'
+
+export interface FieldDefinition {
+  table_name: string
+  table_name_cn: string
+  field_name: string
+  field_name_cn: string
+  data_type: DataType
+  is_primary_key: boolean
+  required: boolean
+  display_format: string
+  description: string
+  created_at?: string | null
+  updated_at?: string | null
+}
+
+export interface RequiredTable {
+  table_name: string
+  table_name_cn: string
+  role: TableRole
+  relation_type: RelationType
+  main_join_key: string
+  table_join_key: string
+  required: boolean
+}
+
+export interface TemplateInfo {
+  template_id: number
+  template_name: string
+  template_file: string
+  template_path: string
+  main_table: string
+  output_name_pattern: string
+  ai_enabled_default: boolean
+  is_active: boolean
+  created_at: string
+  updated_at: string
+}
+
+export interface TemplateRequirements {
+  template_id: number
+  template_name: string
+  template_file: string
+  template_path: string
+  main_table: string
+  primary_key_field: string
+  required_tables: RequiredTable[]
+  fields: FieldDefinition[]
+}
