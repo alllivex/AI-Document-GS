@@ -311,6 +311,8 @@ def _build_ai_input_variables(
         trace_item = trace_item_by_var_path.get(var_path)
         input_variables.append(
             AIInputVariable(
+                original_var_path=trace_item.original_var_path if trace_item else var_path,
+                canonical_var_path=trace_item.canonical_var_path if trace_item else var_path,
                 var_path=var_path,
                 table_name=table_name,
                 table_name_cn=trace_item.table_name_cn if trace_item else "",

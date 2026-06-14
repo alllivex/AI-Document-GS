@@ -5,6 +5,7 @@ import uvicorn
 
 from app.api.documents import router as documents_router
 from app.api.health import router as health_router
+from app.api.settings import router as settings_router
 from app.api.tasks import router as tasks_router
 from app.api.templates import router as templates_router
 from app.api.trace import router as trace_router
@@ -25,6 +26,7 @@ def create_app() -> FastAPI:
     app = FastAPI(title="AI Document Generation System", version="0.1.0", lifespan=lifespan)
     register_exception_handlers(app)
     app.include_router(health_router)
+    app.include_router(settings_router)
     app.include_router(templates_router)
     app.include_router(tasks_router)
     app.include_router(documents_router)

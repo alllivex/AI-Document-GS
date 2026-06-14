@@ -134,6 +134,14 @@ def write_template(settings: AppSettings) -> None:
     document.save(settings.templates_dir / "due_diligence.docx")
 
 
+def write_chinese_template(settings: AppSettings) -> None:
+    settings.templates_dir.mkdir(parents=True, exist_ok=True)
+    document = Document()
+    document.add_paragraph("客户：{{ 客户信息表.客户名称 }}")
+    document.add_paragraph("余额：{{ 贷款汇总表.贷款余额 }}")
+    document.save(settings.templates_dir / "due_diligence.docx")
+
+
 def write_excel_data(settings: AppSettings, task_id: str = "task_001") -> None:
     data_dir = settings.tasks_dir / task_id / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
@@ -199,6 +207,54 @@ def test_generate_task_creates_docx_trace_preview_for_each_main_row(tmp_path) ->
     assert {row["status"] for row in documents} == {"success"}
     task = connection.execute("SELECT status, total_rows, success_count, failed_count FROM tasks WHERE task_id = 'task_001'").fetchone()
     assert dict(task) == {"status": "completed", "total_rows": 3, "success_count": 3, "failed_count": 0}
+
+
+def test_generate_task_renders_chinese_template_variables_and_keeps_original_trace_path(tmp_path) -> None:
+    connection, settings = setup_project(tmp_path)
+    now = NOW.isoformat()
+    connection.execute("UPDATE template_tables SET table_name_cn = '客户信息表' WHERE table_name = 'customer_info'")
+    connection.execute("UPDATE template_tables SET table_name_cn = '贷款汇总表' WHERE table_name = 'loan_summary'")
+    connection.execute(
+        "UPDATE fields SET table_name_cn = '客户信息表', field_name_cn = '客户编号', updated_at = ? WHERE table_name = 'customer_info' AND field_name = 'customer_id'",
+        (now,),
+    )
+    connection.execute(
+        "UPDATE fields SET table_name_cn = '客户信息表', field_name_cn = '客户名称', updated_at = ? WHERE table_name = 'customer_info' AND field_name = 'customer_name'",
+        (now,),
+    )
+    connection.execute(
+        "UPDATE fields SET table_name_cn = '贷款汇总表', field_name_cn = '客户编号', updated_at = ? WHERE table_name = 'loan_summary' AND field_name = 'customer_id'",
+        (now,),
+    )
+    connection.execute(
+        "UPDATE fields SET table_name_cn = '贷款汇总表', field_name_cn = '贷款余额', updated_at = ? WHERE table_name = 'loan_summary' AND field_name = 'loan_balance'",
+        (now,),
+    )
+    connection.commit()
+    write_chinese_template(settings)
+
+    result = generate_task(
+        GenerateTaskInput(task_id="task_001", ai_enabled=False),
+        connection=connection,
+        settings=settings,
+        dependencies=GenerationDependencies(validate_task=passed_validation_report),
+    )
+
+    assert result.status == TaskStatus.COMPLETED
+    assert result.success_count == 3
+    output_dir = settings.tasks_dir / "task_001" / "output"
+    first_docx = sorted(output_dir.glob("*.docx"))[0]
+    paragraphs = [paragraph.text for paragraph in Document(first_docx).paragraphs]
+    assert "客户：Acme" in paragraphs
+
+    first_trace = json.loads(sorted(output_dir.glob("*.trace.json"))[0].read_text(encoding="utf-8"))
+    customer_name_trace = next(
+        item
+        for item in first_trace["trace_items"]
+        if item["canonical_var_path"] == "customer_info.customer_name"
+    )
+    assert customer_name_trace["var_path"] == "customer_info.customer_name"
+    assert customer_name_trace["original_var_path"] == "客户信息表.客户名称"
 
 
 def test_single_document_failure_does_not_stop_other_rows(tmp_path) -> None:

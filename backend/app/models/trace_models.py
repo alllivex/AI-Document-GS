@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Annotated, Literal
 
-from pydantic import Field
+from pydantic import Field, model_validator
 
 from app.models.common import ContractModel
 from app.models.enums import AIBlockStatus, DataType, RelationType
@@ -16,6 +16,8 @@ HighlightReason = Literal["clicked", "used_in_condition", "used_in_loop", "none"
 
 class TraceItem(ContractModel):
     trace_id: str
+    original_var_path: str | None = None
+    canonical_var_path: str = ""
     var_path: str
     table_name: str
     table_name_cn: str = ""
@@ -36,6 +38,14 @@ class TraceItem(ContractModel):
     occurrence_index: int = Field(ge=0)
     source_relation_type: RelationType
     created_at: datetime
+
+    @model_validator(mode="after")
+    def fill_variable_paths(self) -> "TraceItem":
+        if not self.canonical_var_path:
+            self.canonical_var_path = self.var_path
+        if self.original_var_path is None:
+            self.original_var_path = self.var_path
+        return self
 
 
 class SourceRecordField(ContractModel):
@@ -69,12 +79,22 @@ class BaseTraceDetail(ContractModel):
 
 class FieldTraceDetail(BaseTraceDetail):
     trace_kind: Literal["field"] = "field"
+    original_var_path: str | None = None
+    canonical_var_path: str = ""
     var_path: str
     table_name: str
     table_name_cn: str = ""
     field_name: str
     field_name_cn: str = ""
     source_record: SourceRecordView
+
+    @model_validator(mode="after")
+    def fill_variable_paths(self) -> "FieldTraceDetail":
+        if not self.canonical_var_path:
+            self.canonical_var_path = self.var_path
+        if self.original_var_path is None:
+            self.original_var_path = self.var_path
+        return self
 
 
 class ConditionTraceDetail(BaseTraceDetail):
@@ -100,6 +120,8 @@ class LoopTraceDetail(BaseTraceDetail):
 
 
 class AIInputVariable(ContractModel):
+    original_var_path: str | None = None
+    canonical_var_path: str = ""
     var_path: str
     table_name: str
     table_name_cn: str = ""
@@ -111,6 +133,14 @@ class AIInputVariable(ContractModel):
     source_file: str = ""
     excel_row_number: int | None = None
     excel_column_letter: str | None = None
+
+    @model_validator(mode="after")
+    def fill_variable_paths(self) -> "AIInputVariable":
+        if not self.canonical_var_path:
+            self.canonical_var_path = self.var_path
+        if self.original_var_path is None:
+            self.original_var_path = self.var_path
+        return self
 
 
 class KnowledgeReference(ContractModel):

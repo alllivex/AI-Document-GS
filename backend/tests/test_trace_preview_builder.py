@@ -177,6 +177,8 @@ def test_preview_clickable_text_references_trace_json_items(tmp_path) -> None:
     assert customer_trace["source_file"] == "customer_info.xlsx"
     assert customer_trace["table_name"] == "customer_info"
     assert customer_trace["field_name"] == "customer_name"
+    assert customer_trace["original_var_path"] == "customer_info.customer_name"
+    assert customer_trace["canonical_var_path"] == "customer_info.customer_name"
     assert customer_trace["excel_row_number"] == 2
     assert customer_trace["raw_value"] == "Acme"
     assert customer_trace["display_value"] == "Acme"

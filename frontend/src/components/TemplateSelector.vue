@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { getTemplateRequirements, listTemplates } from '../api/templates'
-import type { TemplateInfo, TemplateRequirements } from '../types/template'
+import type { TemplateListItem, TemplateRequirements } from '../types/template'
 
 const props = defineProps<{
   modelValue: number | null
@@ -46,7 +46,7 @@ const emit = defineEmits<{
   'requirements-loaded': [value: TemplateRequirements | null]
 }>()
 
-const templates = ref<TemplateInfo[]>([])
+const templates = ref<TemplateListItem[]>([])
 const requirements = ref<TemplateRequirements | null>(null)
 const loading = ref(false)
 const errorMessage = ref('')

@@ -8,6 +8,7 @@ from pydantic import BaseModel
 
 from app.core.config import AppSettings, get_settings
 from app.engine.ai_client import DeepSeekClient
+from app.services.ai_config_service import resolve_ai_config
 
 
 class AIGenerateInput(BaseModel):
@@ -54,12 +55,12 @@ def generate_ai_text(
         return _failed(input_data, prompt_rendered, started_at, f"Failed to render AI prompt: {exc}")
 
     try:
-        active_client = client or _build_client(settings)
+        active_client, active_model = _build_client_with_model(client, settings, input_data.model)
     except ValueError as exc:
         return _failed(input_data, prompt_rendered, started_at, f"AI unavailable: {exc}")
 
     try:
-        generated_text = active_client.generate(prompt_rendered, model=input_data.model)
+        generated_text = active_client.generate(prompt_rendered, model=active_model)
     except Exception as exc:
         return _failed(input_data, prompt_rendered, started_at, f"AI generation failed: {exc}")
 
@@ -69,21 +70,35 @@ def generate_ai_text(
         prompt_template=input_data.prompt_template,
         prompt_rendered=prompt_rendered,
         generated_text=generated_text,
-        model=input_data.model,
+        model=active_model or input_data.model,
         error_message="",
         started_at=started_at,
         completed_at=datetime.now(timezone.utc),
     )
 
 
-def _build_client(settings: AppSettings | None) -> DeepSeekClient:
-    active_settings = settings or get_settings()
-    if not active_settings.deepseek_api_key:
+def _build_client_with_model(
+    client: AITextClient | None,
+    settings: AppSettings | None,
+    fallback_model: str,
+) -> tuple[AITextClient, str | None]:
+    if client is not None:
+        return client, fallback_model
+
+    config = resolve_ai_config(settings or get_settings())
+    if not config.api_key:
         raise ValueError("DEEPSEEK_API_KEY is not configured")
-    return DeepSeekClient(
-        api_key=active_settings.deepseek_api_key,
-        base_url=active_settings.deepseek_base_url,
-        model=active_settings.deepseek_model,
+    if not config.is_active:
+        raise ValueError("AI config is not active")
+    return (
+        DeepSeekClient(
+            api_key=config.api_key,
+            base_url=config.base_url,
+            model=config.model_name,
+            temperature=config.temperature,
+            timeout_seconds=config.timeout_seconds,
+        ),
+        config.model_name,
     )
 
 

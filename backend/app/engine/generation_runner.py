@@ -21,6 +21,7 @@ from app.engine.context_builder import ReportContextBundle, build_report_context
 from app.engine.data_loader import LoadedTable, load_data_tables
 from app.engine.docx_finalizer import finalize_docx
 from app.engine.docx_renderer import RenderDocxResult, render_docx_template
+from app.engine.template_canonicalizer import canonicalize_docx_template
 from app.engine.template_requirement_service import TemplateRequirementService
 from app.engine.trace_builder import BuildTracePreviewInput, BuildTracePreviewResult, build_trace_and_preview
 from app.engine.validator import validate_task
@@ -139,11 +140,25 @@ class GenerationRunner:
                     error_message=error_message,
                 )
 
-            bundles = self.dependencies.build_report_contexts(requirements, loaded_tables, task_id=task.task_id)
+            canonical_template = canonicalize_docx_template(
+                template_path,
+                workspace.temp_dir / f"{task.task_id}_{requirements.template_id}.canonical.docx",
+                requirements.fields,
+            )
+            if canonical_template.missing_variables:
+                missing_paths = ", ".join(item.original_var_path for item in canonical_template.missing_variables)
+                raise ValueError(f"template contains unknown variables: {missing_paths}")
+
+            bundles = self.dependencies.build_report_contexts(
+                requirements,
+                loaded_tables,
+                task_id=task.task_id,
+                original_var_paths_by_canonical=canonical_template.original_var_paths_by_canonical,
+            )
             result = self._generate_bundles(
                 task_id=task.task_id,
                 requirements=requirements,
-                template_path=template_path,
+                template_path=canonical_template.output_path,
                 bundles=bundles,
                 ai_enabled=bool(input_data.ai_enabled and task.ai_enabled),
             )

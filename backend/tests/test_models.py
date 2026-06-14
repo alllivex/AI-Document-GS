@@ -52,6 +52,8 @@ def test_trace_item_validates_contract_fields() -> None:
     assert item.value_type == "string"
     assert item.source_relation_type == "main"
     assert "data." not in item.var_path
+    assert item.original_var_path == "customer_info.customer_name"
+    assert item.canonical_var_path == "customer_info.customer_name"
 
 
 def test_invalid_enum_value_is_rejected() -> None:

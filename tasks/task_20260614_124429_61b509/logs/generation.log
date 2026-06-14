@@ -1,0 +1,29 @@
+2026-06-14T12:44:43.951698+00:00 [INFO] start  Generation started.
+2026-06-14T12:44:44.035804+00:00 [ERROR] document doc_ceafc46c-bb3b-52cb-9481-df4fc78b337a Document generation failed for primary key: 4000920260329001
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 257, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: Failed to render docx template 'F:\资料\AI\AI-Document-GS\templates\证券化内部尽调报告中文模板.docx': '借款人信息表' is undefined
+
+2026-06-14T12:44:44.062879+00:00 [ERROR] document doc_1025006f-95d7-57b6-ae0c-7fadcd8ecfbf Document generation failed for primary key: 4000920260329002
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 257, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: Failed to render docx template 'F:\资料\AI\AI-Document-GS\templates\证券化内部尽调报告中文模板.docx': '借款人信息表' is undefined
+
+2026-06-14T12:44:44.082284+00:00 [ERROR] document doc_210f1ba2-6607-5783-87f7-5f80b4fbfd34 Document generation failed for primary key: 4000920260329003
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 193, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 257, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: Failed to render docx template 'F:\资料\AI\AI-Document-GS\templates\证券化内部尽调报告中文模板.docx': '借款人信息表' is undefined
+
+2026-06-14T12:44:44.099956+00:00 [INFO] complete  Generation finished with status: failed.

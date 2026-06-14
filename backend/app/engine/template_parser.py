@@ -6,11 +6,22 @@ from pathlib import Path
 import re
 import zipfile
 
+from app.engine.template_canonicalizer import (
+    MissingTemplateVariable,
+    TemplateVariableResolver,
+    canonicalize_jinja_text,
+)
+from app.models.template_models import FieldDefinition
+
 JINJA_TAG_PATTERN = re.compile(r"({[{%#].*?[}%]})", re.DOTALL)
-DOTTED_NAME_PATTERN = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\.([A-Za-z_][A-Za-z0-9_]*)\b")
+IDENT_PATTERN = r"[^\W\d]\w*"
+DOTTED_NAME_PATTERN = re.compile(
+    rf"(?<![\w])({IDENT_PATTERN})\s*\.\s*({IDENT_PATTERN})(?![\w])",
+    re.UNICODE,
+)
 FOR_PATTERN = re.compile(
-    r"{%\s*(?:tr\s+)?for\s+([A-Za-z_][A-Za-z0-9_]*)\s+in\s+([A-Za-z_][A-Za-z0-9_]*)",
-    re.DOTALL,
+    rf"{{%\s*(?:tr\s+)?for\s+({IDENT_PATTERN})\s+in\s+({IDENT_PATTERN})",
+    re.DOTALL | re.UNICODE,
 )
 IGNORED_ROOT_NAMES = {"loop", "cycler", "namespace", "super", "true", "false", "none"}
 IF_BLOCK_PATTERN = re.compile(
@@ -18,10 +29,10 @@ IF_BLOCK_PATTERN = re.compile(
     re.DOTALL,
 )
 LOOP_BLOCK_PATTERN = re.compile(
-    r"{%\s*tr\s+for\s+([A-Za-z_][A-Za-z0-9_]*)\s+in\s+([A-Za-z_][A-Za-z0-9_]*)\s*%}"
+    rf"{{%\s*tr\s+for\s+({IDENT_PATTERN})\s+in\s+({IDENT_PATTERN})\s*%}}"
     r"(.*?)"
     r"{%\s*tr\s+endfor\s*%}",
-    re.DOTALL,
+    re.DOTALL | re.UNICODE,
 )
 
 
@@ -30,6 +41,7 @@ class TemplateFieldReference:
     variable_path: str
     table_name: str
     field_name: str
+    original_variable_path: str | None = None
 
 
 @dataclass(frozen=True)
@@ -57,6 +69,10 @@ class TemplateTraceBlocks:
 
 def extract_template_field_references(template_path: Path) -> list[TemplateFieldReference]:
     text = _read_docx_template_text(template_path)
+    return extract_template_field_references_from_text(text)
+
+
+def extract_template_field_references_from_text(text: str) -> list[TemplateFieldReference]:
     tags = JINJA_TAG_PATTERN.findall(text)
     loop_table_by_variable = _extract_loop_table_by_variable(tags)
     references: dict[tuple[str, str], TemplateFieldReference] = {}
@@ -72,9 +88,34 @@ def extract_template_field_references(template_path: Path) -> list[TemplateField
                 variable_path=variable_path,
                 table_name=table_name,
                 field_name=field_name,
+                original_variable_path=variable_path,
             )
 
     return list(references.values())
+
+
+def extract_canonical_template_field_references(
+    template_path: Path,
+    fields: list[FieldDefinition],
+) -> tuple[list[TemplateFieldReference], dict[str, str]]:
+    references, original_by_canonical, _missing = analyze_template_variables(template_path, fields)
+    return references, original_by_canonical
+
+
+def analyze_template_variables(
+    template_path: Path,
+    fields: list[FieldDefinition],
+) -> tuple[list[TemplateFieldReference], dict[str, str], list[MissingTemplateVariable]]:
+    text = _read_docx_template_text(template_path)
+    canonicalized = canonicalize_jinja_text(text, TemplateVariableResolver(fields))
+    references = extract_template_field_references_from_text(canonicalized.text)
+    for reference in references:
+        object.__setattr__(
+            reference,
+            "original_variable_path",
+            canonicalized.original_var_paths_by_canonical.get(reference.variable_path, reference.variable_path),
+        )
+    return references, canonicalized.original_var_paths_by_canonical, canonicalized.missing_variables
 
 
 def extract_jinja_variables_from_docx(template_path: Path) -> set[str]:

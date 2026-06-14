@@ -4,9 +4,10 @@ from pathlib import Path
 
 from pydantic import Field
 
-from app.core.config import AppSettings
+from app.core.config import AppSettings, get_settings
 from app.models.common import ContractModel
 from app.storage.paths import create_task_workspace, get_upload_file_path, validate_safe_segment
+from app.storage.safe_filename import safe_template_filename
 
 
 class SaveUploadInput(ContractModel):
@@ -40,6 +41,24 @@ def save_uploaded_file(
         table_name=safe_table_name,
         original_filename=original_filename,
         stored_filename=f"{safe_table_name}.xlsx",
+        file_path=file_path,
+        file_size=len(file_bytes),
+    )
+
+
+def save_template_file(template_id: int, file_bytes: bytes, settings: AppSettings | None = None) -> StoredFileInfo:
+    current_settings = settings or get_settings()
+    current_settings.templates_dir.mkdir(parents=True, exist_ok=True)
+    stored_filename = safe_template_filename(template_id)
+    file_path = current_settings.templates_dir / stored_filename
+    if file_path.exists():
+        raise FileExistsError(f"template file already exists: {stored_filename}")
+    file_path.write_bytes(file_bytes)
+
+    return StoredFileInfo(
+        table_name="",
+        original_filename=stored_filename,
+        stored_filename=stored_filename,
         file_path=file_path,
         file_size=len(file_bytes),
     )

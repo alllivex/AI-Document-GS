@@ -45,6 +45,40 @@ class TemplateInfo(ContractModel):
     updated_at: datetime
 
 
+class TemplateListItem(ContractModel):
+    template_id: int = Field(ge=1)
+    template_name: str
+    template_file: str
+    template_path: str
+    main_table: str
+    main_table_cn: str = ""
+    aux_table_count: int = Field(ge=0)
+    required_table_count: int = Field(ge=0)
+    is_active: bool = True
+    updated_at: datetime
+
+
+class TemplateTableSummary(ContractModel):
+    table_name: str
+    table_name_cn: str = ""
+    role: TableRole
+    relation_type: RelationType
+    required: bool = True
+    main_join_key: str = ""
+    table_join_key: str = ""
+
+
+class TemplateDetail(ContractModel):
+    template_id: int = Field(ge=1)
+    template_name: str
+    template_file: str
+    template_path: str
+    main_table: TemplateTableSummary
+    aux_tables: list[TemplateTableSummary] = Field(default_factory=list)
+    is_active: bool = True
+    updated_at: datetime
+
+
 class TemplateRequirements(ContractModel):
     template_id: int = Field(ge=1)
     template_name: str

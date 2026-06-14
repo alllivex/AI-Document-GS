@@ -18,6 +18,8 @@ def build_trace_item(
     *,
     doc_id: str,
     var_path: str,
+    original_var_path: str | None = None,
+    canonical_var_path: str | None = None,
     table: LoadedTable,
     field_name: str,
     raw_value: Any,
@@ -32,6 +34,8 @@ def build_trace_item(
     trace_id = _make_trace_id(doc_id, var_path, occurrence_index)
     return TraceItem(
         trace_id=trace_id,
+        original_var_path=original_var_path or var_path,
+        canonical_var_path=canonical_var_path or var_path,
         var_path=var_path,
         table_name=table.table_name,
         table_name_cn=_field_table_name_cn(field_schema),

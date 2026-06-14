@@ -39,6 +39,40 @@ export interface TemplateInfo {
   updated_at: string
 }
 
+export interface TemplateListItem {
+  template_id: number
+  template_name: string
+  template_file: string
+  template_path: string
+  main_table: string
+  main_table_cn: string
+  aux_table_count: number
+  required_table_count: number
+  is_active: boolean
+  updated_at: string
+}
+
+export interface TemplateTableSummary {
+  table_name: string
+  table_name_cn: string
+  role: TableRole
+  relation_type: RelationType
+  required: boolean
+  main_join_key: string
+  table_join_key: string
+}
+
+export interface TemplateDetail {
+  template_id: number
+  template_name: string
+  template_file: string
+  template_path: string
+  main_table: TemplateTableSummary
+  aux_tables: TemplateTableSummary[]
+  is_active: boolean
+  updated_at: string
+}
+
 export interface TemplateRequirements {
   template_id: number
   template_name: string

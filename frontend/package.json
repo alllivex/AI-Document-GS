@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",
+    "test": "node scripts/test-display-name.mjs",
     "build": "vue-tsc --noEmit && node scripts/build.mjs",
     "preview": "vite preview --host 127.0.0.1"
   },

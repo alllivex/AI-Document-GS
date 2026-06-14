@@ -75,6 +75,23 @@ ON fields(table_name);
 CREATE INDEX IF NOT EXISTS idx_fields_primary_key
 ON fields(table_name, is_primary_key);
 
+CREATE TABLE IF NOT EXISTS ai_model_configs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    provider TEXT NOT NULL DEFAULT 'deepseek',
+    model_name TEXT NOT NULL DEFAULT 'deepseek-chat',
+    base_url TEXT NOT NULL DEFAULT 'https://api.deepseek.com/v1',
+    temperature REAL NOT NULL DEFAULT 0.2,
+    timeout_seconds INTEGER NOT NULL DEFAULT 60,
+    api_key_source TEXT NOT NULL DEFAULT 'env'
+        CHECK (api_key_source IN ('env', 'db', 'none')),
+    is_active INTEGER NOT NULL DEFAULT 1,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_ai_model_configs_active
+ON ai_model_configs(is_active);
+
 CREATE TABLE IF NOT EXISTS tasks (
     task_id TEXT PRIMARY KEY,
     task_name TEXT NOT NULL,

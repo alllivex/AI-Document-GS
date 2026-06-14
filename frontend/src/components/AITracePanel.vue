@@ -10,39 +10,49 @@
     </el-descriptions>
 
     <section class="detail-block">
-      <h4>原始模板段落</h4>
-      <pre>{{ trace.original_block_text || '-' }}</pre>
-    </section>
-
-    <section class="detail-block">
-      <h4>原始 Prompt</h4>
-      <pre>{{ trace.prompt_template || '-' }}</pre>
-    </section>
-
-    <section class="detail-block">
-      <h4>渲染后 Prompt</h4>
-      <pre>{{ trace.prompt_rendered || '-' }}</pre>
-    </section>
-
-    <section class="detail-block">
-      <h4>使用的数据字段</h4>
+      <h4>使用数据</h4>
       <el-table :data="trace.input_variables" border size="small">
-        <el-table-column label="字段" min-width="180">
+        <el-table-column label="字段名" min-width="180">
           <template #default="{ row }">
             <button v-if="row.trace_id" class="link-button" type="button" @click="$emit('select-trace', row.trace_id)">
-              {{ displayName(row.field_name_cn, row.var_path) }}
+              {{ getFieldDisplayName(row) }}
             </button>
-            <span v-else>{{ displayName(row.field_name_cn, row.var_path) }}</span>
+            <span v-else>{{ getFieldDisplayName(row) }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="展示值" min-width="100" prop="display_value" />
+        <el-table-column label="数据值" min-width="120" prop="display_value" />
         <el-table-column label="来源" min-width="150">
           <template #default="{ row }">
-            {{ row.source_file || '-' }}<span v-if="row.excel_row_number"> 第 {{ row.excel_row_number }} 行</span>
+            {{ row.source_file || '-' }}<span v-if="row.excel_row_number"> 第{{ row.excel_row_number }}行</span>
           </template>
         </el-table-column>
       </el-table>
     </section>
+
+    <el-collapse>
+      <el-collapse-item title="高级信息" name="advanced">
+        <section class="detail-block">
+          <h4>变量路径</h4>
+          <ul class="path-list">
+            <li v-for="row in trace.input_variables" :key="row.var_path">
+              {{ row.canonical_var_path || row.var_path }}
+            </li>
+          </ul>
+        </section>
+        <section class="detail-block">
+          <h4>原始模板段落</h4>
+          <pre>{{ trace.original_block_text || '-' }}</pre>
+        </section>
+        <section class="detail-block">
+          <h4>原始 Prompt</h4>
+          <pre>{{ trace.prompt_template || '-' }}</pre>
+        </section>
+        <section class="detail-block">
+          <h4>渲染后 Prompt</h4>
+          <pre>{{ trace.prompt_rendered || '-' }}</pre>
+        </section>
+      </el-collapse-item>
+    </el-collapse>
 
     <section class="detail-block">
       <h4>知识库标记</h4>
@@ -66,6 +76,7 @@
 
 <script setup lang="ts">
 import type { AITraceDetail } from '../types/trace'
+import { getFieldDisplayName } from '../utils/displayName'
 
 defineProps<{
   trace: AITraceDetail
@@ -74,13 +85,6 @@ defineProps<{
 defineEmits<{
   'select-trace': [traceId: string]
 }>()
-
-function displayName(cn?: string, name?: string) {
-  if (cn && name) {
-    return `${cn}（${name}）`
-  }
-  return cn || name || '-'
-}
 
 function statusText(status: string) {
   if (status === 'success') {
@@ -114,6 +118,13 @@ function formatTime(value?: string | null) {
 .detail-block h4 {
   font-size: 14px;
   margin: 0;
+}
+
+.path-list {
+  color: #606266;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 18px;
 }
 
 pre {

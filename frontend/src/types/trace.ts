@@ -32,6 +32,8 @@ export interface BaseTraceDetail {
 
 export interface FieldTraceDetail extends BaseTraceDetail {
   trace_kind: 'field'
+  original_var_path?: string | null
+  canonical_var_path: string
   var_path: string
   table_name: string
   table_name_cn: string
@@ -63,6 +65,8 @@ export interface LoopTraceDetail extends BaseTraceDetail {
 }
 
 export interface AIInputVariable {
+  original_var_path?: string | null
+  canonical_var_path?: string | null
   var_path: string
   table_name: string
   table_name_cn: string

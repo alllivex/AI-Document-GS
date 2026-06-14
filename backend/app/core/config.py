@@ -20,6 +20,8 @@ class AppSettings(BaseModel):
     deepseek_api_key: str | None = None
     deepseek_base_url: str = "https://api.deepseek.com/v1"
     deepseek_model: str = "deepseek-chat"
+    deepseek_temperature: float = 0.2
+    deepseek_timeout_seconds: int = 60
 
     @property
     def ai_available(self) -> bool:
@@ -84,6 +86,8 @@ def load_settings(settings_input: SettingsInput | None = None) -> AppSettings:
         deepseek_base_url=env_file.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
         or "https://api.deepseek.com/v1",
         deepseek_model=env_file.get("DEEPSEEK_MODEL", "deepseek-chat") or "deepseek-chat",
+        deepseek_temperature=float(env_file.get("DEEPSEEK_TEMPERATURE", "0.2") or "0.2"),
+        deepseek_timeout_seconds=int(env_file.get("DEEPSEEK_TIMEOUT_SECONDS", "60") or "60"),
     )
 
 

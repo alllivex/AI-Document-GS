@@ -82,6 +82,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { ElMessage } from 'element-plus'
+import { useRoute } from 'vue-router'
 import RequiredTableUploadList from '../components/RequiredTableUploadList.vue'
 import OutputDocumentList from '../components/OutputDocumentList.vue'
 import TemplateSelector from '../components/TemplateSelector.vue'
@@ -96,7 +97,10 @@ import type {
 import type { RequiredTable, TemplateRequirements } from '../types/template'
 import type { ValidateTaskResponse } from '../types/validation'
 
-const selectedTemplateId = ref<number | null>(null)
+const route = useRoute()
+
+const initialTemplateId = Number(route.query.template_id)
+const selectedTemplateId = ref<number | null>(Number.isInteger(initialTemplateId) && initialTemplateId > 0 ? initialTemplateId : null)
 const taskName = ref('')
 const aiEnabled = ref(true)
 const requirements = ref<TemplateRequirements | null>(null)

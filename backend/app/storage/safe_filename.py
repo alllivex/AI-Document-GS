@@ -22,6 +22,10 @@ def safe_table_filename(table_name: str) -> str:
     return f"{sanitize_filename(table_name)}.xlsx"
 
 
+def safe_template_filename(template_id: int) -> str:
+    return f"template_{template_id}.docx"
+
+
 def build_safe_output_filename(template_name: str, primary_key_value: str, suffix: str = ".docx") -> str:
     safe_stem = sanitize_filename(f"{template_name}_{primary_key_value}")
     suffix_value = suffix if suffix.startswith(".") else f".{suffix}"

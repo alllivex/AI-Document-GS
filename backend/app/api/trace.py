@@ -52,6 +52,8 @@ async def get_trace_item(trace_id: str):
                     task_id=trace_file.get("task_id", ""),
                     doc_id=trace_file.get("doc_id", ""),
                     primary_key_value=trace_file.get("primary_key_value", trace_item.pk_value),
+                    original_var_path=trace_item.original_var_path,
+                    canonical_var_path=trace_item.canonical_var_path,
                     var_path=trace_item.var_path,
                     table_name=trace_item.table_name,
                     table_name_cn=trace_item.table_name_cn,

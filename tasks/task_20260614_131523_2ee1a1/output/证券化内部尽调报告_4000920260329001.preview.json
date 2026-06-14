@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_fa94c2a1-2820-59d1-aa89-c0f60e0a7487",
+  "task_id": "task_20260614_131523_2ee1a1",
+  "title": "证券化内部尽调报告_4000920260329001.docx",
+  "output_file": "证券化内部尽调报告_4000920260329001.docx",
+  "primary_key_value": "4000920260329001",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_40b8e049586b4021bb54afdb97a6de98",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、借款人情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8fa1346b5b2a41d7a00310633878c9a0",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（一）总体情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6a55f0d17f314e0c86b65e3d939553e5",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "尹人",
+          "trace_id": "trace_68b5b239-d76e-5902-9789-095173eb9b1d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，性别",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "男",
+          "trace_id": "trace_f742e06b-a93c-5804-b2cb-592a0e21b89d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，身份证号码",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "430723198502060992",
+          "trace_id": "trace_d8c25075-d13a-567c-a729-a3103a4d3d48",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，文化程度",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "本科",
+          "trace_id": "trace_fbf54715-a326-5106-badc-566d7f943683",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，婚姻状况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "离异",
+          "trace_id": "trace_981578e4-3e7a-5829-9fcb-5dbde797b162",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人户籍及居住地址：户籍：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "湖南省韶山市橘子洲头",
+          "trace_id": "trace_d2ff5600-c1b0-5f55-aade-b07da3871cde",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，居住：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广东省深圳市龙岗区吉华街道丽湖花园",
+          "trace_id": "trace_d355f42f-d063-55ab-beef-73ae7f06c565",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "深圳市凤年科技有限公司",
+          "trace_id": "trace_4bf6c3cc-1390-5118-bbcf-c718853f9af1",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人代表及股东。经调查，经营实体",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "深圳市凤年科技有限公司",
+          "trace_id": "trace_4bf6c3cc-1390-5118-bbcf-c718853f9af1",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的注册资本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "100000",
+          "trace_id": "trace_d585a10b-174d-54aa-87cd-41b7b27c35ab",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，目前营业状态为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "无经营",
+          "trace_id": "trace_fa87277d-ab2c-555e-91bc-c8468ba4dd1d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，截至尽职调查日在我行办理",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_f8fb6da2-1c32-5ab4-b3b1-3861f5d36659",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，融资余额",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3200000",
+          "trace_id": "trace_6440bb14-48af-5575-ba83-ac710dcb9b4c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，已为不良贷款。截至基准日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-01-14 00:00:00",
+          "trace_id": "trace_e006c494-8ed3-507d-b3d0-4c2a8a7bf249",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "尹人",
+          "trace_id": "trace_68b5b239-d76e-5902-9789-095173eb9b1d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "在我行有一笔",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_f8fb6da2-1c32-5ab4-b3b1-3861f5d36659",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "贷款，本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_4ee081d8-48e4-5a9d-af47-5c43bef10301",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "20000",
+          "trace_id": "trace_fb1015af-ac68-5595-964b-0c97d4beb8c4",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3020000",
+          "trace_id": "trace_cef75e2d-83f7-50f2-95ab-0c38411153d4",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。截至尽职调查日，借款人在我行融资总额为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_eb643e36-f832-5912-b837-e559a82baa3a",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，其中本笔网贷通贷款本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_9fb6d2e7-e65a-587b-90cd-477cb24223a8",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "20000",
+          "trace_id": "trace_698e0809-8414-51e4-b438-9931218b993b",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3020000",
+          "trace_id": "trace_241683a9-262e-5472-803a-d58ee5c8a279",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-14T13:15:37.551782Z"
+}

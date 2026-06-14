@@ -73,10 +73,36 @@ def requirements() -> TemplateRequirements:
             ),
         ],
         fields=[
-            FieldDefinition(table_name="customer_info", field_name="customer_id", is_primary_key=True, required=True),
-            FieldDefinition(table_name="customer_info", field_name="customer_name", required=True),
-            FieldDefinition(table_name="loan_summary", field_name="customer_id", is_primary_key=True, required=True),
-            FieldDefinition(table_name="loan_summary", field_name="loan_balance", required=True),
+            FieldDefinition(
+                table_name="customer_info",
+                table_name_cn="客户信息表",
+                field_name="customer_id",
+                field_name_cn="客户编号",
+                is_primary_key=True,
+                required=True,
+            ),
+            FieldDefinition(
+                table_name="customer_info",
+                table_name_cn="客户信息表",
+                field_name="customer_name",
+                field_name_cn="客户名称",
+                required=True,
+            ),
+            FieldDefinition(
+                table_name="loan_summary",
+                table_name_cn="贷款汇总表",
+                field_name="customer_id",
+                field_name_cn="客户编号",
+                is_primary_key=True,
+                required=True,
+            ),
+            FieldDefinition(
+                table_name="loan_summary",
+                table_name_cn="贷款汇总表",
+                field_name="loan_balance",
+                field_name_cn="贷款余额",
+                required=True,
+            ),
         ],
     )
 
@@ -204,6 +230,31 @@ def test_validate_task_reports_missing_template_field(tmp_path, monkeypatch) -> 
     missing = next(item for item in report.items if item.code == "missing_field")
     assert missing.table_name == "loan_summary"
     assert missing.field_name == "missing_balance"
+
+
+def test_validate_task_passes_chinese_template_variables(tmp_path, monkeypatch) -> None:
+    settings = reset_settings(tmp_path, monkeypatch)
+    template_path = tmp_path / "templates" / "due_diligence.docx"
+    write_template(template_path, "{{ 客户信息表.客户名称 }} {{ 贷款汇总表.贷款余额 }}")
+
+    report = validate_task("task_20260613_153000_a1b2c3", requirements(), valid_tables(), template_path, settings=settings)
+
+    assert report.status == "passed"
+    assert report.items == []
+
+
+def test_validate_task_reports_unknown_chinese_template_field(tmp_path, monkeypatch) -> None:
+    settings = reset_settings(tmp_path, monkeypatch)
+    template_path = tmp_path / "templates" / "due_diligence.docx"
+    write_template(template_path, "{{ 客户信息表.不存在字段 }}")
+
+    report = validate_task("task_20260613_153000_a1b2c3", requirements(), valid_tables(), template_path, settings=settings)
+
+    assert "missing_field" in item_codes(report)
+    missing = next(item for item in report.items if item.code == "missing_field")
+    assert missing.table_name == "customer_info"
+    assert missing.field_name == "不存在字段"
+    assert missing.detail["original_variable_path"] == "客户信息表.不存在字段"
 
 
 def test_validate_task_reports_one_to_one_multiple_rows(tmp_path, monkeypatch) -> None:

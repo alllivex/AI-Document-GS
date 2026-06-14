@@ -22,11 +22,14 @@ class DeepSeekClient:
         api_key: str,
         base_url: str = DEFAULT_DEEPSEEK_BASE_URL,
         model: str = DEFAULT_DEEPSEEK_MODEL,
+        temperature: float = 0.2,
+        timeout_seconds: int = 60,
     ) -> None:
         if not api_key:
             raise ValueError("DEEPSEEK_API_KEY is not configured")
         self.model = model
-        self.client = OpenAI(api_key=api_key, base_url=base_url)
+        self.temperature = temperature
+        self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds)
 
     @retry(
         stop=stop_after_attempt(3),
@@ -41,7 +44,7 @@ class DeepSeekClient:
                 {"role": "system", "content": WORD_READY_SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.2,
+            temperature=self.temperature,
         )
         return (response.choices[0].message.content or "").strip()
 

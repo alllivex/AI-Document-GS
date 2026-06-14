@@ -1,15 +1,16 @@
 <template>
-  <div class="source-record">
+  <section class="source-record">
+    <h4 v-if="title">{{ title }}</h4>
     <div class="record-meta">
-      <span>{{ displayName(record.table_name_cn, record.table_name) }}</span>
-      <span>{{ record.source_file }}</span>
-      <span>Excel 第 {{ record.excel_row_number }} 行</span>
+      <span>来源记录：{{ getTableDisplayName(record) }}</span>
+      <span>来源文件：{{ record.source_file || '-' }}</span>
+      <span>Excel位置：第{{ record.excel_row_number }}行</span>
     </div>
 
     <el-table :data="record.fields" border size="small" row-key="field_name" :row-class-name="rowClassName">
       <el-table-column label="字段名" min-width="180">
         <template #default="{ row }">
-          {{ displayName(row.field_name_cn, row.field_name) }}
+          {{ getFieldDisplayName(row) }}
         </template>
       </el-table-column>
       <el-table-column label="数据值" min-width="180">
@@ -18,25 +19,20 @@
         </template>
       </el-table-column>
     </el-table>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import type { SourceRecordField, SourceRecordView } from '../types/trace'
+import { getFieldDisplayName, getTableDisplayName } from '../utils/displayName'
 
 defineProps<{
   record: SourceRecordView
+  title?: string
 }>()
 
 function rowClassName({ row }: { row: SourceRecordField }) {
   return row.is_highlighted ? `trace-highlight-row highlight-row highlight-${row.highlight_reason}` : ''
-}
-
-function displayName(cn?: string, name?: string) {
-  if (cn && name) {
-    return `${cn}（${name}）`
-  }
-  return cn || name || '-'
 }
 
 function formatValue(value: unknown) {
@@ -51,6 +47,11 @@ function formatValue(value: unknown) {
 .source-record {
   display: grid;
   gap: 8px;
+}
+
+.source-record h4 {
+  font-size: 14px;
+  margin: 0;
 }
 
 .record-meta {

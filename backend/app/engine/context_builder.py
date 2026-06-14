@@ -39,6 +39,7 @@ def build_report_contexts(
     requirements: TemplateRequirements,
     loaded_tables: Mapping[str, LoadedTable] | Any,
     task_id: str = "",
+    original_var_paths_by_canonical: Mapping[str, str] | None = None,
 ) -> ReportContextList:
     tables = _coerce_loaded_tables(loaded_tables)
     main_req = _find_main_table_requirement(requirements)
@@ -69,6 +70,7 @@ def build_report_contexts(
             occurrence_index=0,
             field_schemas=field_schemas,
             trace_map=trace_map,
+            original_var_paths_by_canonical=original_var_paths_by_canonical,
         )
         source_rows[main_req.table_name] = _normalize_row(main_row)
 
@@ -85,6 +87,7 @@ def build_report_contexts(
                     pk_value=pk_value,
                     field_schemas=field_schemas,
                     trace_map=trace_map,
+                    original_var_paths_by_canonical=original_var_paths_by_canonical,
                 )
             elif _relation_value(aux_req.relation_type) == RelationType.ONE_TO_MANY.value:
                 context[aux_req.table_name], source_rows[aux_req.table_name] = _build_one_to_many_context(
@@ -95,6 +98,7 @@ def build_report_contexts(
                     pk_value=pk_value,
                     field_schemas=field_schemas,
                     trace_map=trace_map,
+                    original_var_paths_by_canonical=original_var_paths_by_canonical,
                 )
             else:
                 raise ValueError(
@@ -135,6 +139,7 @@ def _build_row_context(
     occurrence_index: int,
     field_schemas: dict[tuple[str, str], FieldDefinition],
     trace_map: TraceMap,
+    original_var_paths_by_canonical: Mapping[str, str] | None = None,
 ) -> dict[str, Any]:
     row_context: dict[str, Any] = {}
     for field_name in table.columns:
@@ -145,6 +150,8 @@ def _build_row_context(
         trace_item = build_trace_item(
             doc_id=doc_id,
             var_path=var_path,
+            original_var_path=(original_var_paths_by_canonical or {}).get(var_path, var_path),
+            canonical_var_path=var_path,
             table=table,
             field_name=field_name,
             raw_value=raw_value,
@@ -173,6 +180,7 @@ def _build_one_to_one_context(
     pk_value: str,
     field_schemas: dict[tuple[str, str], FieldDefinition],
     trace_map: TraceMap,
+    original_var_paths_by_canonical: Mapping[str, str] | None = None,
 ) -> tuple[dict[str, str], dict[str, Any]]:
     if matched_rows.empty:
         return {}, {}
@@ -189,6 +197,7 @@ def _build_one_to_one_context(
         occurrence_index=0,
         field_schemas=field_schemas,
         trace_map=trace_map,
+        original_var_paths_by_canonical=original_var_paths_by_canonical,
     )
     return row_context, _normalize_row(row)
 
@@ -202,6 +211,7 @@ def _build_one_to_many_context(
     pk_value: str,
     field_schemas: dict[tuple[str, str], FieldDefinition],
     trace_map: TraceMap,
+    original_var_paths_by_canonical: Mapping[str, str] | None = None,
 ) -> tuple[list[dict[str, str]], list[dict[str, Any]]]:
     contexts: list[dict[str, str]] = []
     source_rows: list[dict[str, Any]] = []
@@ -219,6 +229,7 @@ def _build_one_to_many_context(
                 occurrence_index=occurrence_index,
                 field_schemas=field_schemas,
                 trace_map=trace_map,
+                original_var_paths_by_canonical=original_var_paths_by_canonical,
             )
         )
         source_rows.append(_normalize_row(row))

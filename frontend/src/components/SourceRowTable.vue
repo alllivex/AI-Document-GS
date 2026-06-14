@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { getFieldDisplayName } from '../utils/displayName'
 
 interface TraceItem {
   field_name?: string
@@ -25,12 +26,8 @@ const props = defineProps<{
 }>()
 
 const fieldLabel = computed(() => {
-  const cn = props.traceItem.field_name_cn
-  const name = props.traceItem.field_name
-  if (cn && name) {
-    return `${cn}（${name}）`
-  }
-  return cn || name || '当前字段'
+  const label = getFieldDisplayName(props.traceItem)
+  return label === '-' ? '当前字段' : label
 })
 
 const rows = computed(() => [

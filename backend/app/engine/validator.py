@@ -9,7 +9,7 @@ import pandas as pd
 
 from app.core.config import AppSettings
 from app.engine.data_loader import LoadedTable
-from app.engine.template_parser import extract_template_field_references
+from app.engine.template_parser import analyze_template_variables
 from app.engine.validation_report_writer import write_validation_report
 from app.models.enums import RelationType, TableRole, ValidationLevel, ValidationStatus
 from app.models.template_models import FieldDefinition, RequiredTable, TemplateRequirements
@@ -217,7 +217,27 @@ def _validate_template_references(
     field_names_by_table = _field_names_by_table(requirements.fields)
     allowed_tables = {table.table_name for table in requirements.required_tables}
 
-    for reference in extract_template_field_references(template_path):
+    references, _original_by_canonical, missing_variables = analyze_template_variables(template_path, requirements.fields)
+    missing_original_paths = {missing.original_var_path for missing in missing_variables}
+    for missing in missing_variables:
+        items.append(
+            _error(
+                "missing_field",
+                f"Template references unknown variable: {missing.original_var_path}",
+                requirements,
+                table_name=missing.table_name,
+                field_name=missing.field_name,
+                suggestion="Ensure the Chinese table/field name exists in entity_schema.xlsx.",
+                detail={
+                    "original_variable_path": missing.original_var_path,
+                    "reason": missing.reason,
+                },
+            )
+        )
+
+    for reference in references:
+        if (reference.original_variable_path or reference.variable_path) in missing_original_paths:
+            continue
         table = tables.get(reference.table_name)
         schema_fields = field_names_by_table.get(reference.table_name)
         field_missing_in_schema = schema_fields is None or reference.field_name not in schema_fields
@@ -232,7 +252,10 @@ def _validate_template_references(
                     table_name=reference.table_name,
                     field_name=reference.field_name,
                     suggestion=f"Ensure {reference.variable_path} exists in schema and uploaded Excel data.",
-                    detail={"variable_path": reference.variable_path},
+                    detail={
+                        "variable_path": reference.variable_path,
+                        "original_variable_path": reference.original_variable_path or reference.variable_path,
+                    },
                 )
             )
 

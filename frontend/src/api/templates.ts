@@ -1,16 +1,22 @@
 import { request } from './http'
 import type { ListResponse } from '../types/api'
-import type { TemplateInfo, TemplateRequirements } from '../types/template'
+import type { TemplateDetail, TemplateListItem, TemplateRequirements } from '../types/template'
 
-export function listTemplates(): Promise<ListResponse<TemplateInfo>> {
-  return request<ListResponse<TemplateInfo>>({
+export interface ListTemplatesParams {
+  search?: string
+  active_only?: boolean
+}
+
+export function listTemplates(params: ListTemplatesParams = {}): Promise<ListResponse<TemplateListItem>> {
+  return request<ListResponse<TemplateListItem>>({
     method: 'GET',
     url: '/api/templates',
+    params,
   })
 }
 
-export function getTemplate(templateId: number): Promise<TemplateInfo> {
-  return request<TemplateInfo>({
+export function getTemplate(templateId: number): Promise<TemplateDetail> {
+  return request<TemplateDetail>({
     method: 'GET',
     url: `/api/templates/${templateId}`,
   })
