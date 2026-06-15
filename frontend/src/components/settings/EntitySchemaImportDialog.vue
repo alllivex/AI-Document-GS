@@ -35,7 +35,7 @@
           <el-table-column prop="action" label="动作" width="100" />
           <el-table-column label="级别" width="100">
             <template #default="{ row }">
-              <el-tag :type="levelType(row.level)">{{ levelText(row.level) }}</el-tag>
+              <StatusTag :type="levelType(row.level)" :label="levelText(row.level)" />
             </template>
           </el-table-column>
           <el-table-column prop="message" label="信息" min-width="320" />
@@ -61,6 +61,7 @@
 import { ref, watch } from 'vue'
 import { ElMessage } from 'element-plus'
 import type { UploadFile } from 'element-plus'
+import StatusTag from '../common/StatusTag.vue'
 import { commitEntitySchemaImport, previewEntitySchemaImport } from '../../api/settings'
 import type { EntitySchemaImportLevel, EntitySchemaImportPreview } from '../../types/settings'
 
@@ -145,7 +146,7 @@ async function commitImport() {
   }
 }
 
-function levelType(level: EntitySchemaImportLevel) {
+function levelType(level: EntitySchemaImportLevel): 'success' | 'warning' | 'danger' {
   if (level === 'error') {
     return 'danger'
   }

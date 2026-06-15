@@ -9,9 +9,7 @@
       </el-table-column>
       <el-table-column label="关系" width="140">
         <template #default="{ row }">
-          <el-tag :type="row.role === 'main' ? 'success' : 'info'">
-            {{ row.role === 'main' ? '主表' : '辅表' }}
-          </el-tag>
+          <StatusTag :type="row.role === 'main' ? 'success' : 'default'" :label="row.role === 'main' ? '主表' : '辅表'" />
         </template>
       </el-table-column>
       <el-table-column label="关联键" min-width="180">
@@ -35,9 +33,9 @@
       </el-table-column>
       <el-table-column label="状态" width="120">
         <template #default="{ row }">
-          <el-tag v-if="uploaded[row.table_name]" type="success">完成</el-tag>
-          <el-tag v-else-if="uploading[row.table_name]" type="warning">上传中</el-tag>
-          <el-tag v-else type="info">待上传</el-tag>
+          <StatusTag v-if="uploaded[row.table_name]" type="success" label="完成" />
+          <StatusTag v-else-if="uploading[row.table_name]" type="processing" label="上传中" />
+          <StatusTag v-else type="default" label="待上传" />
         </template>
       </el-table-column>
     </el-table>
@@ -47,6 +45,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { ElMessage } from 'element-plus'
+import StatusTag from './common/StatusTag.vue'
 import { uploadTaskFile } from '../api/tasks'
 import type { UploadedFileResponse } from '../types/task'
 import type { RequiredTable } from '../types/template'

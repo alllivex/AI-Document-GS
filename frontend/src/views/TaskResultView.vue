@@ -2,8 +2,8 @@
   <main class="page">
     <div class="page-header">
       <div>
-        <h2>任务结果</h2>
-        <p>{{ taskId }}</p>
+        <h2 class="page-title">任务结果</h2>
+        <p class="page-desc">{{ taskId }}</p>
       </div>
       <div class="actions">
         <el-button @click="goBack">返回任务列表</el-button>
@@ -13,7 +13,9 @@
 
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
 
-    <OutputDocumentList :task-id="taskId" :documents="documents" :loading="loading" />
+    <section class="page-card">
+      <OutputDocumentList :task-id="taskId" :documents="documents" :loading="loading" />
+    </section>
   </main>
 </template>
 
@@ -55,31 +57,4 @@ function goBack() {
 }
 </script>
 
-<style scoped>
-.page {
-  display: grid;
-  gap: 16px;
-  padding: 24px;
-}
-
-.page-header {
-  align-items: flex-start;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.page-header h2 {
-  margin: 0 0 6px;
-}
-
-.page-header p {
-  color: #606266;
-  margin: 0;
-}
-
-.actions {
-  display: flex;
-  gap: 8px;
-}
-</style>
+<style scoped></style>

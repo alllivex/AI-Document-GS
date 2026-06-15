@@ -37,7 +37,7 @@
       <el-table-column prop="table_join_key" label="当前表关联字段" min-width="140" />
       <el-table-column label="是否必需" width="100">
         <template #default="{ row }">
-          <el-tag :type="row.required ? 'success' : 'info'">{{ row.required ? '是' : '否' }}</el-tag>
+          <StatusTag :type="row.required ? 'success' : 'default'" :label="row.required ? '是' : '否'" />
         </template>
       </el-table-column>
     </el-table>
@@ -59,6 +59,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import StatusTag from '../common/StatusTag.vue'
 import TemplateRelationImportDialog from './TemplateRelationImportDialog.vue'
 import { exportTemplateRelationsUrl, listTemplateFiles, listTemplateRelations } from '../../api/settings'
 import type { TemplateFileRecord, TemplateRelationRecord } from '../../types/settings'

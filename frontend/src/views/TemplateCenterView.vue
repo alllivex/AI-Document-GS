@@ -2,12 +2,14 @@
   <main class="page">
     <div class="page-header">
       <div>
-        <h2>模板中心</h2>
-        <p>选择业务模板，查看依赖表摘要，并发起文档生成任务。</p>
+        <h2 class="page-title">模板中心</h2>
+        <p class="page-desc">选择业务模板，查看依赖表摘要，并发起文档生成任务。</p>
       </div>
     </div>
 
-    <TemplateSearchBar :loading="loading" @search="handleSearch" />
+    <section class="page-card">
+      <TemplateSearchBar :loading="loading" @search="handleSearch" />
+    </section>
 
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
 
@@ -93,24 +95,9 @@ function useTemplate(templateId: number) {
 </script>
 
 <style scoped>
-.page {
-  display: grid;
-  gap: 16px;
-  padding: 24px;
-}
-
-.page-header h2 {
-  margin: 0 0 6px;
-}
-
-.page-header p {
-  color: #606266;
-  margin: 0;
-}
-
 .template-grid {
   display: grid;
-  gap: 16px;
+  gap: 18px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   min-height: 160px;
 }

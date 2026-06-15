@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_86d671b9-d8bb-502b-8284-58527238f068",
+  "task_id": "task_20260615_012921_7e8808",
+  "title": "普惠支行报告_B支行.docx",
+  "output_file": "普惠支行报告_B支行.docx",
+  "primary_key_value": "B支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_4dbbe9e36c6f4be9a2aef67f17a23e38",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f04d47d466d14505b8fa4a7cd65442bb",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "B支行",
+          "trace_id": "trace_6c2fce5f-0496-545b-ae2e-e6db379b0ff5",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_62635eec-39d0-50b3-9e75-396c5eaad63d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6c1a16855bdb41a5b801a125e34cd4a9",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "980",
+          "trace_id": "trace_dc568146-3ca6-53ca-beb8-b54a7cfefb4d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1200",
+          "trace_id": "trace_a488703f-f130-5107-98c6-74320cad23c3",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e249c7a0626e440880e7ebf11cb4ae03",
+      "block_trace_id": "trace_condition_doc_86d671b9-d8bb-502b-8284-58527238f068_condition_0",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "清偿能力判断：可清偿。",
+          "trace_id": "trace_condition_doc_86d671b9-d8bb-502b-8284-58527238f068_condition_0",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8b551261a8cf4734ad14798f7e719e14",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "block_id": "table_b4d7e8449991424badf76e8ddbcbd5c4",
+      "block_trace_id": "trace_loop_doc_86d671b9-d8bb-502b-8284-58527238f068_loop_0",
+      "block_trace_kind": "loop",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "个人e抵押",
+            "trace_id": "trace_2d4181ee-f233-5201-9f3f-c828a997b811",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "2.5",
+            "trace_id": "trace_49f7ebf1-1146-5b7d-ae04-e58180ef10ed",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ],
+        [
+          {
+            "text": "法人e抵",
+            "trace_id": "trace_7d2e8e02-d030-559f-bc5f-066007d4c1fc",
+            "trace_kind": "field",
+            "ai_block_id": null
+          },
+          {
+            "text": "2.3",
+            "trace_id": "trace_6b50d482-0c1a-5f95-a629-b2dd05474ee7",
+            "trace_kind": "field",
+            "ai_block_id": null
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_52f2e8aa847a433fa686dfa1f68b1ef2",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_79774cd4df95415ea6863573dc0b737d",
+      "block_trace_id": "trace_ai_doc_86d671b9-d8bb-502b-8284-58527238f068_AIBLOCK0",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "根据知识库信息以及不良贷款额环比下降0.03、同比上升",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.1",
+          "trace_id": "trace_eb19cf18-20da-5bcb-95fc-9b9dcf8a6e55",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的数据，该支行当前的风险状况呈现短期改善但长期压力上升的特征。环比数据的小幅下降表明近期风险管控措施可能已产生一定效果，不良资产规模在短期内得到初步控制。然而，同比数据上升",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.1",
+          "trace_id": "trace_eb19cf18-20da-5bcb-95fc-9b9dcf8a6e55",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "则提示，与去年同期相比，该支行的资产质量存在明显恶化趋势，不良贷款余额的累积压力并未根本缓解。这种“环比降、同比升”的格局，可能反映出该支行面临的结构性风险，例如部分存量客户还款能力持续弱化，或新生成不良贷款的消化速度慢于预期。综合来看，该支行风险状况处于可控与需警惕的临界点，需要进一步关注不良贷款的结构分布与迁徙趋势。\n\n针对上述风险状况，建议该支行采取以下管理措施。首先，应深入分析同比上升的具体成因，重点排查哪些行业、产品或客户群体导致了不良额的增长，并评估这些风险因素是否具有持续性。其次，在维持现有催收和处置力度的基础上，可考虑对存量不良贷款进行分类施策，对短期内有望回收的资产加大清收力度，对长期难以回收的资产则需加快核销或转让节奏，以减轻对利润和资本占用的压力。同时，建议加强新增贷款的准入审核，特别是对同比风险暴露集中的领域实施更严格的授信标准，防止风险进一步扩散。最后，应建立不良贷款的月度监测与预警机制，密切跟踪环比与同比数据的变动趋势，以便及时调整风险应对策略。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-06-15T01:30:23.188567Z"
+}

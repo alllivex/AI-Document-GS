@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260614_151210_4324a7",
+  "task_name": "普惠支行报告_2026/6/14 23:12:07",
+  "template_id": 1,
+  "template_name": "普惠支行报告",
+  "template_file": "template_1.docx",
+  "ai_enabled": true,
+  "status": "uploaded",
+  "main_table": "branch_main",
+  "main_table_cn": "支行主表",
+  "primary_key_field": "branch_name",
+  "required_tables": [
+    {
+      "table_name": "branch_main",
+      "table_name_cn": "支行主表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "loan_summary",
+      "table_name_cn": "贷款汇总表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "products",
+      "table_name_cn": "产品明细表",
+      "role": "aux",
+      "relation_type": "one_to_many",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "branch_main",
+      "original_filename": "branch_main.xlsx",
+      "stored_filename": "branch_main.xlsx",
+      "path": "tasks/task_20260614_151210_4324a7/data/branch_main.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-14T15:12:24.558488Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 0,
+    "success_count": 0,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": []
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260614_151210_4324a7",
+    "data_dir": "tasks/task_20260614_151210_4324a7/data",
+    "output_dir": "tasks/task_20260614_151210_4324a7/output",
+    "validation_dir": "tasks/task_20260614_151210_4324a7/validation",
+    "logs_dir": "tasks/task_20260614_151210_4324a7/logs"
+  },
+  "created_at": "2026-06-14T15:12:10.083951Z",
+  "updated_at": "2026-06-14T15:12:24.558488Z",
+  "started_at": null,
+  "completed_at": null
+}

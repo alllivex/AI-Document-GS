@@ -1,13 +1,18 @@
 <template>
-  <el-form class="search-bar" @submit.prevent>
-    <el-input
-      v-model="keyword"
-      clearable
-      placeholder="按模板名称搜索"
-      @clear="emitSearch"
-      @keyup.enter="emitSearch"
-    />
-    <el-button type="primary" :loading="loading" @click="emitSearch">搜索</el-button>
+  <el-form class="page-toolbar search-bar" @submit.prevent>
+    <div class="toolbar-left">
+      <el-input
+        v-model="keyword"
+        clearable
+        placeholder="按模板名称搜索"
+        @clear="emitSearch"
+        @keyup.enter="emitSearch"
+      />
+      <el-button disabled>筛选</el-button>
+    </div>
+    <div class="toolbar-right">
+      <el-button type="primary" :loading="loading" @click="emitSearch">搜索</el-button>
+    </div>
   </el-form>
 </template>
 
@@ -31,10 +36,10 @@ function emitSearch() {
 
 <style scoped>
 .search-bar {
-  align-items: center;
-  display: grid;
-  gap: 12px;
-  grid-template-columns: minmax(220px, 420px) auto;
-  justify-content: start;
+  margin-bottom: 0;
+}
+
+.search-bar .el-input {
+  width: 360px;
 }
 </style>

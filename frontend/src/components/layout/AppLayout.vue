@@ -44,7 +44,8 @@ const activeMenu = computed(() => {
 .app-header {
   align-items: center;
   background: #fff;
-  border-bottom: 1px solid #e4e7ed;
+  border-bottom: 1px solid #edf0f5;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   display: flex;
   flex: 0 0 var(--app-header-height);
   gap: 24px;
@@ -55,8 +56,9 @@ const activeMenu = computed(() => {
 }
 
 .brand {
+  color: #1f2937;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 650;
   white-space: nowrap;
 }
 
@@ -65,7 +67,17 @@ const activeMenu = computed(() => {
   flex: 1;
 }
 
+.nav-menu :deep(.el-menu-item) {
+  color: #475467;
+  font-weight: 600;
+}
+
+.nav-menu :deep(.el-menu-item.is-active) {
+  color: #2563eb;
+}
+
 .app-main {
+  background: #f4f7fb;
   flex: 1;
   min-height: 0;
   overflow: auto;

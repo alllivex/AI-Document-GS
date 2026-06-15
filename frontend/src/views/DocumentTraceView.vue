@@ -138,7 +138,7 @@ function goBack() {
 
 <style scoped>
 .trace-page {
-  background: #f5f7fa;
+  background: #f4f7fb;
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--app-header-height, 60px));
@@ -150,9 +150,11 @@ function goBack() {
   align-items: start;
   display: grid;
   flex: 1;
+  gap: 18px;
   grid-template-columns: minmax(0, 1fr) 420px;
   min-height: 0;
   overflow: hidden;
+  padding: 18px;
 }
 
 .preview-pane {

@@ -18,3 +18,27 @@ Port 5173 is in use, trying another one...
 [2m22:31:43[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/SettingsView.vue[22m
 [2m22:40:35[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/SettingsView.vue, /src/components/settings/TemplateFileManager.vue, /src/components/settings/TemplateUploadDialog.vue, /src/components/settings/EntitySchemaConfig.vue, /src/components/settings/EntitySchemaImportDialog.vue, /src/components/settings/TemplateRelationConfig.vue, /src/components/settings/TemplateRelationImportDialog.vue[22m
 [2m22:40:35[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/SettingsView.vue[22m
+[2m23:02:02[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m23:02:49[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/TaskListView.vue, /src/views/TaskListView.vue?vue&type=style&index=0&scoped=bca0a502&lang.css[22m
+[2m23:02:59[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/TaskListView.vue[22m
+[2m23:03:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/TaskResultView.vue[22m
+[2m23:03:31[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/OutputDocumentList.vue, /src/components/OutputDocumentList.vue?vue&type=style&index=0&scoped=3f134d46&lang.css[22m
+[2m23:03:45[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/TaskCreateView.vue?vue&type=style&index=0&scoped=8d0ce95b&lang.css, /src/views/TaskCreateView.vue[22m
+[2m23:04:00[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/TemplateCenterView.vue?vue&type=style&index=0&scoped=74ef0978&lang.css, /src/views/TemplateCenterView.vue[22m
+[2m23:04:22[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/templates/TemplateCard.vue, /src/components/templates/TemplateCard.vue?vue&type=style&index=0&scoped=37c650e6&lang.css[22m
+[2m23:04:33[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/templates/TemplateSearchBar.vue?vue&type=style&index=0&scoped=573395b8&lang.css, /src/components/templates/TemplateSearchBar.vue[22m
+[2m23:04:53[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/SettingsView.vue?vue&type=style&index=0&scoped=5e0b544f&lang.css, /src/views/SettingsView.vue[22m
+[2m23:05:04[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/views/DocumentTraceView.vue?vue&type=style&index=0&scoped=4f9ae534&lang.css[22m
+[2m23:05:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/PreviewRenderer.vue?vue&type=style&index=0&scoped=1c3ececd&lang.css, /src/components/PreviewRenderer.vue[22m
+[2m23:05:32[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/TraceDetailPanel.vue?vue&type=style&index=0&scoped=621ff80f&lang.css[22m
+[2m23:05:43[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/DocumentNavBar.vue?vue&type=style&index=0&scoped=20029da2&lang.css[22m
+[2m23:05:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/layout/AppLayout.vue?vue&type=style&index=0&scoped=43f34b0e&lang.css[22m
+[2m23:06:26[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/RequiredTableUploadList.vue[22m
+[2m23:06:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ValidationReportPanel.vue[22m
+[2m23:06:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/AIModelConfig.vue[22m
+[2m23:07:00[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/TemplateFileManager.vue[22m
+[2m23:07:22[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/EntitySchemaConfig.vue[22m
+[2m23:07:31[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/TemplateRelationConfig.vue[22m
+[2m23:08:27[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/templates/TemplateDetailDialog.vue[22m
+[2m23:08:42[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/EntitySchemaImportDialog.vue[22m
+[2m23:08:55[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/settings/TemplateRelationImportDialog.vue[22m

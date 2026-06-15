@@ -16,7 +16,7 @@
       <el-table-column prop="template_file" label="系统文件名" min-width="160" />
       <el-table-column label="状态" width="100">
         <template #default="{ row }">
-          <el-tag :type="row.is_active ? 'success' : 'info'">{{ row.is_active ? '启用' : '停用' }}</el-tag>
+          <StatusTag :type="row.is_active ? 'success' : 'default'" :label="row.is_active ? '启用' : '停用'" />
         </template>
       </el-table-column>
       <el-table-column label="上传时间" min-width="180">
@@ -47,6 +47,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import StatusTag from '../common/StatusTag.vue'
 import TemplateUploadDialog from './TemplateUploadDialog.vue'
 import { deactivateTemplateFile, downloadTemplateFileUrl, listTemplateFiles } from '../../api/settings'
 import type { TemplateFileRecord } from '../../types/settings'

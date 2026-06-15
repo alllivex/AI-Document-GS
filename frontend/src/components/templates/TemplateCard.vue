@@ -1,11 +1,9 @@
 <template>
-  <el-card class="template-card" shadow="hover">
+  <el-card class="template-card" shadow="never">
     <template #header>
       <div class="card-header">
         <h3>{{ template.template_name }}</h3>
-        <el-tag :type="template.is_active ? 'success' : 'info'">
-          {{ template.is_active ? '启用' : '停用' }}
-        </el-tag>
+        <StatusTag :status="template.is_active ? 'active' : 'inactive'" :label="template.is_active ? '启用' : '停用'" />
       </div>
     </template>
 
@@ -30,13 +28,14 @@
 
     <div class="actions">
       <el-button @click="emit('view-detail', template.template_id)">查看详情</el-button>
-      <el-button type="primary" @click="emit('use-template', template.template_id)">使用此模板生成</el-button>
+      <el-button type="primary" @click="emit('use-template', template.template_id)">使用模板</el-button>
     </div>
   </el-card>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import StatusTag from '../common/StatusTag.vue'
 import type { TemplateListItem } from '../../types/template'
 
 const props = defineProps<{
@@ -57,7 +56,27 @@ const mainTableText = computed(() => {
 
 <style scoped>
 .template-card {
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.05);
   min-width: 0;
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.template-card:hover {
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.09);
+  transform: translateY(-2px);
+}
+
+.template-card :deep(.el-card__header) {
+  border-bottom-color: #edf0f5;
+  padding: 18px 18px 14px;
+}
+
+.template-card :deep(.el-card__body) {
+  padding: 18px;
 }
 
 .card-header {
@@ -68,14 +87,16 @@ const mainTableText = computed(() => {
 }
 
 .card-header h3 {
-  font-size: 16px;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 650;
   line-height: 1.4;
   margin: 0;
 }
 
 .meta-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
 }
 
@@ -85,12 +106,13 @@ const mainTableText = computed(() => {
 }
 
 .meta-list dt {
-  color: #909399;
+  color: #667085;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .meta-list dd {
-  color: #303133;
+  color: #344054;
   margin: 0;
   overflow-wrap: anywhere;
 }

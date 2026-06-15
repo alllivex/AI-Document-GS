@@ -2,14 +2,14 @@
   <main class="page">
     <div class="page-header">
       <div>
-        <h2>新建生成任务</h2>
-        <p>选择模板后创建任务，再按依赖表上传 Excel。</p>
+        <h2 class="page-title">新建生成任务</h2>
+        <p class="page-desc">选择模板后创建任务，再按依赖表上传 Excel。</p>
       </div>
     </div>
 
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
 
-    <section class="section">
+    <section class="page-card section">
       <h3>1. 选择模板</h3>
       <el-form label-width="100px">
         <el-form-item label="模板">
@@ -33,7 +33,7 @@
       </el-form>
     </section>
 
-    <section v-if="task" class="section">
+    <section v-if="task" class="page-card section">
       <h3>2. 上传 Excel</h3>
       <el-alert
         :title="`任务已创建：${task.task_id}`"
@@ -48,7 +48,7 @@
       />
     </section>
 
-    <section v-if="task" class="section">
+    <section v-if="task" class="page-card section">
       <div class="section-title">
         <h3>3. 校验数据</h3>
         <el-button type="primary" :loading="validating" @click="handleValidate">开始校验</el-button>
@@ -56,7 +56,7 @@
       <ValidationReportPanel :report="validationReport" :loading="validating" />
     </section>
 
-    <section v-if="task" class="section">
+    <section v-if="task" class="page-card section">
       <div class="section-title">
         <h3>4. 生成文档</h3>
         <el-button type="primary" :loading="generating" @click="handleGenerate">开始生成</el-button>
@@ -210,34 +210,12 @@ async function refreshOutputs() {
 </script>
 
 <style scoped>
-.page {
-  display: grid;
-  gap: 16px;
-  padding: 24px;
-}
-
-.page-header h2,
 .section h3 {
   margin: 0 0 8px;
 }
 
-.page-header p {
-  color: #606266;
-  margin: 0;
-}
-
 .section {
-  border: 1px solid #e4e7ed;
-  border-radius: 8px;
   display: grid;
-  gap: 12px;
-  padding: 16px;
-}
-
-.section-title {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   gap: 12px;
 }
 </style>

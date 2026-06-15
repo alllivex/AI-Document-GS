@@ -5,9 +5,10 @@
         <h3>AI配置</h3>
         <p>当前 MVP 使用 DeepSeek OpenAI-compatible API，API Key 通过环境变量配置。</p>
       </div>
-      <el-tag :type="config?.status === 'available' ? 'success' : 'danger'">
-        {{ config?.status === 'available' ? '可用' : '不可用' }}
-      </el-tag>
+      <StatusTag
+        :type="config?.status === 'available' ? 'success' : 'danger'"
+        :label="config?.status === 'available' ? '可用' : '不可用'"
+      />
     </div>
 
     <el-alert
@@ -41,9 +42,10 @@
         <el-switch v-model="form.is_active" />
       </el-form-item>
       <el-form-item label="API Key状态">
-        <el-tag :type="config?.api_key_configured ? 'success' : 'info'">
-          {{ config?.api_key_configured ? '已配置' : '未配置' }}
-        </el-tag>
+        <StatusTag
+          :type="config?.api_key_configured ? 'success' : 'default'"
+          :label="config?.api_key_configured ? '已配置' : '未配置'"
+        />
       </el-form-item>
       <el-form-item label="API Key来源">
         <span>{{ apiKeySourceText }}</span>
@@ -59,6 +61,7 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
+import StatusTag from '../common/StatusTag.vue'
 import { getAIConfig, testAIConfig, updateAIConfig } from '../../api/settings'
 import type { AIConfig } from '../../types/settings'
 

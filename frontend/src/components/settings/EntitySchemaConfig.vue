@@ -27,12 +27,12 @@
       <el-table-column prop="data_type" label="类型" width="120" />
       <el-table-column label="主键" width="90">
         <template #default="{ row }">
-          <el-tag :type="row.is_primary_key ? 'success' : 'info'">{{ row.is_primary_key ? '是' : '否' }}</el-tag>
+          <StatusTag :type="row.is_primary_key ? 'success' : 'default'" :label="row.is_primary_key ? '是' : '否'" />
         </template>
       </el-table-column>
       <el-table-column label="必填" width="90">
         <template #default="{ row }">
-          <el-tag :type="row.required ? 'warning' : 'info'">{{ row.required ? '是' : '否' }}</el-tag>
+          <StatusTag :type="row.required ? 'warning' : 'default'" :label="row.required ? '是' : '否'" />
         </template>
       </el-table-column>
       <el-table-column prop="display_format" label="展示格式" min-width="120" />
@@ -58,6 +58,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import StatusTag from '../common/StatusTag.vue'
 import EntitySchemaImportDialog from './EntitySchemaImportDialog.vue'
 import { exportEntitySchemaUrl, listEntitySchema } from '../../api/settings'
 import type { EntitySchemaFieldRecord } from '../../types/settings'

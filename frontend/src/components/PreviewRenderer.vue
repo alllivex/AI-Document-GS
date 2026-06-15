@@ -3,7 +3,7 @@
     <el-empty v-if="!preview || !preview.blocks?.length" description="暂无预览内容" />
 
     <template v-else>
-      <article class="document-preview">
+      <article class="document-preview preview-paper">
         <template v-for="block in preview.blocks" :key="block.block_id">
           <component :is="headingTag(block.level)" v-if="block.type === 'heading'" class="preview-heading">
             {{ block.text }}
@@ -205,15 +205,27 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 <style scoped>
 .preview-renderer {
-  background: #fff;
+  align-items: flex-start;
+  background: transparent;
+  display: flex;
+  justify-content: center;
   min-height: 100%;
-  padding: 24px;
+  padding: 18px;
 }
 
 .document-preview {
   color: #303133;
   line-height: 1.8;
-  max-width: 920px;
+}
+
+.preview-paper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+  max-width: 860px;
+  min-height: calc(100vh - 170px);
+  padding: 36px;
+  width: 100%;
 }
 
 .preview-heading {
@@ -241,19 +253,20 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 }
 
 .trace-text {
-  background: #ecf5ff;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 5px;
   color: #1d4ed8;
   cursor: pointer;
   font: inherit;
   margin: 0 2px;
-  padding: 0 3px;
+  padding: 0 4px;
 }
 
 .trace-text:hover,
 .trace-text.active {
-  background: #409eff;
+  background: #2563eb;
+  border-color: #2563eb;
   color: #fff;
 }
 
@@ -300,11 +313,11 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 }
 
 .preview-table-wrap {
-  border: 1px solid transparent;
-  border-radius: 6px;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
   margin: 16px 0;
   overflow-x: auto;
-  padding: 8px;
+  padding: 10px;
 }
 
 .preview-table-wrap.clickable-block {
@@ -334,7 +347,8 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 }
 
 .preview-table th {
-  background: #f5f7fa;
+  background: #f8fafc;
+  color: #475467;
   font-weight: 600;
 }
 

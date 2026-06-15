@@ -73,7 +73,9 @@ function scrollToHighlightedRow() {
 <style scoped>
 .trace-panel {
   background: #fff;
-  border-left: 1px solid #e4e7ed;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
   height: 100%;
   min-height: 0;
   overflow-y: auto;
@@ -81,14 +83,15 @@ function scrollToHighlightedRow() {
 }
 
 .trace-panel h3 {
+  color: #1f2937;
   font-size: 16px;
+  font-weight: 650;
   margin: 0 0 16px;
 }
 
 @media (max-width: 960px) {
   .trace-panel {
-    border-left: 0;
-    border-top: 1px solid #e4e7ed;
+    border-radius: 14px;
     height: auto;
     max-height: none;
     overflow-y: visible;

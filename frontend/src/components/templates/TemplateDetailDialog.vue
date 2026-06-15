@@ -19,7 +19,7 @@
           <el-table-column prop="relation_type" label="关系类型" width="140" />
           <el-table-column label="是否必需" width="110">
             <template #default="{ row }">
-              <el-tag :type="row.required ? 'success' : 'info'">{{ row.required ? '必需' : '可选' }}</el-tag>
+              <StatusTag :type="row.required ? 'success' : 'default'" :label="row.required ? '必需' : '可选'" />
             </template>
           </el-table-column>
           <el-table-column prop="main_join_key" label="主表关联字段" min-width="140" />
@@ -37,6 +37,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import StatusTag from '../common/StatusTag.vue'
 import type { TemplateDetail, TemplateTableSummary } from '../../types/template'
 
 const props = defineProps<{

@@ -28,7 +28,8 @@ defineEmits<{
 .document-nav {
   align-items: center;
   background: #fff;
-  border-bottom: 1px solid #e4e7ed;
+  border-bottom: 1px solid #edf0f5;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -52,7 +53,9 @@ defineEmits<{
 }
 
 .document-title h2 {
+  color: #1f2937;
   font-size: 18px;
+  font-weight: 650;
   line-height: 1.4;
   margin: 0;
   overflow: hidden;
@@ -61,7 +64,7 @@ defineEmits<{
 }
 
 .document-title p {
-  color: #909399;
+  color: #667085;
   font-size: 13px;
   margin: 4px 0 0;
   overflow: hidden;

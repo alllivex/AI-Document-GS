@@ -12,15 +12,15 @@
       />
 
       <div class="summary">
-        <el-tag type="danger">错误 {{ report.summary.error_count }}</el-tag>
-        <el-tag type="warning">警告 {{ report.summary.warning_count }}</el-tag>
-        <el-tag type="info">提示 {{ report.summary.info_count }}</el-tag>
+        <StatusTag type="danger" :label="`错误 ${report.summary.error_count}`" />
+        <StatusTag type="warning" :label="`警告 ${report.summary.warning_count}`" />
+        <StatusTag type="default" :label="`提示 ${report.summary.info_count}`" />
       </div>
 
       <el-table :data="report.items" border>
         <el-table-column label="级别" width="100">
           <template #default="{ row }">
-            <el-tag :type="levelType(row.level)">{{ levelText(row.level) }}</el-tag>
+            <StatusTag :type="levelType(row.level)" :label="levelText(row.level)" />
           </template>
         </el-table-column>
         <el-table-column prop="code" label="代码" width="180" />
@@ -38,6 +38,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import StatusTag from './common/StatusTag.vue'
 import type { ValidateTaskResponse, ValidationLevel } from '../types/validation'
 
 const props = defineProps<{
@@ -58,14 +59,14 @@ const statusTitle = computed(() => {
   return '校验通过'
 })
 
-function levelType(level: ValidationLevel) {
+function levelType(level: ValidationLevel): 'danger' | 'warning' | 'default' {
   if (level === 'error') {
     return 'danger'
   }
   if (level === 'warning') {
     return 'warning'
   }
-  return 'info'
+  return 'default'
 }
 
 function levelText(level: ValidationLevel) {
