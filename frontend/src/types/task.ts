@@ -78,6 +78,8 @@ export interface GenerateTaskResponse {
   error_message: string
 }
 
+export type TaskProgressResponse = TaskListItem
+
 export interface DocumentRecord {
   doc_id: string
   task_id: string

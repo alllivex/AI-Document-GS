@@ -4,6 +4,7 @@ import type {
   CreateTaskPayload,
   CreateTaskResponse,
   GenerateTaskResponse,
+  TaskProgressResponse,
   TaskListItem,
   TaskOutputsResponse,
   UploadedFileResponse,
@@ -14,6 +15,13 @@ export function listTasks(): Promise<ListResponse<TaskListItem>> {
   return request<ListResponse<TaskListItem>>({
     method: 'GET',
     url: '/api/tasks',
+  })
+}
+
+export function getTask(taskId: string): Promise<TaskProgressResponse> {
+  return request<TaskProgressResponse>({
+    method: 'GET',
+    url: `/api/tasks/${taskId}`,
   })
 }
 

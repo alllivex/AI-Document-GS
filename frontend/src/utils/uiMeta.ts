@@ -14,15 +14,15 @@ export interface TraceKindMeta {
 
 export const taskStatusOptions: TaskStatusOption[] = [
   { value: 'all', label: '全部状态' },
-  { value: 'created', label: '已创建' },
-  { value: 'uploaded', label: '已上传' },
+  { value: 'created', label: '待上传' },
+  { value: 'uploaded', label: '待校验' },
   { value: 'validating', label: '校验中' },
-  { value: 'validated', label: '已校验' },
+  { value: 'validated', label: '可生成' },
   { value: 'validation_failed', label: '校验失败' },
   { value: 'running', label: '生成中' },
   { value: 'completed', label: '已完成' },
   { value: 'partial_failed', label: '部分失败' },
-  { value: 'failed', label: '失败' },
+  { value: 'failed', label: '生成失败' },
   { value: 'deleted', label: '已删除' },
 ]
 

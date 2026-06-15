@@ -5,6 +5,7 @@ import type {
   AIConfigTestResult,
   AIConfigUpdatePayload,
   EntitySchemaFieldRecord,
+  EntitySchemaTableSummary,
   EntitySchemaImportPreview,
   ListEntitySchemaParams,
   ListTemplateRelationsParams,
@@ -61,6 +62,14 @@ export function listEntitySchema(params: ListEntitySchemaParams): Promise<ListRe
     method: 'GET',
     url: '/api/settings/entity-schema',
     params,
+  })
+}
+
+export function listEntitySchemaTables(keyword?: string): Promise<ListResponse<EntitySchemaTableSummary>> {
+  return request<ListResponse<EntitySchemaTableSummary>>({
+    method: 'GET',
+    url: '/api/settings/entity-schema/tables',
+    params: keyword ? { keyword } : undefined,
   })
 }
 

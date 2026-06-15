@@ -150,6 +150,13 @@ def test_api_e2e_generates_outputs_and_serves_preview_trace_downloads(tmp_path, 
         assert_success(generate_response.json())
         assert generate_response.json()["data"]["success_count"] == 3
 
+        task_response = client.get(f"/api/tasks/{task_id}")
+        assert task_response.status_code == 200
+        assert_success(task_response.json())
+        assert task_response.json()["data"]["status"] == "completed"
+        assert task_response.json()["data"]["total_rows"] == 3
+        assert task_response.json()["data"]["success_count"] == 3
+
         tasks_response = client.get("/api/tasks")
         assert tasks_response.status_code == 200
         assert_success(tasks_response.json())

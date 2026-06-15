@@ -42,6 +42,15 @@ async def create_task(request: CreateTaskRequest):
     return success_response(result.model_dump(mode="json"))
 
 
+@router.get("/{task_id}")
+async def get_task(task_id: str):
+    with get_connection() as connection:
+        task = TaskRepository(connection).get(task_id)
+        if task is None:
+            raise AppError("TASK_NOT_FOUND", f"Task not found: {task_id}", 404, {"task_id": task_id})
+    return success_response(task.model_dump(mode="json"))
+
+
 @router.post("/{task_id}/upload")
 async def upload_task_file(
     task_id: str,

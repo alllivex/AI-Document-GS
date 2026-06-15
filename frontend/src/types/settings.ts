@@ -34,6 +34,14 @@ export interface EntitySchemaFieldRecord {
   is_active: boolean
 }
 
+export interface EntitySchemaTableSummary {
+  table_name: string
+  table_name_cn: string
+  field_count: number
+  primary_key_fields: string[]
+  required_field_count: number
+}
+
 export interface ListEntitySchemaParams {
   table_name?: string
   keyword?: string

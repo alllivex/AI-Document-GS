@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import StatusTag from './common/StatusTag.vue'
 import { uploadTaskFile } from '../api/tasks'
 import type { UploadedFileResponse } from '../types/task'
@@ -76,6 +76,22 @@ async function onFileChange(tableName: string, event: Event) {
     ElMessage.error('只能上传 .xlsx 文件')
     input.value = ''
     return
+  }
+  if (uploaded[tableName]) {
+    try {
+      await ElMessageBox.confirm(
+        '重新上传会覆盖该表已上传文件，并影响后续校验和生成结果，是否继续？',
+        '确认重新上传',
+        {
+          type: 'warning',
+          confirmButtonText: '继续上传',
+          cancelButtonText: '取消',
+        },
+      )
+    } catch {
+      input.value = ''
+      return
+    }
   }
 
   uploading[tableName] = true

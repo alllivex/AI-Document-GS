@@ -16,6 +16,12 @@
         <strong>{{ summaryTitle }}</strong>
         <span>{{ kindMeta.description }}</span>
         <p>{{ summaryText }}</p>
+        <div class="trace-actions">
+          <el-button size="small" @click="$emit('locate-trace', traceItem.trace_id)">回到文档位置</el-button>
+          <el-button v-if="traceItem.trace_kind === 'field'" size="small" type="primary" @click="copySourceInfo">
+            复制来源信息
+          </el-button>
+        </div>
       </section>
 
       <FieldTracePanel v-if="traceItem.trace_kind === 'field'" :trace="traceItem" />
@@ -29,6 +35,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
+import { ElMessage } from 'element-plus'
 import AITracePanel from './AITracePanel.vue'
 import ConditionTracePanel from './ConditionTracePanel.vue'
 import FieldTracePanel from './FieldTracePanel.vue'
@@ -43,6 +50,7 @@ const props = defineProps<{
 
 defineEmits<{
   'select-trace': [traceId: string]
+  'locate-trace': [traceId: string]
 }>()
 
 const panelRef = ref<HTMLElement | null>(null)
@@ -80,6 +88,24 @@ const summaryText = computed(() => {
     return `循环别名 ${props.traceItem.loop_alias}，使用字段 ${props.traceItem.used_fields.join('、') || '无'}。`
   }
   return props.traceItem.error_message || `模型 ${props.traceItem.model || '-'} 生成，输入变量 ${props.traceItem.input_variables.length} 个。`
+})
+
+const sourceInfoText = computed(() => {
+  const trace = props.traceItem
+  if (!trace || trace.trace_kind !== 'field') {
+    return ''
+  }
+  const source = trace.source_record
+  const highlighted = source.fields.find((field) => field.is_highlighted)
+  const rawValue = highlighted?.raw_value
+  return [
+    `表：${source.table_name_cn || '-'} ${source.table_name || '-'}`,
+    `字段：${trace.field_name_cn || '-'} ${trace.field_name || '-'}`,
+    `Excel行号：${source.excel_row_number || '-'}`,
+    `原始值：${rawValue === null || rawValue === undefined || rawValue === '' ? '-' : String(rawValue)}`,
+    `展示值：${highlighted?.display_value || '-'}`,
+    `来源文件：${source.source_file || '-'}`,
+  ].join('\n')
 })
 
 watch(
@@ -138,6 +164,18 @@ function waitForFrame() {
   return new Promise<void>((resolve) => {
     window.requestAnimationFrame(() => resolve())
   })
+}
+
+async function copySourceInfo() {
+  if (!sourceInfoText.value) {
+    return
+  }
+  try {
+    await navigator.clipboard.writeText(sourceInfoText.value)
+    ElMessage.success('来源信息已复制')
+  } catch {
+    ElMessage.error('复制失败，请手动选择来源信息')
+  }
 }
 </script>
 
@@ -238,6 +276,13 @@ function waitForFrame() {
   line-height: 1.6;
   margin: 0;
   overflow-wrap: anywhere;
+}
+
+.trace-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .summary-field {

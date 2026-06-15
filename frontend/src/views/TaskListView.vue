@@ -79,18 +79,29 @@
         <el-table-column label="产出" min-width="150">
           <template #default="{ row }">
             <div class="count-line">
-              <strong>{{ row.success_count }}</strong>
-              <span>/ {{ row.total_rows || 0 }} 成功</span>
+              <strong>{{ row.success_count + row.failed_count }}</strong>
+              <span>/ {{ row.total_rows || 0 }} 已处理</span>
             </div>
-            <div class="muted small-text">失败 {{ row.failed_count }}，错误 {{ row.error_count }}</div>
+            <div class="muted small-text">成功 {{ row.success_count }}，失败 {{ row.failed_count }}</div>
           </template>
         </el-table-column>
-        <el-table-column label="创建时间" min-width="180">
-          <template #default="{ row }">{{ formatTime(row.created_at) }}</template>
-        </el-table-column>
-        <el-table-column label="操作" width="220" fixed="right">
+        <el-table-column label="时间" min-width="190">
           <template #default="{ row }">
-            <el-button link type="primary" @click="openResult(row.task_id)">查看结果</el-button>
+            <div>{{ formatTime(row.created_at) }}</div>
+            <div class="muted small-text">更新：{{ formatTime(row.updated_at) }}</div>
+          </template>
+        </el-table-column>
+        <el-table-column label="主操作" width="260" fixed="right">
+          <template #default="{ row }">
+            <el-button link type="primary" @click="openResult(row.task_id)">{{ mainActionText(row.status) }}</el-button>
+            <el-button
+              v-if="['completed', 'partial_failed'].includes(row.status)"
+              link
+              type="primary"
+              @click="downloadZip(row.task_id)"
+            >
+              下载 ZIP
+            </el-button>
             <el-button link type="primary" @click="createFromTemplate(row.template_id)">新建同类</el-button>
           </template>
         </el-table-column>
@@ -103,7 +114,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import StatusTag from '../components/common/StatusTag.vue'
-import { listTasks } from '../api/tasks'
+import { downloadTaskZipUrl, listTasks } from '../api/tasks'
 import type { TaskListItem, TaskStatus } from '../types/task'
 import { isTaskActive, taskStatusOptions, taskStatusText } from '../utils/uiMeta'
 
@@ -159,6 +170,26 @@ function openResult(taskId: string) {
 
 function createFromTemplate(templateId: number) {
   router.push({ path: '/tasks/new', query: { template_id: String(templateId) } })
+}
+
+function downloadZip(taskId: string) {
+  window.open(downloadTaskZipUrl(taskId), '_blank')
+}
+
+function mainActionText(status: TaskStatus) {
+  if (status === 'running') {
+    return '查看进度'
+  }
+  if (status === 'completed' || status === 'partial_failed') {
+    return '查看结果'
+  }
+  if (status === 'validation_failed') {
+    return '查看校验'
+  }
+  if (status === 'validated') {
+    return '查看生成入口'
+  }
+  return '查看任务'
 }
 
 function formatTime(value: string) {

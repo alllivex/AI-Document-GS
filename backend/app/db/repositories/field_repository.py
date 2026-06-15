@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sqlite3
 
-from app.models.settings_models import EntitySchemaFieldRecord
+from app.models.settings_models import EntitySchemaFieldRecord, EntitySchemaTableSummary
 from app.models.template_models import FieldDefinition
 
 
@@ -58,6 +58,51 @@ class FieldRepository:
             tuple(params + [limit, offset]),
         ).fetchall()
         return [self._record(row) for row in rows], int(total)
+
+    def list_table_summaries(self, keyword: str | None = None) -> list[EntitySchemaTableSummary]:
+        filters: list[str] = []
+        params: list[object] = []
+        if keyword and keyword.strip():
+            like_value = f"%{keyword.strip().lower()}%"
+            filters.append(
+                """
+                (
+                    LOWER(table_name) LIKE ?
+                    OR LOWER(table_name_cn) LIKE ?
+                    OR LOWER(field_name) LIKE ?
+                    OR LOWER(field_name_cn) LIKE ?
+                )
+                """
+            )
+            params.extend([like_value, like_value, like_value, like_value])
+
+        where_clause = f"WHERE {' AND '.join(filters)}" if filters else ""
+        rows = self.connection.execute(
+            f"""
+            SELECT table_name, table_name_cn, field_name, is_primary_key, required
+            FROM fields
+            {where_clause}
+            ORDER BY table_name ASC, id ASC
+            """,
+            tuple(params),
+        ).fetchall()
+
+        summaries: dict[str, EntitySchemaTableSummary] = {}
+        for row in rows:
+            table_name = row["table_name"]
+            summary = summaries.get(table_name)
+            if summary is None:
+                summary = EntitySchemaTableSummary(
+                    table_name=table_name,
+                    table_name_cn=row["table_name_cn"],
+                )
+                summaries[table_name] = summary
+            summary.field_count += 1
+            if row["is_primary_key"]:
+                summary.primary_key_fields.append(row["field_name"])
+            if row["required"]:
+                summary.required_field_count += 1
+        return list(summaries.values())
 
     def get_existing_keys(self) -> set[tuple[str, str]]:
         rows = self.connection.execute("SELECT table_name, field_name FROM fields").fetchall()

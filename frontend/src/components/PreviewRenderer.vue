@@ -1,9 +1,9 @@
 <template>
-  <div class="preview-renderer">
+  <div class="preview-renderer" :class="{ 'hide-trace-highlight': !showTraceHighlight }">
     <el-empty v-if="!preview || !preview.blocks?.length" description="暂无预览内容" />
 
     <template v-else>
-      <div class="trace-legend">
+      <div v-if="showTraceHighlight" class="trace-legend">
         <span class="legend-item trace-field">字段来源</span>
         <span class="legend-item trace-condition">条件判断</span>
         <span class="legend-item trace-loop">循环表格</span>
@@ -172,10 +172,17 @@ interface PreviewFile {
   blocks?: PreviewBlock[]
 }
 
-const props = defineProps<{
-  preview: PreviewFile | null
-  selectedTraceId?: string | null
-}>()
+const props = withDefaults(
+  defineProps<{
+    preview: PreviewFile | null
+    selectedTraceId?: string | null
+    showTraceHighlight?: boolean
+  }>(),
+  {
+    selectedTraceId: null,
+    showTraceHighlight: true,
+  },
+)
 
 const emit = defineEmits<{
   'select-trace': [traceId: string]
@@ -493,6 +500,32 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 .trace-ai.active {
   background: #a16207;
   color: #fff;
+}
+
+.hide-trace-highlight .trace-text {
+  background: transparent;
+  border-color: transparent;
+  color: inherit;
+  margin: 0;
+  padding: 0 1px;
+  text-decoration: underline dotted rgba(36, 88, 211, 0.35);
+  text-underline-offset: 3px;
+}
+
+.hide-trace-highlight .trace-text:hover,
+.hide-trace-highlight .trace-text.active {
+  background: #eef5ff;
+  border-color: #bdd4ff;
+  color: #1f4fbd !important;
+}
+
+.hide-trace-highlight .preview-paragraph.trace-ai {
+  background: transparent;
+  border-color: transparent;
+}
+
+.hide-trace-highlight .preview-table-wrap.clickable-block {
+  border-color: var(--color-border);
 }
 
 .block-trace-button {

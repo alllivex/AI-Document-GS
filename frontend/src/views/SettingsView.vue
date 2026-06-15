@@ -9,21 +9,35 @@
           <h2>配置中心</h2>
           <p>维护系统基础配置与模板资产。</p>
         </div>
-        <el-button @click="checkHealth">检查配置服务</el-button>
+        <el-button @click="checkHealth">检查系统健康</el-button>
       </div>
 
       <el-tabs v-model="activeTab" class="settings-tabs">
-        <el-tab-pane label="实体Schema" name="entity-schema">
+        <el-tab-pane label="模板管理" name="template-files">
+          <TemplateFileManager />
+        </el-tab-pane>
+        <el-tab-pane label="数据结构" name="entity-schema">
           <EntitySchemaConfig />
         </el-tab-pane>
         <el-tab-pane label="模板关系" name="template-relation">
           <TemplateRelationConfig />
         </el-tab-pane>
-        <el-tab-pane label="模板文件" name="template-files">
-          <TemplateFileManager />
-        </el-tab-pane>
-        <el-tab-pane label="AI配置" name="ai-config">
+        <el-tab-pane label="AI 配置" name="ai-config">
           <AIModelConfig />
+        </el-tab-pane>
+        <el-tab-pane label="系统健康" name="system-health">
+          <section class="health-panel">
+            <h3>系统健康</h3>
+            <p>检查配置服务、数据库连接和基础目录是否可用。</p>
+            <el-button type="primary" @click="checkHealth">立即检查</el-button>
+            <el-alert
+              v-if="healthMessage"
+              :title="healthMessage"
+              type="success"
+              show-icon
+              :closable="false"
+            />
+          </section>
         </el-tab-pane>
       </el-tabs>
     </section>
@@ -38,7 +52,7 @@ import EntitySchemaConfig from '../components/settings/EntitySchemaConfig.vue'
 import TemplateFileManager from '../components/settings/TemplateFileManager.vue'
 import TemplateRelationConfig from '../components/settings/TemplateRelationConfig.vue'
 
-const activeTab = ref('entity-schema')
+const activeTab = ref('template-files')
 const healthMessage = ref('')
 const errorMessage = ref('')
 
@@ -47,9 +61,9 @@ async function checkHealth() {
   errorMessage.value = ''
   try {
     const health = await getSettingsHealth()
-    healthMessage.value = `配置服务状态：${health.status}`
+    healthMessage.value = `系统健康状态：${health.status}`
   } catch (error) {
-    errorMessage.value = error instanceof Error ? error.message : '配置服务检查失败'
+    errorMessage.value = error instanceof Error ? error.message : '系统健康检查失败'
   }
 }
 </script>
@@ -88,6 +102,24 @@ async function checkHealth() {
   color: var(--color-text-muted);
   font-size: 13px;
   margin: 5px 0 0;
+}
+
+.health-panel {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  max-width: 640px;
+  padding: 18px;
+}
+
+.health-panel h3 {
+  margin: 0;
+}
+
+.health-panel p {
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 @media (max-width: 760px) {

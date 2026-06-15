@@ -39,6 +39,14 @@ class EntitySchemaFieldRecord(ContractModel):
     is_active: bool = True
 
 
+class EntitySchemaTableSummary(ContractModel):
+    table_name: str
+    table_name_cn: str = ""
+    field_count: int = Field(default=0, ge=0)
+    primary_key_fields: list[str] = Field(default_factory=list)
+    required_field_count: int = Field(default=0, ge=0)
+
+
 class EntitySchemaImportSummary(ContractModel):
     total_rows: int = Field(ge=0)
     create_count: int = Field(ge=0)

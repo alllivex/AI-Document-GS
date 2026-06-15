@@ -27,16 +27,16 @@ const tone = computed(() => {
   }
 
   const normalized = props.status.toLowerCase()
-  if (['success', 'completed', 'validated', 'passed', 'available', 'active'].includes(normalized)) {
+  if (['success', 'completed', 'passed', 'available', 'active'].includes(normalized)) {
     return 'success'
   }
-  if (['warning', 'partial_failed', 'passed_with_warnings', 'uploaded'].includes(normalized)) {
+  if (['warning', 'partial_failed', 'passed_with_warnings'].includes(normalized)) {
     return 'warning'
   }
   if (['danger', 'error', 'failed', 'validation_failed', 'unavailable', 'deleted'].includes(normalized)) {
     return 'danger'
   }
-  if (['processing', 'running', 'validating', 'uploading', 'created'].includes(normalized)) {
+  if (['processing', 'running', 'validating', 'uploading', 'validated'].includes(normalized)) {
     return 'processing'
   }
   return 'default'

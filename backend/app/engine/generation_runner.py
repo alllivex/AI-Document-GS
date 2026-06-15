@@ -100,6 +100,7 @@ class GenerationRunner:
         started_at = _utc_now()
         self._update_task_running(task.task_id, started_at)
         self._log(task.task_id, "", "info", "start", "Generation started.")
+        self.connection.commit()
 
         try:
             requirements = self.requirement_service.get_template_requirements(task.template_id)
@@ -202,6 +203,9 @@ class GenerationRunner:
         document_ids: list[str] = []
         success_count = 0
         failed_count = 0
+        total_rows = len(bundles)
+        self._update_task_progress(task_id, total_rows=total_rows, success_count=0, failed_count=0)
+        self.connection.commit()
 
         for bundle in bundles:
             try:
@@ -226,7 +230,14 @@ class GenerationRunner:
                     traceback.format_exc(),
                 )
                 self._create_failed_document_record(task_id, requirements, bundle)
-                continue
+            finally:
+                self._update_task_progress(
+                    task_id,
+                    total_rows=total_rows,
+                    success_count=success_count,
+                    failed_count=failed_count,
+                )
+                self.connection.commit()
 
         status = _final_status(success_count, failed_count)
         completed_at = _utc_now()
@@ -376,10 +387,29 @@ class GenerationRunner:
         self.connection.execute(
             """
             UPDATE tasks
-            SET status = ?, started_at = ?, updated_at = ?, error_message = ''
+            SET status = ?, total_rows = 0, success_count = 0, failed_count = 0,
+                started_at = ?, completed_at = NULL, updated_at = ?, error_message = ''
             WHERE task_id = ?
             """,
             (TaskStatus.RUNNING.value, started_at.isoformat(), started_at.isoformat(), task_id),
+        )
+
+    def _update_task_progress(
+        self,
+        task_id: str,
+        *,
+        total_rows: int,
+        success_count: int,
+        failed_count: int,
+    ) -> None:
+        updated_at = _utc_now()
+        self.connection.execute(
+            """
+            UPDATE tasks
+            SET total_rows = ?, success_count = ?, failed_count = ?, updated_at = ?
+            WHERE task_id = ?
+            """,
+            (total_rows, success_count, failed_count, updated_at.isoformat(), task_id),
         )
 
     def _update_task_summary(

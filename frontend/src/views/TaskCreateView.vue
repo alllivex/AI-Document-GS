@@ -107,6 +107,14 @@
             </el-button>
           </div>
 
+          <div v-if="generating || generationProgress" class="generation-progress">
+            <div class="progress-heading">
+              <strong>{{ generationProgressText }}</strong>
+              <span>{{ generationPercent }}%</span>
+            </div>
+            <el-progress :percentage="generationPercent" :status="generationProgressStatus" />
+          </div>
+
           <el-alert
             v-if="generationResult"
             :title="generationTitle"
@@ -155,19 +163,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { computed, onBeforeUnmount, ref } from 'vue'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import { useRoute } from 'vue-router'
 import RequiredTableUploadList from '../components/RequiredTableUploadList.vue'
 import OutputDocumentList from '../components/OutputDocumentList.vue'
 import TemplateSelector from '../components/TemplateSelector.vue'
 import ValidationReportPanel from '../components/ValidationReportPanel.vue'
 import StatusTag from '../components/common/StatusTag.vue'
-import { createTask, generateTask, listTaskOutputs, validateTask } from '../api/tasks'
+import { createTask, generateTask, getTask, listTaskOutputs, validateTask } from '../api/tasks'
 import type {
   CreateTaskResponse,
   DocumentRecord,
   GenerateTaskResponse,
+  TaskProgressResponse,
   UploadedFileResponse,
 } from '../types/task'
 import type { RequiredTable, TemplateRequirements } from '../types/template'
@@ -183,6 +192,7 @@ const requirements = ref<TemplateRequirements | null>(null)
 const task = ref<CreateTaskResponse | null>(null)
 const validationReport = ref<ValidateTaskResponse | null>(null)
 const generationResult = ref<GenerateTaskResponse | null>(null)
+const generationProgress = ref<TaskProgressResponse | null>(null)
 const documents = ref<DocumentRecord[]>([])
 const uploadedTables = ref<Set<string>>(new Set())
 const creating = ref(false)
@@ -190,6 +200,7 @@ const validating = ref(false)
 const generating = ref(false)
 const loadingOutputs = ref(false)
 const errorMessage = ref('')
+let progressTimer: ReturnType<typeof window.setInterval> | null = null
 
 const requiredTables = computed<RequiredTable[]>(() => {
   return task.value?.required_tables.length ? task.value.required_tables : requirements.value?.required_tables || []
@@ -243,6 +254,9 @@ const validationStepText = computed(() => {
 })
 
 const generationStepText = computed(() => {
+  if (generationProgress.value?.status === 'running') {
+    return generationProgressText.value
+  }
   if (!generationResult.value) {
     return '等待生成'
   }
@@ -261,7 +275,7 @@ const canCreateTask = computed(() => {
 })
 
 const canGenerate = computed(() => {
-  return Boolean(task.value && validationReport.value && validationReport.value.status !== 'failed')
+  return Boolean(task.value && validationReport.value && validationReport.value.status !== 'failed' && !generating.value)
 })
 
 const generationTitle = computed(() => {
@@ -271,6 +285,45 @@ const generationTitle = computed(() => {
   const result = generationResult.value
   return `生成完成：总数 ${result.total_rows}，成功 ${result.success_count}，失败 ${result.failed_count}`
 })
+
+const processedCount = computed(() => {
+  const progress = generationProgress.value
+  if (!progress) {
+    return generationResult.value ? generationResult.value.success_count + generationResult.value.failed_count : 0
+  }
+  return progress.success_count + progress.failed_count
+})
+
+const generationTotal = computed(() => {
+  return generationProgress.value?.total_rows || generationResult.value?.total_rows || 0
+})
+
+const generationPercent = computed(() => {
+  if (!generationTotal.value) {
+    return generating.value ? 5 : 0
+  }
+  return Math.min(100, Math.round((processedCount.value / generationTotal.value) * 100))
+})
+
+const generationProgressText = computed(() => {
+  if (!generationTotal.value) {
+    return generating.value ? '正在准备生成任务...' : '等待生成'
+  }
+  return `已生成 ${processedCount.value} / ${generationTotal.value} 份`
+})
+
+const generationProgressStatus = computed<'success' | 'exception' | undefined>(() => {
+  const status = generationProgress.value?.status || generationResult.value?.status
+  if (status === 'failed' || status === 'partial_failed') {
+    return 'exception'
+  }
+  if (status === 'completed') {
+    return 'success'
+  }
+  return undefined
+})
+
+onBeforeUnmount(stopProgressPolling)
 
 function onRequirementsLoaded(value: TemplateRequirements | null) {
   requirements.value = value
@@ -305,6 +358,9 @@ function onUploaded(value: UploadedFileResponse) {
   const next = new Set(uploadedTables.value)
   next.add(value.table_name)
   uploadedTables.value = next
+  validationReport.value = null
+  generationResult.value = null
+  generationProgress.value = null
   ElMessage.success(`${value.table_name} 已上传`)
 }
 
@@ -328,16 +384,86 @@ async function handleGenerate() {
   if (!task.value) {
     return
   }
+  if (documents.value.length) {
+    try {
+      await ElMessageBox.confirm(
+        '重新生成可能覆盖已有输出文件，是否继续？',
+        '确认重新生成',
+        {
+          type: 'warning',
+          confirmButtonText: '继续生成',
+          cancelButtonText: '取消',
+        },
+      )
+    } catch {
+      return
+    }
+  }
   generating.value = true
   errorMessage.value = ''
+  generationResult.value = null
+  generationProgress.value = null
+    startProgressPolling(task.value.task_id)
   try {
     generationResult.value = await generateTask(task.value.task_id)
+    const currentProgress = generationProgress.value as TaskProgressResponse | null
+    generationProgress.value = {
+      task_id: generationResult.value.task_id,
+      task_name: task.value.task_name,
+      template_id: task.value.template_id,
+      template_name: task.value.template_name,
+      status: generationResult.value.status,
+      ai_enabled: aiEnabled.value,
+      main_table: currentProgress?.main_table || requiredTables.value.find((table) => table.role === 'main')?.table_name || '',
+      primary_key_field: currentProgress?.primary_key_field || '',
+      total_rows: generationResult.value.total_rows,
+      success_count: generationResult.value.success_count,
+      failed_count: generationResult.value.failed_count,
+      warning_count: currentProgress?.warning_count || 0,
+      error_count: currentProgress?.error_count || 0,
+      task_dir: currentProgress?.task_dir || '',
+      validation_report_path: currentProgress?.validation_report_path || '',
+      error_message: generationResult.value.error_message,
+      created_by: currentProgress?.created_by || 'system',
+      created_at: currentProgress?.created_at || new Date().toISOString(),
+      updated_at: currentProgress?.updated_at || new Date().toISOString(),
+      started_at: currentProgress?.started_at,
+      completed_at: currentProgress?.completed_at,
+    }
     await refreshOutputs()
     ElMessage.success('生成流程已结束')
   } catch (error) {
     errorMessage.value = error instanceof Error ? error.message : '生成失败'
   } finally {
+    stopProgressPolling()
     generating.value = false
+  }
+}
+
+function startProgressPolling(taskId: string) {
+  stopProgressPolling()
+  pollProgress(taskId)
+  progressTimer = window.setInterval(() => {
+    pollProgress(taskId)
+  }, 1000)
+}
+
+function stopProgressPolling() {
+  if (progressTimer) {
+    window.clearInterval(progressTimer)
+    progressTimer = null
+  }
+}
+
+async function pollProgress(taskId: string) {
+  try {
+    const progress = await getTask(taskId)
+    generationProgress.value = progress
+    if (['completed', 'partial_failed', 'failed'].includes(progress.status)) {
+      stopProgressPolling()
+    }
+  } catch {
+    // The generate request will surface the main error; polling failures should not interrupt it.
   }
 }
 
@@ -397,6 +523,27 @@ async function refreshOutputs() {
   color: var(--color-text-muted);
   display: flex;
   gap: 10px;
+}
+
+.generation-progress {
+  background: #f8fbff;
+  border: 1px solid #d9e5ff;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.progress-heading {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-heading span {
+  color: var(--color-primary);
+  font-weight: 750;
 }
 
 .side-summary {

@@ -10,21 +10,35 @@
 
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
 
+    <div class="trace-options">
+      <el-switch
+        v-model="showTraceHighlight"
+        active-text="显示溯源高亮"
+        inactive-text="隐藏溯源高亮"
+      />
+    </div>
+
     <section class="trace-layout">
       <div v-loading="loadingPreview" class="preview-pane">
         <PreviewRenderer
           :preview="preview"
           :selected-trace-id="selectedTraceId"
+          :show-trace-highlight="showTraceHighlight"
           @select-trace="selectTrace"
         />
       </div>
-      <TraceDetailPanel :trace-item="selectedTraceItem" :loading="loadingTrace" @select-trace="selectTrace" />
+      <TraceDetailPanel
+        :trace-item="selectedTraceItem"
+        :loading="loadingTrace"
+        @select-trace="selectTrace"
+        @locate-trace="locateTrace"
+      />
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DocumentNavBar from '../components/DocumentNavBar.vue'
 import PreviewRenderer from '../components/PreviewRenderer.vue'
@@ -86,6 +100,7 @@ const selectedTraceItem = ref<TraceDetail | null>(null)
 const loadingPreview = ref(false)
 const loadingTrace = ref(false)
 const errorMessage = ref('')
+const showTraceHighlight = ref(true)
 
 onMounted(loadPreview)
 
@@ -118,6 +133,12 @@ async function selectTrace(traceId: string) {
   } finally {
     loadingTrace.value = false
   }
+}
+
+async function locateTrace(traceId: string) {
+  selectedTraceId.value = null
+  await nextTick()
+  selectedTraceId.value = traceId
 }
 
 function downloadCurrentDocument() {
@@ -157,6 +178,15 @@ function goBack() {
   min-height: 0;
   overflow: hidden;
   padding: 20px 24px 24px;
+}
+
+.trace-options {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 24px;
 }
 
 .preview-pane {

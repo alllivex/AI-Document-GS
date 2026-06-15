@@ -28,10 +28,10 @@
       <el-table-column label="操作" width="240" fixed="right">
         <template #default="{ row }">
           <el-button link type="primary" :disabled="row.status !== 'success'" @click="openPreview(row.doc_id)">
-            预览溯源
+            查看预览与溯源
           </el-button>
           <el-button link type="primary" :disabled="row.status !== 'success'" @click="downloadDoc(row.doc_id)">
-            下载
+            下载 Word
           </el-button>
         </template>
       </el-table-column>

@@ -64,7 +64,7 @@ def _validate_required_tables(
                     f"Required Excel table is missing: {required_table.table_name}.xlsx",
                     requirements,
                     table_name=required_table.table_name,
-                    suggestion=f"Upload tasks/{{task_id}}/data/{required_table.table_name}.xlsx before validation.",
+                    suggestion=f"请上传必需数据表 {required_table.table_name}.xlsx 后再重新校验。",
                 )
             )
         else:
@@ -74,7 +74,7 @@ def _validate_required_tables(
                     f"Optional Excel table is missing: {required_table.table_name}.xlsx",
                     requirements,
                     table_name=required_table.table_name,
-                    suggestion="Upload this file if the template needs data from the optional table.",
+                    suggestion="如模板需要使用该辅表数据，请上传对应 Excel；否则可忽略此警告。",
                 )
             )
 
@@ -98,7 +98,7 @@ def _validate_required_fields(
                     requirements,
                     table_name=field.table_name,
                     field_name=field.field_name,
-                    suggestion=f"Add column '{field.field_name}' to {field.table_name}.xlsx.",
+                    suggestion=f"字段 {field.table_name}.{field.field_name} 为必填，请在 Excel 中补充对应列。",
                 )
             )
 
@@ -121,7 +121,7 @@ def _validate_main_primary_key(
                 requirements,
                 table_name=requirements.main_table,
                 field_name=primary_key,
-                suggestion=f"Add primary key column '{primary_key}' to {requirements.main_table}.xlsx.",
+                suggestion="主表缺少主键字段，请检查 Excel 表头或模板关系配置。",
             )
         )
         return
@@ -141,7 +141,7 @@ def _validate_main_primary_key(
                 table_name=requirements.main_table,
                 field_name=primary_key,
                 detail={"excel_row_numbers": empty_row_numbers},
-                suggestion="Fill every primary key value before generation.",
+                suggestion=f"主键字段 {requirements.main_table}.{primary_key} 不能为空，请补充提示行号对应的单元格。",
             )
         )
 
@@ -155,7 +155,7 @@ def _validate_main_primary_key(
                 table_name=requirements.main_table,
                 field_name=primary_key,
                 detail={"duplicated_values": duplicated_values},
-                suggestion="Keep primary key values unique in the main table.",
+                suggestion=f"主键字段 {requirements.main_table}.{primary_key} 必须唯一，请删除或修正重复值。",
             )
         )
 
@@ -185,7 +185,7 @@ def _validate_one_to_one_relations(
                     requirements,
                     table_name=table_requirement.table_name,
                     field_name=join_key,
-                    suggestion=f"Add join key column '{join_key}' to {table_requirement.table_name}.xlsx.",
+                    suggestion=f"辅表缺少关联键 {table_requirement.table_name}.{join_key}，请检查 Excel 表头或模板关系配置。",
                 )
             )
             continue
@@ -200,7 +200,7 @@ def _validate_one_to_one_relations(
                     table_name=table_requirement.table_name,
                     field_name=join_key,
                     detail={"duplicated_values": duplicated_values},
-                    suggestion="For one_to_one auxiliary tables, keep at most one row per main table key.",
+                    suggestion="一对一辅表中同一个主表键最多只能匹配一行，请删除或合并重复记录。",
                 )
             )
 
@@ -227,7 +227,7 @@ def _validate_template_references(
                 requirements,
                 table_name=missing.table_name,
                 field_name=missing.field_name,
-                suggestion="Ensure the Chinese table/field name exists in entity_schema.xlsx.",
+                suggestion=f"模板变量 {missing.original_var_path} 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
                 detail={
                     "original_variable_path": missing.original_var_path,
                     "reason": missing.reason,
@@ -251,7 +251,7 @@ def _validate_template_references(
                     requirements,
                     table_name=reference.table_name,
                     field_name=reference.field_name,
-                    suggestion=f"Ensure {reference.variable_path} exists in schema and uploaded Excel data.",
+                    suggestion=f"模板变量 {reference.variable_path} 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
                     detail={
                         "variable_path": reference.variable_path,
                         "original_variable_path": reference.original_variable_path or reference.variable_path,

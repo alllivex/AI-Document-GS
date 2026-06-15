@@ -75,6 +75,31 @@ def test_entity_schema_list_filters_and_searches(tmp_path, monkeypatch) -> None:
     assert keyword_payload["data"]["items"][0]["field_name"] == "loan_balance"
 
 
+def test_entity_schema_table_summaries_group_fields_by_table(tmp_path, monkeypatch) -> None:
+    settings = reset_settings(tmp_path, monkeypatch)
+    init_db(settings.database_path)
+    with get_connection(settings.database_path) as connection:
+        seed_fields(connection)
+
+    from app.main import create_app
+
+    with TestClient(create_app()) as client:
+        response = client.get("/api/settings/entity-schema/tables")
+        keyword_response = client.get("/api/settings/entity-schema/tables", params={"keyword": "贷款"})
+
+    payload = response.json()
+    assert response.status_code == 200
+    assert_success(payload)
+    branch = next(item for item in payload["data"]["items"] if item["table_name"] == "branch_main")
+    assert branch["table_name_cn"] == "支行主表"
+    assert branch["field_count"] == 2
+    assert branch["primary_key_fields"] == ["branch_id"]
+    assert branch["required_field_count"] == 2
+    assert keyword_response.status_code == 200
+    assert keyword_response.json()["data"]["total"] == 1
+    assert keyword_response.json()["data"]["items"][0]["table_name"] == "loan_summary"
+
+
 def test_entity_schema_import_preview_commit_and_export(tmp_path, monkeypatch) -> None:
     settings = reset_settings(tmp_path, monkeypatch)
     init_db(settings.database_path)

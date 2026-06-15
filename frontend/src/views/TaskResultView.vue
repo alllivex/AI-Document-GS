@@ -38,7 +38,11 @@
     </section>
 
     <section class="page-card">
-      <OutputDocumentList :task-id="taskId" :documents="documents" :loading="loading" />
+      <div class="result-filter">
+        <el-segmented v-model="selectedFilter" :options="filterOptions" />
+        <span>当前显示 {{ filteredDocuments.length }} / {{ documents.length }} 份</span>
+      </div>
+      <OutputDocumentList :task-id="taskId" :documents="filteredDocuments" :loading="loading" />
     </section>
   </main>
 </template>
@@ -56,6 +60,13 @@ const taskId = computed(() => String(route.params.taskId || route.query.task_id 
 const documents = ref<DocumentRecord[]>([])
 const loading = ref(false)
 const errorMessage = ref('')
+const selectedFilter = ref<'all' | 'success' | 'failed' | 'ai'>('all')
+const filterOptions = [
+  { label: '全部', value: 'all' },
+  { label: '成功', value: 'success' },
+  { label: '失败', value: 'failed' },
+  { label: '含 AI', value: 'ai' },
+]
 
 const summary = computed(() => {
   return {
@@ -64,6 +75,19 @@ const summary = computed(() => {
     traceCount: documents.value.reduce((sum, document) => sum + (document.trace_count || 0), 0),
     aiBlockCount: documents.value.reduce((sum, document) => sum + (document.ai_block_count || 0), 0),
   }
+})
+
+const filteredDocuments = computed(() => {
+  if (selectedFilter.value === 'success') {
+    return documents.value.filter((document) => document.status === 'success')
+  }
+  if (selectedFilter.value === 'failed') {
+    return documents.value.filter((document) => ['failed', 'ai_partial_failed'].includes(document.status))
+  }
+  if (selectedFilter.value === 'ai') {
+    return documents.value.filter((document) => document.ai_block_count > 0)
+  }
+  return documents.value
 })
 
 onMounted(loadOutputs)
@@ -101,5 +125,18 @@ function goBack() {
 
 .accent-purple {
   border-color: #decfff;
+}
+
+.result-filter {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.result-filter span {
+  color: var(--color-text-muted);
+  font-size: 13px;
 }
 </style>

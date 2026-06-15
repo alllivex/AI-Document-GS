@@ -90,6 +90,14 @@ async def list_entity_schema(
     return success_response({"items": [item.model_dump(mode="json") for item in items], "total": total})
 
 
+@router.get("/entity-schema/tables")
+async def list_entity_schema_tables(keyword: str | None = None):
+    with get_connection() as connection:
+        repository = FieldRepository(connection)
+        items = repository.list_table_summaries(keyword=keyword)
+    return success_response({"items": [item.model_dump(mode="json") for item in items], "total": len(items)})
+
+
 @router.post("/entity-schema/import/preview")
 async def preview_entity_schema_import(file: UploadFile = File(...)):
     file_bytes = await file.read()
