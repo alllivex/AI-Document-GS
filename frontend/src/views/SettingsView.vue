@@ -1,20 +1,15 @@
 <template>
   <main class="page">
-    <div class="page-header">
-      <div>
-        <h2 class="page-title">配置中心</h2>
-        <p class="page-desc">集中承载系统配置模块，本阶段仅搭建基础框架。</p>
-      </div>
-      <el-button @click="checkHealth">检查配置服务</el-button>
-    </div>
-
     <el-alert v-if="healthMessage" :title="healthMessage" type="success" show-icon :closable="false" />
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
 
     <section class="page-card settings-card">
-      <div class="setting-intro">
-        <strong>配置资产管理</strong>
-        <span>维护实体 Schema、模板关系、模板文件与 AI 调用配置。这里的变更会影响后续任务创建和校验流程。</span>
+      <div class="settings-toolbar">
+        <div>
+          <h2>配置中心</h2>
+          <p>维护系统基础配置与模板资产。</p>
+        </div>
+        <el-button @click="checkHealth">检查配置服务</el-button>
       </div>
 
       <el-tabs v-model="activeTab" class="settings-tabs">
@@ -66,5 +61,39 @@ async function checkHealth() {
 
 .settings-tabs :deep(.el-tabs__header) {
   margin-bottom: 18px;
+}
+
+.settings-card {
+  display: grid;
+  gap: 16px;
+}
+
+.settings-toolbar {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding-bottom: 14px;
+}
+
+.settings-toolbar h2 {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 750;
+  margin: 0;
+}
+
+.settings-toolbar p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 760px) {
+  .settings-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
 </style>

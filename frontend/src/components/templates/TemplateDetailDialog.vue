@@ -1,9 +1,24 @@
 <template>
-  <el-dialog :model-value="modelValue" title="模板详情" width="720px" @update:model-value="emit('update:modelValue', $event)">
+  <el-dialog :model-value="modelValue" title="模板详情" width="820px" @update:model-value="emit('update:modelValue', $event)">
     <div v-loading="loading" class="dialog-body">
       <el-empty v-if="!loading && !detail" description="暂无模板详情" />
 
       <template v-if="detail">
+        <section class="detail-summary">
+          <div>
+            <span>模板状态</span>
+            <strong>{{ detail.is_active ? '启用' : '停用' }}</strong>
+          </div>
+          <div>
+            <span>主表</span>
+            <strong>{{ tableText(detail.main_table) }}</strong>
+          </div>
+          <div>
+            <span>辅表数量</span>
+            <strong>{{ detail.aux_tables.length }}</strong>
+          </div>
+        </section>
+
         <el-descriptions :column="2" border>
           <el-descriptions-item label="模板名称">{{ detail.template_name }}</el-descriptions-item>
           <el-descriptions-item label="状态">{{ detail.is_active ? '启用' : '停用' }}</el-descriptions-item>
@@ -65,5 +80,33 @@ function tableText(table: TemplateTableSummary) {
   display: grid;
   gap: 16px;
   min-height: 160px;
+}
+
+.detail-summary {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detail-summary div {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.detail-summary span {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.detail-summary strong {
+  color: var(--color-text);
+  display: block;
+  font-size: 15px;
+  overflow-wrap: anywhere;
 }
 </style>

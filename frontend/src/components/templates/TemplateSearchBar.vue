@@ -8,7 +8,7 @@
         @clear="emitSearch"
         @keyup.enter="emitSearch"
       />
-      <el-button disabled>筛选</el-button>
+      <span class="search-hint">仅显示已启用模板</span>
     </div>
     <div class="toolbar-right">
       <el-button type="primary" :loading="loading" @click="emitSearch">搜索</el-button>
@@ -36,10 +36,24 @@ function emitSearch() {
 
 <style scoped>
 .search-bar {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
   margin-bottom: 0;
+  padding: 12px;
 }
 
 .search-bar .el-input {
   width: 360px;
+}
+
+.search-hint {
+  background: var(--color-primary-soft);
+  border: 1px solid #d9e5ff;
+  border-radius: 999px;
+  color: #1f4fbd;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 10px;
 }
 </style>

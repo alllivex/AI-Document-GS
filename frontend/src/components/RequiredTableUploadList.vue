@@ -20,14 +20,18 @@
       </el-table-column>
       <el-table-column label="上传 Excel" min-width="260">
         <template #default="{ row }">
-          <input
-            :disabled="!taskId || uploading[row.table_name]"
-            accept=".xlsx"
-            type="file"
-            @change="onFileChange(row.table_name, $event)"
-          />
+          <label class="file-picker" :class="{ disabled: !taskId || uploading[row.table_name] }">
+            <span>{{ uploaded[row.table_name] ? '重新上传' : '选择文件' }}</span>
+            <input
+              :disabled="!taskId || uploading[row.table_name]"
+              accept=".xlsx"
+              type="file"
+              @change="onFileChange(row.table_name, $event)"
+            />
+          </label>
           <div v-if="uploaded[row.table_name]" class="uploaded">
-            已上传：{{ uploaded[row.table_name].original_filename }}
+            <strong>{{ uploaded[row.table_name].original_filename }}</strong>
+            <span>{{ uploaded[row.table_name].row_count }} 行 / {{ uploaded[row.table_name].column_count }} 列</span>
           </div>
         </template>
       </el-table-column>
@@ -98,10 +102,52 @@ function tableLabel(row: RequiredTable) {
   width: 100%;
 }
 
-.muted,
-.uploaded {
-  color: #909399;
+.muted {
+  color: var(--color-text-muted);
   font-size: 12px;
   margin-top: 4px;
+}
+
+.file-picker {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  height: 32px;
+  padding: 0 12px;
+}
+
+.file-picker:hover {
+  background: var(--color-primary-soft);
+  border-color: #aac2ff;
+}
+
+.file-picker.disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.file-picker input {
+  display: none;
+}
+
+.uploaded {
+  color: var(--color-text-muted);
+  display: grid;
+  font-size: 12px;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.uploaded strong {
+  color: var(--color-text);
+  font-weight: 650;
+  overflow-wrap: anywhere;
 }
 </style>

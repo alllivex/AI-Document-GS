@@ -3,6 +3,12 @@
     <el-empty v-if="!preview || !preview.blocks?.length" description="暂无预览内容" />
 
     <template v-else>
+      <div class="trace-legend">
+        <span class="legend-item trace-field">字段来源</span>
+        <span class="legend-item trace-condition">条件判断</span>
+        <span class="legend-item trace-loop">循环表格</span>
+        <span class="legend-item trace-ai">AI 生成</span>
+      </div>
       <article class="document-preview preview-paper">
         <template v-for="block in preview.blocks" :key="block.block_id">
           <component :is="headingTag(block.level)" v-if="block.type === 'heading'" class="preview-heading">
@@ -45,7 +51,7 @@
             @click.self="block.block_trace_id && emit('select-trace', block.block_trace_id)"
           >
             <div v-if="block.block_trace_id" class="table-trace-toolbar">
-              <el-button size="small" type="success" @click="emit('select-trace', block.block_trace_id)">
+              <el-button size="small" @click="emit('select-trace', block.block_trace_id)">
                 {{ blockTraceLabel(block.block_trace_kind) }}
               </el-button>
             </div>
@@ -208,23 +214,52 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
   align-items: flex-start;
   background: transparent;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
   justify-content: center;
   min-height: 100%;
   padding: 18px;
 }
 
+.trace-legend {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.legend-item {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 9px;
+}
+
 .document-preview {
-  color: #303133;
+  color: #242f42;
   line-height: 1.8;
 }
 
 .preview-paper {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+  background:
+    linear-gradient(90deg, rgba(36, 88, 211, 0.06) 0, transparent 5px),
+    #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(20, 32, 56, 0.12);
   max-width: 860px;
   min-height: calc(100vh - 170px);
-  padding: 36px;
+  padding: 42px 46px;
   width: 100%;
 }
 
@@ -235,9 +270,9 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 .preview-paragraph {
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 8px;
   margin: 0 0 12px;
-  padding: 2px 4px;
+  padding: 4px 6px;
 }
 
 .preview-paragraph.clickable-block {
@@ -246,43 +281,57 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 .preview-paragraph.trace-ai {
   border-color: #e9d5ff;
+  background: #fcfaff;
 }
 
 .preview-paragraph.trace-ai.active {
-  background: #faf5ff;
+  background: #f8f1ff;
 }
 
 .trace-text {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  border-radius: 5px;
-  color: #1d4ed8;
+  background: #eef5ff;
+  border: 1px solid #bdd4ff;
+  border-radius: 6px;
+  color: #1f4fbd;
   cursor: pointer;
   font: inherit;
   margin: 0 2px;
-  padding: 0 4px;
+  padding: 1px 5px;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease;
 }
 
 .trace-text:hover,
 .trace-text.active {
-  background: #2563eb;
-  border-color: #2563eb;
+  background: #2458d3;
+  border-color: #2458d3;
   color: #fff;
 }
 
+.trace-field {
+  background: #eef5ff;
+  border-color: #bdd4ff;
+  color: #1f4fbd;
+}
+
 .trace-condition {
-  background: #f3e8ff;
-  color: #7e22ce;
+  background: #f7edff;
+  border-color: #dcbcff;
+  color: #7a2bbf;
 }
 
 .trace-loop {
-  background: #e8f7ee;
-  color: #15803d;
+  background: #ebf8f1;
+  border-color: #bfe8d5;
+  color: #13794e;
 }
 
 .trace-ai {
-  background: #f5f3ff;
-  color: #6d28d9;
+  background: #fff5e6;
+  border-color: #f7c978;
+  color: #9b5a00;
 }
 
 .trace-condition:hover,
@@ -299,22 +348,24 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 .trace-ai:hover,
 .trace-ai.active {
-  background: #7c3aed;
+  background: #a16207;
   color: #fff;
 }
 
 .block-trace-button {
   border: 1px solid #d8b4fe;
-  border-radius: 4px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 12px;
+  font-weight: 700;
   margin-right: 8px;
-  padding: 2px 6px;
+  padding: 3px 8px;
 }
 
 .preview-table-wrap {
-  border: 1px solid #edf0f5;
-  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
   margin: 16px 0;
   overflow-x: auto;
   padding: 10px;
@@ -340,7 +391,7 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 .preview-table th,
 .preview-table td {
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--color-border);
   padding: 8px 10px;
   text-align: left;
   vertical-align: top;
@@ -355,5 +406,15 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 .empty-cell {
   color: #909399;
   text-align: center;
+}
+
+@media (max-width: 760px) {
+  .preview-renderer {
+    padding: 0;
+  }
+
+  .preview-paper {
+    padding: 24px 18px;
+  }
 }
 </style>

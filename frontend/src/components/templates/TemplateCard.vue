@@ -1,11 +1,12 @@
 <template>
   <el-card class="template-card" shadow="never">
-    <template #header>
-      <div class="card-header">
-        <h3>{{ template.template_name }}</h3>
-        <StatusTag :status="template.is_active ? 'active' : 'inactive'" :label="template.is_active ? '启用' : '停用'" />
-      </div>
-    </template>
+    <div class="card-top">
+      <div class="template-icon">DOC</div>
+      <StatusTag :status="template.is_active ? 'active' : 'inactive'" :label="template.is_active ? '启用' : '停用'" />
+    </div>
+
+    <h3>{{ template.template_name }}</h3>
+    <p class="file-name">{{ template.template_file }}</p>
 
     <dl class="meta-list">
       <div>
@@ -13,16 +14,12 @@
         <dd>{{ mainTableText }}</dd>
       </div>
       <div>
-        <dt>辅表数量</dt>
-        <dd>{{ template.aux_table_count }}</dd>
+        <dt>依赖表</dt>
+        <dd>{{ template.required_table_count }} 必需 / {{ template.aux_table_count }} 辅表</dd>
       </div>
       <div>
-        <dt>必需表数量</dt>
-        <dd>{{ template.required_table_count }}</dd>
-      </div>
-      <div>
-        <dt>模板文件</dt>
-        <dd>{{ template.template_file }}</dd>
+        <dt>更新时间</dt>
+        <dd>{{ formatTime(template.updated_at) }}</dd>
       </div>
     </dl>
 
@@ -52,67 +49,100 @@ const mainTableText = computed(() => {
     ? `${props.template.main_table_cn}（${props.template.main_table}）`
     : props.template.main_table
 })
+
+function formatTime(value: string) {
+  return value ? new Date(value).toLocaleDateString() : '-'
+}
 </script>
 
 <style scoped>
 .template-card {
-  border: 1px solid #edf0f5;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
   min-width: 0;
   transition:
+    border-color 0.18s ease,
     box-shadow 0.18s ease,
     transform 0.18s ease;
 }
 
 .template-card:hover {
-  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.09);
+  border-color: #bfd0f8;
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
-.template-card :deep(.el-card__header) {
-  border-bottom-color: #edf0f5;
-  padding: 18px 18px 14px;
-}
-
 .template-card :deep(.el-card__body) {
+  display: grid;
+  gap: 14px;
   padding: 18px;
 }
 
-.card-header {
-  align-items: flex-start;
+.card-top {
+  align-items: center;
   display: flex;
-  gap: 12px;
   justify-content: space-between;
 }
 
-.card-header h3 {
-  color: #1f2937;
+.template-icon {
+  align-items: center;
+  background: var(--color-primary-soft);
+  border: 1px solid #d9e5ff;
+  border-radius: 8px;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 11px;
+  font-weight: 800;
+  height: 34px;
+  justify-content: center;
+  width: 42px;
+}
+
+.template-card h3 {
+  color: var(--color-text);
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 750;
   line-height: 1.4;
   margin: 0;
 }
 
+.file-name {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: -6px 0 0;
+  overflow-wrap: anywhere;
+}
+
 .meta-list {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
   display: grid;
-  gap: 12px;
+  gap: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .meta-list div {
   display: grid;
   gap: 4px;
+  padding: 10px 12px;
+}
+
+.meta-list div + div {
+  border-top: 1px solid var(--color-border);
 }
 
 .meta-list dt {
-  color: #667085;
+  color: var(--color-text-muted);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .meta-list dd {
-  color: #344054;
+  color: var(--color-text);
+  font-weight: 650;
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -122,6 +152,5 @@ const mainTableText = computed(() => {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-end;
-  margin-top: 16px;
 }
 </style>

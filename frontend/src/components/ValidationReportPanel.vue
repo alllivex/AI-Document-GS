@@ -12,9 +12,18 @@
       />
 
       <div class="summary">
-        <StatusTag type="danger" :label="`错误 ${report.summary.error_count}`" />
-        <StatusTag type="warning" :label="`警告 ${report.summary.warning_count}`" />
-        <StatusTag type="default" :label="`提示 ${report.summary.info_count}`" />
+        <div class="summary-item danger">
+          <span>错误</span>
+          <strong>{{ report.summary.error_count }}</strong>
+        </div>
+        <div class="summary-item warning">
+          <span>警告</span>
+          <strong>{{ report.summary.warning_count }}</strong>
+        </div>
+        <div class="summary-item default">
+          <span>提示</span>
+          <strong>{{ report.summary.info_count }}</strong>
+        </div>
       </div>
 
       <el-table :data="report.items" border>
@@ -76,8 +85,44 @@ function levelText(level: ValidationLevel) {
 
 <style scoped>
 .summary {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 12px 0;
+}
+
+.summary-item {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.summary-item span {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.summary-item strong {
+  color: var(--color-text);
+  display: block;
+  font-size: 24px;
+  line-height: 1.1;
+  margin-top: 6px;
+}
+
+.summary-item.danger {
+  background: #fff7f6;
+  border-color: #fecdca;
+}
+
+.summary-item.warning {
+  background: #fffbeb;
+  border-color: #fedf89;
+}
+
+.summary-item.default {
+  background: #f8fafc;
 }
 </style>

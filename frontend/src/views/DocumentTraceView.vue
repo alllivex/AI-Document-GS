@@ -138,7 +138,9 @@ function goBack() {
 
 <style scoped>
 .trace-page {
-  background: #f4f7fb;
+  background:
+    linear-gradient(180deg, rgba(238, 244, 255, 0.82), rgba(245, 247, 251, 0.92) 240px),
+    var(--color-bg);
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--app-header-height, 60px));
@@ -150,11 +152,11 @@ function goBack() {
   align-items: start;
   display: grid;
   flex: 1;
-  gap: 18px;
-  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) 430px;
   min-height: 0;
   overflow: hidden;
-  padding: 18px;
+  padding: 20px 24px 24px;
 }
 
 .preview-pane {
@@ -173,6 +175,7 @@ function goBack() {
   .trace-layout {
     grid-template-columns: 1fr;
     overflow: visible;
+    padding: 16px;
   }
 
   .preview-pane {

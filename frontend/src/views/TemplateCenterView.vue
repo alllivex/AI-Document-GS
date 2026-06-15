@@ -1,13 +1,16 @@
 <template>
   <main class="page">
-    <div class="page-header">
-      <div>
-        <h2 class="page-title">模板中心</h2>
-        <p class="page-desc">选择业务模板，查看依赖表摘要，并发起文档生成任务。</p>
+    <section class="page-card template-workbench">
+      <div class="template-workbench-header">
+        <div>
+          <h2 class="page-title">模板中心</h2>
+          <p class="page-desc">选择业务模板，查看依赖表摘要，并发起文档生成任务。</p>
+        </div>
+        <div class="template-stat">
+          <strong>{{ templates.length }}</strong>
+          <span>可用模板</span>
+        </div>
       </div>
-    </div>
-
-    <section class="page-card">
       <TemplateSearchBar :loading="loading" @search="handleSearch" />
     </section>
 
@@ -100,5 +103,54 @@ function useTemplate(templateId: number) {
   gap: 18px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   min-height: 160px;
+}
+
+.template-workbench {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+.template-workbench-header {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.template-stat {
+  background: var(--color-primary-soft);
+  border: 1px solid #d9e5ff;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  min-width: 128px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.template-stat strong {
+  color: var(--color-primary);
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.template-stat span {
+  color: #1f4fbd;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+@media (max-width: 760px) {
+  .template-workbench-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .template-stat {
+    width: 128px;
+  }
 }
 </style>

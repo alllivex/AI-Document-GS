@@ -1,47 +1,97 @@
 <template>
   <main class="page">
-    <div class="page-header">
-      <div>
-        <h2 class="page-title">任务管理</h2>
-        <p class="page-desc">创建任务、查看生成状态和输出结果。</p>
-      </div>
-      <div class="actions">
-        <el-button @click="loadTasks">刷新</el-button>
-        <el-button type="primary" @click="createNewTask">新建任务</el-button>
-      </div>
-    </div>
-
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
+
+    <section class="page-card task-overview">
+      <div class="overview-heading">
+        <div>
+          <h2>任务概览</h2>
+          <p>当前任务的生成进度与异常分布</p>
+        </div>
+      </div>
+      <div class="overview-metrics">
+        <div class="overview-item">
+          <span>全部任务</span>
+          <strong>{{ summary.total }}</strong>
+          <small>当前可见任务总数</small>
+        </div>
+        <div class="overview-item accent-blue">
+          <span>处理中</span>
+          <strong>{{ summary.active }}</strong>
+          <small>待上传、校验或生成</small>
+        </div>
+        <div class="overview-item accent-green">
+          <span>已完成</span>
+          <strong>{{ summary.completed }}</strong>
+          <small>可查看预览和下载</small>
+        </div>
+        <div class="overview-item accent-red">
+          <span>异常任务</span>
+          <strong>{{ summary.failed }}</strong>
+          <small>失败或校验未通过</small>
+        </div>
+      </div>
+    </section>
 
     <section class="page-card">
       <div class="page-toolbar">
         <div class="toolbar-left">
-          <el-input placeholder="搜索任务名称或模板" disabled />
-          <el-button disabled>筛选</el-button>
+          <el-input
+            v-model="keyword"
+            clearable
+            placeholder="搜索任务名称、模板或主表"
+            class="task-search"
+          />
+          <el-select v-model="selectedStatus" class="status-filter">
+            <el-option
+              v-for="option in taskStatusOptions"
+              :key="option.value"
+              :label="option.label"
+              :value="option.value"
+            />
+          </el-select>
         </div>
         <div class="toolbar-right">
+          <span class="result-count">筛选结果 {{ filteredTasks.length }} 条</span>
           <el-button @click="loadTasks">刷新列表</el-button>
+          <el-button type="primary" @click="createNewTask">新建任务</el-button>
         </div>
       </div>
 
-      <el-table v-loading="loading" :data="tasks" border>
-        <el-table-column prop="task_name" label="任务名称" min-width="220" />
-        <el-table-column prop="template_name" label="模板" min-width="220" />
-        <el-table-column label="状态" width="140">
+      <el-table v-loading="loading" :data="filteredTasks" border>
+        <el-table-column label="任务" min-width="260">
           <template #default="{ row }">
-            <StatusTag :status="row.status" :label="statusText(row.status)" />
+            <div class="task-name">{{ row.task_name }}</div>
+            <div class="task-id">{{ row.task_id }}</div>
           </template>
         </el-table-column>
-        <el-table-column prop="total_rows" label="总数" width="90" />
-        <el-table-column prop="success_count" label="成功" width="90" />
-        <el-table-column prop="failed_count" label="失败" width="90" />
-        <el-table-column prop="error_count" label="错误" width="90" />
+        <el-table-column label="模板" min-width="220">
+          <template #default="{ row }">
+            <div>{{ row.template_name }}</div>
+            <div class="muted small-text">主表：{{ row.main_table || '-' }}</div>
+          </template>
+        </el-table-column>
+        <el-table-column label="状态" width="140">
+          <template #default="{ row }">
+            <StatusTag :status="row.status" :label="taskStatusText(row.status)" />
+          </template>
+        </el-table-column>
+        <el-table-column label="产出" min-width="150">
+          <template #default="{ row }">
+            <div class="count-line">
+              <strong>{{ row.success_count }}</strong>
+              <span>/ {{ row.total_rows || 0 }} 成功</span>
+            </div>
+            <div class="muted small-text">失败 {{ row.failed_count }}，错误 {{ row.error_count }}</div>
+          </template>
+        </el-table-column>
         <el-table-column label="创建时间" min-width="180">
           <template #default="{ row }">{{ formatTime(row.created_at) }}</template>
         </el-table-column>
-        <el-table-column label="操作" width="160">
+        <el-table-column label="操作" width="220" fixed="right">
           <template #default="{ row }">
             <el-button link type="primary" @click="openResult(row.task_id)">查看结果</el-button>
+            <el-button link type="primary" @click="createFromTemplate(row.template_id)">新建同类</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -50,16 +100,39 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import StatusTag from '../components/common/StatusTag.vue'
 import { listTasks } from '../api/tasks'
 import type { TaskListItem, TaskStatus } from '../types/task'
+import { isTaskActive, taskStatusOptions, taskStatusText } from '../utils/uiMeta'
 
 const router = useRouter()
 const tasks = ref<TaskListItem[]>([])
 const loading = ref(false)
 const errorMessage = ref('')
+const keyword = ref('')
+const selectedStatus = ref<TaskStatus | 'all'>('all')
+
+const filteredTasks = computed(() => {
+  const search = keyword.value.trim().toLowerCase()
+  return tasks.value.filter((task) => {
+    const matchesStatus = selectedStatus.value === 'all' || task.status === selectedStatus.value
+    const matchesKeyword = !search
+      || [task.task_name, task.template_name, task.main_table, task.task_id]
+        .some((value) => String(value || '').toLowerCase().includes(search))
+    return matchesStatus && matchesKeyword
+  })
+})
+
+const summary = computed(() => {
+  return {
+    total: tasks.value.length,
+    active: tasks.value.filter((task) => isTaskActive(task.status)).length,
+    completed: tasks.value.filter((task) => task.status === 'completed').length,
+    failed: tasks.value.filter((task) => ['failed', 'validation_failed', 'partial_failed'].includes(task.status)).length,
+  }
+})
 
 onMounted(loadTasks)
 
@@ -84,20 +157,8 @@ function openResult(taskId: string) {
   router.push(`/tasks/${taskId}/results`)
 }
 
-function statusText(status: TaskStatus) {
-  const map: Record<TaskStatus, string> = {
-    created: '已创建',
-    uploaded: '已上传',
-    validating: '校验中',
-    validated: '已校验',
-    validation_failed: '校验失败',
-    running: '生成中',
-    completed: '已完成',
-    partial_failed: '部分失败',
-    failed: '失败',
-    deleted: '已删除',
-  }
-  return map[status] || status
+function createFromTemplate(templateId: number) {
+  router.push({ path: '/tasks/new', query: { template_id: String(templateId) } })
 }
 
 function formatTime(value: string) {
@@ -106,7 +167,136 @@ function formatTime(value: string) {
 </script>
 
 <style scoped>
-.toolbar-left .el-input {
-  width: 260px;
+.task-search {
+  width: 300px;
+}
+
+.status-filter {
+  width: 160px;
+}
+
+.result-count,
+.small-text {
+  font-size: 12px;
+}
+
+.result-count {
+  color: var(--color-text-muted);
+}
+
+.task-name {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.task-id {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.count-line {
+  align-items: baseline;
+  display: flex;
+  gap: 4px;
+}
+
+.count-line strong {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.task-overview {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.overview-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-heading h2 {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 750;
+  margin: 0;
+}
+
+.overview-heading p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+
+.overview-metrics {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-border);
+}
+
+.overview-item {
+  background: #fff;
+  min-width: 0;
+  padding: 16px 18px;
+  position: relative;
+}
+
+.overview-item::before {
+  background: #98a2b3;
+  border-radius: 999px;
+  content: "";
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 18px;
+  width: 3px;
+}
+
+.overview-item.accent-blue::before {
+  background: #2458d3;
+}
+
+.overview-item.accent-green::before {
+  background: #168456;
+}
+
+.overview-item.accent-red::before {
+  background: #c0352b;
+}
+
+.overview-item span {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.overview-item strong {
+  color: var(--color-text);
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 9px;
+}
+
+.overview-item small {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1080px) {
+  .overview-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 </style>

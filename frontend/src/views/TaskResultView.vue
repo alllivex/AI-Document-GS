@@ -2,6 +2,7 @@
   <main class="page">
     <div class="page-header">
       <div>
+        <div class="page-kicker">Generated Assets</div>
         <h2 class="page-title">任务结果</h2>
         <p class="page-desc">{{ taskId }}</p>
       </div>
@@ -12,6 +13,29 @@
     </div>
 
     <el-alert v-if="errorMessage" :title="errorMessage" type="error" show-icon :closable="false" />
+
+    <section class="metric-grid">
+      <div class="metric-card">
+        <div class="metric-label">输出文档</div>
+        <div class="metric-value">{{ summary.total }}</div>
+        <div class="metric-note">当前任务生成文件</div>
+      </div>
+      <div class="metric-card accent-green">
+        <div class="metric-label">生成成功</div>
+        <div class="metric-value">{{ summary.success }}</div>
+        <div class="metric-note">可预览溯源与下载</div>
+      </div>
+      <div class="metric-card accent-blue">
+        <div class="metric-label">溯源点</div>
+        <div class="metric-value">{{ summary.traceCount }}</div>
+        <div class="metric-note">字段、循环、条件、AI</div>
+      </div>
+      <div class="metric-card accent-purple">
+        <div class="metric-label">AI 段落</div>
+        <div class="metric-value">{{ summary.aiBlockCount }}</div>
+        <div class="metric-note">AI 生成内容数量</div>
+      </div>
+    </section>
 
     <section class="page-card">
       <OutputDocumentList :task-id="taskId" :documents="documents" :loading="loading" />
@@ -32,6 +56,15 @@ const taskId = computed(() => String(route.params.taskId || route.query.task_id 
 const documents = ref<DocumentRecord[]>([])
 const loading = ref(false)
 const errorMessage = ref('')
+
+const summary = computed(() => {
+  return {
+    total: documents.value.length,
+    success: documents.value.filter((document) => document.status === 'success').length,
+    traceCount: documents.value.reduce((sum, document) => sum + (document.trace_count || 0), 0),
+    aiBlockCount: documents.value.reduce((sum, document) => sum + (document.ai_block_count || 0), 0),
+  }
+})
 
 onMounted(loadOutputs)
 
@@ -57,4 +90,16 @@ function goBack() {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.accent-green {
+  border-color: #bfe8d5;
+}
+
+.accent-blue {
+  border-color: #cfe0ff;
+}
+
+.accent-purple {
+  border-color: #decfff;
+}
+</style>

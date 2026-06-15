@@ -22,7 +22,8 @@ onErrorCaptured((error) => {
 <style scoped>
 .runtime-error {
   background: #fef0f0;
-  color: #c45656;
+  border-bottom: 1px solid #fecdca;
+  color: #b42318;
   padding: 12px 24px;
 }
 </style>
