@@ -12,6 +12,10 @@ class PreviewRunStyle(ContractModel):
     bold: bool | None = None
     italic: bool | None = None
     underline: bool | None = None
+    alignment: str | None = None
+    color: str | None = None
+    background_color: str | None = None
+    font_size_pt: float | None = None
 
 
 class PreviewRun(ContractModel):
@@ -27,6 +31,11 @@ class PreviewTableCell(ContractModel):
     trace_id: str | None = None
     trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     ai_block_id: str | None = None
+    runs: list[PreviewRun] | None = None
+    colspan: int = Field(default=1, ge=1)
+    rowspan: int = Field(default=1, ge=1)
+    style: PreviewRunStyle | None = None
+    width_px: float | None = None
 
 
 class PreviewHeadingBlock(ContractModel):
@@ -42,6 +51,7 @@ class PreviewParagraphBlock(ContractModel):
     block_trace_id: str | None = None
     block_trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     runs: list[PreviewRun]
+    style: PreviewRunStyle | None = None
 
 
 class PreviewTableBlock(ContractModel):
@@ -51,6 +61,8 @@ class PreviewTableBlock(ContractModel):
     block_trace_kind: Literal["field", "condition", "loop", "ai"] | None = None
     headers: list[PreviewTableCell]
     rows: list[list[PreviewTableCell]]
+    style: PreviewRunStyle | None = None
+    width_px: float | None = None
 
 
 PreviewBlock = Annotated[

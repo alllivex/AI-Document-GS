@@ -69,4 +69,16 @@ assert.match(sourceTable, /getFieldDisplayName\(row\)/)
 assert.match(sourceTable, /trace-highlight-row/)
 assert.doesNotMatch(sourceTable, /`\$\{[^`]+?（\$\{/)
 
+assert.match(sourceTable, /data-source-highlight-target/)
+assert.match(sourceTable, /source-highlight-focus/)
+
+const previewRenderer = fs.readFileSync(path.join(root, 'src/components/PreviewRenderer.vue'), 'utf8')
+assert.match(previewRenderer, /suppressAutoScrollTraceId/)
+assert.match(previewRenderer, /selectTraceFromPreview/)
+
+const traceDetailPanel = fs.readFileSync(path.join(root, 'src/components/TraceDetailPanel.vue'), 'utf8')
+assert.match(traceDetailPanel, /data-source-highlight-target/)
+assert.match(traceDetailPanel, /getBoundingClientRect/)
+assert.match(traceDetailPanel, /panel\.scrollTo/)
+
 console.log('display name and trace panel checks passed')

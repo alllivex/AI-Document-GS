@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Deque
 from uuid import uuid4
 
-from app.engine.docx_preview_parser import ParsedDocxBlock, ParsedParagraph, ParsedTable, parse_docx_for_preview
+from app.engine.docx_preview_parser import ParsedDocxBlock, ParsedParagraph, ParsedRun, ParsedTable, ParsedTableCell, parse_docx_for_preview
 from app.models.preview_models import (
     PreviewFile,
     PreviewHeadingBlock,
@@ -68,7 +68,7 @@ def build_preview_blocks(
 
     for parsed_block in parsed_blocks:
         if isinstance(parsed_block, ParsedParagraph):
-            runs = split_text_with_trace(parsed_block.text, trace_queues)
+            runs = split_parsed_runs_with_trace(parsed_block.runs or [ParsedRun(text=parsed_block.text)], trace_queues)
             condition_trace = _match_condition_trace(parsed_block.text, remaining_conditions)
             if condition_trace is not None:
                 _apply_condition_trace_to_runs(runs, condition_trace)
@@ -90,6 +90,7 @@ def build_preview_blocks(
                         block_trace_id=block_trace_id,
                         block_trace_kind=block_trace_kind,
                         runs=runs,
+                        style=parsed_block.style,
                     )
                 )
         elif isinstance(parsed_block, ParsedTable):
@@ -110,20 +111,32 @@ def build_trace_queues(trace_items: list[TraceItem]) -> TraceQueueByDisplayValue
 
 
 def split_text_with_trace(text: str, trace_queues: TraceQueueByDisplayValue) -> list[PreviewRun]:
+    return split_parsed_runs_with_trace([ParsedRun(text=text)], trace_queues)
+
+
+def split_parsed_runs_with_trace(parsed_runs: list[ParsedRun], trace_queues: TraceQueueByDisplayValue) -> list[PreviewRun]:
     runs: list[PreviewRun] = []
-    position = 0
+    for parsed_run in parsed_runs:
+        position = 0
+        text = parsed_run.text
 
-    while position < len(text):
-        match = _find_next_trace_match(text, position, trace_queues)
-        if match is None:
-            _append_run(runs, text[position:])
-            break
+        while position < len(text):
+            match = _find_next_trace_match(text, position, trace_queues)
+            if match is None:
+                _append_run(runs, text[position:], style=parsed_run.style)
+                break
 
-        start, display_value, trace_item = match
-        if start > position:
-            _append_run(runs, text[position:start])
-        _append_run(runs, text[start : start + len(display_value)], trace_item.trace_id, "field")
-        position = start + len(display_value)
+            start, display_value, trace_item = match
+            if start > position:
+                _append_run(runs, text[position:start], style=parsed_run.style)
+            _append_run(
+                runs,
+                text[start : start + len(display_value)],
+                trace_item.trace_id,
+                "field",
+                style=parsed_run.style,
+            )
+            position = start + len(display_value)
 
     return runs
 
@@ -145,16 +158,25 @@ def _build_table_block(
             [_build_table_cell(text, trace_queues) for text in row]
             for row in raw_rows
         ],
+        style=parsed_table.style,
+        width_px=parsed_table.width_px,
     )
 
 
-def _build_table_cell(text: str, trace_queues: TraceQueueByDisplayValue) -> PreviewTableCell:
-    match = _find_next_trace_match(text, 0, trace_queues)
-    if match is None:
-        return PreviewTableCell(text=text)
+def _build_table_cell(cell: ParsedTableCell, trace_queues: TraceQueueByDisplayValue) -> PreviewTableCell:
+    runs = split_parsed_runs_with_trace(cell.runs or [ParsedRun(text=cell.text)], trace_queues)
+    first_trace_run = next((run for run in runs if run.trace_id), None)
 
-    _, _, trace_item = match
-    return PreviewTableCell(text=text, trace_id=trace_item.trace_id, trace_kind="field")
+    return PreviewTableCell(
+        text=cell.text,
+        trace_id=first_trace_run.trace_id if first_trace_run else None,
+        trace_kind=first_trace_run.trace_kind if first_trace_run else None,
+        runs=runs if runs else None,
+        colspan=cell.colspan,
+        rowspan=cell.rowspan,
+        style=cell.style,
+        width_px=cell.width_px,
+    )
 
 
 def _find_next_trace_match(
@@ -198,13 +220,14 @@ def _append_run(
     text: str,
     trace_id: str | None = None,
     trace_kind: str | None = None,
+    style: dict | None = None,
 ) -> None:
     if not text:
         return
-    if runs and runs[-1].trace_id == trace_id and runs[-1].trace_kind == trace_kind:
+    if runs and runs[-1].trace_id == trace_id and runs[-1].trace_kind == trace_kind and runs[-1].style == style:
         runs[-1].text += text
         return
-    runs.append(PreviewRun(text=text, trace_id=trace_id, trace_kind=trace_kind))
+    runs.append(PreviewRun(text=text, trace_id=trace_id, trace_kind=trace_kind, style=style))
 
 
 def _match_condition_trace(

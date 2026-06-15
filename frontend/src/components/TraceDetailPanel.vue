@@ -87,6 +87,8 @@ watch(
   async () => {
     const requestId = ++scrollRequestId
     await nextTick()
+    await nextTick()
+    await waitForFrame()
 
     if (requestId !== scrollRequestId || props.loading) {
       return
@@ -103,16 +105,38 @@ function scrollToHighlightedRow() {
     return
   }
 
-  const highlightedRow = panel.querySelector<HTMLElement>('.trace-highlight-row, .highlight-row')
-  if (!highlightedRow) {
+  const highlightedTarget =
+    panel.querySelector<HTMLElement>('[data-source-highlight-target="true"]') ||
+    panel.querySelector<HTMLElement>('.trace-highlight-row, .highlight-row')
+  if (!highlightedTarget) {
     panel.scrollTo({ top: 0, behavior: 'smooth' })
     return
   }
 
-  highlightedRow.scrollIntoView({
-    block: 'center',
-    inline: 'nearest',
+  focusHighlightedTarget(panel, highlightedTarget)
+  const panelRect = panel.getBoundingClientRect()
+  const targetRect = highlightedTarget.getBoundingClientRect()
+  const top = panel.scrollTop + targetRect.top - panelRect.top - panel.clientHeight * 0.35
+
+  panel.scrollTo({
+    top: Math.max(top, 0),
     behavior: 'smooth',
+  })
+}
+
+function focusHighlightedTarget(panel: HTMLElement, target: HTMLElement) {
+  for (const element of panel.querySelectorAll('.source-highlight-focus')) {
+    element.classList.remove('source-highlight-focus')
+  }
+  target.classList.add('source-highlight-focus')
+  window.setTimeout(() => {
+    target.classList.remove('source-highlight-focus')
+  }, 1200)
+}
+
+function waitForFrame() {
+  return new Promise<void>((resolve) => {
+    window.requestAnimationFrame(() => resolve())
   })
 }
 </script>

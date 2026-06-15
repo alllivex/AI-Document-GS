@@ -10,12 +10,24 @@
     <el-table :data="record.fields" border size="small" row-key="field_name" :row-class-name="rowClassName">
       <el-table-column label="字段名" min-width="180">
         <template #default="{ row }">
-          {{ getFieldDisplayName(row) }}
+          <span
+            :class="{ 'source-highlight-target': row.is_highlighted }"
+            :data-field-name="row.field_name"
+            :data-source-highlight-target="row.is_highlighted ? 'true' : undefined"
+          >
+            {{ getFieldDisplayName(row) }}
+          </span>
         </template>
       </el-table-column>
       <el-table-column label="数据值" min-width="180">
         <template #default="{ row }">
-          {{ row.display_value || formatValue(row.raw_value) }}
+          <span
+            :class="{ 'source-highlight-target': row.is_highlighted }"
+            :data-field-name="row.field_name"
+            :data-source-highlight-target="row.is_highlighted ? 'true' : undefined"
+          >
+            {{ row.display_value || formatValue(row.raw_value) }}
+          </span>
         </template>
       </el-table-column>
     </el-table>
@@ -73,5 +85,16 @@ function formatValue(value: unknown) {
 
 .source-record :deep(.highlight-used_in_loop td) {
   background: #e8f7ee !important;
+}
+
+.source-record :deep(.source-highlight-target) {
+  border-radius: 4px;
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+.source-record :deep(.source-highlight-focus) {
+  box-shadow: 0 0 0 3px rgba(36, 88, 211, 0.24);
+  outline: 2px solid rgba(36, 88, 211, 0.72);
 }
 </style>

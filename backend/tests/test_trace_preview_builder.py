@@ -5,6 +5,9 @@ import sys
 import zipfile
 
 from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -97,6 +100,12 @@ def write_loop_template(path: Path) -> None:
             "<document><body><tbl>{%tr for p in products %}{{ p.product_name }} {{ p.overdue_rate }}"
             "{%tr endfor %}</tbl></body></document>",
         )
+
+
+def shade_cell(cell, fill: str) -> None:
+    shading = OxmlElement("w:shd")
+    shading.set(qn("w:fill"), fill)
+    cell._tc.get_or_add_tcPr().append(shading)
 
 
 def load_json(path: Path) -> dict:
@@ -210,7 +219,73 @@ def test_unmatched_preview_text_is_kept_without_trace_id(tmp_path) -> None:
     ]
 
     table_block = next(block for block in preview_payload["blocks"] if block["type"] == "table")
-    assert table_block["rows"][1][0] == {"text": "Unmatched cell", "trace_id": None, "trace_kind": None, "ai_block_id": None}
+    unmatched_cell = table_block["rows"][1][0]
+    assert unmatched_cell["text"] == "Unmatched cell"
+    assert unmatched_cell["trace_id"] is None
+    assert unmatched_cell["trace_kind"] is None
+    assert unmatched_cell["ai_block_id"] is None
+
+
+def test_preview_preserves_merged_table_cells_and_basic_styles(tmp_path) -> None:
+    output_path = tmp_path / "merged.docx"
+    document = Document()
+    paragraph = document.add_paragraph()
+    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = paragraph.add_run("Styled Acme")
+    run.bold = True
+    run.underline = True
+
+    table = document.add_table(rows=3, cols=3)
+    merged_header = table.cell(0, 0).merge(table.cell(0, 1))
+    merged_header.text = "Merged Header"
+    shade_cell(merged_header, "D9EAF7")
+    table.cell(0, 2).text = "Plain Header"
+    vertical = table.cell(1, 0).merge(table.cell(2, 0))
+    vertical.text = "Vertical"
+    table.cell(1, 1).text = "Amount"
+    table.cell(1, 2).text = "3000.00"
+    table.cell(2, 1).text = "Tail"
+    table.cell(2, 2).text = "Acme"
+    document.save(output_path)
+
+    result = build_trace_and_preview(
+        BuildTracePreviewInput(
+            task_id="task_001",
+            doc_id="doc_001",
+            template_id=1,
+            template_name="merged",
+            template_file="merged.docx",
+            output_file=output_path.name,
+            output_path=output_path,
+            main_table="customer_info",
+            primary_key_field="customer_id",
+            primary_key_value="C001",
+            trace_map={
+                "customer_info.customer_name": [
+                    make_trace_item("trace_customer_name", "customer_info.customer_name", "customer_info", "customer_name", "Acme")
+                ],
+                "loan.amount": [
+                    make_trace_item("trace_amount", "loan.amount", "loan", "amount", "3000.00")
+                ],
+            },
+            final_docx_path=output_path,
+        )
+    )
+
+    preview_payload = load_json(result.preview_file_path)
+    paragraph_block = preview_payload["blocks"][0]
+    assert paragraph_block["style"]["alignment"] == "center"
+    assert paragraph_block["runs"][0]["style"]["bold"] is True
+    assert paragraph_block["runs"][0]["style"]["underline"] is True
+    assert paragraph_block["runs"][1]["trace_id"] == "trace_customer_name"
+
+    table_block = next(block for block in preview_payload["blocks"] if block["type"] == "table")
+    assert table_block["headers"][0]["text"] == "Merged Header"
+    assert table_block["headers"][0]["colspan"] == 2
+    assert table_block["headers"][0]["style"]["background_color"] == "D9EAF7"
+    assert table_block["rows"][0][0]["text"] == "Vertical"
+    assert table_block["rows"][0][0]["rowspan"] == 2
+    assert table_block["rows"][0][2]["trace_id"] == "trace_amount"
 
 
 def test_repeated_display_values_use_trace_map_order(tmp_path) -> None:

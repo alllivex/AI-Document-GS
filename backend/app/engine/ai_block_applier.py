@@ -109,12 +109,45 @@ def _replacement_text(
 
 
 def _replace_paragraph_text(paragraph: Paragraph, text: str) -> None:
+    first_run = paragraph.runs[0] if paragraph.runs else None
+    style_snapshot = _run_style_snapshot(first_run)
     paragraph._p.clear_content()
     lines = text.splitlines() or [""]
     run = paragraph.add_run(lines[0])
+    _apply_run_style_snapshot(run, style_snapshot)
     for line in lines[1:]:
         run.add_break()
         run.add_text(line)
+
+
+def _run_style_snapshot(run: Any | None) -> dict[str, Any]:
+    if run is None:
+        return {}
+    font = run.font
+    return {
+        "bold": run.bold,
+        "italic": run.italic,
+        "underline": run.underline,
+        "style": run.style,
+        "font_name": font.name,
+        "font_size": font.size,
+        "font_color": font.color.rgb if font.color is not None else None,
+    }
+
+
+def _apply_run_style_snapshot(run: Any, snapshot: dict[str, Any]) -> None:
+    if not snapshot:
+        return
+    run.bold = snapshot.get("bold")
+    run.italic = snapshot.get("italic")
+    run.underline = snapshot.get("underline")
+    if snapshot.get("style") is not None:
+        run.style = snapshot["style"]
+    font = run.font
+    font.name = snapshot.get("font_name")
+    font.size = snapshot.get("font_size")
+    if snapshot.get("font_color") is not None:
+        font.color.rgb = snapshot["font_color"]
 
 
 def _build_ai_block_trace(

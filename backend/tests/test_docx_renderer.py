@@ -40,6 +40,27 @@ def write_table_loop_template(path: Path) -> None:
     document.save(path)
 
 
+def write_merged_table_template(path: Path) -> None:
+    document = Document()
+    table = document.add_table(rows=3, cols=3)
+    table.cell(0, 0).merge(table.cell(0, 1)).text = "Merged {{ customer_info.customer_name }}"
+    table.cell(0, 2).text = "Header"
+    table.cell(1, 0).merge(table.cell(2, 0)).text = "Vertical"
+    table.cell(1, 1).text = "{{ loan_summary.loan_balance }}"
+    table.cell(1, 2).text = "Tail"
+    table.cell(2, 1).text = "Bottom"
+    table.cell(2, 2).text = "Right"
+    document.save(path)
+
+
+def has_grid_span(document: Document) -> bool:
+    return bool(document.element.xpath(".//w:gridSpan"))
+
+
+def has_vertical_merge(document: Document) -> bool:
+    return bool(document.element.xpath(".//w:vMerge"))
+
+
 def test_render_docx_template_replaces_variables_and_if_conditions(tmp_path) -> None:
     template_path = tmp_path / "template.docx"
     output_path = tmp_path / "output.docx"
@@ -101,6 +122,27 @@ def test_render_docx_template_supports_docxtpl_table_row_loop(tmp_path) -> None:
     assert result.success is True
     rendered = Document(output_path)
     assert table_rows(rendered) == [["Factory", "3000.00"], ["Equipment", "500.00"]]
+
+
+def test_render_docx_template_preserves_merged_table_structure(tmp_path) -> None:
+    template_path = tmp_path / "merged_template.docx"
+    output_path = tmp_path / "merged_output.docx"
+    write_merged_table_template(template_path)
+
+    result = render_docx_template(
+        template_path,
+        {
+            "customer_info": {"customer_name": "Acme"},
+            "loan_summary": {"loan_balance": "3000.00"},
+        },
+        output_path,
+    )
+
+    assert result.success is True
+    rendered = Document(output_path)
+    assert rendered.tables[0].cell(0, 0).text == "Merged Acme"
+    assert has_grid_span(rendered)
+    assert has_vertical_merge(rendered)
 
 
 def test_rendered_docx_can_be_opened_by_python_docx(tmp_path) -> None:
