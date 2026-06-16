@@ -166,6 +166,8 @@ def _build_ai_block_trace(
     return AIBlockTrace(
         block_id=_block_id_from_marker(marker),
         marker=marker,
+        comment_id=ai_result.comment_id if ai_result is not None else None,
+        selected_text=ai_result.selected_text if ai_result is not None else "",
         status=status,
         original_block_text=original_block_text,
         prompt_template=ai_result.prompt_template if ai_result is not None else "",

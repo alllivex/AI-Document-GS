@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260615_130110_6c2066",
+  "status": "failed",
+  "summary": {
+    "error_count": 6,
+    "warning_count": 0,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.bad_mom",
+      "table_name": "data",
+      "field_name": "bad_mom",
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "模板变量 data.bad_mom 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.bad_mom",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.bad_yoy",
+      "table_name": "data",
+      "field_name": "bad_yoy",
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "模板变量 data.bad_yoy 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.bad_yoy",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.branch_name",
+      "table_name": "data",
+      "field_name": "branch_name",
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "模板变量 data.branch_name 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.branch_name",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.report_date",
+      "table_name": "data",
+      "field_name": "report_date",
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "模板变量 data.report_date 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.report_date",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "duplicate_ai_marker",
+      "message": "AI block marker appears multiple times in template: §AIBLOCK0§",
+      "table_name": null,
+      "field_name": null,
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "Ensure each AI Block marker is covered by exactly one Word comment containing prompt=\"...\".",
+      "detail": {
+        "comment_id": null,
+        "marker": "§AIBLOCK0§",
+        "selected_text": ""
+      }
+    },
+    {
+      "level": "error",
+      "code": "ai_marker_bound_to_multiple_comments",
+      "message": "AI block marker is bound to multiple prompt comments: §AIBLOCK0§, comment_id=0, comment_id=1",
+      "table_name": null,
+      "field_name": null,
+      "template_id": 7,
+      "template_file": "template_7.docx",
+      "suggestion": "Ensure each AI Block marker is covered by exactly one Word comment containing prompt=\"...\".",
+      "detail": {
+        "comment_id": "1",
+        "marker": "§AIBLOCK0§",
+        "selected_text": "§AIBLOCK0§基于不良环比{{ data.bad_mom }}、同比{{ data.bad_yoy }}，普惠贷款余额为 {{ loan_summary.loan_balance }} 万元；房产评估金额 {{ loan_summary.house_eval_amount }} 万元。清偿能力判断：{% if loan_summary.house_eval_amount < loan_summary.loan_balance %}无法清偿{% else %}可清偿{% endif %}。"
+      }
+    }
+  ],
+  "created_at": "2026-06-15T13:01:41.293629Z"
+}

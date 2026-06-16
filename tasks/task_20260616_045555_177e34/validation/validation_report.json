@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260616_045555_177e34",
+  "status": "failed",
+  "summary": {
+    "error_count": 23,
+    "warning_count": 0,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "error",
+      "code": "one_to_one_multiple_rows",
+      "message": "One-to-one table matches multiple rows: hetong_data.LRR_CUST_NO",
+      "table_name": "hetong_data",
+      "field_name": "LRR_CUST_NO",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "一对一辅表中同一个主表键最多只能匹配一行，请删除或合并重复记录。",
+      "detail": {
+        "duplicated_values": [
+          4000920260329001,
+          4000920260329002
+        ]
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_NAME",
+      "table_name": "data",
+      "field_name": "LRR_NAME",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_NAME 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_NAME",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_GENDER",
+      "table_name": "data",
+      "field_name": "LRR_GENDER",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_GENDER 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_GENDER",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_ID_NO",
+      "table_name": "data",
+      "field_name": "LRR_ID_NO",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_ID_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_ID_NO",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_EDUCATION",
+      "table_name": "data",
+      "field_name": "LRR_EDUCATION",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_EDUCATION 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_EDUCATION",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_MARITAL_STATUS",
+      "table_name": "data",
+      "field_name": "LRR_MARITAL_STATUS",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_MARITAL_STATUS 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_MARITAL_STATUS",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_REGISTER_ADDR",
+      "table_name": "data",
+      "field_name": "LRR_REGISTER_ADDR",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_REGISTER_ADDR 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_REGISTER_ADDR",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_RESIDENT_ADDR",
+      "table_name": "data",
+      "field_name": "LRR_RESIDENT_ADDR",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_RESIDENT_ADDR 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_RESIDENT_ADDR",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.COMPANY_NAME",
+      "table_name": "data",
+      "field_name": "COMPANY_NAME",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.COMPANY_NAME 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.COMPANY_NAME",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.COMPANY_REG_CAPITAL",
+      "table_name": "data",
+      "field_name": "COMPANY_REG_CAPITAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.COMPANY_REG_CAPITAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.COMPANY_REG_CAPITAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.COMPANY_BUSINESS_STATUS",
+      "table_name": "data",
+      "field_name": "COMPANY_BUSINESS_STATUS",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.COMPANY_BUSINESS_STATUS 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.COMPANY_BUSINESS_STATUS",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LOAN_PRODUCT",
+      "table_name": "data",
+      "field_name": "LOAN_PRODUCT",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LOAN_PRODUCT 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LOAN_PRODUCT",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.CUSTOMER_FINANCING_BALANCE",
+      "table_name": "data",
+      "field_name": "CUSTOMER_FINANCING_BALANCE",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.CUSTOMER_FINANCING_BALANCE 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.CUSTOMER_FINANCING_BALANCE",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.BASE_DATE",
+      "table_name": "data",
+      "field_name": "BASE_DATE",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.BASE_DATE 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.BASE_DATE",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LOAN_PRINCIPAL",
+      "table_name": "data",
+      "field_name": "LOAN_PRINCIPAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LOAN_PRINCIPAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LOAN_PRINCIPAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LOAN_INTEREST_ARREARS",
+      "table_name": "data",
+      "field_name": "LOAN_INTEREST_ARREARS",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LOAN_INTEREST_ARREARS 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LOAN_INTEREST_ARREARS",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LOAN_TOTAL",
+      "table_name": "data",
+      "field_name": "LOAN_TOTAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LOAN_TOTAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LOAN_TOTAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.CUSTOMER_TOTAL_FINANCING",
+      "table_name": "data",
+      "field_name": "CUSTOMER_TOTAL_FINANCING",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.CUSTOMER_TOTAL_FINANCING 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.CUSTOMER_TOTAL_FINANCING",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.THIS_LOAN_PRINCIPAL",
+      "table_name": "data",
+      "field_name": "THIS_LOAN_PRINCIPAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.THIS_LOAN_PRINCIPAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.THIS_LOAN_PRINCIPAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.THIS_LOAN_INTEREST_ARREARS",
+      "table_name": "data",
+      "field_name": "THIS_LOAN_INTEREST_ARREARS",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.THIS_LOAN_INTEREST_ARREARS 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.THIS_LOAN_INTEREST_ARREARS",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.THIS_LOAN_TOTAL",
+      "table_name": "data",
+      "field_name": "THIS_LOAN_TOTAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.THIS_LOAN_TOTAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.THIS_LOAN_TOTAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LOAN_ZH_PRINCIPAL",
+      "table_name": "data",
+      "field_name": "LOAN_ZH_PRINCIPAL",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LOAN_ZH_PRINCIPAL 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LOAN_ZH_PRINCIPAL",
+        "reason": "table_not_found"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: data.LRR_CUST_NO",
+      "table_name": "data",
+      "field_name": "LRR_CUST_NO",
+      "template_id": 4,
+      "template_file": "template_4.docx",
+      "suggestion": "模板变量 data.LRR_CUST_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "data.LRR_CUST_NO",
+        "reason": "table_not_found"
+      }
+    }
+  ],
+  "created_at": "2026-06-16T04:56:16.742444Z"
+}

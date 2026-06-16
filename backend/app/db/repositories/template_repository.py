@@ -309,6 +309,28 @@ class TemplateRepository:
             (template_file, template_path, now, template_id),
         )
 
+    def update_template_original_filename(self, template_id: int, original_filename: str, now: str) -> bool:
+        cursor = self.connection.execute(
+            """
+            UPDATE templates
+            SET original_filename = ?, updated_at = ?
+            WHERE id = ?
+            """,
+            (original_filename, now, template_id),
+        )
+        return cursor.rowcount > 0
+
+    def activate_template(self, template_id: int, now: str) -> bool:
+        cursor = self.connection.execute(
+            """
+            UPDATE templates
+            SET is_active = 1, updated_at = ?
+            WHERE id = ?
+            """,
+            (now, template_id),
+        )
+        return cursor.rowcount > 0
+
     def deactivate_template(self, template_id: int, now: str) -> bool:
         cursor = self.connection.execute(
             """

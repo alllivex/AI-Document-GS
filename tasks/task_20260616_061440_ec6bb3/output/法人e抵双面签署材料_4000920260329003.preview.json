@@ -1,0 +1,3241 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_1cf6a263-dd9e-54d9-a37c-dca0dfd4dc1c",
+  "task_id": "task_20260616_061440_ec6bb3",
+  "title": "法人e抵双面签署材料_4000920260329003.docx",
+  "output_file": "法人e抵双面签署材料_4000920260329003.docx",
+  "primary_key_value": "4000920260329003",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_15d92f1492d44db69dd9be1d63390f8d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "共同债务人承诺书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 18.0
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1e614405ec9a4901a98fe83a3b088a0c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（2021年版）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 14.0
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_214bebcb71b74c9e9632004c4e7e6d16",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "        ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "（身份证号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "）是",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": " ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_bb84c53c-54c2-5047-bacf-43696be17ebd",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "FF0000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "的",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b74ae9552262461da28c77252b9e1e53",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "□法定代表人/□法定代表人配偶/□自然人股东/□自然人股东配偶/□实际控制人/□实际控制人配偶，自愿作为“共同债务人”对借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_bb84c53c-54c2-5047-bacf-43696be17ebd",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "FF0000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": " ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "(营业执照号码：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "91440101MA0034567Z",
+          "trace_id": "trace_e1bdbbd6-e8a3-54db-afec-778f36def521",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "FF0000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": " )自",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "      ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "年",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "月",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "日至",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "      ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "年",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "月",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "日期间（包括该期间的起始日和届满日），与贵行签订的《网贷通循环借款合同》以及其他e抵快贷业务相关文件（以下简称“主合同”）项下的全部债务(含贷款本金、利息、罚息、复利、违约金、损害赔偿金、贷款人实现债权的费用和借款人所有其他应付费用)承担连带共同还款责任，具体权利义务按照借款人与贵行签订的主合同（亦包括对其不时的修订或补充，下同）执行。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8715f1aa46614002abc6b718528bd198",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人在此郑重承诺：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_281c99f70882449993f29ee5d20420c1",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、此承诺书所填写内容真实完整，如因上述资料虚假给贵行造成损失的，本人愿承担相应的法律责任。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_16f13fa7fa3340daad266b2d8ea40059",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "二、此承诺书所述的婚姻状况完全属实，如因婚姻状况虚假给贵行造成损失的，本人愿承担相应的法律责任。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_17396ebf4e82455eb02e39cc4c5eb53d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "三、如上述借款合同被撤销或被认定无效，给贵行造成损失的，本人承诺与借款人承担连带赔偿责任或其他民事责任。如贵行与借款人协商同意对借款合同办理续贷/展期的，本人承诺继续履行其在本承诺书项下的保证责任。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e36907ec09de4cafbdfc4d155810025d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "四、本人住所地址：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                              ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；邮编：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "          ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；传真：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "          ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；电话：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "          ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；电子邮件：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "          ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；手机号码：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "              ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；微信号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "            ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；支付宝账号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "           ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；阿里旺旺账号：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "          ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "；其他送达方式：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "            ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "本人确认以上述地址作为主合同及本《共同债务人承诺书》项下争议所涉诉讼/仲裁文书的送达地址。本人同意司法机关可使用本条记载的传真、手机号码、电子邮件、微信号、支付宝账号、阿里旺旺账号等电子联系方式，对各项法律文书进行电子送达。上述法律文书包括但不限于传票、开庭通知书、判决书、裁定书、调解书、限期履行通知书等。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7b943287670c445ebf073d90128a93be",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人同意司法机关可采取以上一种或多种送达方式向本人送达法律文书，司法机关采取多种方式向本人送达法律文书的，送达时间以上述送达方式中最先送达的为准。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e3b18ce391dd4d2891d698eafdcc705b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "上述送达约定适用于诉讼、仲裁以及其他司法程序的各个阶段，包括但不限于一审、二",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "审、再审、执行以及督促程序。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e9632a532714429596a64f58e3fabe13",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人承诺确保本条记载的地址、传真、手机号码、电子邮件等各项信息的真实有效性，相关信息如有变更，本人应及时书面通知贷款人，否则按原信息进行的送达（含电子送达）仍然有效，本人自行承担由此产生的法律后果。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2b59d1d9db33416e8a63f70aa6b59329",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "五、本人同意，贵行向本人在本承诺书第四条记载的地址或本人另行书面通知的地址寄送相关文件，即视为已向本人履行了通知义务。除信函方式外，本人同意接受电话、电子邮件、短信、微信等电子方式作为贵行通知、催收方式。本承诺书第四条预留的联系方式变更的，本人有义务及时书面通知贵行。因未及时通知，导致贵行按原预留地址或相关电子联系方式发送的通知、催收文件仍然有效，本人自行承担由此产生的法律后果。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_469b7368feab427bb444b8cd16bb5c90",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "六、本人授权中国工商银行自本人签署本承诺书之日起至借款人上述个人贷款业务终止之日，通过金融信用信息基础数据库、全国人口信息社会应用平台等国家认可的信息系统查询、打印、保存、使用本人信用报告及与办理个人贷款业务有关的本人信息，用于审查审批贷款申请和贷后管理等贷款相关事项；授权中国工商银行依据有关法律法规或其他规范性文件或金融监管机构要求，将本人的身份、职业和居住地址等个人基本信息，在上述业务办理及存续期间形成的交易记录（包括但不限于借款人违约等不良信息）等信息及其他相关信用信息提供给金融信用信息基础数据库等国家认可的信息系统。本人声明中国工商银行已经依法向本人提示征信授权相关事项，对相关概念、内容及法律效果做出了说明，本人已经知悉并理解有关内容，本承诺书经本人签章后生效。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_615a4e54a1584751b9f4555983ba82a4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "除非与贵行另行协商一致，本承诺书一经生效即不可撤销。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_248b3533c3c14594b5e95ef8fd7a37d6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "七、本承诺书适用中华人民共和国法律，在履行期间，凡由本承诺书引起的或与本承诺书有关的一切争议、纠纷，按照主合同约定的解决方式进行解决。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_9994964950654d16968acbed38126ec1",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                         承诺人（签章）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": " ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_125c76ea9e9b4ca3aafe9c4b46ea89ae",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                         ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "签署日期： ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "年",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "月",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "     ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_17e167c3579d462dae39c45cced93ec1",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "信息查询使用授权书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 14.0
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ffcfa84507bf4c4f91186b4fd1ec6966",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "【适用于对公客户主要相关自然人】",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d641a397cab0460db4bffcd305994056",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3e1437e1ee194ef29aaae60b1f8408dd",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "鉴于",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_bb84c53c-54c2-5047-bacf-43696be17ebd",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "FF0000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "（以下简称“该单位”）在贵行申请（参与）办理客户评级授信、信贷业务、对公信用卡、金融资产服务业务、合作机构准入、",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d6690870c77b4b539f6eba69169f5e48",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（其他用途约定）等金融产品/服务，且本人为该单位的",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "法定代表人/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "法定代表人配偶/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "实际控制人/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "实际控制人配偶/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "自然人股东/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "自然人股东配偶/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "管理层人员/",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "□其他:                    ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "，本人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "现授权贵行在相关金融产品和服务的尽职调查、审查审批、业务办理、融资发放、贷后（办后）管理、欠款催收和客户分析等业务处理过程中，查询、保存和使用本人的相关信息。包括：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_24a981dfc0d44372b6b2b39e0e0e10c0",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "1.本人在金融信用信息基础数据库中的相关信息。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_27374127e6d24e428bf1ba2661abd810",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "2.包括但不限于",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "本人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "的姓名、性别、证件类型、证件号码、出生年月、最高学历、工作简历、从业年限及职务等基本信息。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_481a3b70fca546d68b052d12079b7c08",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "3.",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "本人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "公安涉案信息、涉及诉讼或仲裁信息、资产被查封、扣押或被强制执行情况、法院诉讼判决、仲裁裁决、行政处罚、社保缴纳情况等。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6ef00b6256fb42d0a96b7df6c21489e3",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "4.为免歧义，相关信息不包括任何可通过公开渠道获取的信息。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_a87e8bb9510844cca5db5e0782ca192b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人授权贵行对以上信息进行查询和使用，具体如下：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_86a2eba780da4210b0cffc38cafb3a1e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "1.同意贵行将与该单位签订的合同/协议项下涉及的本人有关信息，以及贵行获得的其他本人相关信息提供给金融信用信息基础数据库。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_7ee6d074cd144734a720dfa2f1760068",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "2.出于为客户（或机构）提供金融服务之目的，同意贵行将本人提供的相关信息以及贵行在为该单位提供金融服务过程中获得的本人信息在贵行分支机构和集团成员之间内部共享。    ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_238bd827e3944b05835373198d5c3017",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "3.根据适用的法律法规和监管要求，同意贵行将本人相关信息提供给有关的监管、司法、行政管理等部门。根据欠款催收、债权转让、金融服务外包等需要，同意贵行将本人相关信息提供给有关的第三方机构(本人在金融信用信息基础数据库中的相关信息除外)。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_5283845e0f8b4b6e8f154fb24d0e7114",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "4.本人知悉并同意，在查询和使用本人信息时，贵行将采取必要措施保障信息安全，防止信息非法泄露或不当使用。贵行超出上述授权查询、使用、报送本人信息的一切后果和法律责任由贵行承担。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_235420aa05444a96b51baffd341cc6bc",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "5.",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "本授权书所涉及信息的查询使用授权有效期为自本人签署之日起至该单位在中国工商银行股份有限公司申请（参与）办理的业务终止之日止。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "10000A",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_657367a70bea43d9b9ace5790305ce3e",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本人声明，知悉并理解本授权书条款的内容。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_92f44d367185480f9dfc4e58309cf5cb",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                       授权人：（签字）_________________   ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_edec40db71654e24b08c672ffdf9f03a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "                                         授权人身份证件类型：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                                           授权人身份证件号码：__________________",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_c9e1e962426542a1996665024339ef18",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "授权时间：          年      月      日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "right",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_bd80a28d0270425b811b7d80e44a17ef",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "信息查询使用授权书",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 14.0
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e4205c124e36458b93b6c1085b0a7112",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "【适用于对公客户】",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_cbd9de34131042558092efbf287375a6",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "中国工商银行股份有限公司：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e7de3884f5cd4033802bc7494b2643a7",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "鉴于",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "广州华南实业有限公司",
+          "trace_id": "trace_bb84c53c-54c2-5047-bacf-43696be17ebd",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "FF0000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "  ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "（以下简称“本单位”）在贵行申请（参与）办理客户评级授信、信贷业务、对公信用卡、金融资产服务业务、个贷合作机构准入、",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                       ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "（其他用途约定）等金融产品/服务，本单位现授权贵行：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1f08ee942a774d3db105014ab346de9d",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "1.在相关金融产品和服务的尽职调查、审查审批、业务办理、融资发放、贷后（办后）管理、欠款催收和客户分析等业务处理过程中，查询和使用本单位的相关信息，相关信息包括：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_44b4c523968a4f528ca10bdf4514e642",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（1）本单位在金融信用信息基础数据库中的相关信息。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_153e5a0e2ed34344a36f4e535af0ca2c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（2）本单位工商登记信息、海关进出口信息、纳税信息、发票信息、财务信息、水电费缴费情况及数据、代发工资信息、通讯费缴费信息、POS收单数据、互联网征信信息、支付结算信息、抵质押信息以及其他第三方机构持有的本单位相关信息等。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ab6b046c090c440b880aa907c7c94587",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（3）本单位公安涉案信息、涉及诉讼或仲裁信息、资产被查封、扣押或被强制执行情况、法院诉讼判决、仲裁裁决、行政处罚、社保缴纳情况等。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e932573411cc46ab9865c943e23fad43",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（4）为免歧义，相关信息不包括任何可通过公开渠道获取的信息。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d84252adb85945d8a3dd05ffc1727461",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "2.将与本单位签订的合同/协议项下有关信息，以及贵行获得的其他本单位相关信息提供给金融信用信息基础数据库。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e5089b83293f4ccc8d906b5ce7c4af76",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "3.本单位向贵行提供的相关信息以及贵行在为本单位提供金融服务过程中获得的本单位其他信息会在贵行分支机构和集团成员之间内部共享。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_24c4c411a5a04e73a9c201cf0c5f95fd",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "4.根据适用的法律法规和监管要求，贵行会将本单位的相关信息提供给有关的监管、司法、行政管理等部门。根据欠款催收、债权转让、金融服务外包等需要，贵行也会将本单位的相关信息提供给有关的第三方机构。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f0ff97f4f98f48a4a4f733e55f5b9abc",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "在使用本单位信息时，贵行会采取必要措施保障信息安全，防止本单位信息非法泄露或不当使用。贵行超出上述授权查询、使用、报送本单位信息的一切后果和法律责任由贵行承担。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_2ea617cc6b114425aec66d4e5441e18b",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本授权书所涉及信息的查询使用授权有效期为自本单位法定代表人（授权代理人）签署并加盖公章之日起至本次办理的金融产品/服务终止之日止。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_767b3fe34c774f19bf67dec4df4ca1c4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "本单位声明，",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "中国工商银行已经依法向本单位提示本授权相关事项，对相关概念、内容及法律效果做出了说明，本单位",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "知悉并理解本授权书条款的内容。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3805934df59049908360231ad253b2aa",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "公章：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                        ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ca49c11a681448eea9f6af0d3d4b999a",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "            法定代表人（授权代理人）：（签章）",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        },
+        {
+          "text": "                ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_56a00e393f394f34aa2f2b6dd1608a7f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "年    月    日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": "000000",
+            "background_color": null,
+            "font_size_pt": 10.5
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "justify",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    }
+  ],
+  "created_at": "2026-06-16T06:14:54.534191Z"
+}

@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_583bff67-09d7-5170-b27d-7ba5a8e698ff",
+  "task_id": "task_20260616_045629_17b9ad",
+  "title": "证券化内部尽调报告_4000920260329003.docx",
+  "output_file": "证券化内部尽调报告_4000920260329003.docx",
+  "primary_key_value": "4000920260329003",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b2ff35d8290848dabf5579b7ffaa8712",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、借款人情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_61bbee2ae9104a4fbd91a6e6652108b0",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（一）总体情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_435687b45b4d415faa06ede90479f2cf",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_12b2cb2e-4450-5207-8f7d-abe46fb50e5f",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，性别",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "男",
+          "trace_id": "trace_04c1ed87-62ec-5722-aefb-77430e2f147c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，身份证号码",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "310115199010156032",
+          "trace_id": "trace_8faf7b2e-822b-5367-a1f5-94ffc1a2f222",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，文化程度",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "大专",
+          "trace_id": "trace_aa0a2985-e251-534e-98f2-77e79982a765",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，婚姻状况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "未婚",
+          "trace_id": "trace_ac194baa-ec46-59f5-825d-cc9fd7f92555",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人户籍及居住地址：户籍：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "上海市浦东新区张江路123号",
+          "trace_id": "trace_c0350b23-0a8e-5f1f-8de8-fd1cb28cc5b1",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，居住：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "上海市徐汇区漕溪路88号",
+          "trace_id": "trace_b965f046-128e-5d8d-aa23-d8490f6a2951",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "上海智云信息技术有限公司",
+          "trace_id": "trace_a58ceb67-c0c5-5ff6-8f57-d080d694fa37",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人代表及股东。经调查，经营实体",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "上海智云信息技术有限公司",
+          "trace_id": "trace_a58ceb67-c0c5-5ff6-8f57-d080d694fa37",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的注册资本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "200000",
+          "trace_id": "trace_a7ded7c2-6b05-543d-9972-87e838dff420",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，目前营业状态为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "停业整顿",
+          "trace_id": "trace_61c28b09-7aef-57aa-8869-1b49bd0fc035",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，截至尽职调查日在我行办理",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_c6941c57-e0b7-52ee-b54f-d9ff94994509",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，融资余额",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500000",
+          "trace_id": "trace_3a034080-148d-583d-9a33-53badda49efa",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，已为不良贷款。截至基准日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-01-14 00:00:00",
+          "trace_id": "trace_f6dcb6a3-c8ec-5e28-b898-f0637e27a55c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "王强",
+          "trace_id": "trace_12b2cb2e-4450-5207-8f7d-abe46fb50e5f",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "在我行有一笔",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_c6941c57-e0b7-52ee-b54f-d9ff94994509",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "贷款，本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500000",
+          "trace_id": "trace_10b05635-3e8b-5a42-bf5d-1f56a20e765e",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "75000",
+          "trace_id": "trace_64771eed-1a83-590d-add1-6358e53412a2",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1575000",
+          "trace_id": "trace_22795422-0055-5297-87c7-f60677b07e13",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。截至尽职调查日，借款人在我行融资总额为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500000",
+          "trace_id": "trace_8c49b111-5446-53c9-a1bb-43f283a4a4cd",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，其中本笔网贷通贷款本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500000",
+          "trace_id": "trace_23d7e0f1-7744-54e1-abfa-247473c05790",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "75000",
+          "trace_id": "trace_ceea8e71-e51a-51c5-8808-bcdeba46c93c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1575000",
+          "trace_id": "trace_72983805-30c3-5aa4-9013-e38b02aaa2ba",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-16T04:56:40.106871Z"
+}

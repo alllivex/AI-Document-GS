@@ -57,6 +57,8 @@ def test_ai_trace_is_written_with_inputs_knowledge_refs_and_preview_block(tmp_pa
     ai_block = AIBlockTrace(
         block_id="AIBLOCK0",
         marker="搂AIBLOCK0搂",
+        comment_id="4",
+        selected_text="AI selected paragraph §AIBLOCK0§",
         status=AIBlockStatus.SUCCESS,
         original_block_text="搂AIBLOCK0搂基于不良环比{{ branch_main.bad_mom }}、同比{{ branch_main.bad_yoy }}撰写建议。",
         prompt_template=(
@@ -99,6 +101,8 @@ def test_ai_trace_is_written_with_inputs_knowledge_refs_and_preview_block(tmp_pa
     ai_trace = trace_payload["ai_traces"][0]
     assert ai_trace["trace_kind"] == "ai"
     assert ai_trace["block_id"] == "AIBLOCK0"
+    assert ai_trace["comment_id"] == "4"
+    assert ai_trace["selected_text"] == "AI selected paragraph §AIBLOCK0§"
     assert ai_trace["status"] == "success"
     assert [item["var_path"] for item in ai_trace["input_variables"]] == [
         "branch_main.bad_mom",

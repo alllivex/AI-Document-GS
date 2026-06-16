@@ -53,6 +53,27 @@ export function deactivateTemplateFile(templateId: number): Promise<TemplateFile
   })
 }
 
+export function activateTemplateFile(templateId: number): Promise<TemplateFileRecord> {
+  return request<TemplateFileRecord>({
+    method: 'POST',
+    url: `/api/settings/template-files/${templateId}/activate`,
+  })
+}
+
+export function replaceTemplateFile(templateId: number, file: File): Promise<TemplateFileRecord> {
+  const formData = new FormData()
+  formData.append('file', file)
+
+  return request<TemplateFileRecord>({
+    method: 'PUT',
+    url: `/api/settings/template-files/${templateId}/file`,
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  })
+}
+
 export function downloadTemplateFileUrl(templateId: number): string {
   return buildApiUrl(`/api/settings/template-files/${templateId}/download`)
 }

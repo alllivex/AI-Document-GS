@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260616_071552_f16c21",
+  "task_name": "法人e抵单面签署材料_2026/6/16 15:15:49",
+  "template_id": 2,
+  "template_name": "法人e抵单面签署材料",
+  "template_file": "template_2.docx",
+  "ai_enabled": true,
+  "status": "completed",
+  "main_table": "loan_cust_data",
+  "main_table_cn": "贷款客户数据表",
+  "primary_key_field": "LRR_CUST_NO",
+  "required_tables": [
+    {
+      "table_name": "loan_cust_data",
+      "table_name_cn": "贷款客户数据表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "loan_cust_data",
+      "original_filename": "loan_cust_data.xlsx",
+      "stored_filename": "loan_cust_data.xlsx",
+      "path": "tasks/task_20260616_071552_f16c21/data/loan_cust_data.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-16T07:15:59.336537Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 3,
+    "success_count": 3,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": [
+      "doc_ed6043ee-c822-5cf4-b093-1277768b1146",
+      "doc_69232468-a9a3-5225-898d-5c1a8e5d39c6",
+      "doc_1b4914b2-b5d0-5eea-863b-b78416ef17d9"
+    ]
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260616_071552_f16c21",
+    "data_dir": "tasks/task_20260616_071552_f16c21/data",
+    "output_dir": "tasks/task_20260616_071552_f16c21/output",
+    "validation_dir": "tasks/task_20260616_071552_f16c21/validation",
+    "logs_dir": "tasks/task_20260616_071552_f16c21/logs"
+  },
+  "created_at": "2026-06-16T07:15:52.761732Z",
+  "updated_at": "2026-06-16T07:16:13.682598Z",
+  "started_at": null,
+  "completed_at": "2026-06-16T07:16:13.682598Z"
+}

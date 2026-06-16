@@ -3,7 +3,7 @@
     <div class="toolbar">
       <div>
         <h3>模板文件</h3>
-        <p>管理可用于生成任务的 Word 模板文件，模板关系配置将在后续模块维护。</p>
+        <p>管理用于生成任务的 Word 模板文件；模板关系配置在后续模块维护。</p>
       </div>
       <el-button type="primary" @click="uploadVisible = true">上传新模板</el-button>
     </div>
@@ -22,16 +22,25 @@
       <el-table-column label="上传时间" min-width="180">
         <template #default="{ row }">{{ formatTime(row.created_at) }}</template>
       </el-table-column>
-      <el-table-column label="操作" width="180" fixed="right">
+      <el-table-column label="操作" width="220" fixed="right">
         <template #default="{ row }">
           <el-button link type="primary" @click="downloadTemplate(row.template_id)">下载</el-button>
+          <el-button link type="primary" @click="openReplaceDialog(row)">更换</el-button>
           <el-button
+            v-if="row.is_active"
             link
             type="danger"
-            :disabled="!row.is_active"
             @click="confirmDeactivate(row)"
           >
             停用
+          </el-button>
+          <el-button
+            v-else
+            link
+            type="success"
+            @click="confirmActivate(row)"
+          >
+            启用
           </el-button>
         </template>
       </el-table-column>
@@ -41,6 +50,11 @@
       v-model="uploadVisible"
       @uploaded="handleUploaded"
     />
+    <TemplateReplaceDialog
+      v-model="replaceVisible"
+      :template="replaceTarget"
+      @replaced="handleReplaced"
+    />
   </section>
 </template>
 
@@ -48,13 +62,21 @@
 import { onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import StatusTag from '../common/StatusTag.vue'
+import TemplateReplaceDialog from './TemplateReplaceDialog.vue'
 import TemplateUploadDialog from './TemplateUploadDialog.vue'
-import { deactivateTemplateFile, downloadTemplateFileUrl, listTemplateFiles } from '../../api/settings'
+import {
+  activateTemplateFile,
+  deactivateTemplateFile,
+  downloadTemplateFileUrl,
+  listTemplateFiles,
+} from '../../api/settings'
 import type { TemplateFileRecord } from '../../types/settings'
 
 const templateFiles = ref<TemplateFileRecord[]>([])
 const loading = ref(false)
 const uploadVisible = ref(false)
+const replaceVisible = ref(false)
+const replaceTarget = ref<TemplateFileRecord | null>(null)
 const errorMessage = ref('')
 
 onMounted(loadTemplateFiles)
@@ -74,6 +96,11 @@ async function loadTemplateFiles() {
 
 function downloadTemplate(templateId: number) {
   window.open(downloadTemplateFileUrl(templateId), '_blank')
+}
+
+function openReplaceDialog(template: TemplateFileRecord) {
+  replaceTarget.value = template
+  replaceVisible.value = true
 }
 
 async function confirmDeactivate(template: TemplateFileRecord) {
@@ -100,9 +127,40 @@ async function confirmDeactivate(template: TemplateFileRecord) {
   }
 }
 
+async function confirmActivate(template: TemplateFileRecord) {
+  try {
+    await ElMessageBox.confirm(
+      `确认启用模板“${template.template_name}”？启用后可用于新建生成任务。`,
+      '启用模板',
+      {
+        confirmButtonText: '确认启用',
+        cancelButtonText: '取消',
+        type: 'success',
+      },
+    )
+  } catch {
+    return
+  }
+
+  try {
+    await activateTemplateFile(template.template_id)
+    ElMessage.success('模板已启用')
+    await loadTemplateFiles()
+  } catch (error) {
+    errorMessage.value = error instanceof Error ? error.message : '模板启用失败'
+  }
+}
+
 async function handleUploaded() {
   uploadVisible.value = false
   ElMessage.success('模板上传成功')
+  await loadTemplateFiles()
+}
+
+async function handleReplaced() {
+  replaceVisible.value = false
+  replaceTarget.value = null
+  ElMessage.success('模板更换成功')
   await loadTemplateFiles()
 }
 

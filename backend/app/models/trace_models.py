@@ -156,6 +156,8 @@ class AITraceDetail(BaseTraceDetail):
     trace_kind: Literal["ai"] = "ai"
     block_id: str
     marker: str
+    comment_id: str | None = None
+    selected_text: str = ""
     status: Literal["success", "failed", "skipped"]
     original_block_text: str
     prompt_template: str
@@ -179,6 +181,8 @@ TraceDetail = Annotated[
 class AIBlockTrace(ContractModel):
     block_id: str
     marker: str
+    comment_id: str | None = None
+    selected_text: str = ""
     status: AIBlockStatus
     original_block_text: str = ""
     prompt_template: str

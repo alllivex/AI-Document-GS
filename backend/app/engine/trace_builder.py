@@ -142,6 +142,8 @@ def build_ai_trace_details(
             primary_key_value=input_data.primary_key_value,
             block_id=block.block_id,
             marker=block.marker,
+            comment_id=block.comment_id,
+            selected_text=block.selected_text,
             status=_ai_trace_status(block.status),
             original_block_text=block.original_block_text,
             prompt_template=block.prompt_template,

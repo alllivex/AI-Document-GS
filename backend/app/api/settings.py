@@ -77,6 +77,27 @@ async def deactivate_template_file(template_id: int):
     return success_response(record.model_dump(mode="json"))
 
 
+@router.post("/template-files/{template_id}/activate")
+async def activate_template_file(template_id: int):
+    with get_connection() as connection:
+        service = TemplateFileService(TemplateRepository(connection), get_settings())
+        record = service.activate_template_file(template_id)
+    return success_response(record.model_dump(mode="json"))
+
+
+@router.put("/template-files/{template_id}/file")
+async def replace_template_file(template_id: int, file: UploadFile = File(...)):
+    file_bytes = await file.read()
+    with get_connection() as connection:
+        service = TemplateFileService(TemplateRepository(connection), get_settings())
+        record = service.replace_template_file(
+            template_id=template_id,
+            original_filename=file.filename or "",
+            file_bytes=file_bytes,
+        )
+    return success_response(record.model_dump(mode="json"))
+
+
 @router.get("/entity-schema")
 async def list_entity_schema(
     table_name: str | None = None,

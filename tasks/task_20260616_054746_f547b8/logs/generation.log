@@ -1,0 +1,84 @@
+2026-06-16T05:48:21.221692+00:00 [INFO] start  Generation started.
+2026-06-16T05:48:21.485804+00:00 [ERROR] document doc_df6d0440-416a-55ff-a00e-1a317c2069c5 Document generation failed for primary key: A支行
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 212, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 285, in _generate_one_document
+    ai_results = self._generate_ai_results(template_path, bundle.context, ai_enabled)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 345, in _generate_ai_results
+    self.dependencies.generate_ai_text(
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_generator.py", line 62, in generate_ai_text
+    active_client, active_model = _build_client_with_model(client, settings, input_data.model)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_generator.py", line 100, in _build_client_with_model
+    DeepSeekClient(
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_client.py", line 32, in __init__
+    self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_client.py", line 226, in __init__
+    super().__init__(
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_base_client.py", line 909, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_base_client.py", line 839, in __init__
+    super().__init__(**kwargs)
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_client.py", line 688, in __init__
+    self._transport = self._init_transport(
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_client.py", line 731, in _init_transport
+    return HTTPTransport(
+           ^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_transports\default.py", line 153, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_config.py", line 35, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\ssl.py", line 707, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2026-06-16T05:48:21.573446+00:00 [ERROR] document doc_bc72d8ed-ec1b-59b7-b2c6-2db3180fc4c3 Document generation failed for primary key: B支行
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 212, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 285, in _generate_one_document
+    ai_results = self._generate_ai_results(template_path, bundle.context, ai_enabled)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 345, in _generate_ai_results
+    self.dependencies.generate_ai_text(
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_generator.py", line 62, in generate_ai_text
+    active_client, active_model = _build_client_with_model(client, settings, input_data.model)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_generator.py", line 100, in _build_client_with_model
+    DeepSeekClient(
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\ai_client.py", line 32, in __init__
+    self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_client.py", line 226, in __init__
+    super().__init__(
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_base_client.py", line 909, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\openai\_base_client.py", line 839, in __init__
+    super().__init__(**kwargs)
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_client.py", line 688, in __init__
+    self._transport = self._init_transport(
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_client.py", line 731, in _init_transport
+    return HTTPTransport(
+           ^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_transports\default.py", line 153, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\site-packages\httpx\_config.py", line 35, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PythonEnvs\py312\Lib\ssl.py", line 707, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+FileNotFoundError: [Errno 2] No such file or directory
+
+2026-06-16T05:48:21.586109+00:00 [INFO] complete  Generation finished with status: failed.

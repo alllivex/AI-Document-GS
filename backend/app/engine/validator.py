@@ -8,6 +8,7 @@ from typing import Any
 import pandas as pd
 
 from app.core.config import AppSettings
+from app.engine.ai_prompt_loader import analyze_ai_prompt_bindings
 from app.engine.data_loader import LoadedTable
 from app.engine.template_parser import analyze_template_variables
 from app.engine.validation_report_writer import write_validation_report
@@ -42,6 +43,7 @@ def validate_task(
     _validate_main_primary_key(template_requirements, tables, items)
     _validate_one_to_one_relations(template_requirements, tables, items)
     _validate_template_references(template_requirements, tables, template_path, items)
+    _validate_ai_block_bindings(template_requirements, template_path, items)
 
     report = _build_report(task_id, items)
     write_validation_report(task_id, report, task_dir=task_dir, settings=settings)
@@ -258,6 +260,43 @@ def _validate_template_references(
                     },
                 )
             )
+
+
+def _validate_ai_block_bindings(
+    requirements: TemplateRequirements,
+    template_path: Path,
+    items: list[ValidationItem],
+) -> None:
+    if not template_path.exists():
+        return
+
+    try:
+        analysis = analyze_ai_prompt_bindings(template_path)
+    except Exception as exc:
+        items.append(
+            _error(
+                "ai_block_parse_failed",
+                f"Failed to parse AI block bindings: {exc}",
+                requirements,
+                suggestion="Check that each AI Block marker is covered by a valid Word comment.",
+            )
+        )
+        return
+
+    for issue in analysis.issues:
+        items.append(
+            _error(
+                issue.code,
+                issue.message,
+                requirements,
+                suggestion='Ensure each AI Block marker is covered by exactly one Word comment containing prompt="...".',
+                detail={
+                    "comment_id": issue.comment_id,
+                    "marker": issue.marker,
+                    "selected_text": issue.selected_text,
+                },
+            )
+        )
 
 
 def _build_report(task_id: str, items: list[ValidationItem]) -> ValidationReport:

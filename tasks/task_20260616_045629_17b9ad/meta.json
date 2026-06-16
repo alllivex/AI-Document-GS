@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260616_045629_17b9ad",
+  "task_name": "证券化内部尽调报告_2026/6/16 12:56:27",
+  "template_id": 5,
+  "template_name": "证券化内部尽调报告",
+  "template_file": "证券化内部尽调报告中文模板.docx",
+  "ai_enabled": true,
+  "status": "completed",
+  "main_table": "borrower_info",
+  "main_table_cn": "借款人信息表",
+  "primary_key_field": "LRR_CUST_NO",
+  "required_tables": [
+    {
+      "table_name": "borrower_info",
+      "table_name_cn": "借款人信息表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "borrower_info",
+      "original_filename": "borrower_info.xlsx",
+      "stored_filename": "borrower_info.xlsx",
+      "path": "tasks/task_20260616_045629_17b9ad/data/borrower_info.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-16T04:56:36.180608Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 3,
+    "success_count": 3,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": [
+      "doc_a659a55b-f0eb-5f14-b2cc-7506bf4e48ec",
+      "doc_baded69b-60f0-5c1b-a728-85c757eed90e",
+      "doc_583bff67-09d7-5170-b27d-7ba5a8e698ff"
+    ]
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260616_045629_17b9ad",
+    "data_dir": "tasks/task_20260616_045629_17b9ad/data",
+    "output_dir": "tasks/task_20260616_045629_17b9ad/output",
+    "validation_dir": "tasks/task_20260616_045629_17b9ad/validation",
+    "logs_dir": "tasks/task_20260616_045629_17b9ad/logs"
+  },
+  "created_at": "2026-06-16T04:56:29.109350Z",
+  "updated_at": "2026-06-16T04:56:40.123744Z",
+  "started_at": null,
+  "completed_at": "2026-06-16T04:56:40.123744Z"
+}

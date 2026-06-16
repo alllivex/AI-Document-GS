@@ -16,6 +16,8 @@ class AIGenerateInput(BaseModel):
     prompt_template: str
     context: dict[str, Any]
     model: str = "deepseek-chat"
+    comment_id: str | None = None
+    selected_text: str = ""
 
 
 class AIGenerateResult(BaseModel):
@@ -26,6 +28,8 @@ class AIGenerateResult(BaseModel):
     generated_text: str
     model: str
     error_message: str
+    comment_id: str | None = None
+    selected_text: str = ""
     started_at: datetime | None = None
     completed_at: datetime | None = None
 
@@ -72,6 +76,8 @@ def generate_ai_text(
         generated_text=generated_text,
         model=active_model or input_data.model,
         error_message="",
+        comment_id=input_data.comment_id,
+        selected_text=input_data.selected_text,
         started_at=started_at,
         completed_at=datetime.now(timezone.utc),
     )
@@ -116,6 +122,8 @@ def _failed(
         generated_text="",
         model=input_data.model,
         error_message=error_message,
+        comment_id=input_data.comment_id,
+        selected_text=input_data.selected_text,
         started_at=started_at,
         completed_at=datetime.now(timezone.utc),
     )

@@ -348,6 +348,8 @@ class GenerationRunner:
                         prompt_template=prompt.prompt_template,
                         context=context,
                         model=self.settings.deepseek_model,
+                        comment_id=prompt.comment_id,
+                        selected_text=prompt.selected_text,
                     ),
                     settings=self.settings,
                 )

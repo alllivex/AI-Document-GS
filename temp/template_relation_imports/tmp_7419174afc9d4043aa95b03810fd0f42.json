@@ -1,0 +1,86 @@
+{
+  "preview": {
+    "import_id": "tmp_7419174afc9d4043aa95b03810fd0f42",
+    "summary": {
+      "total_rows": 3,
+      "create_count": 3,
+      "update_count": 0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：支行测试报告 - 支行主表"
+      },
+      {
+        "row_number": 3,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：支行测试报告 - 贷款汇总表"
+      },
+      {
+        "row_number": 4,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：支行测试报告 - 产品明细表"
+      }
+    ],
+    "can_commit": true
+  },
+  "rows": [
+    {
+      "row_number": 2,
+      "template_id": 7,
+      "template_name": "支行测试报告",
+      "template_file": "template_7.docx",
+      "template_key": "id:7",
+      "template_label": "支行测试报告",
+      "table_name": "branch_main",
+      "table_name_cn": "支行主表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "branch_name",
+      "table_join_key": "branch_name",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    },
+    {
+      "row_number": 3,
+      "template_id": 7,
+      "template_name": "支行测试报告",
+      "template_file": "template_7.docx",
+      "template_key": "id:7",
+      "template_label": "支行测试报告",
+      "table_name": "loan_summary",
+      "table_name_cn": "贷款汇总表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "branch_name",
+      "table_join_key": "branch_name",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    },
+    {
+      "row_number": 4,
+      "template_id": 7,
+      "template_name": "支行测试报告",
+      "template_file": "template_7.docx",
+      "template_key": "id:7",
+      "template_label": "支行测试报告",
+      "table_name": "products",
+      "table_name_cn": "产品明细表",
+      "role": "aux",
+      "relation_type": "one_to_many",
+      "main_join_key": "branch_name",
+      "table_join_key": "branch_name",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    }
+  ]
+}
