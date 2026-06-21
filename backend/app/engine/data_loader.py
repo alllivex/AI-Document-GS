@@ -8,6 +8,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 from app.engine.excel_utils import build_column_index_map, build_excel_column_letter_map
+from app.models.template_models import FieldDefinition
 
 
 @dataclass(frozen=True)
@@ -23,18 +24,32 @@ class LoadedTable:
     excel_column_letter_map: dict[str, str]
 
 
-def load_data_tables(data_dir: Path, table_names: Sequence[str]) -> dict[str, LoadedTable]:
-    return {table_name: load_data_table(data_dir, table_name) for table_name in table_names}
+def load_data_tables(
+    data_dir: Path,
+    table_names: Sequence[str],
+    fields: Sequence[FieldDefinition] | None = None,
+) -> dict[str, LoadedTable]:
+    fields_by_table: dict[str, list[FieldDefinition]] = {}
+    for field in fields or []:
+        fields_by_table.setdefault(field.table_name, []).append(field)
+    return {
+        table_name: load_data_table(data_dir, table_name, fields_by_table.get(table_name))
+        for table_name in table_names
+    }
 
 
-def load_data_table(data_dir: Path, table_name: str) -> LoadedTable:
+def load_data_table(
+    data_dir: Path,
+    table_name: str,
+    fields: Sequence[FieldDefinition] | None = None,
+) -> LoadedTable:
     source_path = data_dir / f"{table_name}.xlsx"
     if not source_path.exists():
         raise FileNotFoundError(f"data table file not found for table '{table_name}': {source_path}")
 
     _validate_header_columns(_read_header_columns(source_path), table_name, source_path)
     dataframe = pd.read_excel(source_path, sheet_name=0)
-    dataframe = _normalize_columns(dataframe, table_name)
+    dataframe = _normalize_columns(dataframe, table_name, fields)
     _validate_dataframe(dataframe, table_name, source_path)
 
     columns = list(dataframe.columns)
@@ -79,16 +94,56 @@ def _validate_header_columns(columns: list[str], table_name: str, source_path: P
         raise ValueError(f"data table '{table_name}' has duplicate header columns: {', '.join(duplicates)}")
 
 
-def _normalize_columns(dataframe: pd.DataFrame, table_name: str) -> pd.DataFrame:
+def _normalize_columns(
+    dataframe: pd.DataFrame,
+    table_name: str,
+    fields: Sequence[FieldDefinition] | None = None,
+) -> pd.DataFrame:
     normalized = dataframe.copy()
-    columns = [_clean_column_name(column) for column in normalized.columns]
+    original_columns = [_clean_column_name(column) for column in normalized.columns]
+    header_aliases = build_field_header_aliases(table_name, fields or [])
+    columns = [header_aliases.get(column, column) for column in original_columns]
 
     duplicates = sorted({column for column in columns if columns.count(column) > 1})
     if duplicates:
-        raise ValueError(f"data table '{table_name}' has duplicate header columns: {', '.join(duplicates)}")
+        conflicts = [
+            f"{canonical} <- {', '.join(original for original, mapped in zip(original_columns, columns) if mapped == canonical)}"
+            for canonical in duplicates
+        ]
+        raise ValueError(
+            f"data table '{table_name}' has duplicate header columns after schema mapping: {'; '.join(conflicts)}"
+        )
 
     normalized.columns = columns
     return normalized
+
+
+def build_field_header_aliases(
+    table_name: str,
+    fields: Sequence[FieldDefinition],
+) -> dict[str, str]:
+    alias_owners: dict[str, set[str]] = {}
+    for field in fields:
+        if field.table_name != table_name:
+            continue
+        alias_owners.setdefault(field.field_name, set()).add(field.field_name)
+        chinese_name = field.field_name_cn.strip()
+        if chinese_name:
+            alias_owners.setdefault(chinese_name, set()).add(field.field_name)
+
+    ambiguous = {
+        alias: sorted(owners)
+        for alias, owners in alias_owners.items()
+        if len(owners) > 1
+    }
+    if ambiguous:
+        details = "; ".join(
+            f"{alias} -> {', '.join(owners)}"
+            for alias, owners in sorted(ambiguous.items())
+        )
+        raise ValueError(f"entity schema has ambiguous field header aliases for table '{table_name}': {details}")
+
+    return {alias: next(iter(owners)) for alias, owners in alias_owners.items()}
 
 
 def _validate_dataframe(dataframe: pd.DataFrame, table_name: str, source_path: Path) -> None:

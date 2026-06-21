@@ -1,0 +1,1341 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_bc4fc49a-174e-51c5-9a30-c7834ee1d307",
+  "task_id": "task_20260616_134739_81e2ef",
+  "title": "证券化内部尽调报告_4000920260329001.docx",
+  "output_file": "证券化内部尽调报告_4000920260329001.docx",
+  "primary_key_value": "4000920260329001",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_33236b622f1043ab94feb97a83faf59c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "一、借款人情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_684b63dd9f8740f1adab36c78734ef16",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "（一）总体情况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4b3b8ac0b0e545e68fb30d6cab4319df",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "尹人",
+          "trace_id": "trace_a697bfa8-9821-5d47-a1de-602323ec7034",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，性别",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "男",
+          "trace_id": "trace_27f6f0fd-8936-5539-a652-d9ff197b4332",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，身份证号码",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "430723198502060992",
+          "trace_id": "trace_1f9054e0-c86e-550e-aec8-1e1539c41f5a",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，文化程度",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "本科",
+          "trace_id": "trace_af9c6216-fa09-5ab1-8f64-e68e022e1893",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，婚姻状况",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "离异",
+          "trace_id": "trace_fabf7b22-8816-5c97-8dc0-de88ed4dd565",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人户籍及居住地址：户籍：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "湖南省韶山市橘子洲头",
+          "trace_id": "trace_525fc2b0-bfdc-5097-acab-c28648373bed",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，居住：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "广东省深圳市龙岗区吉华街道丽湖花园",
+          "trace_id": "trace_571a38a3-2ad4-5408-aeb9-df5658d94480",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "。借款人为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "深圳市凤年科技有限公司",
+          "trace_id": "trace_e809f6ae-5260-5b4f-aa7c-cb2f8a1216b2",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人代表及股东。经调查，经营实体",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "深圳市凤年科技有限公司",
+          "trace_id": "trace_e809f6ae-5260-5b4f-aa7c-cb2f8a1216b2",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的注册资本",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "100000",
+          "trace_id": "trace_f59598bc-8c42-5dc7-9a44-ef3cd5c26b16",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，目前营业状态为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "无经营",
+          "trace_id": "trace_b88f2d4d-abb7-51f9-b4a7-e39f8c4ab6b3",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，截至尽职调查日在我行办理",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_9d802185-4d9b-5af4-b91a-89c5358dcc72",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，融资余额",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3200000",
+          "trace_id": "trace_28e55d29-a4d9-5f41-ace5-733038a7b68e",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，已为不良贷款。截至基准日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-01-14 00:00:00",
+          "trace_id": "trace_68c58c10-6357-5759-abc8-18b9b7b20f5b",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，借款人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "尹人",
+          "trace_id": "trace_a697bfa8-9821-5d47-a1de-602323ec7034",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "在我行有一笔",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "法人e抵押",
+          "trace_id": "trace_9d802185-4d9b-5af4-b91a-89c5358dcc72",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "贷款，本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_429b3ce0-52cc-5b91-9d46-43f28605e22a",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "20000",
+          "trace_id": "trace_e3d60448-2650-5aaa-ab59-9ed43926ca86",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3020000",
+          "trace_id": "trace_f14ae9e9-1d17-5396-8b23-565a1394ef0a",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。截至尽职调查日，借款人在我行融资总额为",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_e23c763e-2e41-50d5-a174-4e8c9d6bbdb3",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，其中本笔网贷通贷款本金余额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3000000",
+          "trace_id": "trace_2817fea6-c13d-561a-8984-741cf4be426d",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，积欠利息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "20000",
+          "trace_id": "trace_2fe24f44-187c-5b55-acb4-3f41bb857cb0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元，本息合计",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "3020000",
+          "trace_id": "trace_1a83a2d7-7a1d-584b-93ce-a901dae0d9f1",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_d4b7fc5d8cb447dba88bf892eec79e36",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "截至尽职调查日，借款人的借据明细如下：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "table",
+      "block_id": "table_316c4a5eaa1c41f296bee594440265b2",
+      "block_trace_id": "trace_loop_doc_bc4fc49a-174e-51c5-9a30-c7834ee1d307_loop_0",
+      "block_trace_kind": "loop",
+      "headers": [
+        {
+          "text": "合同号",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "合同号",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "借据号",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "借据号",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "合同金额",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "合同金额",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "贷款余额",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "贷款余额",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "起始日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "起始日",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "到期日",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "到期日",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "担保方式",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "担保方式",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        },
+        {
+          "text": "担保人",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "担保人",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": {
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "alignment": null,
+                "color": "000000",
+                "background_color": null,
+                "font_size_pt": null
+              }
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": null
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "0400000001-2026年(信)字00007号",
+            "trace_id": "trace_cbbc275b-73fc-5471-a21a-513a1e121c22",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000001-2026年(信)字00007号",
+                "trace_id": "trace_cbbc275b-73fc-5471-a21a-513a1e121c22",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "0400000001-2026年(信)字00237号",
+            "trace_id": "trace_163fa37a-73e2-539c-8bf5-87e216d70791",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000001-2026年(信)字00237号",
+                "trace_id": "trace_163fa37a-73e2-539c-8bf5-87e216d70791",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "900000",
+            "trace_id": "trace_103d599e-679f-5c96-89f2-91817e8726ca",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "900000",
+                "trace_id": "trace_103d599e-679f-5c96-89f2-91817e8726ca",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "92787.13",
+            "trace_id": "trace_b484e1b6-98ab-5958-96ba-d141d3bb8992",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "92787.13",
+                "trace_id": "trace_b484e1b6-98ab-5958-96ba-d141d3bb8992",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2023-11-28 00:00:00",
+            "trace_id": "trace_148faeb8-a0e6-50af-a5ff-9dff2191a4e1",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2023-11-28 00:00:00",
+                "trace_id": "trace_148faeb8-a0e6-50af-a5ff-9dff2191a4e1",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2024-11-27 00:00:00",
+            "trace_id": "trace_425a2569-778b-5723-9418-d49d3c383a04",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2024-11-27 00:00:00",
+                "trace_id": "trace_425a2569-778b-5723-9418-d49d3c383a04",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "信用，附加个人连带责任保证担保",
+            "trace_id": "trace_f12351e3-4d6e-5982-a8eb-f45e8bbf8ac9",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "信用，附加个人连带责任保证担保",
+                "trace_id": "trace_f12351e3-4d6e-5982-a8eb-f45e8bbf8ac9",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "王强",
+            "trace_id": "trace_9dabdc1c-f7f7-5f8d-9a9f-52cce5b26c3d",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "王强",
+                "trace_id": "trace_9dabdc1c-f7f7-5f8d-9a9f-52cce5b26c3d",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          }
+        ],
+        [
+          {
+            "text": "0400000002-2026年(信)字000011号",
+            "trace_id": "trace_058dd479-60ac-5794-b4c9-eef1c1c112b8",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000002-2026年(信)字000011号",
+                "trace_id": "trace_058dd479-60ac-5794-b4c9-eef1c1c112b8",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "0400000001-2026年(信)字00238号",
+            "trace_id": "trace_5b8b60de-b6fc-5778-ac8f-3a898356517c",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000001-2026年(信)字00238号",
+                "trace_id": "trace_5b8b60de-b6fc-5778-ac8f-3a898356517c",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "700000",
+            "trace_id": "trace_b901ded7-4c1a-5cb5-ba8f-c081d0701e94",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "700000",
+                "trace_id": "trace_b901ded7-4c1a-5cb5-ba8f-c081d0701e94",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "200000.0",
+            "trace_id": "trace_bca0213f-e171-592c-a66f-cfaeb7ac213a",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "200000.0",
+                "trace_id": "trace_bca0213f-e171-592c-a66f-cfaeb7ac213a",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2023-11-28 00:00:00",
+            "trace_id": "trace_19caec06-1ced-547d-9918-cb5c9ab48256",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2023-11-28 00:00:00",
+                "trace_id": "trace_19caec06-1ced-547d-9918-cb5c9ab48256",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2024-11-27 00:00:00",
+            "trace_id": "trace_444cb093-8b00-5b9a-aa32-02e2201064d5",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2024-11-27 00:00:00",
+                "trace_id": "trace_444cb093-8b00-5b9a-aa32-02e2201064d5",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "信用，附加个人连带责任保证担保",
+            "trace_id": "trace_e7123889-cc80-51ff-ba0e-f80c123fb2f3",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "信用，附加个人连带责任保证担保",
+                "trace_id": "trace_e7123889-cc80-51ff-ba0e-f80c123fb2f3",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "李娜、张三",
+            "trace_id": "trace_6c8b050d-e50e-595b-965a-46c5d67a6504",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "李娜、张三",
+                "trace_id": "trace_6c8b050d-e50e-595b-965a-46c5d67a6504",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          }
+        ],
+        [
+          {
+            "text": "0400000003-2026年(信)字000003号",
+            "trace_id": "trace_e95bb3f7-3104-555a-87c1-1fe2f33a2b39",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000003-2026年(信)字000003号",
+                "trace_id": "trace_e95bb3f7-3104-555a-87c1-1fe2f33a2b39",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "0400000001-2026年(信)字00239号",
+            "trace_id": "trace_3527a13a-b949-5ff3-afea-0a065b6f633a",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "0400000001-2026年(信)字00239号",
+                "trace_id": "trace_3527a13a-b949-5ff3-afea-0a065b6f633a",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "200000",
+            "trace_id": "trace_263f11d9-a8a9-5ba8-81c3-95ac23e0bdb3",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "200000",
+                "trace_id": "trace_263f11d9-a8a9-5ba8-81c3-95ac23e0bdb3",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "200000.0",
+            "trace_id": "trace_4c550e06-bc05-553b-a58b-37ab797b8877",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "200000.0",
+                "trace_id": "trace_4c550e06-bc05-553b-a58b-37ab797b8877",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2023-11-28 00:00:00",
+            "trace_id": "trace_a89d5592-876a-5392-b189-b24e3b088e44",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2023-11-28 00:00:00",
+                "trace_id": "trace_a89d5592-876a-5392-b189-b24e3b088e44",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "2024-11-27 00:00:00",
+            "trace_id": "trace_cfbfb342-c9ff-5668-8e4d-57b8aaf3d4bf",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2024-11-27 00:00:00",
+                "trace_id": "trace_cfbfb342-c9ff-5668-8e4d-57b8aaf3d4bf",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "信用，附加个人连带责任保证担保",
+            "trace_id": "trace_e98f3799-0818-5e11-80e3-490aaecaa0a4",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "信用，附加个人连带责任保证担保",
+                "trace_id": "trace_e98f3799-0818-5e11-80e3-490aaecaa0a4",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          },
+          {
+            "text": "李五、刘撤",
+            "trace_id": "trace_8962a2f7-d81f-528c-a5dc-7357d830ce6a",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "李五、刘撤",
+                "trace_id": "trace_8962a2f7-d81f-528c-a5dc-7357d830ce6a",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": {
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "alignment": null,
+                  "color": null,
+                  "background_color": null,
+                  "font_size_pt": 10.5
+                }
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": null
+          }
+        ]
+      ],
+      "style": null,
+      "width_px": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e5dabbbdc4054330ade5528f0b4457b1",
+      "block_trace_id": "trace_condition_doc_bc4fc49a-174e-51c5-9a30-c7834ee1d307_condition_0",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "抵押担保情况判断：担保方式为最高额抵质押的最高额能够覆盖全部债权本息。",
+          "trace_id": "trace_condition_doc_bc4fc49a-174e-51c5-9a30-c7834ee1d307_condition_0",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_e371ccffe9d045c7b87cfa58dc134117",
+      "block_trace_id": "trace_ai_doc_bc4fc49a-174e-51c5-9a30-c7834ee1d307_AIBLOCK0",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "根据企业查询数据，",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "深圳市凤年科技有限公司",
+          "trace_id": "trace_e809f6ae-5260-5b4f-aa7c-cb2f8a1216b2",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "成立于2018年5月10日，注册资本500万元，注册地址位于深圳市南山区科技园正天大厦45层，目前仍有办公营业。公司法定代表人和实际控制人为张明远，持股60%，李华持股40%。经营范围涵盖智能家居产品研发、生产与销售、物联网技术服务、计算机软件开发及电子产品批发零售，所属行业为计算机、通信和其他电子设备制造业，企业规模为小型，即期信用等级为BB级。\n\n经分析，该公司因智能家居行业竞争加剧，2025年市场份额大幅下滑，下游客户回款周期延长至6个月以上，导致资金链紧张。同时，主要投资人李华撤资进一步加剧经营困难，公司现已暂停生产活动，处于停业状态。建议加强贷后监控，关注其资产处置及债务偿还计划，并审慎评估后续合作风险。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-16T13:48:07.331341Z"
+}

@@ -161,6 +161,31 @@ def write_excel_data(settings: AppSettings, task_id: str = "task_001") -> None:
     ).to_excel(data_dir / "loan_summary.xlsx", index=False)
 
 
+def write_chinese_header_excel_data(settings: AppSettings, task_id: str = "task_001") -> None:
+    data_dir = settings.tasks_dir / task_id / "data"
+    pd.DataFrame(
+        [{"客户编号": "C001", "客户名称": "Acme"}],
+    ).to_excel(data_dir / "customer_info.xlsx", index=False)
+    pd.DataFrame(
+        [{"客户编号": "C001", "贷款余额": 1200}],
+    ).to_excel(data_dir / "loan_summary.xlsx", index=False)
+
+
+def configure_chinese_field_names(connection: sqlite3.Connection) -> None:
+    mappings = {
+        ("customer_info", "customer_id"): ("客户信息表", "客户编号"),
+        ("customer_info", "customer_name"): ("客户信息表", "客户名称"),
+        ("loan_summary", "customer_id"): ("贷款汇总表", "客户编号"),
+        ("loan_summary", "loan_balance"): ("贷款汇总表", "贷款余额"),
+    }
+    for (table_name, field_name), (table_name_cn, field_name_cn) in mappings.items():
+        connection.execute(
+            "UPDATE fields SET table_name_cn = ?, field_name_cn = ? WHERE table_name = ? AND field_name = ?",
+            (table_name_cn, field_name_cn, table_name, field_name),
+        )
+    connection.commit()
+
+
 def passed_validation_report(task_id: str, *args, **kwargs) -> ValidationReport:
     return ValidationReport(
         task_id=task_id,
@@ -207,6 +232,27 @@ def test_generate_task_creates_docx_trace_preview_for_each_main_row(tmp_path) ->
     assert {row["status"] for row in documents} == {"success"}
     task = connection.execute("SELECT status, total_rows, success_count, failed_count FROM tasks WHERE task_id = 'task_001'").fetchone()
     assert dict(task) == {"status": "completed", "total_rows": 3, "success_count": 3, "failed_count": 0}
+
+
+def test_generate_docx_from_chinese_business_data_headers(tmp_path) -> None:
+    connection, settings = setup_project(tmp_path)
+    configure_chinese_field_names(connection)
+    write_chinese_header_excel_data(settings)
+
+    result = generate_task(
+        GenerateTaskInput(task_id="task_001", ai_enabled=False),
+        connection=connection,
+        settings=settings,
+        dependencies=GenerationDependencies(validate_task=passed_validation_report),
+    )
+
+    assert result.status == TaskStatus.COMPLETED
+    output = next((settings.tasks_dir / "task_001" / "output").glob("*.docx"))
+    assert "Customer: Acme" in [paragraph.text for paragraph in Document(output).paragraphs]
+    trace = json.loads(next((settings.tasks_dir / "task_001" / "output").glob("*.trace.json")).read_text(encoding="utf-8"))
+    customer_trace = next(item for item in trace["trace_items"] if item["field_name"] == "customer_name")
+    assert customer_trace["field_name_cn"] == "客户名称"
+    assert customer_trace["excel_column_letter"] == "B"
 
 
 def test_generate_task_renders_chinese_template_variables_and_keeps_original_trace_path(tmp_path) -> None:

@@ -11,7 +11,9 @@ from app.core.config import AppSettings
 from app.engine.ai_prompt_loader import analyze_ai_prompt_bindings
 from app.engine.data_loader import LoadedTable
 from app.engine.template_parser import analyze_template_variables
+from app.engine.template_file_type import TemplateFileType, detect_template_file_type
 from app.engine.validation_report_writer import write_validation_report
+from app.engine.xlsx_template_parser import analyze_xlsx_template
 from app.models.enums import RelationType, TableRole, ValidationLevel, ValidationStatus
 from app.models.template_models import FieldDefinition, RequiredTable, TemplateRequirements
 from app.models.validation_models import ValidationItem, ValidationReport, ValidationSummary
@@ -219,7 +221,21 @@ def _validate_template_references(
     field_names_by_table = _field_names_by_table(requirements.fields)
     allowed_tables = {table.table_name for table in requirements.required_tables}
 
-    references, _original_by_canonical, missing_variables = analyze_template_variables(template_path, requirements.fields)
+    try:
+        file_type = detect_template_file_type(template_path)
+        if file_type is TemplateFileType.XLSX:
+            analysis = analyze_xlsx_template(template_path, requirements.fields)
+            references = list(analysis.references)
+            missing_variables = list(analysis.missing_variables)
+            for code, message, coordinate in analysis.issues:
+                items.append(_error(code, message, requirements, detail={"coordinate": coordinate}))
+        else:
+            references, _original_by_canonical, missing_variables = analyze_template_variables(template_path, requirements.fields)
+    except Exception as exc:
+        items.append(_error("xlsx_template_invalid", f"Failed to parse template: {exc}", requirements))
+        return
+
+    relation_by_table = {table.table_name: table.relation_type for table in requirements.required_tables}
     missing_original_paths = {missing.original_var_path for missing in missing_variables}
     for missing in missing_variables:
         items.append(
@@ -239,6 +255,17 @@ def _validate_template_references(
 
     for reference in references:
         if (reference.original_variable_path or reference.variable_path) in missing_original_paths:
+            continue
+        if file_type is TemplateFileType.XLSX and relation_by_table.get(reference.table_name) == RelationType.ONE_TO_MANY:
+            items.append(
+                _error(
+                    "xlsx_one_to_many_unsupported",
+                    f"Excel templates do not support one-to-many variables: {reference.variable_path}",
+                    requirements,
+                    table_name=reference.table_name,
+                    field_name=reference.field_name,
+                )
+            )
             continue
         table = tables.get(reference.table_name)
         schema_fields = field_names_by_table.get(reference.table_name)
@@ -271,6 +298,8 @@ def _validate_ai_block_bindings(
         return
 
     try:
+        if detect_template_file_type(template_path) is TemplateFileType.XLSX:
+            return
         analysis = analyze_ai_prompt_bindings(template_path)
     except Exception as exc:
         items.append(

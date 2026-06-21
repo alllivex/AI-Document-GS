@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_001",
+  "task_id": "task_001",
+  "template_id": 1,
+  "template_name": "template",
+  "template_file": "template.docx",
+  "output_file": "condition.docx",
+  "output_path": "F:\\资料\\AI\\AI-Document-GS\\temp\\pytest-preview-release\\test_condition_trace_and_previ0\\condition.docx",
+  "main_table": "loan_summary",
+  "main_table_cn": "",
+  "primary_key_field": "branch_name",
+  "primary_key_value": "A支行",
+  "generated_at": "2026-06-21T13:01:20.208154Z",
+  "source_files": [
+    {
+      "table_name": "loan_summary",
+      "table_name_cn": "",
+      "filename": "loan_summary.xlsx",
+      "path": "tasks/task_001/data/loan_summary.xlsx",
+      "row_count": 0,
+      "column_count": 0
+    }
+  ],
+  "trace_items": [
+    {
+      "trace_id": "trace_house",
+      "original_var_path": "loan_summary.house_eval_amount",
+      "canonical_var_path": "loan_summary.house_eval_amount",
+      "var_path": "loan_summary.house_eval_amount",
+      "table_name": "loan_summary",
+      "table_name_cn": "",
+      "field_name": "house_eval_amount",
+      "field_name_cn": "",
+      "source_file": "loan_summary.xlsx",
+      "source_file_path": "tasks/task_001/data/loan_summary.xlsx",
+      "pk_field": "customer_id",
+      "pk_value": "C001",
+      "row_index": 0,
+      "excel_row_number": 2,
+      "column_index": 1,
+      "excel_column_letter": "B",
+      "raw_value": 900,
+      "display_value": "900",
+      "value_type": "string",
+      "display_format": "",
+      "occurrence_index": 0,
+      "source_relation_type": "main",
+      "created_at": "2026-06-14T12:00:00Z"
+    },
+    {
+      "trace_id": "trace_balance",
+      "original_var_path": "loan_summary.loan_balance",
+      "canonical_var_path": "loan_summary.loan_balance",
+      "var_path": "loan_summary.loan_balance",
+      "table_name": "loan_summary",
+      "table_name_cn": "",
+      "field_name": "loan_balance",
+      "field_name_cn": "",
+      "source_file": "loan_summary.xlsx",
+      "source_file_path": "tasks/task_001/data/loan_summary.xlsx",
+      "pk_field": "customer_id",
+      "pk_value": "C001",
+      "row_index": 0,
+      "excel_row_number": 2,
+      "column_index": 1,
+      "excel_column_letter": "B",
+      "raw_value": 1250,
+      "display_value": "1250",
+      "value_type": "string",
+      "display_format": "",
+      "occurrence_index": 0,
+      "source_relation_type": "main",
+      "created_at": "2026-06-14T12:00:00Z"
+    }
+  ],
+  "condition_traces": [
+    {
+      "trace_id": "trace_condition_doc_001_condition_0",
+      "trace_kind": "condition",
+      "task_id": "task_001",
+      "doc_id": "doc_001",
+      "primary_key_value": "A支行",
+      "expression": "loan_summary.house_eval_amount < loan_summary.loan_balance",
+      "used_variables": [
+        "loan_summary.house_eval_amount",
+        "loan_summary.loan_balance"
+      ],
+      "evaluated_result": true,
+      "selected_branch": "if",
+      "expected_output_text": "无法清偿",
+      "actual_output_text": "清偿能力判断：无法清偿。",
+      "is_consistent": true,
+      "source_records": [
+        {
+          "table_name": "loan_summary",
+          "table_name_cn": "",
+          "source_file": "loan_summary.xlsx",
+          "row_index": 0,
+          "excel_row_number": 2,
+          "relation_type": "main",
+          "fields": [
+            {
+              "field_name": "house_eval_amount",
+              "field_name_cn": "",
+              "raw_value": 900,
+              "display_value": "900",
+              "value_type": "string",
+              "excel_column_letter": "B",
+              "is_highlighted": true,
+              "highlight_reason": "used_in_condition"
+            },
+            {
+              "field_name": "loan_balance",
+              "field_name_cn": "",
+              "raw_value": 1250,
+              "display_value": "1250",
+              "value_type": "string",
+              "excel_column_letter": "B",
+              "is_highlighted": true,
+              "highlight_reason": "used_in_condition"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "loop_traces": [],
+  "ai_traces": [],
+  "ai_blocks": [],
+  "statistics": {
+    "trace_item_count": 2,
+    "ai_block_count": 0,
+    "source_file_count": 1,
+    "table_count": 1
+  }
+}

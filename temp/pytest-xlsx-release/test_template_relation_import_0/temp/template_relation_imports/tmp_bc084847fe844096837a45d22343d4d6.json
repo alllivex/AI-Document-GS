@@ -1,0 +1,63 @@
+{
+  "preview": {
+    "import_id": "tmp_bc084847fe844096837a45d22343d4d6",
+    "summary": {
+      "total_rows": 2,
+      "create_count": 1,
+      "update_count": 1,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "update",
+        "level": "info",
+        "message": "将更新模板关系：普惠支行报告 - 支行主表"
+      },
+      {
+        "row_number": 3,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：普惠支行报告 - 贷款汇总表"
+      }
+    ],
+    "can_commit": true
+  },
+  "rows": [
+    {
+      "row_number": 2,
+      "template_id": 1,
+      "template_name": "普惠支行报告",
+      "template_file": "template_1.docx",
+      "template_key": "id:1",
+      "template_label": "普惠支行报告",
+      "table_name": "branch_main",
+      "table_name_cn": "支行主表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    },
+    {
+      "row_number": 3,
+      "template_id": 1,
+      "template_name": "普惠支行报告",
+      "template_file": "template_1.docx",
+      "template_key": "id:1",
+      "template_label": "普惠支行报告",
+      "table_name": "loan_summary",
+      "table_name_cn": "贷款汇总表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "branch_id",
+      "table_join_key": "branch_id",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    }
+  ]
+}

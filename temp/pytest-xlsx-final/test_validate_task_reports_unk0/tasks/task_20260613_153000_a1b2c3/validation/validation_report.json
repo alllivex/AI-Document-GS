@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260613_153000_a1b2c3",
+  "status": "failed",
+  "summary": {
+    "error_count": 1,
+    "warning_count": 0,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references unknown variable: 客户信息表.不存在字段",
+      "table_name": "customer_info",
+      "field_name": "不存在字段",
+      "template_id": 1,
+      "template_file": "due_diligence.docx",
+      "suggestion": "模板变量 客户信息表.不存在字段 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "original_variable_path": "客户信息表.不存在字段",
+        "reason": "field_not_found"
+      }
+    }
+  ],
+  "created_at": "2026-06-21T04:01:51.165665Z"
+}

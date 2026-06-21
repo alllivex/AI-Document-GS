@@ -1,0 +1,23 @@
+{
+  "preview": {
+    "import_id": "tmp_2a8bcf7c9f4e41a685b7973c8c820a59",
+    "summary": {
+      "total_rows": 1,
+      "create_count": 0,
+      "update_count": 0,
+      "skip_count": 0,
+      "error_count": 1,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 1,
+        "action": "error",
+        "level": "error",
+        "message": "缺少必需列：field_name_cn, table_name_cn"
+      }
+    ],
+    "can_commit": false
+  },
+  "fields": []
+}

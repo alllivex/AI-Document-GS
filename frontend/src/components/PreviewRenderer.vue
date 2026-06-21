@@ -18,7 +18,7 @@
           <p
             v-else-if="block.type === 'paragraph'"
             class="preview-paragraph"
-            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: block.block_trace_id === selectedTraceId }]"
+            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: Boolean(block.block_trace_id) && block.block_trace_id === selectedTraceId }]"
             :data-trace-id="block.block_trace_id || undefined"
             :style="styleToCss(block.style)"
             @click="selectBlockTrace(block.block_trace_id, $event)"
@@ -52,7 +52,7 @@
           <div
             v-else-if="block.type === 'table'"
             class="preview-table-wrap"
-            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: block.block_trace_id === selectedTraceId }]"
+            :class="[block.block_trace_id ? 'clickable-block' : '', traceKindClass(block.block_trace_kind), { active: Boolean(block.block_trace_id) && block.block_trace_id === selectedTraceId }]"
             :data-trace-id="block.block_trace_id || undefined"
             @click.self="block.block_trace_id && selectTraceFromPreview(block.block_trace_id)"
           >
@@ -62,7 +62,7 @@
               </el-button>
             </div>
             <table class="preview-table" :style="tableStyle(block)">
-              <thead>
+              <thead v-if="block.headers.length">
                 <tr>
                   <th
                     v-for="(cell, index) in block.headers"
@@ -320,7 +320,7 @@ function headingTag(level?: number) {
 }
 
 function traceKindClass(kind?: string | null) {
-  return `trace-${kind || 'field'}`
+  return kind ? `trace-${kind}` : ''
 }
 
 function blockTraceLabel(kind?: string | null) {
@@ -360,7 +360,9 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 <style scoped>
 .preview-renderer {
-  align-items: flex-start;
+  --preview-paper-width: 794px;
+
+  align-items: center;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -381,7 +383,7 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
   gap: 8px;
   justify-content: center;
   margin: 0 auto;
-  max-width: 860px;
+  max-width: var(--preview-paper-width);
   padding: 8px 10px;
   width: 100%;
 }
@@ -406,7 +408,7 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
   border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: 0 18px 46px rgba(20, 32, 56, 0.12);
-  max-width: 794px;
+  max-width: var(--preview-paper-width);
   min-height: calc(100vh - 170px);
   padding: 48px 56px;
   width: 100%;
@@ -588,6 +590,37 @@ function selectBlockTrace(traceId: string | null | undefined, event: MouseEvent)
 
 .trace-cell-content {
   white-space: pre-wrap;
+}
+
+.preview-table :deep(.trace-text) {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dotted rgba(36, 88, 211, 0.42);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 1px 3px;
+  text-align: inherit;
+  transition:
+    background 0.16s ease,
+    box-shadow 0.16s ease,
+    color 0.16s ease;
+}
+
+.preview-table :deep(.trace-text:hover) {
+  background: #eef5ff;
+  box-shadow: 0 0 0 1px #bdd4ff;
+  color: #1f4fbd;
+}
+
+.preview-table :deep(.trace-text.active) {
+  background: #e0ecff;
+  box-shadow: 0 0 0 2px rgba(36, 88, 211, 0.28);
+  color: #1746a2;
+  font-weight: 650;
 }
 
 @media (max-width: 760px) {

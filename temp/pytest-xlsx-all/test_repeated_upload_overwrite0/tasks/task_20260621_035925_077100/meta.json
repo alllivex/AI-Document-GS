@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260621_035925_077100",
+  "task_name": "客户尽调报告批量生成",
+  "template_id": 1,
+  "template_name": "客户尽调报告",
+  "template_file": "due_diligence.docx",
+  "ai_enabled": true,
+  "status": "uploaded",
+  "main_table": "customer_info",
+  "main_table_cn": "客户信息表",
+  "primary_key_field": "customer_id",
+  "required_tables": [
+    {
+      "table_name": "customer_info",
+      "table_name_cn": "客户信息表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "loan_summary",
+      "table_name_cn": "贷款汇总表",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "customer_id",
+      "table_join_key": "customer_id",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "customer_info",
+      "original_filename": "second.xlsx",
+      "stored_filename": "customer_info.xlsx",
+      "path": "tasks/task_20260621_035925_077100/data/customer_info.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-21T03:59:25.438292Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 0,
+    "success_count": 0,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": []
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260621_035925_077100",
+    "data_dir": "tasks/task_20260621_035925_077100/data",
+    "output_dir": "tasks/task_20260621_035925_077100/output",
+    "validation_dir": "tasks/task_20260621_035925_077100/validation",
+    "logs_dir": "tasks/task_20260621_035925_077100/logs"
+  },
+  "created_at": "2026-06-21T03:59:25.397526Z",
+  "updated_at": "2026-06-21T03:59:25.438292Z",
+  "started_at": null,
+  "completed_at": null
+}

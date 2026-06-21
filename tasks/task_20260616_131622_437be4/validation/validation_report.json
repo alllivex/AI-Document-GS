@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260616_131622_437be4",
+  "status": "failed",
+  "summary": {
+    "error_count": 14,
+    "warning_count": 0,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "error",
+      "code": "missing_primary_key_field",
+      "message": "Primary key field is missing: loan_cust_data.LRR_CUST_NO",
+      "table_name": "loan_cust_data",
+      "field_name": "LRR_CUST_NO",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "主表缺少主键字段，请检查 Excel 表头或模板关系配置。",
+      "detail": null
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COLLATERAL_OWNER_NAME",
+      "table_name": "loan_cust_data",
+      "field_name": "COLLATERAL_OWNER_NAME",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COLLATERAL_OWNER_NAME 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COLLATERAL_OWNER_NAME",
+        "original_variable_path": "loan_cust_data.COLLATERAL_OWNER_NAME"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COLLATERAL_OWNER_ID_NO",
+      "table_name": "loan_cust_data",
+      "field_name": "COLLATERAL_OWNER_ID_NO",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COLLATERAL_OWNER_ID_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COLLATERAL_OWNER_ID_NO",
+        "original_variable_path": "loan_cust_data.COLLATERAL_OWNER_ID_NO"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COLLATERAL_ADDR",
+      "table_name": "loan_cust_data",
+      "field_name": "COLLATERAL_ADDR",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COLLATERAL_ADDR 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COLLATERAL_ADDR",
+        "original_variable_path": "loan_cust_data.COLLATERAL_ADDR"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COMPANY_NAME",
+      "table_name": "loan_cust_data",
+      "field_name": "COMPANY_NAME",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COMPANY_NAME 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COMPANY_NAME",
+        "original_variable_path": "loan_cust_data.COMPANY_NAME"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COMPANY_BIZ_ADDR",
+      "table_name": "loan_cust_data",
+      "field_name": "COMPANY_BIZ_ADDR",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COMPANY_BIZ_ADDR 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COMPANY_BIZ_ADDR",
+        "original_variable_path": "loan_cust_data.COMPANY_BIZ_ADDR"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COMPANY_LICENSE_NO",
+      "table_name": "loan_cust_data",
+      "field_name": "COMPANY_LICENSE_NO",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COMPANY_LICENSE_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COMPANY_LICENSE_NO",
+        "original_variable_path": "loan_cust_data.COMPANY_LICENSE_NO"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.LRR_PHONE",
+      "table_name": "loan_cust_data",
+      "field_name": "LRR_PHONE",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.LRR_PHONE 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.LRR_PHONE",
+        "original_variable_path": "loan_cust_data.LRR_PHONE"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.LOAN_AMT_CN",
+      "table_name": "loan_cust_data",
+      "field_name": "LOAN_AMT_CN",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.LOAN_AMT_CN 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.LOAN_AMT_CN",
+        "original_variable_path": "loan_cust_data.LOAN_AMT_CN"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.LOAN_AMT",
+      "table_name": "loan_cust_data",
+      "field_name": "LOAN_AMT",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.LOAN_AMT 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.LOAN_AMT",
+        "original_variable_path": "loan_cust_data.LOAN_AMT"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.LRR_NAME",
+      "table_name": "loan_cust_data",
+      "field_name": "LRR_NAME",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.LRR_NAME 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.LRR_NAME",
+        "original_variable_path": "loan_cust_data.LRR_NAME"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.LRR_ID_NO",
+      "table_name": "loan_cust_data",
+      "field_name": "LRR_ID_NO",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.LRR_ID_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.LRR_ID_NO",
+        "original_variable_path": "loan_cust_data.LRR_ID_NO"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COLLATERAL_CERT_NO",
+      "table_name": "loan_cust_data",
+      "field_name": "COLLATERAL_CERT_NO",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COLLATERAL_CERT_NO 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COLLATERAL_CERT_NO",
+        "original_variable_path": "loan_cust_data.COLLATERAL_CERT_NO"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: loan_cust_data.COLLATERAL_OWNER_PHONE",
+      "table_name": "loan_cust_data",
+      "field_name": "COLLATERAL_OWNER_PHONE",
+      "template_id": 8,
+      "template_file": "template_8.docx",
+      "suggestion": "模板变量 loan_cust_data.COLLATERAL_OWNER_PHONE 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "loan_cust_data.COLLATERAL_OWNER_PHONE",
+        "original_variable_path": "loan_cust_data.COLLATERAL_OWNER_PHONE"
+      }
+    }
+  ],
+  "created_at": "2026-06-16T13:16:29.207500Z"
+}

@@ -31,7 +31,7 @@
             查看预览与溯源
           </el-button>
           <el-button link type="primary" :disabled="row.status !== 'success'" @click="downloadDoc(row.doc_id)">
-            下载 Word
+            {{ row.output_filename.toLowerCase().endsWith('.xlsx') ? '下载 Excel' : '下载 Word' }}
           </el-button>
         </template>
       </el-table-column>

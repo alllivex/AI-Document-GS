@@ -5,6 +5,7 @@ import sys
 
 from docx import Document
 from fastapi.testclient import TestClient
+from openpyxl import Workbook
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -32,6 +33,36 @@ def docx_bytes(text: str = "Hello {{ customer_info.customer_name }}") -> bytes:
 def docx_text(file_bytes: bytes) -> str:
     document = Document(BytesIO(file_bytes))
     return "\n".join(paragraph.text for paragraph in document.paragraphs)
+
+
+def xlsx_bytes(text: str = "{{ customer_info.customer_name }}") -> bytes:
+    buffer = BytesIO()
+    workbook = Workbook()
+    workbook.active["A1"] = text
+    workbook.save(buffer)
+    return buffer.getvalue()
+
+
+def test_template_file_upload_and_download_xlsx(tmp_path, monkeypatch) -> None:
+    settings = reset_settings(tmp_path, monkeypatch)
+    init_db(settings.database_path)
+    from app.main import create_app
+
+    with TestClient(create_app()) as client:
+        response = client.post(
+            "/api/settings/template-files",
+            data={"template_name": "Excel Report", "description": ""},
+            files={"file": ("report.xlsx", xlsx_bytes(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")},
+        )
+        assert response.status_code == 200
+        payload = response.json()["data"]
+        assert payload["template_file_type"] == "xlsx"
+        assert payload["template_file"].endswith(".xlsx")
+        assert (settings.templates_dir / payload["template_file"]).is_file()
+
+        download = client.get(f"/api/settings/template-files/{payload['template_id']}/download")
+        assert download.status_code == 200
+        assert download.headers["content-type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 
 def assert_success(payload: dict) -> None:

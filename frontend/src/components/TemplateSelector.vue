@@ -16,7 +16,7 @@
         :label="template.template_name"
         :value="template.template_id"
       >
-        <span>{{ template.template_name }}</span>
+        <span>{{ template.template_name }}（{{ template.template_file_type === 'xlsx' ? 'Excel' : 'Word' }}）</span>
         <span class="template-file">{{ template.template_file }}</span>
       </el-option>
     </el-select>
@@ -27,6 +27,7 @@
       <div>主表：{{ displayTable(requirements.main_table) }}</div>
       <div>主键：{{ requirements.primary_key_field }}</div>
       <div>依赖表：{{ requirements.required_tables.length }} 张</div>
+      <div>输出类型：{{ requirements.template_file_type === 'xlsx' ? 'Excel' : 'Word' }}</div>
     </div>
   </div>
 </template>

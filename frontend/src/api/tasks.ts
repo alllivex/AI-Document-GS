@@ -11,10 +11,18 @@ import type {
 } from '../types/task'
 import type { ValidateTaskResponse } from '../types/validation'
 
-export function listTasks(): Promise<ListResponse<TaskListItem>> {
+export interface TaskListParams {
+  page: number
+  page_size: number
+  status?: string
+  keyword?: string
+}
+
+export function listTasks(params: TaskListParams): Promise<ListResponse<TaskListItem>> {
   return request<ListResponse<TaskListItem>>({
     method: 'GET',
     url: '/api/tasks',
+    params,
   })
 }
 

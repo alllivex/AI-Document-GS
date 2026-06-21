@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, computed_field
 
 from app.models.common import ContractModel
 from app.models.enums import DataType, RelationType, TableRole
@@ -44,6 +45,11 @@ class TemplateInfo(ContractModel):
     created_at: datetime
     updated_at: datetime
 
+    @computed_field
+    @property
+    def template_file_type(self) -> Literal["docx", "xlsx"]:
+        return _template_file_type(self.template_file)
+
 
 class TemplateListItem(ContractModel):
     template_id: int = Field(ge=1)
@@ -56,6 +62,11 @@ class TemplateListItem(ContractModel):
     required_table_count: int = Field(ge=0)
     is_active: bool = True
     updated_at: datetime
+
+    @computed_field
+    @property
+    def template_file_type(self) -> Literal["docx", "xlsx"]:
+        return _template_file_type(self.template_file)
 
 
 class TemplateTableSummary(ContractModel):
@@ -78,6 +89,11 @@ class TemplateDetail(ContractModel):
     is_active: bool = True
     updated_at: datetime
 
+    @computed_field
+    @property
+    def template_file_type(self) -> Literal["docx", "xlsx"]:
+        return _template_file_type(self.template_file)
+
 
 class TemplateRequirements(ContractModel):
     template_id: int = Field(ge=1)
@@ -88,3 +104,12 @@ class TemplateRequirements(ContractModel):
     primary_key_field: str
     required_tables: list[RequiredTable]
     fields: list[FieldDefinition] = Field(default_factory=list)
+
+    @computed_field
+    @property
+    def template_file_type(self) -> Literal["docx", "xlsx"]:
+        return _template_file_type(self.template_file)
+
+
+def _template_file_type(filename: str) -> Literal["docx", "xlsx"]:
+    return "xlsx" if filename.lower().endswith(".xlsx") else "docx"

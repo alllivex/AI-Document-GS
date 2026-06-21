@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260613_153000_a1b2c3",
+  "status": "passed_with_warnings",
+  "summary": {
+    "error_count": 0,
+    "warning_count": 1,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "warning",
+      "code": "missing_optional_table",
+      "message": "Optional Excel table is missing: collateral_info.xlsx",
+      "table_name": "collateral_info",
+      "field_name": null,
+      "template_id": 1,
+      "template_file": "due_diligence.docx",
+      "suggestion": "如模板需要使用该辅表数据，请上传对应 Excel；否则可忽略此警告。",
+      "detail": null
+    }
+  ],
+  "created_at": "2026-06-21T12:46:34.332459Z"
+}

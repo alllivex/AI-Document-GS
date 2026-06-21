@@ -11,6 +11,7 @@ from app.core.errors import AppError
 from app.core.response import success_response
 from app.db.connection import get_connection
 from app.db.repositories.document_repository import DocumentRepository
+from app.engine.template_file_type import media_type_for_file
 
 router = APIRouter(prefix="/api/documents", tags=["documents"])
 
@@ -42,7 +43,7 @@ async def download_document(doc_id: str):
         raise AppError("FILE_NOT_FOUND", f"Document file not found: {doc_id}", 404, {"doc_id": doc_id})
     return FileResponse(
         output_path,
-        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        media_type=media_type_for_file(output_path),
         filename=document.output_filename,
     )
 

@@ -9,6 +9,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.engine.data_loader import LoadedTable, load_data_tables
 from app.engine.excel_utils import excel_column_letter
+from app.models.template_models import FieldDefinition
 
 
 def write_table(path: Path, rows: list[dict]) -> None:
@@ -91,3 +92,72 @@ def test_load_data_tables_rejects_duplicate_headers(tmp_path) -> None:
 
     with pytest.raises(ValueError, match="customer_info.*duplicate header columns.*customer_id"):
         load_data_tables(tmp_path, ["customer_info"])
+
+
+def customer_fields() -> list[FieldDefinition]:
+    return [
+        FieldDefinition(
+            table_name="customer_info",
+            table_name_cn="客户信息表",
+            field_name="customer_id",
+            field_name_cn="客户编号",
+            is_primary_key=True,
+        ),
+        FieldDefinition(
+            table_name="customer_info",
+            table_name_cn="客户信息表",
+            field_name="customer_name",
+            field_name_cn="客户姓名",
+        ),
+    ]
+
+
+def test_load_data_table_maps_chinese_headers_to_schema_field_names(tmp_path) -> None:
+    write_table(tmp_path / "customer_info.xlsx", [{"客户编号": "C001", "客户姓名": "张三"}])
+
+    table = load_data_tables(tmp_path, ["customer_info"], customer_fields())["customer_info"]
+
+    assert table.columns == ["customer_id", "customer_name"]
+    assert table.dataframe.loc[0, "customer_name"] == "张三"
+    assert table.column_index_map == {"customer_id": 0, "customer_name": 1}
+    assert table.excel_column_letter_map == {"customer_id": "A", "customer_name": "B"}
+
+
+def test_load_data_table_accepts_mixed_english_and_chinese_headers(tmp_path) -> None:
+    write_table(tmp_path / "customer_info.xlsx", [{"customer_id": "C001", "客户姓名": "张三"}])
+
+    table = load_data_tables(tmp_path, ["customer_info"], customer_fields())["customer_info"]
+
+    assert table.columns == ["customer_id", "customer_name"]
+
+
+def test_load_data_table_rejects_headers_mapping_to_same_field(tmp_path) -> None:
+    write_table(
+        tmp_path / "customer_info.xlsx",
+        [{"customer_id": "C001", "客户编号": "C002", "客户姓名": "张三"}],
+    )
+
+    with pytest.raises(ValueError, match="after schema mapping.*customer_id <- customer_id, 客户编号"):
+        load_data_tables(tmp_path, ["customer_info"], customer_fields())
+
+
+def test_load_data_table_rejects_ambiguous_schema_chinese_names(tmp_path) -> None:
+    write_table(tmp_path / "customer_info.xlsx", [{"编号": "C001"}])
+    fields = [
+        FieldDefinition(table_name="customer_info", field_name="customer_id", field_name_cn="编号"),
+        FieldDefinition(table_name="customer_info", field_name="legacy_id", field_name_cn="编号"),
+    ]
+
+    with pytest.raises(ValueError, match="ambiguous field header aliases.*编号"):
+        load_data_tables(tmp_path, ["customer_info"], fields)
+
+
+def test_load_data_table_rejects_chinese_alias_colliding_with_english_name(tmp_path) -> None:
+    write_table(tmp_path / "customer_info.xlsx", [{"customer_id": "C001"}])
+    fields = [
+        FieldDefinition(table_name="customer_info", field_name="customer_id", field_name_cn="客户编号"),
+        FieldDefinition(table_name="customer_info", field_name="legacy_id", field_name_cn="customer_id"),
+    ]
+
+    with pytest.raises(ValueError, match="ambiguous field header aliases.*customer_id"):
+        load_data_tables(tmp_path, ["customer_info"], fields)

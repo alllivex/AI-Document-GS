@@ -1,0 +1,189 @@
+{
+  "preview": {
+    "import_id": "tmp_feba4478858943239bac852f0c4e5fb3",
+    "summary": {
+      "total_rows": 9,
+      "create_count": 9,
+      "update_count": 0,
+      "skip_count": 0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.customer_name"
+      },
+      {
+        "row_number": 3,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.id_number"
+      },
+      {
+        "row_number": 4,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.unified_social_credit_code"
+      },
+      {
+        "row_number": 5,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.company_name"
+      },
+      {
+        "row_number": 6,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.customer_code"
+      },
+      {
+        "row_number": 7,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.business_address"
+      },
+      {
+        "row_number": 8,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.account_number"
+      },
+      {
+        "row_number": 9,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.collateral_address"
+      },
+      {
+        "row_number": 10,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 data_element.real_estate_certificate_number"
+      }
+    ],
+    "can_commit": true
+  },
+  "fields": [
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "customer_name",
+      "field_name_cn": "客户姓名",
+      "data_type": "string",
+      "is_primary_key": true,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "id_number",
+      "field_name_cn": "身份证号",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "unified_social_credit_code",
+      "field_name_cn": "统一社会信用代码",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "company_name",
+      "field_name_cn": "企业名称",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "customer_code",
+      "field_name_cn": "客编",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "business_address",
+      "field_name_cn": "企业经营地址",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "account_number",
+      "field_name_cn": "账户号码",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "collateral_address",
+      "field_name_cn": "押品坐落地址",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "field_name": "real_estate_certificate_number",
+      "field_name_cn": "不动产权证书号",
+      "data_type": "string",
+      "is_primary_key": false,
+      "required": false,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    }
+  ]
+}

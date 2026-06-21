@@ -52,13 +52,13 @@
           </el-select>
         </div>
         <div class="toolbar-right">
-          <span class="result-count">筛选结果 {{ filteredTasks.length }} 条</span>
+          <span class="result-count">筛选结果 {{ total }} 条</span>
           <el-button @click="loadTasks">刷新列表</el-button>
           <el-button type="primary" @click="createNewTask">新建任务</el-button>
         </div>
       </div>
 
-      <el-table v-loading="loading" :data="filteredTasks" border>
+      <el-table v-loading="loading" :data="tasks" border>
         <el-table-column label="任务" min-width="260">
           <template #default="{ row }">
             <div class="task-name">{{ row.task_name }}</div>
@@ -106,12 +106,23 @@
           </template>
         </el-table-column>
       </el-table>
+      <div class="task-pagination">
+        <el-pagination
+          v-model:current-page="page"
+          v-model:page-size="pageSize"
+          :page-sizes="[10, 20, 50]"
+          :total="total"
+          layout="total, sizes, prev, pager, next, jumper"
+          @current-change="loadTasks"
+          @size-change="handlePageSizeChange"
+        />
+      </div>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import StatusTag from '../components/common/StatusTag.vue'
 import { downloadTaskZipUrl, listTasks } from '../api/tasks'
@@ -124,17 +135,10 @@ const loading = ref(false)
 const errorMessage = ref('')
 const keyword = ref('')
 const selectedStatus = ref<TaskStatus | 'all'>('all')
-
-const filteredTasks = computed(() => {
-  const search = keyword.value.trim().toLowerCase()
-  return tasks.value.filter((task) => {
-    const matchesStatus = selectedStatus.value === 'all' || task.status === selectedStatus.value
-    const matchesKeyword = !search
-      || [task.task_name, task.template_name, task.main_table, task.task_id]
-        .some((value) => String(value || '').toLowerCase().includes(search))
-    return matchesStatus && matchesKeyword
-  })
-})
+const page = ref(1)
+const pageSize = ref(10)
+const total = ref(0)
+let searchTimer: ReturnType<typeof setTimeout> | undefined
 
 const summary = computed(() => {
   return {
@@ -147,17 +151,34 @@ const summary = computed(() => {
 
 onMounted(loadTasks)
 
+watch([keyword, selectedStatus], () => {
+  page.value = 1
+  clearTimeout(searchTimer)
+  searchTimer = setTimeout(loadTasks, 300)
+})
+
 async function loadTasks() {
   loading.value = true
   errorMessage.value = ''
   try {
-    const response = await listTasks()
+    const response = await listTasks({
+      page: page.value,
+      page_size: pageSize.value,
+      status: selectedStatus.value === 'all' ? undefined : selectedStatus.value,
+      keyword: keyword.value.trim() || undefined,
+    })
     tasks.value = response.items
+    total.value = response.total
   } catch (error) {
     errorMessage.value = error instanceof Error ? error.message : '任务列表加载失败'
   } finally {
     loading.value = false
   }
+}
+
+function handlePageSizeChange() {
+  page.value = 1
+  loadTasks()
 }
 
 function createNewTask() {
@@ -236,6 +257,12 @@ function formatTime(value: string) {
 .count-line strong {
   color: var(--color-primary);
   font-size: 18px;
+}
+
+.task-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
 }
 
 .task-overview {

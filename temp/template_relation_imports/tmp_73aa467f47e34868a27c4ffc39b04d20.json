@@ -1,0 +1,40 @@
+{
+  "preview": {
+    "import_id": "tmp_73aa467f47e34868a27c4ffc39b04d20",
+    "summary": {
+      "total_rows": 1,
+      "create_count": 1,
+      "update_count": 0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：抵押类合同文档 - 贷款客户数据表"
+      }
+    ],
+    "can_commit": true
+  },
+  "rows": [
+    {
+      "row_number": 2,
+      "template_id": 8,
+      "template_name": "抵押类合同文档",
+      "template_file": "template_8.docx",
+      "template_key": "id:8",
+      "template_label": "抵押类合同文档",
+      "table_name": "loan_cust_data",
+      "table_name_cn": "贷款客户数据表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    }
+  ]
+}

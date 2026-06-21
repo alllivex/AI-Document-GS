@@ -46,10 +46,15 @@ def save_uploaded_file(
     )
 
 
-def save_template_file(template_id: int, file_bytes: bytes, settings: AppSettings | None = None) -> StoredFileInfo:
+def save_template_file(
+    template_id: int,
+    file_bytes: bytes,
+    settings: AppSettings | None = None,
+    suffix: str = ".docx",
+) -> StoredFileInfo:
     current_settings = settings or get_settings()
     current_settings.templates_dir.mkdir(parents=True, exist_ok=True)
-    stored_filename = safe_template_filename(template_id)
+    stored_filename = safe_template_filename(template_id, suffix)
     file_path = current_settings.templates_dir / stored_filename
     if file_path.exists():
         raise FileExistsError(f"template file already exists: {stored_filename}")

@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_b0c756e1-8f78-5f48-9bb5-b663c63faa15",
+  "task_id": "task_001",
+  "title": "due_diligence_C001.xlsx",
+  "output_file": "due_diligence_C001.xlsx",
+  "primary_key_value": "C001",
+  "blocks": [
+    {
+      "type": "table",
+      "block_id": "xlsx_table_2244f2c40ee94a869854ea4a87144971",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [],
+      "rows": [
+        [
+          {
+            "text": "客户",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "Acme",
+            "trace_id": "trace_3025a66b-ca8e-5821-9233-9ed3905f06a2",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "Acme",
+                "trace_id": "trace_3025a66b-ca8e-5821-9233-9ed3905f06a2",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 173.0
+          }
+        ],
+        [
+          {
+            "text": "余额",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "金额：1200.00",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "金额：",
+                "trace_id": null,
+                "trace_kind": null,
+                "ai_block_id": null,
+                "style": null
+              },
+              {
+                "text": "1200.00",
+                "trace_id": "trace_58d9266d-6b59-5058-8f96-88f67a790ea0",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 173.0
+          }
+        ]
+      ],
+      "style": null,
+      "width_px": null
+    }
+  ],
+  "created_at": "2026-06-21T12:46:33.841293Z"
+}

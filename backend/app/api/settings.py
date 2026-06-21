@@ -18,6 +18,7 @@ from app.models.settings_models import (
     TemplateRelationImportCommitRequest,
 )
 from app.db.repositories.template_repository import TemplateRepository
+from app.engine.template_file_type import media_type_for_file
 from app.services.entity_schema_service import EntitySchemaService
 from app.services.ai_config_service import AIConfigService
 from app.services.template_relation_service import TemplateRelationService
@@ -64,7 +65,7 @@ async def download_template_file(template_id: int):
         path, record = service.get_download_path(template_id)
     return FileResponse(
         path,
-        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        media_type=media_type_for_file(path),
         filename=record.original_filename,
     )
 

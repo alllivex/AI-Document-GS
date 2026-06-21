@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_001",
+  "task_id": "task_001",
+  "title": "ai_doc.docx",
+  "output_file": "ai_doc.docx",
+  "primary_key_value": "A支行",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_8d00b6f8679b4d74a9f2fe5f217ca806",
+      "block_trace_id": "trace_ai_doc_001_AIBLOCK0",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "风险分析显示，不良环比",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.12",
+          "trace_id": "trace_bad_mom",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "、同比",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.35",
+          "trace_id": "trace_bad_yoy",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "均有上升，应加强贷后监测。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-21T03:59:18.966067Z"
+}

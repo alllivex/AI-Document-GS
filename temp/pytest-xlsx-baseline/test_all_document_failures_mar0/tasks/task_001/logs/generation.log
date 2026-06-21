@@ -1,0 +1,29 @@
+2026-06-21T03:54:59.609293+00:00 [INFO] start  Generation started.
+2026-06-21T03:54:59.681574+00:00 [ERROR] document doc_b0c756e1-8f78-5f48-9bb5-b663c63faa15 Document generation failed for primary key: C001
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 227, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 303, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: boom
+
+2026-06-21T03:54:59.694856+00:00 [ERROR] document doc_330bea88-a2b7-5198-a3dd-67f972c1cf59 Document generation failed for primary key: C002
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 227, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 303, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: boom
+
+2026-06-21T03:54:59.705358+00:00 [ERROR] document doc_dab71b21-c8c3-52d8-8a8d-4ce3403ca7e3 Document generation failed for primary key: C003
+Traceback (most recent call last):
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 227, in _generate_bundles
+    document_record = self._generate_one_document(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\资料\AI\AI-Document-GS\backend\app\engine\generation_runner.py", line 303, in _generate_one_document
+    raise RuntimeError(render_result.error_message)
+RuntimeError: boom
+
+2026-06-21T03:54:59.710052+00:00 [INFO] complete  Generation finished with status: failed.

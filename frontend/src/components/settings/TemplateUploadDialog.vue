@@ -9,15 +9,15 @@
       </el-form-item>
       <el-form-item label="模板文件" required>
         <el-upload
-          accept=".docx"
+          accept=".docx,.xlsx"
           :auto-upload="false"
           :limit="1"
           :on-change="handleFileChange"
           :on-remove="handleFileRemove"
         >
-          <el-button>选择 docx 文件</el-button>
+          <el-button>选择 Word 或 Excel 模板</el-button>
           <template #tip>
-            <div class="upload-tip">仅支持 .docx 文件，上传后系统保存为 template_模板ID.docx。</div>
+            <div class="upload-tip">支持 .docx 和 .xlsx，Excel 模板首版仅渲染第一个工作表。</div>
           </template>
         </el-upload>
       </el-form-item>
@@ -74,9 +74,9 @@ function handleFileChange(uploadFile: UploadFile) {
     selectedFile.value = null
     return
   }
-  if (!rawFile.name.toLowerCase().endsWith('.docx')) {
+  if (!isSupportedTemplateFile(rawFile.name)) {
     selectedFile.value = null
-    errorMessage.value = '仅支持上传 .docx 模板文件'
+    errorMessage.value = '仅支持上传 .docx 或 .xlsx 模板文件'
     return
   }
   selectedFile.value = rawFile
@@ -88,7 +88,7 @@ function handleFileRemove() {
 
 async function submitUpload() {
   if (!selectedFile.value) {
-    errorMessage.value = '请选择 .docx 模板文件'
+    errorMessage.value = '请选择 .docx 或 .xlsx 模板文件'
     return
   }
   uploading.value = true
@@ -113,6 +113,11 @@ function resetForm() {
   selectedFile.value = null
   uploading.value = false
   errorMessage.value = ''
+}
+
+function isSupportedTemplateFile(filename: string) {
+  const lowerName = filename.toLowerCase()
+  return lowerName.endsWith('.docx') || lowerName.endsWith('.xlsx')
 }
 </script>
 

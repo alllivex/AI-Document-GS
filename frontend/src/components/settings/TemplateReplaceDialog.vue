@@ -16,15 +16,15 @@
     <el-form class="replace-form" label-width="96px">
       <el-form-item label="新模板文件" required>
         <el-upload
-          accept=".docx"
+          :accept="requiredSuffix"
           :auto-upload="false"
           :limit="1"
           :on-change="handleFileChange"
           :on-remove="handleFileRemove"
         >
-          <el-button>选择 docx 文件</el-button>
+          <el-button>选择 {{ requiredSuffix }} 文件</el-button>
           <template #tip>
-            <div class="upload-tip">更换前会校验模板变量和 AI Block 绑定，失败时不会覆盖旧文件。</div>
+            <div class="upload-tip">只能替换为同类型模板；更换前会校验变量，失败时不会覆盖旧文件。</div>
           </template>
         </el-upload>
       </el-form-item>
@@ -62,6 +62,7 @@ const replacing = ref(false)
 const errorMessage = ref('')
 
 const canReplace = computed(() => Boolean(props.template && selectedFile.value && !replacing.value))
+const requiredSuffix = computed(() => props.template?.template_file_type === 'xlsx' ? '.xlsx' : '.docx')
 
 watch(
   () => props.modelValue,
@@ -83,9 +84,9 @@ function handleFileChange(uploadFile: UploadFile) {
     selectedFile.value = null
     return
   }
-  if (!rawFile.name.toLowerCase().endsWith('.docx')) {
+  if (!rawFile.name.toLowerCase().endsWith(requiredSuffix.value)) {
     selectedFile.value = null
-    errorMessage.value = '仅支持上传 .docx 模板文件'
+    errorMessage.value = `请选择 ${requiredSuffix.value} 模板文件`
     return
   }
   selectedFile.value = rawFile
@@ -97,7 +98,7 @@ function handleFileRemove() {
 
 async function submitReplace() {
   if (!props.template || !selectedFile.value) {
-    errorMessage.value = '请选择 .docx 模板文件'
+    errorMessage.value = `请选择 ${requiredSuffix.value} 模板文件`
     return
   }
   replacing.value = true

@@ -13,6 +13,7 @@ from app.core.errors import AppError
 from app.db.repositories.task_repository import TaskRepository
 from app.db.repositories.uploaded_file_repository import UploadedFileRepository
 from app.engine.template_requirement_service import TemplateRequirementService
+from app.engine.template_file_type import TemplateFileType, detect_template_file_type
 from app.models.common import ContractModel
 from app.models.enums import TaskStatus
 from app.models.file_models import UploadedFileMeta, UploadedFileRecord
@@ -61,6 +62,7 @@ class TaskService:
 
     def create_task(self, task_name: str, template_id: int, ai_enabled: bool = True) -> CreateTaskResponse:
         requirements = self.requirement_service.get_template_requirements(template_id)
+        effective_ai_enabled = ai_enabled and detect_template_file_type(requirements.template_file) is TemplateFileType.DOCX
         now = _utc_now()
         task_id = generate_task_id(now)
         workspace = create_task_workspace(task_id, self.settings)
@@ -72,7 +74,7 @@ class TaskService:
             template_id=template_id,
             template_name=requirements.template_name,
             status=TaskStatus.CREATED,
-            ai_enabled=ai_enabled,
+            ai_enabled=effective_ai_enabled,
             main_table=requirements.main_table,
             primary_key_field=requirements.primary_key_field,
             task_dir=task_dir,

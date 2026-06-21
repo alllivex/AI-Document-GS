@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_ad6749db-4b99-51e3-9e89-99ea45e286bf",
+  "task_id": "task_20260621_040330_63d62c",
+  "title": "due_diligence_C003.docx",
+  "output_file": "due_diligence_C003.docx",
+  "primary_key_value": "C003",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_1c4d4effb5f34126a95dc3ce0c428b02",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "Customer: ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "Gamma",
+          "trace_id": "trace_dcb9b264-09fe-5d18-9208-3dc401ce92b0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_764f41b65e5e40628eb56b293da37c4f",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "Balance: ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500.00",
+          "trace_id": "trace_c32a03e9-9116-5341-b138-66adb95819e5",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-21T04:03:31.493600Z"
+}

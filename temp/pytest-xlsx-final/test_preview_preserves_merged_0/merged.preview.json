@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_001",
+  "task_id": "task_001",
+  "title": "merged.docx",
+  "output_file": "merged.docx",
+  "primary_key_value": "C001",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_f04b6703a961436f8e32825dcb7aa5c4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "Styled ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        },
+        {
+          "text": "Acme",
+          "trace_id": "trace_customer_name",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": {
+            "bold": true,
+            "italic": null,
+            "underline": true,
+            "alignment": null,
+            "color": null,
+            "background_color": null,
+            "font_size_pt": null
+          }
+        }
+      ],
+      "style": {
+        "bold": null,
+        "italic": null,
+        "underline": null,
+        "alignment": "center",
+        "color": null,
+        "background_color": null,
+        "font_size_pt": null
+      }
+    },
+    {
+      "type": "table",
+      "block_id": "table_f14a606e1e5442ec94bd8a55fa4b43e9",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [
+        {
+          "text": "Merged Header",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "Merged Header",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": null
+            }
+          ],
+          "colspan": 2,
+          "rowspan": 1,
+          "style": {
+            "bold": null,
+            "italic": null,
+            "underline": null,
+            "alignment": null,
+            "color": null,
+            "background_color": "D9EAF7",
+            "font_size_pt": null
+          },
+          "width_px": 384.0
+        },
+        {
+          "text": "Plain Header",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "Plain Header",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": null
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": 192.0
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "Vertical",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "Vertical",
+                "trace_id": null,
+                "trace_kind": null,
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 2,
+            "style": null,
+            "width_px": 192.0
+          },
+          {
+            "text": "Amount",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "Amount",
+                "trace_id": null,
+                "trace_kind": null,
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 192.0
+          },
+          {
+            "text": "3000.00",
+            "trace_id": "trace_amount",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "3000.00",
+                "trace_id": "trace_amount",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 192.0
+          }
+        ],
+        [
+          {
+            "text": "Tail",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "Tail",
+                "trace_id": null,
+                "trace_kind": null,
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 192.0
+          },
+          {
+            "text": "Acme",
+            "trace_id": "trace_customer_name",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "Acme",
+                "trace_id": "trace_customer_name",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 192.0
+          }
+        ]
+      ],
+      "style": null,
+      "width_px": null
+    }
+  ],
+  "created_at": "2026-06-21T04:01:50.463116Z"
+}

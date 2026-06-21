@@ -1,7 +1,7 @@
 <template>
   <el-card class="template-card" shadow="never">
     <div class="card-top">
-      <div class="template-icon">DOC</div>
+      <div class="template-icon">{{ template.template_file_type === 'xlsx' ? 'XLS' : 'DOC' }}</div>
       <StatusTag :status="template.is_active ? 'active' : 'inactive'" :label="template.is_active ? '启用' : '停用'" />
     </div>
 

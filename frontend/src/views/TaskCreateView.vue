@@ -46,8 +46,9 @@
             </el-form-item>
             <el-form-item label="AI 生成">
               <div class="switch-row">
-                <el-switch v-model="aiEnabled" :disabled="Boolean(task)" />
-                <span>启用后会替换模板中的 AI 段落，输出仍为干净 Word。</span>
+                <el-switch v-model="aiEnabled" :disabled="Boolean(task) || isXlsxTemplate" />
+                <span v-if="isXlsxTemplate">Excel 模板首版不支持 AI 生成。</span>
+                <span v-else>启用后会替换模板中的 AI 段落，输出仍为干净 Word。</span>
               </div>
             </el-form-item>
             <el-form-item>
@@ -87,7 +88,7 @@
           <div class="section-title">
             <div>
               <h3>3. 生成前校验</h3>
-              <p>检查模板变量、必填字段、主键、Excel 字段和 AI Block 配置。</p>
+              <p>检查模板变量、必填字段、主键、Excel 字段及当前模板类型支持的能力。</p>
             </div>
             <el-button type="primary" :disabled="!task || !allRequiredUploaded" :loading="validating" @click="handleValidate">
               开始校验
@@ -100,7 +101,7 @@
           <div class="section-title">
             <div>
               <h3>4. 生成文档</h3>
-              <p>按主表行批量生成 Word、预览 JSON 和溯源 JSON。</p>
+              <p>按主表行批量生成 Word 或 Excel、预览 JSON 和溯源 JSON。</p>
             </div>
             <el-button type="primary" :disabled="!canGenerate" :loading="generating" @click="handleGenerate">
               开始生成
@@ -205,6 +206,8 @@ let progressTimer: ReturnType<typeof window.setInterval> | null = null
 const requiredTables = computed<RequiredTable[]>(() => {
   return task.value?.required_tables.length ? task.value.required_tables : requirements.value?.required_tables || []
 })
+
+const isXlsxTemplate = computed(() => requirements.value?.template_file_type === 'xlsx')
 
 const requiredUploadCount = computed(() => {
   return requiredTables.value.filter((table) => table.required !== false).length
@@ -330,7 +333,9 @@ function onRequirementsLoaded(value: TemplateRequirements | null) {
   uploadedTables.value = new Set()
   if (value && !taskName.value) {
     taskName.value = `${value.template_name}_${new Date().toLocaleString()}`
-    aiEnabled.value = true
+    aiEnabled.value = value.template_file_type !== 'xlsx'
+  } else if (value?.template_file_type === 'xlsx') {
+    aiEnabled.value = false
   }
 }
 

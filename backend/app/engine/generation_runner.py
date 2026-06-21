@@ -22,9 +22,13 @@ from app.engine.data_loader import LoadedTable, load_data_tables
 from app.engine.docx_finalizer import finalize_docx
 from app.engine.docx_renderer import RenderDocxResult, render_docx_template
 from app.engine.template_canonicalizer import canonicalize_docx_template
+from app.engine.template_file_type import TemplateFileType, detect_template_file_type
 from app.engine.template_requirement_service import TemplateRequirementService
 from app.engine.trace_builder import BuildTracePreviewInput, BuildTracePreviewResult, build_trace_and_preview
 from app.engine.validator import validate_task
+from app.engine.xlsx_preview_builder import build_xlsx_trace_and_preview
+from app.engine.xlsx_renderer import RenderXlsxResult, render_xlsx_template
+from app.engine.xlsx_template_canonicalizer import canonicalize_xlsx_template
 from app.models.enums import AIStatus, DocumentStatus, TaskStatus, ValidationStatus
 from app.models.task_models import DocumentRecord, OutputSummary, TaskMeta
 from app.models.template_models import TemplateRequirements
@@ -50,7 +54,7 @@ class GenerateTaskResult(BaseModel):
 
 @dataclass(frozen=True)
 class GenerationDependencies:
-    load_data_tables: Callable[[Path, list[str]], dict[str, LoadedTable]] = load_data_tables
+    load_data_tables: Callable[[Path, list[str], list[Any]], dict[str, LoadedTable]] = load_data_tables
     validate_task: Callable[..., Any] = validate_task
     build_report_contexts: Callable[..., list[ReportContextBundle]] = build_report_contexts
     render_docx_template: Callable[[Path, dict[str, Any], Path], RenderDocxResult] = render_docx_template
@@ -58,6 +62,7 @@ class GenerationDependencies:
     generate_ai_text: Callable[..., AIGenerateResult] = generate_ai_text
     finalize_docx: Callable[[Path, Path, list[AIGenerateResult], bool], ApplyAIBlocksResult] = finalize_docx
     build_trace_and_preview: Callable[[BuildTracePreviewInput], BuildTracePreviewResult] = build_trace_and_preview
+    render_xlsx_template: Callable[[Path, dict[str, Any], Path], RenderXlsxResult] = render_xlsx_template
 
 
 def generate_task(
@@ -106,7 +111,7 @@ class GenerationRunner:
             requirements = self.requirement_service.get_template_requirements(task.template_id)
             template_path = _resolve_project_path(requirements.template_path, self.settings.project_root)
             table_names = [table.table_name for table in requirements.required_tables]
-            loaded_tables = self.dependencies.load_data_tables(workspace.data_dir, table_names)
+            loaded_tables = self.dependencies.load_data_tables(workspace.data_dir, table_names, requirements.fields)
 
             validation_report = self.dependencies.validate_task(
                 task.task_id,
@@ -141,11 +146,19 @@ class GenerationRunner:
                     error_message=error_message,
                 )
 
-            canonical_template = canonicalize_docx_template(
-                template_path,
-                workspace.temp_dir / f"{task.task_id}_{requirements.template_id}.canonical.docx",
-                requirements.fields,
-            )
+            file_type = detect_template_file_type(template_path)
+            if file_type is TemplateFileType.XLSX:
+                canonical_template = canonicalize_xlsx_template(
+                    template_path,
+                    workspace.temp_dir / f"{task.task_id}_{requirements.template_id}.canonical.xlsx",
+                    requirements.fields,
+                )
+            else:
+                canonical_template = canonicalize_docx_template(
+                    template_path,
+                    workspace.temp_dir / f"{task.task_id}_{requirements.template_id}.canonical.docx",
+                    requirements.fields,
+                )
             if canonical_template.missing_variables:
                 missing_paths = ", ".join(item.original_var_path for item in canonical_template.missing_variables)
                 raise ValueError(f"template contains unknown variables: {missing_paths}")
@@ -162,6 +175,7 @@ class GenerationRunner:
                 template_path=canonical_template.output_path,
                 bundles=bundles,
                 ai_enabled=bool(input_data.ai_enabled and task.ai_enabled),
+                file_type=file_type,
             )
             self.connection.commit()
             return result
@@ -198,6 +212,7 @@ class GenerationRunner:
         template_path: Path,
         bundles: list[ReportContextBundle],
         ai_enabled: bool,
+        file_type: TemplateFileType,
     ) -> GenerateTaskResult:
         workspace = create_task_workspace(task_id, self.settings)
         document_ids: list[str] = []
@@ -215,6 +230,7 @@ class GenerationRunner:
                     template_path=template_path,
                     bundle=bundle,
                     ai_enabled=ai_enabled,
+                    file_type=file_type,
                 )
                 document_ids.append(document_record.doc_id)
                 success_count += 1
@@ -229,7 +245,7 @@ class GenerationRunner:
                     f"Document generation failed for primary key: {bundle.primary_key_value}",
                     traceback.format_exc(),
                 )
-                self._create_failed_document_record(task_id, requirements, bundle)
+                self._create_failed_document_record(task_id, requirements, bundle, file_type)
             finally:
                 self._update_task_progress(
                     task_id,
@@ -272,7 +288,11 @@ class GenerationRunner:
         template_path: Path,
         bundle: ReportContextBundle,
         ai_enabled: bool,
+        file_type: TemplateFileType,
     ) -> DocumentRecord:
+        if file_type is TemplateFileType.XLSX:
+            return self._generate_one_xlsx(task_id, requirements, template_path, bundle)
+
         workspace = create_task_workspace(task_id, self.settings)
         output_filename = build_safe_output_filename(requirements.template_name, bundle.primary_key_value)
         output_path = workspace.output_dir / output_filename
@@ -330,6 +350,65 @@ class GenerationRunner:
         )
         return self.document_repository.create(record)
 
+    def _generate_one_xlsx(
+        self,
+        task_id: str,
+        requirements: TemplateRequirements,
+        template_path: Path,
+        bundle: ReportContextBundle,
+    ) -> DocumentRecord:
+        workspace = create_task_workspace(task_id, self.settings)
+        output_filename = build_safe_output_filename(
+            requirements.template_name,
+            bundle.primary_key_value,
+            TemplateFileType.XLSX.suffix,
+        )
+        output_path = workspace.output_dir / output_filename
+        render_result = self.dependencies.render_xlsx_template(template_path, bundle.context, output_path)
+        if not render_result.success:
+            raise RuntimeError(render_result.error_message)
+
+        trace_input = BuildTracePreviewInput(
+            task_id=task_id,
+            doc_id=bundle.doc_id,
+            template_id=requirements.template_id,
+            template_name=requirements.template_name,
+            template_file=requirements.template_file,
+            output_file=output_filename,
+            output_path=output_path,
+            main_table=requirements.main_table,
+            main_table_cn=_main_table_cn(requirements),
+            primary_key_field=requirements.primary_key_field,
+            primary_key_value=bundle.primary_key_value,
+            trace_map=bundle.trace_map,
+            ai_blocks=[],
+            final_docx_path=output_path,
+            template_path=template_path,
+        )
+        trace_result = build_xlsx_trace_and_preview(trace_input, render_result.cells)
+        now = _utc_now()
+        return self.document_repository.create(
+            DocumentRecord(
+                doc_id=bundle.doc_id,
+                task_id=task_id,
+                template_id=requirements.template_id,
+                template_name=requirements.template_name,
+                primary_key_value=bundle.primary_key_value,
+                output_filename=output_filename,
+                output_path=_relative_path(output_path, self.settings.project_root),
+                trace_filename=trace_result.trace_file_path.name,
+                trace_path=_relative_path(trace_result.trace_file_path, self.settings.project_root),
+                preview_filename=trace_result.preview_file_path.name,
+                preview_path=_relative_path(trace_result.preview_file_path, self.settings.project_root),
+                status=DocumentStatus.SUCCESS,
+                ai_status=AIStatus.NOT_USED,
+                trace_count=trace_result.trace_count,
+                ai_block_count=0,
+                created_at=now,
+                updated_at=now,
+            )
+        )
+
     def _generate_ai_results(
         self,
         template_path: Path,
@@ -361,9 +440,10 @@ class GenerationRunner:
         task_id: str,
         requirements: TemplateRequirements,
         bundle: ReportContextBundle,
+        file_type: TemplateFileType,
     ) -> None:
         now = _utc_now()
-        output_filename = build_safe_output_filename(requirements.template_name, bundle.primary_key_value)
+        output_filename = build_safe_output_filename(requirements.template_name, bundle.primary_key_value, file_type.suffix)
         output_path = create_task_workspace(task_id, self.settings).output_dir / output_filename
         record = DocumentRecord(
             doc_id=bundle.doc_id,
@@ -378,7 +458,7 @@ class GenerationRunner:
             preview_filename="",
             preview_path="",
             status=DocumentStatus.FAILED,
-            ai_status=AIStatus.FAILED,
+            ai_status=AIStatus.NOT_USED if file_type is TemplateFileType.XLSX else AIStatus.FAILED,
             error_message="Document generation failed.",
             created_at=now,
             updated_at=now,

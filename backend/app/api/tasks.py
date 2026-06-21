@@ -3,7 +3,7 @@ from __future__ import annotations
 import zipfile
 from pathlib import Path
 
-from fastapi import APIRouter, File, Form, UploadFile
+from fastapi import APIRouter, File, Form, Query, UploadFile
 from fastapi.responses import FileResponse
 
 from app.core.config import get_settings
@@ -25,10 +25,25 @@ router = APIRouter(prefix="/api/tasks", tags=["tasks"])
 
 
 @router.get("")
-async def list_tasks():
+async def list_tasks(
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=10, ge=1, le=100),
+    status: TaskStatus | None = Query(default=None),
+    keyword: str | None = Query(default=None, max_length=100),
+):
     with get_connection() as connection:
-        items = [task.model_dump(mode="json") for task in TaskRepository(connection).list()]
-    return success_response({"items": items, "total": len(items)})
+        repository = TaskRepository(connection)
+        items = [
+            task.model_dump(mode="json")
+            for task in repository.list(
+                status=status,
+                keyword=keyword,
+                limit=page_size,
+                offset=(page - 1) * page_size,
+            )
+        ]
+        total = repository.count(status=status, keyword=keyword)
+    return success_response({"items": items, "page": page, "page_size": page_size, "total": total})
 
 
 @router.post("")
@@ -79,7 +94,7 @@ async def validate_task_endpoint(task_id: str):
         requirements = TemplateRequirementService(connection).get_template_requirements(task.template_id)
         table_names = [table.table_name for table in requirements.required_tables]
         task_dir = settings.tasks_dir / task_id
-        loaded_tables = load_data_tables(task_dir / "data", table_names)
+        loaded_tables = load_data_tables(task_dir / "data", table_names, requirements.fields)
         template_path = _resolve_project_path(requirements.template_path, settings.project_root)
         report = validate_task(
             task_id,

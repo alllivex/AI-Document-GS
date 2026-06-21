@@ -1,0 +1,37 @@
+{
+  "preview": {
+    "import_id": "tmp_55f6a3a5ec614d4aaec80e6439197682",
+    "summary": {
+      "total_rows": 1,
+      "create_count": 1,
+      "update_count": 0,
+      "skip_count": 0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "create",
+        "level": "info",
+        "message": "将新增字段 branch_main.branch_id"
+      }
+    ],
+    "can_commit": true
+  },
+  "fields": [
+    {
+      "table_name": "branch_main",
+      "table_name_cn": "支行主表",
+      "field_name": "branch_id",
+      "field_name_cn": "支行编号",
+      "data_type": "string",
+      "is_primary_key": true,
+      "required": true,
+      "display_format": "",
+      "description": "",
+      "created_at": null,
+      "updated_at": null
+    }
+  ]
+}

@@ -15,6 +15,8 @@ export interface ApiResponse<T> {
 
 export interface ListResponse<T> {
   items: T[]
+  page: number
+  page_size: number
   total: number
 }
 

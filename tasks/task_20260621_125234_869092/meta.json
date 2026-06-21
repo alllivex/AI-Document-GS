@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260621_125234_869092",
+  "task_name": "法人e抵贷款作业数据要素_2026/6/21 20:52:32",
+  "template_id": 9,
+  "template_name": "法人e抵贷款作业数据要素",
+  "template_file": "template_9.xlsx",
+  "ai_enabled": false,
+  "status": "completed",
+  "main_table": "data_element",
+  "main_table_cn": "数据要素表",
+  "primary_key_field": "customer_code",
+  "required_tables": [
+    {
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "data_element",
+      "original_filename": "数据要素表.xlsx",
+      "stored_filename": "data_element.xlsx",
+      "path": "tasks/task_20260621_125234_869092/data/data_element.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-21T12:52:41.333291Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 1,
+    "success_count": 1,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": [
+      "doc_49c6b523-970c-5ef0-b2db-e08e8072d02a"
+    ]
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260621_125234_869092",
+    "data_dir": "tasks/task_20260621_125234_869092/data",
+    "output_dir": "tasks/task_20260621_125234_869092/output",
+    "validation_dir": "tasks/task_20260621_125234_869092/validation",
+    "logs_dir": "tasks/task_20260621_125234_869092/logs"
+  },
+  "created_at": "2026-06-21T12:52:34.823491Z",
+  "updated_at": "2026-06-21T12:52:46.744900Z",
+  "started_at": null,
+  "completed_at": "2026-06-21T12:52:46.744900Z"
+}

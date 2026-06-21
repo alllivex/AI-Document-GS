@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, computed_field
 
 from app.models.enums import DataType
 from app.models.common import ContractModel
@@ -23,6 +23,11 @@ class TemplateFileRecord(ContractModel):
     is_active: bool = True
     created_at: datetime
     updated_at: datetime
+
+    @computed_field
+    @property
+    def template_file_type(self) -> Literal["docx", "xlsx"]:
+        return "xlsx" if self.template_file.lower().endswith(".xlsx") else "docx"
 
 
 class EntitySchemaFieldRecord(ContractModel):

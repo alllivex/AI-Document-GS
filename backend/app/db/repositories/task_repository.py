@@ -87,36 +87,56 @@ class TaskRepository:
             )
         return self.get(task_id)
 
-    def list(self, status: TaskStatus | str | None = None, limit: int = 100, offset: int = 0) -> list[TaskRecord]:
-        if status is None:
-            rows = self.connection.execute(
-                """
-                SELECT task_id, task_name, template_id, template_name, status, ai_enabled,
-                       main_table, primary_key_field, total_rows, success_count, failed_count,
-                       warning_count, error_count, task_dir, validation_report_path,
-                       error_message, created_by, created_at, updated_at, started_at, completed_at
-                FROM tasks
-                ORDER BY created_at DESC
-                LIMIT ? OFFSET ?
-                """,
-                (limit, offset),
-            ).fetchall()
-        else:
-            status_value = status.value if isinstance(status, TaskStatus) else status
-            rows = self.connection.execute(
-                """
-                SELECT task_id, task_name, template_id, template_name, status, ai_enabled,
-                       main_table, primary_key_field, total_rows, success_count, failed_count,
-                       warning_count, error_count, task_dir, validation_report_path,
-                       error_message, created_by, created_at, updated_at, started_at, completed_at
-                FROM tasks
-                WHERE status = ?
-                ORDER BY created_at DESC
-                LIMIT ? OFFSET ?
-                """,
-                (status_value, limit, offset),
-            ).fetchall()
+    def list(
+        self,
+        status: TaskStatus | str | None = None,
+        keyword: str | None = None,
+        limit: int = 100,
+        offset: int = 0,
+    ) -> list[TaskRecord]:
+        where_sql, params = self._build_list_filter(status, keyword)
+        rows = self.connection.execute(
+            f"""
+            SELECT task_id, task_name, template_id, template_name, status, ai_enabled,
+                   main_table, primary_key_field, total_rows, success_count, failed_count,
+                   warning_count, error_count, task_dir, validation_report_path,
+                   error_message, created_by, created_at, updated_at, started_at, completed_at
+            FROM tasks
+            {where_sql}
+            ORDER BY created_at DESC
+            LIMIT ? OFFSET ?
+            """,
+            (*params, limit, offset),
+        ).fetchall()
         return [TaskRecord(**dict(row)) for row in rows]
+
+    def count(self, status: TaskStatus | str | None = None, keyword: str | None = None) -> int:
+        where_sql, params = self._build_list_filter(status, keyword)
+        row = self.connection.execute(
+            f"SELECT COUNT(*) AS total FROM tasks {where_sql}",
+            params,
+        ).fetchone()
+        return int(row["total"])
+
+    @staticmethod
+    def _build_list_filter(
+        status: TaskStatus | str | None,
+        keyword: str | None,
+    ) -> tuple[str, tuple[object, ...]]:
+        conditions: list[str] = []
+        params: list[object] = []
+        if status is not None:
+            status_value = status.value if isinstance(status, TaskStatus) else status
+            conditions.append("status = ?")
+            params.append(status_value)
+        if keyword:
+            search = f"%{keyword.strip()}%"
+            conditions.append(
+                "(task_name LIKE ? OR template_name LIKE ? OR main_table LIKE ? OR task_id LIKE ?)"
+            )
+            params.extend([search] * 4)
+        where_sql = f"WHERE {' AND '.join(conditions)}" if conditions else ""
+        return where_sql, tuple(params)
 
     @staticmethod
     def _to_db_params(task: TaskRecord) -> dict[str, object]:

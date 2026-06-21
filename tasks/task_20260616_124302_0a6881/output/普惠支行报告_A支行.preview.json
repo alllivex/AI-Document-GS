@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef",
+  "task_id": "task_20260616_124302_0a6881",
+  "title": "普惠支行报告_A支行.docx",
+  "output_file": "普惠支行报告_A支行.docx",
+  "primary_key_value": "A支行",
+  "blocks": [
+    {
+      "type": "heading",
+      "block_id": "heading_f57f04e3e2424359a57b09f6cba77c5f",
+      "level": 1,
+      "text": "普惠支行报告"
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_3f8b36258da6452891696c074192fbbf",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "支行：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "A支行",
+          "trace_id": "trace_329dbb19-61b0-513b-8f42-e1e8b160dfb9",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "，报告期：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "2026-03-31 00:00:00",
+          "trace_id": "trace_57d4c61f-ad80-5646-8ca7-1d200cce586e",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_01d05d5f65c34574aeacc8a204ffbbe4",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1250",
+          "trace_id": "trace_9ae1b73b-55c4-507a-ace7-ced4d5004ee0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "900",
+          "trace_id": "trace_4be9d6fa-301d-59c1-8a8b-51e5b3bb87a8",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_ac2aa50684204a87b7260c771137eb69",
+      "block_trace_id": "trace_condition_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_condition_0",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "清偿能力判断：无法清偿。",
+          "trace_id": "trace_condition_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_condition_0",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_66f1d76f7aaa47958fb9c870a8139820",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "各产品不良情况：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "table",
+      "block_id": "table_f71a642359674f46a6e935ed849d583a",
+      "block_trace_id": "trace_loop_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_loop_0",
+      "block_trace_kind": "loop",
+      "headers": [
+        {
+          "text": "产品名称",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "产品名称",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": null
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": 288.0
+        },
+        {
+          "text": "不良率(%)",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "runs": [
+            {
+              "text": "不良率(%)",
+              "trace_id": null,
+              "trace_kind": null,
+              "ai_block_id": null,
+              "style": null
+            }
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "style": null,
+          "width_px": 288.0
+        }
+      ],
+      "rows": [
+        [
+          {
+            "text": "法人e抵",
+            "trace_id": "trace_edd9d01f-029f-548a-b675-076612a4a6b5",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "法人e抵",
+                "trace_id": "trace_edd9d01f-029f-548a-b675-076612a4a6b5",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 288.0
+          },
+          {
+            "text": "2.7",
+            "trace_id": "trace_be59f974-b979-554b-bba2-dfde55a2f656",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2.7",
+                "trace_id": "trace_be59f974-b979-554b-bba2-dfde55a2f656",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 288.0
+          }
+        ],
+        [
+          {
+            "text": "个人e抵押",
+            "trace_id": "trace_2f49d4ce-b051-5c87-a439-88f938af3978",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "个人e抵押",
+                "trace_id": "trace_2f49d4ce-b051-5c87-a439-88f938af3978",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 288.0
+          },
+          {
+            "text": "2.2",
+            "trace_id": "trace_39f41cb8-a60d-56da-aab1-c828a924f679",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "2.2",
+                "trace_id": "trace_39f41cb8-a60d-56da-aab1-c828a924f679",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": null,
+            "width_px": 288.0
+          }
+        ]
+      ],
+      "style": null,
+      "width_px": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6994e4ff55694277aca335f23a466011",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "风险分析（以下段落将由 AI 改写）：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_49ab8855a26c45f3af1cb2827132cf66",
+      "block_trace_id": "trace_ai_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_AIBLOCK0",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "根据提供的知识库信息以及不良额环比上升",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.12",
+          "trace_id": "trace_e6fcf8b1-dd42-55e7-8124-620c531f5128",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "、同比上升",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "0.35",
+          "trace_id": "trace_ea579ffa-2417-5a54-991b-7ef273ef862c",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "的数据，该支行当前面临的不良贷款风险呈现明显上升趋势。环比与同比的双重增长表明，近期资产质量压力正在加大，且这一趋势并非短期波动，而是可能已持续较长时间。知识库中提及的普惠代扣业务模式，其客户群体通常信用记录较弱或经营稳定性不足，因此不良额的攀升可能与部分客户还款能力下降、代扣失败率上升有关。此外，环比增幅虽小于同比，但结合近期数据看，风险暴露速度可能正在加快，需要警惕后续不良率进一步恶化的可能性。\n\n针对上述风险状况，建议该支行首先对普惠代扣业务的不良客户进行分层排查，重点分析同比与环比期间新增不良的客户特征，例如行业分布、贷款金额区间及代扣失败原因，以识别风险集中点。其次，应加强贷后监控频率，对代扣连续失败或还款记录异常的客户提前介入，通过电话提醒、上门催收或调整还款计划等方式降低损失。同时，建议优化代扣策略，例如增加代扣时间点或绑定多张银行卡，减少因系统或账户余额不足导致的非恶意逾期。最后，需审慎评估新增贷款的审批标准，对同类客户适当提高准入门槛或要求补充担保措施，从源头控制风险积累。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_4621b18e6f154081951671e5e29f8cc9",
+      "block_trace_id": "trace_ai_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_AIBLOCK1",
+      "block_trace_kind": "ai",
+      "runs": [
+        {
+          "text": "根据您提供的数据，当前业务运行中存在若干需要关注的风险点。首先，部分关键指标出现波动，例如销售额在最近一个季度环比下降了约百分之五，而客户投诉数量则上升了百分之十二。这可能表明市场环境或内部流程出现了变化，需要进一步分析具体原因，例如是否与产品交付时效或服务质量有关。其次，成本控制方面，原材料采购成本同比增加了百分之八，但生产效率并未同步提升，这可能导致利润率承压。此外，员工离职率在近两个月内上升了三个百分点，可能对团队稳定性和项目连续性造成潜在影响。\n\n针对上述风险，建议采取以下管理措施。一是成立专项小组，对销售额下降和客户投诉增加的原因进行深入调查，重点排查客户反馈中的共性问题，并制定改进计划。二是优化采购流程，与供应商重新协商价格或寻找替代来源，同时引入精益生产方法以提升效率，从而缓解成本压力。三是加强员工关怀，通过定期沟通和调整激励机制来降低离职率，确保核心岗位的稳定性。这些措施需在下一季度前启动，并定期跟踪效果以动态调整策略。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_bc90f8ca847d48048e6fd4f0de0af55c",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "普惠贷款余额为 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1250",
+          "trace_id": "trace_9ae1b73b-55c4-507a-ace7-ced4d5004ee0",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元；房产评估金额 ",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "900",
+          "trace_id": "trace_4be9d6fa-301d-59c1-8a8b-51e5b3bb87a8",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": " 万元。",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_cb0a0bdec48942e0a2236378e6501e7a",
+      "block_trace_id": "trace_condition_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_condition_1",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "清偿能力判断：无法清偿。",
+          "trace_id": "trace_condition_doc_2e03a909-edd5-5031-b40a-3553a6e6a7ef_condition_1",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-16T12:43:30.989533Z"
+}

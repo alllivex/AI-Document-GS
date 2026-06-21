@@ -1,0 +1,23 @@
+{
+  "preview": {
+    "import_id": "tmp_10e8006a16424772bde00d64e9a35c6a",
+    "summary": {
+      "total_rows": 1,
+      "create_count": 0,
+      "update_count": 0,
+      "skip_count": 0,
+      "error_count": 1,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "error",
+        "level": "error",
+        "message": "data_type 不在允许范围内：bad"
+      }
+    ],
+    "can_commit": false
+  },
+  "fields": []
+}

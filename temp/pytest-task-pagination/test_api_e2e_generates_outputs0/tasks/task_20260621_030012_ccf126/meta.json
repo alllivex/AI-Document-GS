@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260621_030012_ccf126",
+  "task_name": "task",
+  "template_id": 1,
+  "template_name": "due diligence",
+  "template_file": "due_diligence.docx",
+  "ai_enabled": false,
+  "status": "completed",
+  "main_table": "customer_info",
+  "main_table_cn": "",
+  "primary_key_field": "customer_id",
+  "required_tables": [
+    {
+      "table_name": "customer_info",
+      "table_name_cn": "",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true
+    },
+    {
+      "table_name": "loan_summary",
+      "table_name_cn": "",
+      "role": "aux",
+      "relation_type": "one_to_one",
+      "main_join_key": "customer_id",
+      "table_join_key": "customer_id",
+      "required": true
+    }
+  ],
+  "uploaded_files": [
+    {
+      "table_name": "customer_info",
+      "original_filename": "customer_info.xlsx",
+      "stored_filename": "customer_info.xlsx",
+      "path": "tasks/task_20260621_030012_ccf126/data/customer_info.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-21T03:00:12.919942Z"
+    },
+    {
+      "table_name": "loan_summary",
+      "original_filename": "loan_summary.xlsx",
+      "stored_filename": "loan_summary.xlsx",
+      "path": "tasks/task_20260621_030012_ccf126/data/loan_summary.xlsx",
+      "row_count": 0,
+      "column_count": 0,
+      "uploaded_at": "2026-06-21T03:00:12.959054Z"
+    }
+  ],
+  "output_summary": {
+    "total_rows": 3,
+    "success_count": 3,
+    "failed_count": 0,
+    "warning_count": 0,
+    "error_count": 0,
+    "document_ids": [
+      "doc_351eb7e4-db49-59f0-9385-49b7a670d475",
+      "doc_65de761c-41bb-5acc-bdfe-74193264ae97",
+      "doc_4bafc591-70f4-536d-9f12-4c291a195141"
+    ]
+  },
+  "paths": {
+    "task_dir": "tasks/task_20260621_030012_ccf126",
+    "data_dir": "tasks/task_20260621_030012_ccf126/data",
+    "output_dir": "tasks/task_20260621_030012_ccf126/output",
+    "validation_dir": "tasks/task_20260621_030012_ccf126/validation",
+    "logs_dir": "tasks/task_20260621_030012_ccf126/logs"
+  },
+  "created_at": "2026-06-21T03:00:12.838418Z",
+  "updated_at": "2026-06-21T03:00:13.718364Z",
+  "started_at": null,
+  "completed_at": "2026-06-21T03:00:13.718364Z"
+}

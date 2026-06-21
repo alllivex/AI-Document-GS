@@ -8,6 +8,7 @@ export interface TemplateFileRecord {
   template_file: string
   original_filename: string
   template_path: string
+  template_file_type: 'docx' | 'xlsx'
   description: string
   is_active: boolean
   created_at: string

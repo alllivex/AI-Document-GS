@@ -3,7 +3,7 @@
     <div class="toolbar">
       <div>
         <h3>模板文件</h3>
-        <p>管理用于生成任务的 Word 模板文件；模板关系配置在后续模块维护。</p>
+        <p>管理用于生成任务的 Word 和 Excel 模板文件；模板关系配置在后续模块维护。</p>
       </div>
       <el-button type="primary" @click="uploadVisible = true">上传新模板</el-button>
     </div>
@@ -14,6 +14,9 @@
       <el-table-column prop="template_name" label="模板名称" min-width="180" />
       <el-table-column prop="original_filename" label="原始文件名" min-width="200" />
       <el-table-column prop="template_file" label="系统文件名" min-width="160" />
+      <el-table-column label="类型" width="90">
+        <template #default="{ row }">{{ row.template_file_type === 'xlsx' ? 'Excel' : 'Word' }}</template>
+      </el-table-column>
       <el-table-column label="状态" width="100">
         <template #default="{ row }">
           <StatusTag :type="row.is_active ? 'success' : 'default'" :label="row.is_active ? '启用' : '停用'" />

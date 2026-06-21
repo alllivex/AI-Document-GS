@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_dab71b21-c8c3-52d8-8a8d-4ce3403ca7e3",
+  "task_id": "task_001",
+  "title": "due_diligence_C003.docx",
+  "output_file": "due_diligence_C003.docx",
+  "primary_key_value": "C003",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_dcee19ca1c9442748b69a3081750b486",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "客户：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "Gamma",
+          "trace_id": "trace_ecae40c8-8c67-5bf9-bba8-e685beac6638",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    },
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_b4907459a69e4ba885c88efb080f6da5",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "runs": [
+        {
+          "text": "余额：",
+          "trace_id": null,
+          "trace_kind": null,
+          "ai_block_id": null,
+          "style": null
+        },
+        {
+          "text": "1500.00",
+          "trace_id": "trace_f99633fc-4c91-5a17-aa31-9477c03d5cbc",
+          "trace_kind": "field",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-21T03:54:58.917155Z"
+}

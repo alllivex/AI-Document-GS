@@ -18,7 +18,7 @@
       />
     </div>
 
-    <section class="trace-layout">
+    <section ref="layoutRef" class="trace-layout" :style="layoutStyle">
       <div v-loading="loadingPreview" class="preview-pane">
         <PreviewRenderer
           :preview="preview"
@@ -27,7 +27,18 @@
           @select-trace="selectTrace"
         />
       </div>
+      <div
+        class="trace-resizer"
+        role="separator"
+        aria-label="调整文档预览和溯源详情宽度"
+        aria-orientation="vertical"
+        tabindex="0"
+        @dblclick="resetDetailPaneWidth"
+        @keydown="resizeWithKeyboard"
+        @pointerdown="startResize"
+      />
       <TraceDetailPanel
+        class="trace-detail-pane"
         :trace-item="selectedTraceItem"
         :loading="loadingTrace"
         @select-trace="selectTrace"
@@ -38,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DocumentNavBar from '../components/DocumentNavBar.vue'
 import PreviewRenderer from '../components/PreviewRenderer.vue'
@@ -101,8 +112,22 @@ const loadingPreview = ref(false)
 const loadingTrace = ref(false)
 const errorMessage = ref('')
 const showTraceHighlight = ref(true)
+const layoutRef = ref<HTMLElement | null>(null)
+const detailPaneWidth = ref(430)
+const isResizing = ref(false)
+
+const DEFAULT_DETAIL_PANE_WIDTH = 430
+const MIN_PREVIEW_PANE_WIDTH = 420
+const MIN_DETAIL_PANE_WIDTH = 320
+const RESIZER_WIDTH = 10
+const GRID_GAP_WIDTH = 16
+
+const layoutStyle = computed(() => ({
+  '--trace-detail-width': `${detailPaneWidth.value}px`,
+}))
 
 onMounted(loadPreview)
+onBeforeUnmount(stopResize)
 
 async function loadPreview() {
   if (!docId.value) {
@@ -155,6 +180,96 @@ function goBack() {
   }
   router.push('/tasks')
 }
+
+function startResize(event: PointerEvent) {
+  if (window.matchMedia('(max-width: 960px)').matches) {
+    return
+  }
+
+  isResizing.value = true
+  document.body.classList.add('trace-resizing')
+  updateDetailPaneWidth(event.clientX)
+  window.addEventListener('pointermove', handleResize)
+  window.addEventListener('pointerup', stopResize)
+  window.addEventListener('pointercancel', stopResize)
+}
+
+function handleResize(event: PointerEvent) {
+  if (!isResizing.value) {
+    return
+  }
+  updateDetailPaneWidth(event.clientX)
+}
+
+function stopResize() {
+  if (!isResizing.value) {
+    return
+  }
+  isResizing.value = false
+  document.body.classList.remove('trace-resizing')
+  window.removeEventListener('pointermove', handleResize)
+  window.removeEventListener('pointerup', stopResize)
+  window.removeEventListener('pointercancel', stopResize)
+}
+
+function updateDetailPaneWidth(pointerX: number) {
+  const layout = layoutRef.value
+  if (!layout) {
+    return
+  }
+
+  const rect = layout.getBoundingClientRect()
+  const maxDetailWidth = rect.width - MIN_PREVIEW_PANE_WIDTH - RESIZER_WIDTH - GRID_GAP_WIDTH * 2
+  const nextWidth = rect.right - pointerX - GRID_GAP_WIDTH
+  detailPaneWidth.value = clamp(nextWidth, MIN_DETAIL_PANE_WIDTH, Math.max(MIN_DETAIL_PANE_WIDTH, maxDetailWidth))
+}
+
+function resizeWithKeyboard(event: KeyboardEvent) {
+  if (window.matchMedia('(max-width: 960px)').matches) {
+    return
+  }
+
+  const step = event.shiftKey ? 48 : 24
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault()
+    setDetailPaneWidth(detailPaneWidth.value + step)
+  } else if (event.key === 'ArrowRight') {
+    event.preventDefault()
+    setDetailPaneWidth(detailPaneWidth.value - step)
+  } else if (event.key === 'Home') {
+    event.preventDefault()
+    setDetailPaneWidth(MIN_DETAIL_PANE_WIDTH)
+  } else if (event.key === 'End') {
+    event.preventDefault()
+    setDetailPaneWidth(getMaxDetailPaneWidth())
+  } else if (event.key === 'Enter') {
+    event.preventDefault()
+    resetDetailPaneWidth()
+  }
+}
+
+function resetDetailPaneWidth() {
+  setDetailPaneWidth(DEFAULT_DETAIL_PANE_WIDTH)
+}
+
+function setDetailPaneWidth(width: number) {
+  detailPaneWidth.value = clamp(width, MIN_DETAIL_PANE_WIDTH, getMaxDetailPaneWidth())
+}
+
+function getMaxDetailPaneWidth() {
+  const layout = layoutRef.value
+  if (!layout) {
+    return DEFAULT_DETAIL_PANE_WIDTH
+  }
+  return Math.max(
+    MIN_DETAIL_PANE_WIDTH,
+    layout.getBoundingClientRect().width - MIN_PREVIEW_PANE_WIDTH - RESIZER_WIDTH - GRID_GAP_WIDTH * 2,
+  )
+}
+
+function clamp(value: number, min: number, max: number) {
+  return Math.min(Math.max(value, min), max)
+}
 </script>
 
 <style scoped>
@@ -173,8 +288,8 @@ function goBack() {
   align-items: start;
   display: grid;
   flex: 1;
-  gap: 20px;
-  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: 0 8px;
+  grid-template-columns: minmax(420px, 1fr) 10px minmax(320px, var(--trace-detail-width));
   min-height: 0;
   overflow: hidden;
   padding: 20px 24px 24px;
@@ -195,6 +310,50 @@ function goBack() {
   overflow-y: auto;
 }
 
+.trace-resizer {
+  align-self: stretch;
+  cursor: col-resize;
+  min-height: 0;
+  position: relative;
+  touch-action: none;
+}
+
+.trace-resizer::before {
+  background: rgba(148, 163, 184, 0.24);
+  border-radius: 999px;
+  bottom: 10px;
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+  transition:
+    background 0.16s ease,
+    width 0.16s ease;
+  width: 2px;
+}
+
+.trace-resizer:hover::before,
+.trace-resizer:focus-visible::before {
+  background: var(--color-primary);
+  width: 4px;
+}
+
+.trace-resizer:focus-visible {
+  border-radius: 999px;
+  outline: 2px solid rgba(36, 88, 211, 0.28);
+  outline-offset: 2px;
+}
+
+.trace-detail-pane {
+  min-width: 0;
+}
+
+:global(.trace-resizing) {
+  cursor: col-resize;
+  user-select: none;
+}
+
 @media (max-width: 960px) {
   .trace-page {
     height: auto;
@@ -204,6 +363,7 @@ function goBack() {
 
   .trace-layout {
     grid-template-columns: 1fr;
+    gap: 16px;
     overflow: visible;
     padding: 16px;
   }
@@ -211,6 +371,10 @@ function goBack() {
   .preview-pane {
     height: auto;
     overflow-y: visible;
+  }
+
+  .trace-resizer {
+    display: none;
   }
 }
 </style>

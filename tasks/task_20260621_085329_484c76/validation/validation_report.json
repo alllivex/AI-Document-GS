@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "task_id": "task_20260621_085329_484c76",
+  "status": "failed",
+  "summary": {
+    "error_count": 8,
+    "warning_count": 0,
+    "info_count": 0
+  },
+  "items": [
+    {
+      "level": "error",
+      "code": "missing_primary_key_field",
+      "message": "Primary key field is missing: data_element.customer_code",
+      "table_name": "data_element",
+      "field_name": "customer_code",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "主表缺少主键字段，请检查 Excel 表头或模板关系配置。",
+      "detail": null
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.customer_name",
+      "table_name": "data_element",
+      "field_name": "customer_name",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.customer_name 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.customer_name",
+        "original_variable_path": "data_element.customer_name"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.customer_code",
+      "table_name": "data_element",
+      "field_name": "customer_code",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.customer_code 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.customer_code",
+        "original_variable_path": "data_element.customer_code"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.id_number",
+      "table_name": "data_element",
+      "field_name": "id_number",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.id_number 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.id_number",
+        "original_variable_path": "data_element.id_number"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.company_name",
+      "table_name": "data_element",
+      "field_name": "company_name",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.company_name 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.company_name",
+        "original_variable_path": "data_element.company_name"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.unified_social_credit_code",
+      "table_name": "data_element",
+      "field_name": "unified_social_credit_code",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.unified_social_credit_code 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.unified_social_credit_code",
+        "original_variable_path": "data_element.unified_social_credit_code"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.account_number",
+      "table_name": "data_element",
+      "field_name": "account_number",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.account_number 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.account_number",
+        "original_variable_path": "data_element.account_number"
+      }
+    },
+    {
+      "level": "error",
+      "code": "missing_field",
+      "message": "Template references missing field: data_element.business_address",
+      "table_name": "data_element",
+      "field_name": "business_address",
+      "template_id": 9,
+      "template_file": "template_9.xlsx",
+      "suggestion": "模板变量 data_element.business_address 在配置或 Excel 中不存在，请检查模板变量名、实体 Schema 或上传表字段。",
+      "detail": {
+        "variable_path": "data_element.business_address",
+        "original_variable_path": "data_element.business_address"
+      }
+    }
+  ],
+  "created_at": "2026-06-21T08:53:36.291432Z"
+}

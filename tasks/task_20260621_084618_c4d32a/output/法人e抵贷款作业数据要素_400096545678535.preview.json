@@ -1,0 +1,1553 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_11e8335c-be5e-5dc3-9768-c5b0a35dea5f",
+  "task_id": "task_20260621_084618_c4d32a",
+  "title": "法人e抵贷款作业数据要素_400096545678535.xlsx",
+  "output_file": "法人e抵贷款作业数据要素_400096545678535.xlsx",
+  "primary_key_value": "400096545678535",
+  "blocks": [
+    {
+      "type": "table",
+      "block_id": "xlsx_table_e85f81802bd747df92bce5ee47cb71e0",
+      "block_trace_id": null,
+      "block_trace_kind": null,
+      "headers": [],
+      "rows": [
+        [
+          {
+            "text": "法人e抵快贷字段",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "签署资料",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "内容",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "法定代表人姓名",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "陈镇宏",
+            "trace_id": "trace_fe13b868-08c0-5654-8adb-0769e3c3edad",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "陈镇宏",
+                "trace_id": "trace_fe13b868-08c0-5654-8adb-0769e3c3edad",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "法定代表人客编",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "400096545678535",
+            "trace_id": "trace_67d88ef0-dad7-5695-a6aa-aa3e399070c6",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "400096545678535",
+                "trace_id": "trace_67d88ef0-dad7-5695-a6aa-aa3e399070c6",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "法定代表人身份证",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "440582199305184096",
+            "trace_id": "trace_1c19ee61-1b9e-5b86-864f-38d1be75a66d",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "440582199305184096",
+                "trace_id": "trace_1c19ee61-1b9e-5b86-864f-38d1be75a66d",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "法定代表人手机",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品地址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品产权证号",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品宗地号",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品权属人姓名",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品权属人客编",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品权属人身份证",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "押品权属人手机",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司名称",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "深圳市芊美然服饰有限公司",
+            "trace_id": "trace_3516e4bd-c0a2-56c2-b082-e5f1756f4949",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "深圳市芊美然服饰有限公司",
+                "trace_id": "trace_3516e4bd-c0a2-56c2-b082-e5f1756f4949",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司营业执照号码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "91440300MADCM2WA2H",
+            "trace_id": "trace_01e4aaaf-a263-5f6d-bc56-f2e750ab908c",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "91440300MADCM2WA2H",
+                "trace_id": "trace_01e4aaaf-a263-5f6d-bc56-f2e750ab908c",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司账号",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "4000026409200653012",
+            "trace_id": "trace_aa7baf65-829f-53ac-8269-3ae991999eaf",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "4000026409200653012",
+                "trace_id": "trace_aa7baf65-829f-53ac-8269-3ae991999eaf",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司客编",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司中征码",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司注册地址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "公司实际经营地址",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 12.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "深圳市福田区园岭街道红荔社区红荔路1068号荔湖花苑大厦B栋18E",
+            "trace_id": "trace_a114558b-2864-51bf-83d3-4cf772f0bddd",
+            "trace_kind": "field",
+            "ai_block_id": null,
+            "runs": [
+              {
+                "text": "深圳市福田区园岭街道红荔社区红荔路1068号荔湖花苑大厦B栋18E",
+                "trace_id": "trace_a114558b-2864-51bf-83d3-4cf772f0bddd",
+                "trace_kind": "field",
+                "ai_block_id": null,
+                "style": null
+              }
+            ],
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "贷款金额小写",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "贷款金额大写",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "担保额度",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "贷款金额大写",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": true,
+              "italic": null,
+              "underline": null,
+              "alignment": "left",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "必要",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "循环起始日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ],
+        [
+          {
+            "text": "循环结束日",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 195.8
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": "center",
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 96.0
+          },
+          {
+            "text": "",
+            "trace_id": null,
+            "trace_kind": null,
+            "ai_block_id": null,
+            "runs": null,
+            "colspan": 1,
+            "rowspan": 1,
+            "style": {
+              "bold": null,
+              "italic": null,
+              "underline": null,
+              "alignment": null,
+              "color": null,
+              "background_color": "#000000",
+              "font_size_pt": 11.0
+            },
+            "width_px": 216.8
+          }
+        ]
+      ],
+      "style": null,
+      "width_px": null
+    }
+  ],
+  "created_at": "2026-06-21T12:47:56.466704Z"
+}

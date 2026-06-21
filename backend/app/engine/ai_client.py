@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import certifi
+import httpx
 from openai import OpenAI
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
@@ -29,7 +31,19 @@ class DeepSeekClient:
             raise ValueError("DEEPSEEK_API_KEY is not configured")
         self.model = model
         self.temperature = temperature
-        self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout_seconds)
+
+        # Build a custom httpx Client that uses certifi's CA bundle directly,
+        # ignoring the SSL_CERT_FILE / SSL_CERT_DIR environment variables.
+        # This prevents "FileNotFoundError" crashes when SSL_CERT_FILE
+        # is set to a non-existent path (e.g. from Anaconda activation scripts).
+        ssl_context = httpx.create_ssl_context(verify=certifi.where(), trust_env=False)
+        http_client = httpx.Client(verify=ssl_context, timeout=timeout_seconds)
+        self.client = OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            http_client=http_client,
+            timeout=timeout_seconds,
+        )
 
     @retry(
         stop=stop_after_attempt(3),

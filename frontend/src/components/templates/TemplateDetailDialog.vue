@@ -23,6 +23,7 @@
           <el-descriptions-item label="模板名称">{{ detail.template_name }}</el-descriptions-item>
           <el-descriptions-item label="状态">{{ detail.is_active ? '启用' : '停用' }}</el-descriptions-item>
           <el-descriptions-item label="模板文件">{{ detail.template_file }}</el-descriptions-item>
+          <el-descriptions-item label="文件类型">{{ detail.template_file_type === 'xlsx' ? 'Excel' : 'Word' }}</el-descriptions-item>
           <el-descriptions-item label="模板路径">{{ detail.template_path }}</el-descriptions-item>
           <el-descriptions-item label="主表" :span="2">{{ tableText(detail.main_table) }}</el-descriptions-item>
         </el-descriptions>

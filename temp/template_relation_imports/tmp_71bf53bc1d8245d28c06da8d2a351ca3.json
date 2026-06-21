@@ -1,0 +1,40 @@
+{
+  "preview": {
+    "import_id": "tmp_71bf53bc1d8245d28c06da8d2a351ca3",
+    "summary": {
+      "total_rows": 1,
+      "create_count": 1,
+      "update_count": 0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "items": [
+      {
+        "row_number": 2,
+        "action": "create",
+        "level": "info",
+        "message": "将新增模板关系：法人e抵贷款作业数据要素 - 数据要素表"
+      }
+    ],
+    "can_commit": true
+  },
+  "rows": [
+    {
+      "row_number": 2,
+      "template_id": 9,
+      "template_name": "法人e抵贷款作业数据要素",
+      "template_file": "template_9.xlsx",
+      "template_key": "id:9",
+      "template_label": "法人e抵贷款作业数据要素",
+      "table_name": "data_element",
+      "table_name_cn": "数据要素表",
+      "role": "main",
+      "relation_type": "main",
+      "main_join_key": "",
+      "table_join_key": "",
+      "required": true,
+      "sort_order": 0,
+      "description": ""
+    }
+  ]
+}

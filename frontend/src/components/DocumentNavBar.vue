@@ -10,17 +10,21 @@
     </div>
     <div class="nav-actions">
       <span class="trace-tip">点击高亮内容查看来源</span>
-      <el-button type="primary" :disabled="!docId" @click="$emit('download')">下载 Word</el-button>
+      <el-button type="primary" :disabled="!docId" @click="$emit('download')">{{ downloadLabel }}</el-button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   docId: string
   title?: string
   outputFile?: string
 }>()
+
+const downloadLabel = computed(() => props.outputFile?.toLowerCase().endsWith('.xlsx') ? '下载 Excel' : '下载 Word')
 
 defineEmits<{
   back: []

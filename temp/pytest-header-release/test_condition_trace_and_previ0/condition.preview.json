@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "doc_id": "doc_001",
+  "task_id": "task_001",
+  "title": "condition.docx",
+  "output_file": "condition.docx",
+  "primary_key_value": "A支行",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "block_id": "paragraph_6761e9d5e33d48a0878a83e92cb694af",
+      "block_trace_id": "trace_condition_doc_001_condition_0",
+      "block_trace_kind": "condition",
+      "runs": [
+        {
+          "text": "清偿能力判断：无法清偿。",
+          "trace_id": "trace_condition_doc_001_condition_0",
+          "trace_kind": "condition",
+          "ai_block_id": null,
+          "style": null
+        }
+      ],
+      "style": null
+    }
+  ],
+  "created_at": "2026-06-21T12:49:24.379179Z"
+}
